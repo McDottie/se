@@ -1,0 +1,4 @@
+<map id="BUTTON_Read" name="BUTTON_Read">
+<area shape="rect" id="node1" title="Blocks while button_Hit result equals &#45;1." alt="" coords="5,5,116,32"/>
+<area shape="rect" id="node2" href="$d7/dc7/button_8c.html#a9f00b0aebf4efaa3684a0e2ed2bfee08" title="Gets pressed button non&#45;blocking version." alt="" coords="164,5,260,32"/>
+</map>

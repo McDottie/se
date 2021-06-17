@@ -1,0 +1,6 @@
+Flash.c:16:14:FLASH_EraseSectors	48	static
+Flash.c:36:14:FLASH_WriteData	64	static
+Flash.c:53:5:FLASH_WriteBlock	72	dynamic
+Flash.c:70:14:FLASH_VerifyData	56	static
+Flash.c:83:14:FLASH_WriteArray	120	dynamic
+Flash.c:115:14:FLASH_BlanckCheck	48	static

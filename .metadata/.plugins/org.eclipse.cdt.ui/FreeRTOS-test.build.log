@@ -1,0 +1,44 @@
+19:19:35 **** Build of configuration Debug for project FreeRTOS-test ****
+make -r -j8 all 
+Building file: ../src/cr_startup_lpc175x_6x-FreeRTOS.c
+Building file: ../src/crp.c
+Building file: ../src/main.c
+Building file: ../src/printf-stdarg.c
+Invoking: MCU C Compiler
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -D__NEWLIB__ -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\SE2021\inc" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-test\inc" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CMSIS_CORE_LPC17xx\inc" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\include" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\src\portable" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m3 -mthumb -D__NEWLIB__ -fstack-usage -specs=nano.specs -MMD -MP -MF"src/cr_startup_lpc175x_6x-FreeRTOS.d" -MT"src/cr_startup_lpc175x_6x-FreeRTOS.o" -MT"src/cr_startup_lpc175x_6x-FreeRTOS.d" -o "src/cr_startup_lpc175x_6x-FreeRTOS.o" "../src/cr_startup_lpc175x_6x-FreeRTOS.c"
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -D__NEWLIB__ -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\SE2021\inc" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-test\inc" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CMSIS_CORE_LPC17xx\inc" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\include" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\src\portable" -O0 -fno-common -g3 -WaInvoking: MCU C Compiler
+ll -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m3 -mthumb -D__NEWLIB__ -fstack-usage -specs=nano.specs -MMD -MP -MF"src/crp.d" -MT"src/crp.o" -MT"src/crp.d" -o "src/crp.o" "../src/crp.c"
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -D__NEWLIB__ -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\SE2021\inc" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-test\inc" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CMSIS_CORE_LPC17xx\inc" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\include" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\src\portable" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m3 -mthumb -D__NEWLIB__ -fstack-usage -specs=nano.specs -MMD -MP -MF"src/main.d" -MT"src/main.o" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -D__NEWLIB__ -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\SE2021\inc" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-test\inc" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CMSIS_CORE_LPC17xx\inc" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\include" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\src\portable" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m3 -mthumb -D__NEWLIB__ -fstack-usage -specs=nano.specs -MMD -MP -MF"src/printf-stdarg.d" -MT"src/printf-stdarg.o" -MT"src/printf-stdarg.d" -o "src/printf-stdarg.o" "../src/printf-stdarg.c"
+Finished building: ../src/crp.c
+ 
+Finished building: ../src/cr_startup_lpc175x_6x-FreeRTOS.c
+../src/main.c: In function 'vTaskLed':
+../src/main.c:28:13: warning: unused variable 'res' [-Wunused-variable]
+Finished building: ../src/printf-stdarg.c
+   28 |  BaseType_t res;
+      |             ^~~
+ 
+ 
+Finished building: ../src/main.c
+ 
+Building target: FreeRTOS-test.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CMSIS_CORE_LPC17xx\Debug" -L"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\SE2021\Debug" -L"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug" -Xlinker -Map="FreeRTOS-test.map" -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "FreeRTOS-template_Debug.ld" -o "FreeRTOS-test.axf"  ./src/cr_startup_lpc175x_6x-FreeRTOS.o ./src/crp.o ./src/main.o ./src/printf-stdarg.o   -lCMSIS_CORE_LPC17xx -lSE2021 -lFreeRTOS-Kernel
+Memory region         Used Size  Region Size  %age Used
+       MFlash512:       14876 B       512 KB      2.84%
+        RamLoc32:       12612 B        32 KB     38.49%
+        RamAHB32:          0 GB        32 KB      0.00%
+Finished building target: FreeRTOS-test.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "FreeRTOS-test.axf"; # arm-none-eabi-objcopy -v -O binary "FreeRTOS-test.axf" "FreeRTOS-test.bin" ; # checksum -p LPC1769 -d "FreeRTOS-test.bin";
+   text	   data	    bss	    dec	    hex	filename
+  14868	      8	  12604	  27480	   6b58	FreeRTOS-test.axf
+ 
+
+19:19:37 Build Finished. 0 errors, 1 warnings. (took 1s.396ms)
+

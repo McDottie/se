@@ -1,0 +1,5 @@
+collate.c:61:1:__collate_load_tables	1056	static
+collate.c:116:1:__collate_substitute	40	static
+collate.c:146:1:__collate_lookup	40	static
+collate.c:168:1:__collate_strdup	24	static
+collate.c:179:1:__collate_err	32	static

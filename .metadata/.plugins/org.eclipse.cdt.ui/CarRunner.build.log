@@ -1,0 +1,133 @@
+16:23:55 **** Build of configuration Debug for project CarRunner ****
+make -r -j8 all 
+Building file: ../src/cr_startup_lpc175x_6x.c
+Building file: ../src/crp.c
+Building file: ../src/CarRunner.c
+Building file: ../src/time_helper.c
+Building file: ../src/game.c
+Building file: ../src/saver.c
+Invoking: MCU C Compiler
+Invoking: MCU C Compiler
+Invoking: MCU C Compiler
+Invoking: MCU C Compiler
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -D__REDLIB__ -I"C:\Users\josee\Documents\ISEL\3_Ano-5_Semestre\SE1\CarRunner\inc" -I"C:\Users\josee\Documents\ISEL\3_Ano-5_Semestre\SE1\SE2021\inc" -I"C:\Users\josee\Documents\ISEL\3_Ano-5_Semestre\SE1\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m3 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/CarRunner.d" -MT"src/CarRunner.o" -MT"src/CarRunner.d" -o "src/CarRunner.o" "../src/CarRunner.c"
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -D__REDLIB__ -I"C:\Users\josee\Documents\ISEL\3_Ano-5_Semestre\SE1\CarRunner\inc" -I"C:\Users\josee\Documents\ISEL\3_Ano-5_Semestre\SE1\SE2021\inc" -I"C:\Users\josee\Documents\ISEL\3_Ano-5_Semestre\SE1\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m3 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/crp.d" -MT"src/crp.o" -MT"src/crp.d" -o "src/crp.o" "../src/crp.c"
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -D__REDLIB__ -I"C:\Users\josee\Documents\ISEL\3_Ano-5_Semestre\SE1\CarRunner\inc" -I"C:\Users\josee\Documents\ISEL\3_Ano-5_Semestre\SE1\SE2021\inc" -I"C:\Users\josee\Documents\ISEL\3_Ano-5_Semestre\SE1\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m3 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/cr_startup_lpc175x_6x.d" -MT"src/cr_startup_lpc175x_6x.o" -MT"src/cr_startup_lpc175x_6x.d" -o "src/cr_startup_lpc175x_6x.o" "../src/cr_startup_lpc175x_6x.c"
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -D__REDLIB__ -I"C:\Users\josee\Documents\ISEL\3_Ano-5_Semestre\SE1\CarRunner\inc" -I"C:\Users\josee\Documents\ISEL\3_Ano-5_Semestre\SE1\SE2021\inc" -I"C:\Users\josee\Documents\ISEL\3_Ano-5_Semestre\SE1\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m3 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/game.d" -MT"src/game.o" -MT"src/game.d" -o "src/game.o" "../src/game.c"
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -D__REDLIB__ -I"C:\Users\josee\Documents\ISEL\3_Ano-5_Semestre\SE1\CarRunner\inc" -I"C:\Users\josee\Documents\ISEL\3_Ano-5_Semestre\SE1\SE2021\inc" -I"C:\Users\josee\Documents\ISEL\3_Ano-5_Semestre\SE1\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m3 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/saver.d" -MT"src/saver.o" -MT"src/saver.d" -o "src/saver.o" "../src/saver.c"
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -D__REDLIB__ -I"C:\Users\josee\Documents\ISEL\3_Ano-5_Semestre\SE1\CarRunner\inc" -I"C:\Users\josee\Documents\ISEL\3_Ano-5_Semestre\SE1\SE2021\inc" -I"C:\Users\josee\Documents\ISEL\3_Ano-5_Semestre\SE1\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m3 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/time_helper.d" -MT"src/time_helper.o" -MT"src/time_helper.d" -o "src/time_helper.o" "../src/time_helper.c"
+In file included from ../src/saver.c:9:
+C:\Users\josee\Documents\ISEL\3_Ano-5_Semestre\SE1\SE2021\inc/flash.h:36:19: warning: initialization of 'int *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   36 | #define sector28  0x00070000
+      |                   ^~~~~~~~~~
+../src/saver.c:11:15: note: in expansion of macro 'sector28'
+   11 | int *names  = sector28;
+      |               ^~~~~~~~
+C:\Users\josee\Documents\ISEL\3_Ano-5_Semestre\SE1\SE2021\inc/flash.h:39:19: warning: initialization of 'int *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   39 | #define sector29  0x00078000
+      |                   ^~~~~~~~~~
+../src/saver.c:12:15: note: in expansion of macro 'sector29'
+   12 | int *scores = sector29;
+      |               ^~~~~~~~
+../src/game.c: In function 'gameRoutine':
+../src/game.c:42:2: warning: implicit declaration of function 'initValues' [-Wimplicit-function-declaration]
+   42 |  initValues();
+      |  ^~~~~~~~~~
+../src/game.c:50:17: warning: implicit declaration of function 'ADXL345_isTap' [-Wimplicit-function-declaration]
+   50 |      bool tap = ADXL345_isTap();
+      |                 ^~~~~~~~~~~~~
+../src/game.c:57:7: warning: implicit declaration of function 'updateGameDesign' [-Wimplicit-function-declaration]
+   57 |       updateGameDesign();
+      |       ^~~~~~~~~~~~~~~~
+../src/game.c:74:24: warning: implicit declaration of function 'updateGameLogic' [-Wimplicit-function-declaration]
+   74 |             gameOver = updateGameLogic();
+      |                        ^~~~~~~~~~~~~~~
+../src/game.c:88:5: warning: implicit declaration of function 'saveUser' [-Wimplicit-function-declaration]
+   88 |     saveUser(points);
+      |     ^~~~~~~~
+../src/game.c:91:10: warning: unused variable 'a' [-Wunused-variable]
+   91 |     int *a = readScores();
+      |          ^
+../src/game.c: At top level:
+../src/game.c:95:6: warning: conflicting types for 'saveUser'
+   95 | void saveUser(int points){
+      |      ^~~~~~~~
+../src/game.c:88:5: note: previous implicit declaration of 'saveUser' was here
+   88 |     saveUser(points);
+      |     ^~~~~~~~
+../src/game.c:147:6: warning: conflicting types for 'initValues'
+  147 | void initValues() {
+      |      ^~~~~~~~~~
+../src/game.c:42:2: note: previous implicit declaration of 'initValues' was here
+   42 |  initValues();
+      |  ^~~~~~~~~~
+../src/game.c:219:6: warning: conflicting types for 'updateGameDesign'
+  219 | void updateGameDesign() {
+      |      ^~~~~~~~~~~~~~~~
+../src/game.c:57:7: note: previous implicit declaration of 'updateGameDesign' was here
+   57 |       updateGameDesign();
+      |       ^~~~~~~~~~~~~~~~
+../src/CarRunner.c: In function 'main':
+../src/CarRunner.c:52:2: warning: implicit declaration of function 'gameInit' [-Wimplicit-function-declaration]
+   52 |  gameInit();
+      |  ^~~~~~~~
+../src/CarRunner.c:75:6: warning: implicit declaration of function 'gameRoutine' [-Wimplicit-function-declaration]
+   75 |      gameRoutine();
+      |      ^~~~~~~~~~~
+../src/CarRunner.c:81:6: warning: implicit declaration of function 'Menu' [-Wimplicit-function-declaration]
+   81 |      Menu();
+      |      ^~~~
+../src/CarRunner.c: At top level:
+../src/CarRunner.c:108:6: warning: conflicting types for 'Menu'
+  108 | void Menu() {
+      |      ^~~~
+../src/CarRunner.c:81:6: note: previous implicit declaration of 'Menu' was here
+   81 |      Menu();
+      |      ^~~~
+../src/CarRunner.c: In function 'Menu':
+../src/CarRunner.c:124:5: warning: implicit declaration of function 'routineChooser' [-Wimplicit-function-declaration]
+  124 |     routineChooser(i);
+      |     ^~~~~~~~~~~~~~
+../src/CarRunner.c: At top level:
+../src/CarRunner.c:149:6: warning: conflicting types for 'routineChooser'
+  149 | void routineChooser(int routine){
+      |      ^~~~~~~~~~~~~~
+../src/CarRunner.c:124:5: note: previous implicit declaration of 'routineChooser' was here
+  124 |     routineChooser(i);
+      |     ^~~~~~~~~~~~~~
+../src/CarRunner.c: In function 'routineChooser':
+../src/CarRunner.c:155:3: warning: implicit declaration of function 'playerScoresShowDown' [-Wimplicit-function-declaration]
+  155 |   playerScoresShowDown();
+      |   ^~~~~~~~~~~~~~~~~~~~
+../src/CarRunner.c: At top level:
+../src/CarRunner.c:175:6: warning: conflicting types for 'playerScoresShowDown'
+  175 | void playerScoresShowDown(){
+      |      ^~~~~~~~~~~~~~~~~~~~
+../src/CarRunner.c:155:3: note: previous implicit declaration of 'playerScoresShowDown' was here
+  155 |   playerScoresShowDown();
+      |   ^~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/crp.c
+Finished building: ../src/CarRunner.c
+Finished building: ../src/cr_startup_lpc175x_6x.c
+Finished building: ../src/game.c
+Finished building: ../src/saver.c
+Finished building: ../src/time_helper.c
+ 
+ 
+ 
+ 
+ 
+ 
+Building target: CarRunner.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\josee\Documents\ISEL\3_Ano-5_Semestre\SE1\CMSIS_CORE_LPC17xx\Debug" -L"C:\Users\josee\Documents\ISEL\3_Ano-5_Semestre\SE1\SE2021\Debug" -Xlinker -Map="CarRunner.map" -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "CarRunner_Debug.ld" -o "CarRunner.axf"  ./src/CarRunner.o ./src/cr_startup_lpc175x_6x.o ./src/crp.o ./src/game.o ./src/saver.o ./src/time_helper.o   -lCMSIS_CORE_LPC17xx -lSE2021
+c:/nxp/mcuxpressoide_11.2.1_4149/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.2.0.202008311134/tools/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/bin/ld.exe: cannot find -lCMSIS_CORE_LPC17xx
+c:/nxp/mcuxpressoide_11.2.1_4149/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.2.0.202008311134/tools/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/bin/ld.exe: cannot find -lSE2021
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:32: CarRunner.axf] Error 1
+"make -r -j8 all" terminated with exit code 2. Build might be incomplete.
+
+16:23:58 Build Failed. 3 errors, 19 warnings. (took 3s.866ms)
+

@@ -1,0 +1,2 @@
+regex.h:97:8:regerror	96	static
+regerror.c:162:1:regatoi	24	static

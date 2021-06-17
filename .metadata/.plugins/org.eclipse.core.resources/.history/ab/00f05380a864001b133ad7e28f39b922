@@ -1,0 +1,198 @@
+/*
+===============================================================================
+ Name        : CarRunner.c
+ Author      : $(author)
+ Version     :
+ Copyright   : $(copyright)
+ Description : main definition
+===============================================================================
+*/
+
+#ifdef __USE_CMSIS
+#include "LPC17xx.h"
+#endif
+
+#include <cr_section_macros.h>
+
+#include <stdio.h>
+#include <stdlib.h>
+#include "lcd.h"
+#include "time_helper.h"
+#include "button.h"
+#include "rtc.h"
+#include "wait.h"
+#include "ADXL345.h"
+#include "spi.h"
+#include "saver.h"
+#include "CarRunner.h"
+
+
+#define PRESSING_TIME 2000
+
+/**
+ @startuml
+	[*] -> initPeripherals
+	title CarRunner Main loop
+
+	initPeripherals --> waitEvent
+	waitEvent --> Game : keypressed == S and PRESSED
+	waitEvent --> Menu : keypressed == L&R for 2s
+	waitEvent --> update_DateTimeDisplay
+	waitEvent --> waitEvent : after 1s
+	Game --> waitEvent
+	Menu --> waitEvent
+
+ @enduml
+*/
+int main(void) {
+	WAIT_Init();
+	BUTTON_Init();
+	LCDText_Init();
+	RTC_Init(0);
+	gameInit();
+	SPI_Init();
+
+	while(ADXL345_Init() == -1);
+
+	int start;
+	int dateTime_Stamp;
+	struct tm dateTime;
+	key_state keyState;
+
+	while(1) {
+		//time Update
+		if(WAIT_GetElapsedMillis(dateTime_Stamp) >= 1000) {
+			dateTime_Stamp = WAIT_GetElapsedMillis(0);
+			RTC_GetValue(&dateTime);
+			update_DateTimeDisplay(dateTime);
+		}
+
+		keyState = BUTTON_GetButtonsEvents();
+
+		switch(keyState.key) {
+			case S:
+				if(keyState.state == PRESSED)
+					gameRoutine();
+				break;
+			case L|R:
+				if (keyState.state == PRESSED)
+					start = WAIT_GetElapsedMillis(0);
+				if (keyState.state == REPEATED && WAIT_GetElapsedMillis(start) >= PRESSING_TIME)
+					Menu();
+
+				break;
+			default:
+				break;
+		}
+
+	}
+	return 0;
+}
+
+
+char * menu_options[3] = {"Change Time","Show Players\nScores", "Exit"};
+
+void Menu() {
+
+	key_state keyState;
+	int i = 0;
+
+	LCDText_Clear();
+	LCDText_WriteString(menu_options[i]);
+
+	while(1){
+		keyState = BUTTON_GetButtonsEvents();
+		if(keyState.state == PRESSED)
+		switch(keyState.key) {
+			case S:
+				if (i == 2)
+					return;
+
+				routineChooser(i);
+				LCDText_Clear();
+				LCDText_WriteString(menu_options[i]);
+				break;
+			case L:
+				i--;
+				if (i < 0) i = 2;
+				LCDText_Clear();
+				LCDText_WriteString(menu_options[i]);
+				break;
+			case R:
+				i++;
+				if (i > 2) i = 0;
+				LCDText_Clear();
+				LCDText_WriteString(menu_options[i]);
+				break;
+			default:
+				break;
+		}
+	}
+
+}
+
+void routineChooser(int routine){
+	switch(routine) {
+	case 0:
+		Time_changeRoutine(RTC_GetSeconds());
+		break;
+	case 1:
+		playerScoresShowDown();
+		break;
+	default:
+		break;
+	}
+}
+
+
+void playerScoresShowDown(){
+
+	int size = listSize();
+	if(size == 0) {
+		LCDText_Clear();
+		LCDText_WriteString("NO PLAYERS\nSCORES YET");
+		WAIT_ChronoUs(3000000);
+		return;
+	}
+
+
+	int * scores = readScores();
+	char * strings[size];
+	readNames(strings);
+
+
+	key_state keyState;
+	int i = 0;
+
+
+	LCDText_Clear();
+	LCDText_Printf("%s\n%d",strings[i],scores[i]);
+
+	while(1){
+		keyState = BUTTON_GetButtonsEvents();
+		if(keyState.state == PRESSED)
+		switch(keyState.key) {
+			case S:
+				return;
+			case L:
+				i--;
+				if (i < 0) i = size-1;
+				LCDText_Clear();
+				LCDText_Printf("%s\n%d",strings[i],scores[i]);
+
+				break;
+			case R:
+				i++;
+				if (i >= size) i = 0;
+				LCDText_Clear();
+				LCDText_Printf("%s\n%d",strings[i],scores[i]);
+				break;
+			default:
+				break;
+		}
+	}
+	for(int i = 0; i < size; i++) {
+		free(strings[i]);
+	}
+	free(scores);
+}

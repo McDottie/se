@@ -1,0 +1,5 @@
+NTP.h:52:10:ntohl	16	static
+NTP.c:9:5:NTP_Init	16	static
+NTP.c:13:11:NTP_MessageFromPacket	8	static
+NTP.c:17:14:NTP_PacketFromMessage	16	static
+NTP.c:21:12:NTP_Request	80	static

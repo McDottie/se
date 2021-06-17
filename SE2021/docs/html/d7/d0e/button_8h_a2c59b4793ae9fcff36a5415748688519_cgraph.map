@@ -1,0 +1,4 @@
+<map id="BUTTON_GetButtonsEvents" name="BUTTON_GetButtonsEvents">
+<area shape="rect" id="node1" title="Pressed button state." alt="" coords="5,5,191,32"/>
+<area shape="rect" id="node2" href="$d7/dc7/button_8c.html#a9f00b0aebf4efaa3684a0e2ed2bfee08" title="Gets pressed button non&#45;blocking version." alt="" coords="239,5,335,32"/>
+</map>

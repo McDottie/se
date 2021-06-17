@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;CarRunner/docs/SE2021.doxyfile&apos;" deleteContents="false" description="Delete resource &apos;CarRunner/docs/SE2021.doxyfile&apos;" element1="/CarRunner/docs/SE2021.doxyfile" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1611435885069"/>
+</session>

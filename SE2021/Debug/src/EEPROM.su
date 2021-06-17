@@ -1,0 +1,5 @@
+EEPROM.c:20:5:EEPROM_WriteByte	24	static
+EEPROM.c:41:10:pageEnding	16	static
+EEPROM.c:46:5:EEPROM_WriteData	48	static
+EEPROM.c:93:5:EEPROM_ReadByte	24	static
+EEPROM.c:122:5:EEPROM_ReadData	32	static

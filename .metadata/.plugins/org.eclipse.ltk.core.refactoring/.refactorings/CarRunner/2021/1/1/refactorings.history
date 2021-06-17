@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;CarRunner/src/timeHelper.c&apos; to &apos;time_helper.c&apos;" description="Rename resource &apos;timeHelper.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/timeHelper.c" name="time_helper.c" stamp="1609873547058" updateReferences="true"/>
+</session>

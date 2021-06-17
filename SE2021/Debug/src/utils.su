@@ -1,0 +1,4 @@
+utils.c:15:5:UTILS_SetPinDir	24	static
+utils.c:20:5:UTILS_SetPinSelFunction	24	static
+utils.c:27:5:UTILS_SetResistorMode	24	static
+utils.c:34:5:UTILS_SetOpenDrainMode	24	static

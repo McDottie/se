@@ -1,0 +1,17 @@
+core_cm3.h:1323:22:NVIC_EnableIRQ	16	static
+uart.c:26:6:UARTSetDivisors	48	static
+uart.c:62:6:UART_Initialize	24	static
+uart.c:191:10:UART_ReadBuffer	32	static
+uart.c:211:10:UART_WriteBuffer	32	static
+uart.c:246:6:UART_IsChar	8	static
+uart.c:251:15:UART_ReadChar	16	static
+uart.c:258:6:UART_GetChar	16	static
+uart.c:263:6:UART_WriteChar	16	static
+uart.c:268:6:UART_WriteString	16	static
+uart.c:273:6:UART_Printf	2064	static
+uart.c:282:10:UART_ReadBufferAwait	24	static
+uart.c:294:6:UART_IRQRoutine	24	static
+uart.c:346:6:UART0_IRQHandler	8	static
+uart.c:350:6:UART1_IRQHandler	8	static
+uart.c:354:6:UART2_IRQHandler	8	static
+uart.c:358:6:UART3_IRQHandler	8	static

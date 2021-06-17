@@ -1,0 +1,5 @@
+main.c:15:6:vTaskTimeout	24	static
+main.c:26:6:vTaskLed	24	static
+main.c:39:5:main	16	static
+main.c:52:6:vApplicationStackOverflowHook	16	static
+main.c:65:6:vConfigureTimerForRunTimeStats	24	static

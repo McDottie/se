@@ -1,0 +1,6 @@
+engine.c:144:1:matcher	152	static
+engine.c:355:1:dissect	88	static
+engine.c:548:1:backref	80	static
+engine.c:753:1:fast	72	static
+engine.c:844:1:slow	72	static
+engine.c:940:1:step	48	static

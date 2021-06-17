@@ -1,0 +1,11 @@
+printf-stdarg.c:42:12:__semihost	32	static
+printf-stdarg.c:58:12:semihost_write	32	static
+printf-stdarg.c:68:12:putchar	16	static
+printf-stdarg.c:76:13:printchar	16	static
+printf-stdarg.c:93:12:prints	40	static
+printf-stdarg.c:126:12:printi	64	static
+printf-stdarg.c:169:12:print	64	static
+printf-stdarg.c:233:5:printf	16	static
+printf-stdarg.c:241:5:sprintf	28	static
+printf-stdarg.c:249:5:vsprintf	24	static
+printf-stdarg.c:254:5:snprintf	24	static

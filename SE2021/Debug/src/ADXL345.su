@@ -1,0 +1,8 @@
+ADXL345.c:7:6:writeRegister	32	static
+ADXL345.c:19:6:readRegisters	24	static
+ADXL345.c:23:6:readRegister	24	static
+ADXL345.c:37:5:ADXL345_Init	32	static
+ADXL345.c:78:6:setupTap	32	static
+ADXL345.c:112:6:ADXL345_isTap	16	static
+ADXL345.c:118:6:ADXL345_isDoubleTap	16	static
+ADXL345.c:124:5:ADXL345_Read	32	static

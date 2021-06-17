@@ -1,0 +1,4 @@
+esp01Test.c:25:6:vESPTester	40	static
+esp01Test.c:54:5:main	16	static
+esp01Test.c:60:6:vApplicationStackOverflowHook	16	static
+esp01Test.c:69:6:vConfigureTimerForRunTimeStats	24	static

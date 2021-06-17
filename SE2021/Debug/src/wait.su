@@ -1,0 +1,4 @@
+wait.c:26:6:WAIT_Milliseconds	16	static
+wait.c:35:9:WAIT_Init	16	static
+wait.c:48:10:WAIT_GetElapsedMillis	16	static
+wait.c:54:6:WAIT_ChronoUs	16	static

@@ -1,0 +1,20 @@
+19:16:36 **** Build of configuration Debug for project lab5 ****
+make -r -j8 all 
+Building target: lab5.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\josee\Documents\ISEL\3_Ano-5_Semestre\SE1\CMSIS_CORE_LPC17xx\Debug" -L"C:\Users\josee\Documents\ISEL\3_Ano-5_Semestre\SE1\SE2021\Debug" -Xlinker -Map="lab5.map" -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "lab5_Debug.ld" -o "lab5.axf"  ./src/cr_startup_lpc175x_6x.o ./src/crp.o ./src/main.o   -lCMSIS_CORE_LPC17xx -lSE2021
+Memory region         Used Size  Region Size  %age Used
+       MFlash512:       16120 B       512 KB      3.07%
+        RamLoc32:         552 B        32 KB      1.68%
+        RamAHB32:          0 GB        32 KB      0.00%
+Finished building target: lab5.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "lab5.axf"; # arm-none-eabi-objcopy -v -O binary "lab5.axf" "lab5.bin" ; # checksum -p LPC1769 -d "lab5.bin";
+   text	   data	    bss	    dec	    hex	filename
+  16116	      4	    548	  16668	   411c	lab5.axf
+ 
+
+19:16:38 Build Finished. 0 errors, 0 warnings. (took 1s.760ms)
+

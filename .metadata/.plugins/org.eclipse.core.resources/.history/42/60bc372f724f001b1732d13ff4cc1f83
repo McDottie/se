@@ -1,0 +1,38 @@
+/*
+===============================================================================
+ Name        : lab6.c
+ Author      : $(author)
+ Version     :
+ Copyright   : $(copyright)
+ Description : main definition
+===============================================================================
+*/
+
+#ifdef __USE_CMSIS
+#include "LPC17xx.h"
+#endif
+
+#include <cr_section_macros.h>
+
+#include <stdio.h>
+#include "spi.h"
+#include "ADXL345.h"
+
+
+
+// TODO: insert other include files here
+
+// TODO: insert other definitions and declarations here
+
+int main(void) {
+
+	SPI_Init();
+	ADXL345_Init();
+	short int x_value,y_value,z_value;
+
+    while(1) {
+    	ADXL345_Read(&x_value, &y_value, &z_value);
+    	printf("x=%d y=%d z=%d\n",x_value,y_value,z_value);
+    }
+    return 0 ;
+}

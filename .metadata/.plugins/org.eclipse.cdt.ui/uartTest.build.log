@@ -1,0 +1,45 @@
+21:54:35 **** Incremental Build of configuration Debug for project uartTest ****
+make -r -j8 all 
+Building file: ../src/uartTest.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -D__REDLIB__ -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\uartTest\inc" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\SE2021\inc" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m3 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/uartTest.d" -MT"src/uartTest.o" -MT"src/uartTest.d" -o "src/uartTest.o" "../src/uartTest.c"
+../src/uartTest.c: In function 'main':
+../src/uartTest.c:29:3: warning: implicit declaration of function 'memset' [-Wimplicit-function-declaration]
+   29 |   memset(data, 0, dlen+1);
+      |   ^~~~~~
+../src/uartTest.c:21:1: note: 'memset' is defined in header '<string.h>'; did you forget to '#include <string.h>'?
+   20 | #include "wait.h"
+  +++ |+#include <string.h>
+   21 | 
+../src/uartTest.c:36:27: warning: pointer targets in passing argument 1 of 'UART_ReadBuffer' differ in signedness [-Wpointer-sign]
+   36 |    sum += UART_ReadBuffer(&data[sum], dlen-sum);
+      |                           ^~~~~~~~~~
+      |                           |
+      |                           char *
+In file included from ../src/uartTest.c:19:
+C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\SE2021\inc/uart.h:95:35: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+   95 | uint32_t UART_ReadBuffer(uint8_t *buffer, uint32_t len);
+      |                          ~~~~~~~~~^~~~~~
+../src/uartTest.c:35:8: warning: unused variable 'prevSum' [-Wunused-variable]
+   35 |    int prevSum = sum;
+      |        ^~~~~~~
+Finished building: ../src/uartTest.c
+ 
+Building target: uartTest.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CMSIS_CORE_LPC17xx\Debug" -L"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\SE2021\Debug" -Xlinker -Map="uartTest.map" -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "uartTest_Debug.ld" -o "uartTest.axf"  ./src/cr_startup_lpc175x_6x.o ./src/crp.o ./src/uartTest.o   -lCMSIS_CORE_LPC17xx -lSE2021
+Memory region         Used Size  Region Size  %age Used
+       MFlash512:       15396 B       512 KB      2.94%
+        RamLoc32:        4620 B        32 KB     14.10%
+        RamAHB32:          0 GB        32 KB      0.00%
+Finished building target: uartTest.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "uartTest.axf"; # arm-none-eabi-objcopy -v -O binary "uartTest.axf" "uartTest.bin" ; # checksum -p LPC1769 -d "uartTest.bin";
+   text	   data	    bss	    dec	    hex	filename
+  15392	      4	   4616	  20012	   4e2c	uartTest.axf
+ 
+
+21:54:35 Build Finished. 0 errors, 3 warnings. (took 580ms)
+
