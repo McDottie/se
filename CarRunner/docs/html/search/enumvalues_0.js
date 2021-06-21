@@ -1,0 +1,23 @@
+var searchData=
+[
+  ['adxl345_5fdatarate_5f0_5f10hz_360',['ADXL345_DATARATE_0_10HZ',['../de/dfe/ADXL345_8h.html#a4b57ccec449cacb2e7d1aa89e6416355a7ef42db0dc5ef80ae000d9567dce9f23',1,'ADXL345.h']]],
+  ['adxl345_5fdatarate_5f0_5f20hz_361',['ADXL345_DATARATE_0_20HZ',['../de/dfe/ADXL345_8h.html#a4b57ccec449cacb2e7d1aa89e6416355ac1effd43feccf8673a2162686dc02cd4',1,'ADXL345.h']]],
+  ['adxl345_5fdatarate_5f0_5f39hz_362',['ADXL345_DATARATE_0_39HZ',['../de/dfe/ADXL345_8h.html#a4b57ccec449cacb2e7d1aa89e6416355a9517c5661f560d9274bce0f02f92eef0',1,'ADXL345.h']]],
+  ['adxl345_5fdatarate_5f0_5f78hz_363',['ADXL345_DATARATE_0_78HZ',['../de/dfe/ADXL345_8h.html#a4b57ccec449cacb2e7d1aa89e6416355a23395d3313d19f3ecab715d007faf737',1,'ADXL345.h']]],
+  ['adxl345_5fdatarate_5f100hz_364',['ADXL345_DATARATE_100HZ',['../de/dfe/ADXL345_8h.html#a4b57ccec449cacb2e7d1aa89e6416355ad50ef6b3433a8d1073ec80661814ac4c',1,'ADXL345.h']]],
+  ['adxl345_5fdatarate_5f12_5f5hz_365',['ADXL345_DATARATE_12_5HZ',['../de/dfe/ADXL345_8h.html#a4b57ccec449cacb2e7d1aa89e6416355ae7579d13a727fc4175410a0aa517e6eb',1,'ADXL345.h']]],
+  ['adxl345_5fdatarate_5f1600hz_366',['ADXL345_DATARATE_1600HZ',['../de/dfe/ADXL345_8h.html#a4b57ccec449cacb2e7d1aa89e6416355ad54656dc288532bda5822b04b2170f20',1,'ADXL345.h']]],
+  ['adxl345_5fdatarate_5f1_5f56hz_367',['ADXL345_DATARATE_1_56HZ',['../de/dfe/ADXL345_8h.html#a4b57ccec449cacb2e7d1aa89e6416355acd9ea648f7422d14defba70ebd4d0c69',1,'ADXL345.h']]],
+  ['adxl345_5fdatarate_5f200hz_368',['ADXL345_DATARATE_200HZ',['../de/dfe/ADXL345_8h.html#a4b57ccec449cacb2e7d1aa89e6416355a7d2ef06f6bca352dc9f9ab658c9cdb05',1,'ADXL345.h']]],
+  ['adxl345_5fdatarate_5f25hz_369',['ADXL345_DATARATE_25HZ',['../de/dfe/ADXL345_8h.html#a4b57ccec449cacb2e7d1aa89e6416355a2e356981f6730d09415ef7175cd3e969',1,'ADXL345.h']]],
+  ['adxl345_5fdatarate_5f3200hz_370',['ADXL345_DATARATE_3200HZ',['../de/dfe/ADXL345_8h.html#a4b57ccec449cacb2e7d1aa89e6416355a08d837f35dceeb38bd7effc9c66e72be',1,'ADXL345.h']]],
+  ['adxl345_5fdatarate_5f3_5f13hz_371',['ADXL345_DATARATE_3_13HZ',['../de/dfe/ADXL345_8h.html#a4b57ccec449cacb2e7d1aa89e6416355a4cb70cebaca3306ab9cef10821285ff8',1,'ADXL345.h']]],
+  ['adxl345_5fdatarate_5f400hz_372',['ADXL345_DATARATE_400HZ',['../de/dfe/ADXL345_8h.html#a4b57ccec449cacb2e7d1aa89e6416355a4d23138b36b807ca8242cff26151c1cf',1,'ADXL345.h']]],
+  ['adxl345_5fdatarate_5f50hz_373',['ADXL345_DATARATE_50HZ',['../de/dfe/ADXL345_8h.html#a4b57ccec449cacb2e7d1aa89e6416355a0b400a26a6bca2763d1aa3d20156a286',1,'ADXL345.h']]],
+  ['adxl345_5fdatarate_5f6_5f25hz_374',['ADXL345_DATARATE_6_25HZ',['../de/dfe/ADXL345_8h.html#a4b57ccec449cacb2e7d1aa89e6416355a2ca5f3f0c789f55f0ea2950e88a0d10f',1,'ADXL345.h']]],
+  ['adxl345_5fdatarate_5f800hz_375',['ADXL345_DATARATE_800HZ',['../de/dfe/ADXL345_8h.html#a4b57ccec449cacb2e7d1aa89e6416355ac3e455db9f299325db37d0f15c94b30b',1,'ADXL345.h']]],
+  ['adxl345_5frange_5f16g_376',['ADXL345_RANGE_16G',['../de/dfe/ADXL345_8h.html#a5ea6ae5aace0e199d7bcf6ba2c106fe4ae5641dd5b58e2fdb7018903fb9c4e21b',1,'ADXL345.h']]],
+  ['adxl345_5frange_5f2g_377',['ADXL345_RANGE_2G',['../de/dfe/ADXL345_8h.html#a5ea6ae5aace0e199d7bcf6ba2c106fe4adbe3b6f849ede28b1367a75f650fdc62',1,'ADXL345.h']]],
+  ['adxl345_5frange_5f4g_378',['ADXL345_RANGE_4G',['../de/dfe/ADXL345_8h.html#a5ea6ae5aace0e199d7bcf6ba2c106fe4af4839f1f2c196d523d8be06641263548',1,'ADXL345.h']]],
+  ['adxl345_5frange_5f8g_379',['ADXL345_RANGE_8G',['../de/dfe/ADXL345_8h.html#a5ea6ae5aace0e199d7bcf6ba2c106fe4a84324e3172d029f3e0c74370b120d215',1,'ADXL345.h']]]
+];

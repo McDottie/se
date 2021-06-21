@@ -1,0 +1,4 @@
+<map id="BUTTON_Hit" name="BUTTON_Hit">
+<area shape="rect" id="node1" title="Gets pressed button non&#45;blocking version." alt="" coords="5,5,101,32"/>
+<area shape="rect" id="node2" href="$df/d7c/group__WAIT__Public__Functions.html#ga1c152ed7920e9c4118a0cad2d776e816" title="Waits waitUs microseconds." alt="" coords="149,5,268,32"/>
+</map>

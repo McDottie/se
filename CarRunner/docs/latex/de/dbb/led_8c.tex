@@ -1,0 +1,122 @@
+\doxysection{C\+:/\+Users/josee/\+Documents/\+I\+S\+E\+L/3\+\_\+\+Ano-\/5\+\_\+\+Semestre/\+S\+E1/\+S\+E2021/src/led.c File Reference}
+\label{led_8c}\index{C:/Users/josee/Documents/ISEL/3\_Ano-\/5\_Semestre/SE1/SE2021/src/led.c@{C:/Users/josee/Documents/ISEL/3\_Ano-\/5\_Semestre/SE1/SE2021/src/led.c}}
+{\ttfamily \#include \char`\"{}led.\+h\char`\"{}}\newline
+Include dependency graph for led.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{df/d0a/led_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \textbf{ L\+E\+D\+\_\+\+Init} (bool state)
+\begin{DoxyCompactList}\small\item\em Initiates the system to allow manipulation of the status L\+ED that exists on the L\+P\+C\+Xpresso L\+P\+C1769 prototyping board. \end{DoxyCompactList}\item 
+bool \textbf{ L\+E\+D\+\_\+\+Get\+State} (void)
+\item 
+void \textbf{ L\+E\+D\+\_\+\+On} (void)
+\begin{DoxyCompactList}\small\item\em Turns on the L\+ED. \end{DoxyCompactList}\item 
+void \textbf{ L\+E\+D\+\_\+\+Off} (void)
+\begin{DoxyCompactList}\small\item\em Turns off the L\+ED. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+bool \textbf{ led\+\_\+state}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{led_8c_a05448f68852f7baac7e2be2609275f1f}} 
+\index{led.c@{led.c}!LED\_GetState@{LED\_GetState}}
+\index{LED\_GetState@{LED\_GetState}!led.c@{led.c}}
+\doxysubsubsection{LED\_GetState()}
+{\footnotesize\ttfamily bool L\+E\+D\+\_\+\+Get\+State (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+Returns true if the L\+ED is on and false if the L\+ED is off. 
+\end{DoxyReturn}
+
+
+Definition at line 26 of file led.\+c.
+
+
+
+References led\+\_\+state.
+
+\mbox{\label{led_8c_ab278fb7416c57a0720beafac49c11d3a}} 
+\index{led.c@{led.c}!LED\_Init@{LED\_Init}}
+\index{LED\_Init@{LED\_Init}!led.c@{led.c}}
+\doxysubsubsection{LED\_Init()}
+{\footnotesize\ttfamily void L\+E\+D\+\_\+\+Init (\begin{DoxyParamCaption}\item[{bool}]{state }\end{DoxyParamCaption})}
+
+
+
+Initiates the system to allow manipulation of the status L\+ED that exists on the L\+P\+C\+Xpresso L\+P\+C1769 prototyping board. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & Leave the L\+ED off when the status is false or lit when true. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 16 of file led.\+c.
+
+
+
+References led\+\_\+state.
+
+\mbox{\label{led_8c_af842f9996045107cd0841a4f0707fc65}} 
+\index{led.c@{led.c}!LED\_Off@{LED\_Off}}
+\index{LED\_Off@{LED\_Off}!led.c@{led.c}}
+\doxysubsubsection{LED\_Off()}
+{\footnotesize\ttfamily void L\+E\+D\+\_\+\+Off (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Turns off the L\+ED. 
+
+
+
+Definition at line 35 of file led.\+c.
+
+
+
+References led\+\_\+state.
+
+\mbox{\label{led_8c_a94ffebcdd3b5bbbf9a89e9f9ab52028d}} 
+\index{led.c@{led.c}!LED\_On@{LED\_On}}
+\index{LED\_On@{LED\_On}!led.c@{led.c}}
+\doxysubsubsection{LED\_On()}
+{\footnotesize\ttfamily void L\+E\+D\+\_\+\+On (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Turns on the L\+ED. 
+
+
+
+Definition at line 30 of file led.\+c.
+
+
+
+References led\+\_\+state.
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\label{led_8c_a172311489890fda0fd6c0562523f63c0}} 
+\index{led.c@{led.c}!led\_state@{led\_state}}
+\index{led\_state@{led\_state}!led.c@{led.c}}
+\doxysubsubsection{led\_state}
+{\footnotesize\ttfamily bool led\+\_\+state}
+
+
+
+Definition at line 14 of file led.\+c.
+
+
+
+Referenced by L\+E\+D\+\_\+\+Get\+State(), L\+E\+D\+\_\+\+Init(), L\+E\+D\+\_\+\+Off(), and L\+E\+D\+\_\+\+On().
+

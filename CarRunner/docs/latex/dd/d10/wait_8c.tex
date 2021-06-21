@@ -1,0 +1,54 @@
+\doxysection{C\+:/\+Users/josee/\+Documents/\+I\+S\+E\+L/3\+\_\+\+Ano-\/5\+\_\+\+Semestre/\+S\+E1/\+S\+E2021/src/wait.c File Reference}
+\label{wait_8c}\index{C:/Users/josee/Documents/ISEL/3\_Ano-\/5\_Semestre/SE1/SE2021/src/wait.c@{C:/Users/josee/Documents/ISEL/3\_Ano-\/5\_Semestre/SE1/SE2021/src/wait.c}}
+{\ttfamily \#include \char`\"{}wait.\+h\char`\"{}}\newline
+Include dependency graph for wait.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{d7/d47/wait_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ S\+Y\+S\+T\+I\+C\+K\+\_\+\+F\+R\+EQ}~(System\+Core\+Clock / 1000)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \textbf{ Sys\+Tick\+\_\+\+Handler} (void)
+\item 
+void \textbf{ W\+A\+I\+T\+\_\+\+Milliseconds} (uint32\+\_\+t millis)
+\begin{DoxyCompactList}\small\item\em Waits a number of milliseconds. \end{DoxyCompactList}\item 
+int32\+\_\+t \textbf{ W\+A\+I\+T\+\_\+\+Init} (void)
+\begin{DoxyCompactList}\small\item\em Initialises the wait A\+PI for 1 ms resolution. \end{DoxyCompactList}\item 
+uint32\+\_\+t \textbf{ W\+A\+I\+T\+\_\+\+Get\+Elapsed\+Millis} (uint32\+\_\+t start)
+\begin{DoxyCompactList}\small\item\em Get difference in milliseconds from parameter. \end{DoxyCompactList}\item 
+void \textbf{ W\+A\+I\+T\+\_\+\+Chrono\+Us} (uint32\+\_\+t wait\+Us)
+\begin{DoxyCompactList}\small\item\em Waits wait\+Us microseconds. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\label{wait_8c_a259bee748117476f5bf763c71a2f66a8}} 
+\index{wait.c@{wait.c}!SYSTICK\_FREQ@{SYSTICK\_FREQ}}
+\index{SYSTICK\_FREQ@{SYSTICK\_FREQ}!wait.c@{wait.c}}
+\doxysubsubsection{SYSTICK\_FREQ}
+{\footnotesize\ttfamily \#define S\+Y\+S\+T\+I\+C\+K\+\_\+\+F\+R\+EQ~(System\+Core\+Clock / 1000)}
+
+
+
+Definition at line 15 of file wait.\+c.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{wait_8c_ab5e09814056d617c521549e542639b7e}} 
+\index{wait.c@{wait.c}!SysTick\_Handler@{SysTick\_Handler}}
+\index{SysTick\_Handler@{SysTick\_Handler}!wait.c@{wait.c}}
+\doxysubsubsection{SysTick\_Handler()}
+{\footnotesize\ttfamily void Sys\+Tick\+\_\+\+Handler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 19 of file wait.\+c.
+

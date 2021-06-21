@@ -1,0 +1,204 @@
+@startuml inline_umlgraph_1.png
+    [*] -> gameRoutine
+    title CarRunner Game Routine
+    gameRoutine --> updateGameDesign : after delay s
+    gameRoutine --> updateGameLogic : after delay s
+    gameRoutine --> updateGameDesign : keypressed == L | R or tap detected
+    gameRoutine --> updateGameLogic : keypressed == L | R or tap detected
+    updateGameLogic --> gameRoutine
+    updateGameDesign --> gameRoutine
+    updateGameLogic : update_roads
+    updateGameLogic : check_gameOver
+    gameRoutine --> saveUser : gameOver
+    saveUser --> [*]
+@enduml
+@startuml inline_umlgraph_2.eps
+    [*] -> gameRoutine
+    title CarRunner Game Routine
+    gameRoutine --> updateGameDesign : after delay s
+    gameRoutine --> updateGameLogic : after delay s
+    gameRoutine --> updateGameDesign : keypressed == L | R or tap detected
+    gameRoutine --> updateGameLogic : keypressed == L | R or tap detected
+    updateGameLogic --> gameRoutine
+    updateGameDesign --> gameRoutine
+    updateGameLogic : update_roads
+    updateGameLogic : check_gameOver
+    gameRoutine --> saveUser : gameOver
+    saveUser --> [*]
+@enduml
+@startuml inline_umlgraph_3.png
+    [*] -> Time_changeRoutine
+    title CarRunner Change Date Time Routine
+    Time_changeRoutine --> AddTime : keypressed == L
+    AddTime: value++
+    Time_changeRoutine --> SubtractTime : keypressed == R
+    SubtractTime --> Time_changeRoutine
+    SubtractTime : value--
+    AddTime --> Time_changeRoutine
+    Time_changeRoutine --> ChangeTimeUnitOrExit : keypressed = S
+    ChangeTimeUnitOrExit : timeUnit++
+    ChangeTimeUnitOrExit --> Time_changeRoutine
+    ChangeTimeUnitOrExit --> [*]
+@enduml
+@startuml inline_umlgraph_4.eps
+    [*] -> Time_changeRoutine
+    title CarRunner Change Date Time Routine
+    Time_changeRoutine --> AddTime : keypressed == L
+    AddTime: value++
+    Time_changeRoutine --> SubtractTime : keypressed == R
+    SubtractTime --> Time_changeRoutine
+    SubtractTime : value--
+    AddTime --> Time_changeRoutine
+    Time_changeRoutine --> ChangeTimeUnitOrExit : keypressed = S
+    ChangeTimeUnitOrExit : timeUnit++
+    ChangeTimeUnitOrExit --> Time_changeRoutine
+    ChangeTimeUnitOrExit --> [*]
+@enduml
+@startuml inline_umlgraph_5.png
+   [*] -> initPeripherals
+   title CarRunner Main loop
+
+   initPeripherals --> waitEvent
+   waitEvent --> waitEvent : after 1s
+   waitEvent --> Game : keypressed == S and PRESSED
+   waitEvent --> Menu : keypressed == L&R for 2s
+   waitEvent : update_DateTimeDisplay
+   Game --> waitEvent
+   Menu --> waitEvent
+@enduml
+@startuml inline_umlgraph_6.eps
+   [*] -> initPeripherals
+   title CarRunner Main loop
+
+   initPeripherals --> waitEvent
+   waitEvent --> waitEvent : after 1s
+   waitEvent --> Game : keypressed == S and PRESSED
+   waitEvent --> Menu : keypressed == L&R for 2s
+   waitEvent : update_DateTimeDisplay
+   Game --> waitEvent
+   Menu --> waitEvent
+@enduml
+@startuml inline_umlgraph_7.png
+   [*] -> Menu
+   title CarRunner Menu
+
+   Menu --> Menu : keypressed == L | R
+   Menu : ShowMenuOption
+   Menu --> ChooseOption : keypressed = S
+   ChooseOption --> Time_changeRoutine
+   ChooseOption --> playerScoresShowdown
+   Menu --> [*]
+@enduml
+@startuml inline_umlgraph_8.eps
+   [*] -> Menu
+   title CarRunner Menu
+
+   Menu --> Menu : keypressed == L | R
+   Menu : ShowMenuOption
+   Menu --> ChooseOption : keypressed = S
+   ChooseOption --> Time_changeRoutine
+   ChooseOption --> playerScoresShowdown
+   Menu --> [*]
+@enduml
+@startuml inline_umlgraph_9.png
+    [*] -> playerScoresShowdown
+    title CarRunner Player Showdown
+    playerScoresShowdown --> nextPlayer : keypressed == R
+    playerScoresShowdown --> previousPlayer : keypressed == L
+    previousPlayer --> playerScoresShowdown
+    nextPlayer --> playerScoresShowdown
+
+    playerScoresShowdown --> [*] : keypressed = S
+@enduml
+@startuml inline_umlgraph_10.eps
+    [*] -> playerScoresShowdown
+    title CarRunner Player Showdown
+    playerScoresShowdown --> nextPlayer : keypressed == R
+    playerScoresShowdown --> previousPlayer : keypressed == L
+    previousPlayer --> playerScoresShowdown
+    nextPlayer --> playerScoresShowdown
+
+    playerScoresShowdown --> [*] : keypressed = S
+@enduml
+@startuml inline_umlgraph_11.png
+    [*] -> gameRoutine
+    title CarRunner Game Routine
+    gameRoutine --> updateGameDesign : after delay s
+    gameRoutine --> updateGameLogic : after delay s
+    gameRoutine --> updateGameDesign : keypressed == L | R or tap detected
+    gameRoutine --> updateGameLogic : keypressed == L | R or tap detected
+    updateGameLogic --> gameRoutine
+    updateGameDesign --> gameRoutine
+    updateGameLogic : update_roads
+    updateGameLogic : check_gameOver
+    gameRoutine --> saveUser : gameOver
+    saveUser --> [*]
+@enduml
+@startuml inline_umlgraph_12.eps
+    [*] -> gameRoutine
+    title CarRunner Game Routine
+    gameRoutine --> updateGameDesign : after delay s
+    gameRoutine --> updateGameLogic : after delay s
+    gameRoutine --> updateGameDesign : keypressed == L | R or tap detected
+    gameRoutine --> updateGameLogic : keypressed == L | R or tap detected
+    updateGameLogic --> gameRoutine
+    updateGameDesign --> gameRoutine
+    updateGameLogic : update_roads
+    updateGameLogic : check_gameOver
+    gameRoutine --> saveUser : gameOver
+    saveUser --> [*]
+@enduml
+@startuml inline_umlgraph_13.png
+    [*] -> saveUser
+    title CarRunner Save User
+    saveUser --> NextChar : keypressed == L
+    saveUser --> PreviousChar : keypressed == R
+    NextChar : char++
+    PreviousChar : char--
+    saveUser --> AddChar : keypressed == S
+    AddChar : name[i] = char
+    AddChar : i++
+    saveUser --> save : keypressed == S for 2 seconds
+    save --> [*]
+@enduml
+@startuml inline_umlgraph_14.eps
+    [*] -> saveUser
+    title CarRunner Save User
+    saveUser --> NextChar : keypressed == L
+    saveUser --> PreviousChar : keypressed == R
+    NextChar : char++
+    PreviousChar : char--
+    saveUser --> AddChar : keypressed == S
+    AddChar : name[i] = char
+    AddChar : i++
+    saveUser --> save : keypressed == S for 2 seconds
+    save --> [*]
+@enduml
+@startuml inline_umlgraph_15.png
+    [*] -> Time_changeRoutine
+    title CarRunner Change Date Time Routine
+    Time_changeRoutine --> AddTime : keypressed == L
+    AddTime: value++
+    Time_changeRoutine --> SubtractTime : keypressed == R
+    SubtractTime --> Time_changeRoutine
+    SubtractTime : value--
+    AddTime --> Time_changeRoutine
+    Time_changeRoutine --> ChangeTimeUnitOrExit : keypressed = S
+    ChangeTimeUnitOrExit : timeUnit++
+    ChangeTimeUnitOrExit --> Time_changeRoutine
+    ChangeTimeUnitOrExit --> [*]
+@enduml
+@startuml inline_umlgraph_16.eps
+    [*] -> Time_changeRoutine
+    title CarRunner Change Date Time Routine
+    Time_changeRoutine --> AddTime : keypressed == L
+    AddTime: value++
+    Time_changeRoutine --> SubtractTime : keypressed == R
+    SubtractTime --> Time_changeRoutine
+    SubtractTime : value--
+    AddTime --> Time_changeRoutine
+    Time_changeRoutine --> ChangeTimeUnitOrExit : keypressed = S
+    ChangeTimeUnitOrExit : timeUnit++
+    ChangeTimeUnitOrExit --> Time_changeRoutine
+    ChangeTimeUnitOrExit --> [*]
+@enduml

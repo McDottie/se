@@ -1,0 +1,4 @@
+<map id="FLASH_WriteArray" name="FLASH_WriteArray">
+<area shape="rect" id="node1" title="Writes an array to a data block. This Function can only access sectors from sector 16 to 29." alt="" coords="5,5,139,32"/>
+<area shape="rect" id="node2" href="$d3/d00/Flash_8c.html#a698f741fbd7c45bf458536045c2bd495" title="Deletes the contents of a sector, or multiple sectors, of FLASH. To delete only one sector,..." alt="" coords="187,5,337,32"/>
+</map>

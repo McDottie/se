@@ -1,0 +1,235 @@
+\doxysection{C\+:/\+Users/josee/\+Documents/\+I\+S\+E\+L/3\+\_\+\+Ano-\/5\+\_\+\+Semestre/\+S\+E1/\+S\+E2021/inc/\+Flash.h File Reference}
+\label{Flash_8h}\index{C:/Users/josee/Documents/ISEL/3\_Ano-\/5\_Semestre/SE1/SE2021/inc/Flash.h@{C:/Users/josee/Documents/ISEL/3\_Ano-\/5\_Semestre/SE1/SE2021/inc/Flash.h}}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ I\+A\+P\+\_\+\+C\+M\+D\+\_\+\+S\+U\+C\+E\+SS}~0
+\item 
+\#define \textbf{ I\+A\+P\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+C\+O\+M\+M\+A\+ND}~1
+\item 
+\#define \textbf{ I\+A\+P\+\_\+\+S\+R\+C\+\_\+\+A\+D\+D\+R\+\_\+\+E\+R\+R\+OR}~2
+\item 
+\#define \textbf{ I\+A\+P\+\_\+\+D\+S\+T\+\_\+\+A\+D\+D\+R\+\_\+\+E\+R\+R\+OR}~3
+\item 
+\#define \textbf{ I\+A\+P\+\_\+\+S\+R\+C\+\_\+\+A\+D\+D\+R\+\_\+\+N\+O\+T\+\_\+\+M\+A\+P\+P\+ED}~4
+\item 
+\#define \textbf{ I\+A\+P\+\_\+\+D\+S\+T\+\_\+\+A\+D\+D\+R\+\_\+\+N\+O\+T\+\_\+\+M\+A\+P\+P\+ED}~5
+\item 
+\#define \textbf{ I\+A\+P\+\_\+\+C\+O\+U\+N\+T\+\_\+\+E\+R\+R\+OR}~6
+\item 
+\#define \textbf{ I\+A\+P\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+S\+E\+C\+T\+OR}~7
+\item 
+\#define \textbf{ I\+A\+P\+\_\+\+S\+E\+C\+T\+O\+R\+\_\+\+N\+O\+T\+\_\+\+B\+L\+A\+NK}~8
+\item 
+\#define \textbf{ I\+A\+P\+\_\+\+S\+E\+C\+T\+O\+R\+\_\+\+N\+O\+T\+\_\+\+P\+R\+E\+P\+A\+R\+E\+D\+\_\+\+F\+O\+R\+\_\+\+W\+R\+I\+T\+E\+\_\+\+O\+P\+E\+R\+A\+T\+I\+ON}~9
+\item 
+\#define \textbf{ I\+A\+P\+\_\+\+C\+O\+M\+P\+A\+R\+E\+\_\+\+E\+R\+R\+OR}~10
+\item 
+\#define \textbf{ I\+A\+P\+\_\+\+B\+U\+SY}~11
+\item 
+\#define \textbf{ S\+E\+C\+T\+O\+R\+\_\+\+S\+I\+ZE}~32768
+\item 
+\#define \textbf{ sector28}~0x00070000
+\item 
+\#define \textbf{ sector29}~0x00078000
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \textbf{ F\+L\+A\+S\+H\+\_\+\+Erase\+Sectors} (unsigned int start\+Sector, unsigned int end\+Sector)
+\begin{DoxyCompactList}\small\item\em Deletes the contents of a sector, or multiple sectors, of F\+L\+A\+SH. To delete only one sector, the same sector number must be used for both parameters. \end{DoxyCompactList}\item 
+unsigned int \textbf{ F\+L\+A\+S\+H\+\_\+\+Write\+Data} (void $\ast$dst\+Addr, void $\ast$src\+Addr, unsigned int size)
+\begin{DoxyCompactList}\small\item\em Write the data block. This Function can only access sectors from sector 16 to 29. \end{DoxyCompactList}\item 
+unsigned int \textbf{ F\+L\+A\+S\+H\+\_\+\+Verify\+Data} (void $\ast$dst\+Addr, void $\ast$src\+Addr, unsigned int size)
+\begin{DoxyCompactList}\small\item\em Compares the contents of the data block. \end{DoxyCompactList}\item 
+unsigned int \textbf{ F\+L\+A\+S\+H\+\_\+\+Write\+Array} (void $\ast$dst\+Addr, int src\+Addr[$\,$], int array\+\_\+size, unsigned int size)
+\begin{DoxyCompactList}\small\item\em Writes an array to a data block. This Function can only access sectors from sector 16 to 29. \end{DoxyCompactList}\item 
+int \textbf{ F\+L\+A\+S\+H\+\_\+\+Write\+Block} (void $\ast$dst\+Addr, void $\ast$src\+Addr, unsigned int size)
+\item 
+unsigned int \textbf{ F\+L\+A\+S\+H\+\_\+\+Blanck\+Check} (unsigned int start\+Sector, unsigned int end\+Sector)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\label{Flash_8h_a717fc8cb2c79e2cdae13b7e9e3a7ccbd}} 
+\index{Flash.h@{Flash.h}!sector28@{sector28}}
+\index{sector28@{sector28}!Flash.h@{Flash.h}}
+\doxysubsubsection{sector28}
+{\footnotesize\ttfamily \#define sector28~0x00070000}
+
+Sector 28 adrress 
+
+Definition at line 36 of file Flash.\+h.
+
+\mbox{\label{Flash_8h_a325e91919e6e0b98e77f6c129446de9e}} 
+\index{Flash.h@{Flash.h}!sector29@{sector29}}
+\index{sector29@{sector29}!Flash.h@{Flash.h}}
+\doxysubsubsection{sector29}
+{\footnotesize\ttfamily \#define sector29~0x00078000}
+
+Sector 29 adrress 
+
+Definition at line 39 of file Flash.\+h.
+
+\mbox{\label{Flash_8h_aa35bad1e92008da628f27b2f6bb270aa}} 
+\index{Flash.h@{Flash.h}!SECTOR\_SIZE@{SECTOR\_SIZE}}
+\index{SECTOR\_SIZE@{SECTOR\_SIZE}!Flash.h@{Flash.h}}
+\doxysubsubsection{SECTOR\_SIZE}
+{\footnotesize\ttfamily \#define S\+E\+C\+T\+O\+R\+\_\+\+S\+I\+ZE~32768}
+
+Sectors sizes 
+
+Definition at line 33 of file Flash.\+h.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{Flash_8h_a8434ff2fd7738e952662618266f8d4ea}} 
+\index{Flash.h@{Flash.h}!FLASH\_BlanckCheck@{FLASH\_BlanckCheck}}
+\index{FLASH\_BlanckCheck@{FLASH\_BlanckCheck}!Flash.h@{Flash.h}}
+\doxysubsubsection{FLASH\_BlanckCheck()}
+{\footnotesize\ttfamily unsigned int F\+L\+A\+S\+H\+\_\+\+Blanck\+Check (\begin{DoxyParamCaption}\item[{unsigned int}]{start\+Sector,  }\item[{unsigned int}]{end\+Sector }\end{DoxyParamCaption})}
+
+
+
+Definition at line 115 of file Flash.\+c.
+
+
+
+References iap\+\_\+entry.
+
+
+
+Referenced by check\+Clean().
+
+\mbox{\label{Flash_8h_a698f741fbd7c45bf458536045c2bd495}} 
+\index{Flash.h@{Flash.h}!FLASH\_EraseSectors@{FLASH\_EraseSectors}}
+\index{FLASH\_EraseSectors@{FLASH\_EraseSectors}!Flash.h@{Flash.h}}
+\doxysubsubsection{FLASH\_EraseSectors()}
+{\footnotesize\ttfamily unsigned int F\+L\+A\+S\+H\+\_\+\+Erase\+Sectors (\begin{DoxyParamCaption}\item[{unsigned int}]{start\+Sector,  }\item[{unsigned int}]{end\+Sector }\end{DoxyParamCaption})}
+
+
+
+Deletes the contents of a sector, or multiple sectors, of F\+L\+A\+SH. To delete only one sector, the same sector number must be used for both parameters. 
+
+
+
+Definition at line 16 of file Flash.\+c.
+
+
+
+References I\+A\+P\+\_\+\+C\+M\+D\+\_\+\+S\+U\+C\+E\+SS, and iap\+\_\+entry.
+
+
+
+Referenced by F\+L\+A\+S\+H\+\_\+\+Write\+Array(), and F\+L\+A\+S\+H\+\_\+\+Write\+Data().
+
+\mbox{\label{Flash_8h_a34f8a70dbbe55c632a9135db50dce515}} 
+\index{Flash.h@{Flash.h}!FLASH\_VerifyData@{FLASH\_VerifyData}}
+\index{FLASH\_VerifyData@{FLASH\_VerifyData}!Flash.h@{Flash.h}}
+\doxysubsubsection{FLASH\_VerifyData()}
+{\footnotesize\ttfamily unsigned int F\+L\+A\+S\+H\+\_\+\+Verify\+Data (\begin{DoxyParamCaption}\item[{void $\ast$}]{dst\+Addr,  }\item[{void $\ast$}]{src\+Addr,  }\item[{unsigned int}]{size }\end{DoxyParamCaption})}
+
+
+
+Compares the contents of the data block. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em src\+Addr} & data block reference \\
+\hline
+{\em size} & size in bytes of the data block \\
+\hline
+{\em dst\+Addr} & data block to be compared to \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 70 of file Flash.\+c.
+
+
+
+References iap\+\_\+entry.
+
+\mbox{\label{Flash_8h_a76d88560bab0ad9d82dfdad535599652}} 
+\index{Flash.h@{Flash.h}!FLASH\_WriteArray@{FLASH\_WriteArray}}
+\index{FLASH\_WriteArray@{FLASH\_WriteArray}!Flash.h@{Flash.h}}
+\doxysubsubsection{FLASH\_WriteArray()}
+{\footnotesize\ttfamily unsigned int F\+L\+A\+S\+H\+\_\+\+Write\+Array (\begin{DoxyParamCaption}\item[{void $\ast$}]{dst\+Addr,  }\item[{int}]{src\+Addr[$\,$],  }\item[{int}]{array\+\_\+size,  }\item[{unsigned int}]{size }\end{DoxyParamCaption})}
+
+
+
+Writes an array to a data block. This Function can only access sectors from sector 16 to 29. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em src\+Addr} & array to be written \\
+\hline
+{\em array\+\_\+size} & size of the array \\
+\hline
+{\em size} & block size \\
+\hline
+{\em dst\+Addr} & Flash address \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 83 of file Flash.\+c.
+
+
+
+References F\+L\+A\+S\+H\+\_\+\+Erase\+Sectors(), I\+A\+P\+\_\+\+C\+M\+D\+\_\+\+S\+U\+C\+E\+SS, iap\+\_\+entry, and S\+E\+C\+T\+O\+R\+\_\+\+S\+I\+ZE.
+
+
+
+Referenced by save\+Score().
+
+\mbox{\label{Flash_8h_a6e88ebccaaac4dc6f071ebd23d08036b}} 
+\index{Flash.h@{Flash.h}!FLASH\_WriteBlock@{FLASH\_WriteBlock}}
+\index{FLASH\_WriteBlock@{FLASH\_WriteBlock}!Flash.h@{Flash.h}}
+\doxysubsubsection{FLASH\_WriteBlock()}
+{\footnotesize\ttfamily int F\+L\+A\+S\+H\+\_\+\+Write\+Block (\begin{DoxyParamCaption}\item[{void $\ast$}]{dst\+Addr,  }\item[{void $\ast$}]{src\+Addr,  }\item[{unsigned int}]{size }\end{DoxyParamCaption})}
+
+
+
+Definition at line 53 of file Flash.\+c.
+
+
+
+References iap\+\_\+entry.
+
+
+
+Referenced by F\+L\+A\+S\+H\+\_\+\+Write\+Data().
+
+\mbox{\label{Flash_8h_a3db6ec18c90224fb77b17365442f9247}} 
+\index{Flash.h@{Flash.h}!FLASH\_WriteData@{FLASH\_WriteData}}
+\index{FLASH\_WriteData@{FLASH\_WriteData}!Flash.h@{Flash.h}}
+\doxysubsubsection{FLASH\_WriteData()}
+{\footnotesize\ttfamily unsigned int F\+L\+A\+S\+H\+\_\+\+Write\+Data (\begin{DoxyParamCaption}\item[{void $\ast$}]{dst\+Addr,  }\item[{void $\ast$}]{src\+Addr,  }\item[{unsigned int}]{size }\end{DoxyParamCaption})}
+
+
+
+Write the data block. This Function can only access sectors from sector 16 to 29. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em src\+Addr} & data block pointer \\
+\hline
+{\em size} & block size \\
+\hline
+{\em dst\+Addr} & Flash address \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 36 of file Flash.\+c.
+
+
+
+References F\+L\+A\+S\+H\+\_\+\+Erase\+Sectors(), F\+L\+A\+S\+H\+\_\+\+Write\+Block(), I\+A\+P\+\_\+\+C\+M\+D\+\_\+\+S\+U\+C\+E\+SS, iap\+\_\+entry, and S\+E\+C\+T\+O\+R\+\_\+\+S\+I\+ZE.
+
+
+
+Referenced by check\+Clean().
+

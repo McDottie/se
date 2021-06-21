@@ -1,0 +1,8 @@
+<map id="ADXL345_Init" name="ADXL345_Init">
+<area shape="rect" id="node1" title="Initializes the ADXL345 Peripheral." alt="" coords="5,56,104,83"/>
+<area shape="rect" id="node2" href="$d4/ddb/ADXL345_8c.html#a0e11c845302c3c61651b273be2fd0cf9" title=" " alt="" coords="333,5,428,32"/>
+<area shape="rect" id="node4" href="$d4/ddb/ADXL345_8c.html#a6a554e6ac4d26bac4b26dd8a4d0a45f8" title="Configs taping." alt="" coords="181,31,255,57"/>
+<area shape="rect" id="node5" href="$d4/ddb/ADXL345_8c.html#af3310a0deedc61822abc7ea3007d68d5" title=" " alt="" coords="332,56,429,83"/>
+<area shape="rect" id="node6" href="$da/d87/spi_8h.html#afdfd38280ebbf6be99ed3540c0678313" title="Configures the transfer." alt="" coords="152,132,284,159"/>
+<area shape="rect" id="node3" href="$da/d87/spi_8h.html#adf7db1666629f8a6c11d0be20e592940" title="Makes a transfer. Returns the success or error in the transfer." alt="" coords="477,31,573,57"/>
+</map>

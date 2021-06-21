@@ -1,0 +1,175 @@
+\doxysection{C\+:/\+Users/josee/\+Documents/\+I\+S\+E\+L/3\+\_\+\+Ano-\/5\+\_\+\+Semestre/\+S\+E1/\+S\+E2021/inc/button.h File Reference}
+\label{button_8h}\index{C:/Users/josee/Documents/ISEL/3\_Ano-\/5\_Semestre/SE1/SE2021/inc/button.h@{C:/Users/josee/Documents/ISEL/3\_Ano-\/5\_Semestre/SE1/SE2021/inc/button.h}}
+
+
+Contains the button A\+PI.  
+
+
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \textbf{ key\+\_\+state}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ P\+R\+E\+S\+S\+ED}~0
+\item 
+\#define \textbf{ R\+E\+L\+E\+A\+S\+ED}~1
+\item 
+\#define \textbf{ R\+E\+P\+E\+A\+T\+ED}~2
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \textbf{ B\+U\+T\+T\+O\+N\+\_\+\+Init} (void)
+\begin{DoxyCompactList}\small\item\em Initializes the system to premit the access to buttons. \end{DoxyCompactList}\item 
+int \textbf{ B\+U\+T\+T\+O\+N\+\_\+\+Hit} (void)
+\begin{DoxyCompactList}\small\item\em Gets pressed button non-\/blocking version. \end{DoxyCompactList}\item 
+int \textbf{ B\+U\+T\+T\+O\+N\+\_\+\+Read} (void)
+\begin{DoxyCompactList}\small\item\em Gets pressed button blocking version. \end{DoxyCompactList}\item 
+\textbf{ key\+\_\+state} \textbf{ B\+U\+T\+T\+O\+N\+\_\+\+Get\+Buttons\+Events} (void)
+\begin{DoxyCompactList}\small\item\em Pressed button state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Contains the button A\+PI. 
+
+\begin{DoxyVersion}{Version}
+1.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+3 Nov 2020 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+Jose Filipe Cruz dos Santos 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\label{button_8h_a654adff3c664f27f0b29c24af818dd26}} 
+\index{button.h@{button.h}!PRESSED@{PRESSED}}
+\index{PRESSED@{PRESSED}!button.h@{button.h}}
+\doxysubsubsection{PRESSED}
+{\footnotesize\ttfamily \#define P\+R\+E\+S\+S\+ED~0}
+
+
+
+Definition at line 13 of file button.\+h.
+
+\mbox{\label{button_8h_ad74b7f5218b46c8332cd531df7178d45}} 
+\index{button.h@{button.h}!RELEASED@{RELEASED}}
+\index{RELEASED@{RELEASED}!button.h@{button.h}}
+\doxysubsubsection{RELEASED}
+{\footnotesize\ttfamily \#define R\+E\+L\+E\+A\+S\+ED~1}
+
+
+
+Definition at line 14 of file button.\+h.
+
+\mbox{\label{button_8h_ab75389a8a36ba24ff75c7bd7f47cfc09}} 
+\index{button.h@{button.h}!REPEATED@{REPEATED}}
+\index{REPEATED@{REPEATED}!button.h@{button.h}}
+\doxysubsubsection{REPEATED}
+{\footnotesize\ttfamily \#define R\+E\+P\+E\+A\+T\+ED~2}
+
+
+
+Definition at line 15 of file button.\+h.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{button_8h_a2944f616818b235ccbc2415f7e3b902f}} 
+\index{button.h@{button.h}!BUTTON\_GetButtonsEvents@{BUTTON\_GetButtonsEvents}}
+\index{BUTTON\_GetButtonsEvents@{BUTTON\_GetButtonsEvents}!button.h@{button.h}}
+\doxysubsubsection{BUTTON\_GetButtonsEvents()}
+{\footnotesize\ttfamily \textbf{ key\+\_\+state} B\+U\+T\+T\+O\+N\+\_\+\+Get\+Buttons\+Events (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Pressed button state. 
+
+\begin{DoxyReturn}{Returns}
+button state code (bitmap)\+: pressed ,released , repeated 
+\end{DoxyReturn}
+
+
+Definition at line 72 of file button.\+c.
+
+
+
+References B\+U\+T\+T\+O\+N\+\_\+\+Hit(), and key\+State.
+
+
+
+Referenced by game\+Routine(), main(), Menu(), player\+Scores\+Show\+Down(), save\+User(), and Time\+\_\+change\+Routine().
+
+\mbox{\label{button_8h_a9f00b0aebf4efaa3684a0e2ed2bfee08}} 
+\index{button.h@{button.h}!BUTTON\_Hit@{BUTTON\_Hit}}
+\index{BUTTON\_Hit@{BUTTON\_Hit}!button.h@{button.h}}
+\doxysubsubsection{BUTTON\_Hit()}
+{\footnotesize\ttfamily int B\+U\+T\+T\+O\+N\+\_\+\+Hit (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Gets pressed button non-\/blocking version. 
+
+\begin{DoxyReturn}{Returns}
+button code (bitmap) if pressed otherwise -\/1 
+\end{DoxyReturn}
+
+
+Definition at line 41 of file button.\+c.
+
+
+
+References B\+U\+T\+T\+O\+N\+\_\+\+O\+NE, key\+\_\+state\+::key, key\+State, P\+R\+E\+S\+S\+ED, R\+E\+L\+E\+A\+S\+ED, R\+E\+P\+E\+A\+T\+ED, key\+\_\+state\+::state, and W\+A\+I\+T\+\_\+\+Chrono\+Us().
+
+
+
+Referenced by B\+U\+T\+T\+O\+N\+\_\+\+Get\+Buttons\+Events(), B\+U\+T\+T\+O\+N\+\_\+\+Init(), and B\+U\+T\+T\+O\+N\+\_\+\+Read().
+
+\mbox{\label{button_8h_aa550fbf7e9db2cbff32e2e878b25e56b}} 
+\index{button.h@{button.h}!BUTTON\_Init@{BUTTON\_Init}}
+\index{BUTTON\_Init@{BUTTON\_Init}!button.h@{button.h}}
+\doxysubsubsection{BUTTON\_Init()}
+{\footnotesize\ttfamily void B\+U\+T\+T\+O\+N\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initializes the system to premit the access to buttons. 
+
+Initializes the system to premit the access to buttons. 
+
+Definition at line 32 of file button.\+c.
+
+
+
+References B\+U\+T\+T\+O\+N\+\_\+\+Hit(), B\+U\+T\+T\+O\+N\+\_\+\+O\+NE, and key\+State.
+
+
+
+Referenced by main().
+
+\mbox{\label{button_8h_a12337b45f487876c9fde8a07328ac13b}} 
+\index{button.h@{button.h}!BUTTON\_Read@{BUTTON\_Read}}
+\index{BUTTON\_Read@{BUTTON\_Read}!button.h@{button.h}}
+\doxysubsubsection{BUTTON\_Read()}
+{\footnotesize\ttfamily int B\+U\+T\+T\+O\+N\+\_\+\+Read (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Gets pressed button blocking version. 
+
+\begin{DoxyReturn}{Returns}
+button code (bitmap) when pressed
+\end{DoxyReturn}
+Gets pressed button blocking version. 
+
+Definition at line 64 of file button.\+c.
+
+
+
+References B\+U\+T\+T\+O\+N\+\_\+\+Hit().
+

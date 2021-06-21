@@ -1,0 +1,102 @@
+\doxysection{C\+:/\+Users/josee/\+Documents/\+I\+S\+E\+L/3\+\_\+\+Ano-\/5\+\_\+\+Semestre/\+S\+E1/\+Car\+Runner/inc/saver.h File Reference}
+\label{saver_8h}\index{C:/Users/josee/Documents/ISEL/3\_Ano-\/5\_Semestre/SE1/CarRunner/inc/saver.h@{C:/Users/josee/Documents/ISEL/3\_Ano-\/5\_Semestre/SE1/CarRunner/inc/saver.h}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \textbf{ save\+Score} (int score, char $\ast$name, int name\+\_\+size)
+\item 
+int $\ast$ \textbf{ read\+Scores} ()
+\begin{DoxyCompactList}\small\item\em reads from flash all the scores \end{DoxyCompactList}\item 
+int \textbf{ list\+Size} ()
+\item 
+void \textbf{ read\+Names} (char $\ast$strings[$\,$])
+\begin{DoxyCompactList}\small\item\em function that reads from flash all the names its required that strings is started with size[list\+Size][17] to accommodate for max size names \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{saver_8h_a9c3b350969d650fdb9eb332f355aabc8}} 
+\index{saver.h@{saver.h}!listSize@{listSize}}
+\index{listSize@{listSize}!saver.h@{saver.h}}
+\doxysubsubsection{listSize()}
+{\footnotesize\ttfamily int list\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+the current number of players that exist 
+\end{DoxyReturn}
+
+
+Definition at line 83 of file saver.\+c.
+
+
+
+References check\+Clean(), and names.
+
+
+
+Referenced by player\+Scores\+Show\+Down().
+
+\mbox{\label{saver_8h_a66bcbb74da6580309611caac3a022592}} 
+\index{saver.h@{saver.h}!readNames@{readNames}}
+\index{readNames@{readNames}!saver.h@{saver.h}}
+\doxysubsubsection{readNames()}
+{\footnotesize\ttfamily void read\+Names (\begin{DoxyParamCaption}\item[{char $\ast$}]{strings[$\,$] }\end{DoxyParamCaption})}
+
+
+
+function that reads from flash all the names its required that strings is started with size[list\+Size][17] to accommodate for max size names 
+
+
+
+Definition at line 89 of file saver.\+c.
+
+
+
+References names.
+
+
+
+Referenced by player\+Scores\+Show\+Down().
+
+\mbox{\label{saver_8h_a2970ebb257cd1fd2595b817dd35fe21b}} 
+\index{saver.h@{saver.h}!readScores@{readScores}}
+\index{readScores@{readScores}!saver.h@{saver.h}}
+\doxysubsubsection{readScores()}
+{\footnotesize\ttfamily int$\ast$ read\+Scores (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+reads from flash all the scores 
+
+\begin{DoxyReturn}{Returns}
+array of scores 
+\end{DoxyReturn}
+
+
+Definition at line 70 of file saver.\+c.
+
+
+
+References check\+Clean(), and scores.
+
+
+
+Referenced by game\+Routine(), and player\+Scores\+Show\+Down().
+
+\mbox{\label{saver_8h_a80a44e8469613fd1a9b7078f5f012bd1}} 
+\index{saver.h@{saver.h}!saveScore@{saveScore}}
+\index{saveScore@{saveScore}!saver.h@{saver.h}}
+\doxysubsubsection{saveScore()}
+{\footnotesize\ttfamily void save\+Score (\begin{DoxyParamCaption}\item[{int}]{score,  }\item[{char $\ast$}]{name,  }\item[{int}]{name\+\_\+size }\end{DoxyParamCaption})}
+
+
+
+Definition at line 22 of file saver.\+c.
+
+
+
+References check\+Clean(), F\+L\+A\+S\+H\+\_\+\+Write\+Array(), I\+A\+P\+\_\+\+C\+M\+D\+\_\+\+S\+U\+C\+E\+SS, names, and scores.
+
+
+
+Referenced by save\+User().
+

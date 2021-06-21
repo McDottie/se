@@ -1,0 +1,364 @@
+\doxysection{C\+:/\+Users/josee/\+Documents/\+I\+S\+E\+L/3\+\_\+\+Ano-\/5\+\_\+\+Semestre/\+S\+E1/\+S\+E2021/inc/\+A\+D\+X\+L345.h File Reference}
+\label{ADXL345_8h}\index{C:/Users/josee/Documents/ISEL/3\_Ano-\/5\_Semestre/SE1/SE2021/inc/ADXL345.h@{C:/Users/josee/Documents/ISEL/3\_Ano-\/5\_Semestre/SE1/SE2021/inc/ADXL345.h}}
+
+
+Contains the A\+D\+X\+L345 A\+PI.  
+
+
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+Include dependency graph for A\+D\+X\+L345.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=223pt]{d6/ddd/ADXL345_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ A\+D\+X\+L345\+\_\+\+D\+E\+V\+I\+D\+\_\+\+R\+E\+S\+E\+T\+\_\+\+V\+A\+L\+UE}~(0x00\+E5)
+\item 
+\#define \textbf{ A\+D\+X\+L345\+\_\+\+R\+E\+G\+\_\+\+D\+E\+V\+ID}~(0x00)
+\item 
+\#define \textbf{ A\+D\+X\+L345\+\_\+\+R\+E\+G\+\_\+\+T\+H\+R\+E\+S\+H\+\_\+\+T\+AP}~(0x1D)
+\item 
+\#define \textbf{ A\+D\+X\+L345\+\_\+\+R\+E\+G\+\_\+\+D\+UR}~(0x21)
+\item 
+\#define \textbf{ A\+D\+X\+L345\+\_\+\+R\+E\+G\+\_\+\+L\+A\+T\+E\+NT}~(0x22)
+\item 
+\#define \textbf{ A\+D\+X\+L345\+\_\+\+R\+E\+G\+\_\+\+W\+I\+N\+D\+OW}~(0x23)
+\item 
+\#define \textbf{ A\+D\+X\+L345\+\_\+\+R\+E\+G\+\_\+\+T\+H\+R\+E\+S\+H\+\_\+\+A\+CT}~(0x24)
+\item 
+\#define \textbf{ A\+D\+X\+L345\+\_\+\+R\+E\+G\+\_\+\+T\+A\+P\+\_\+\+A\+X\+ES}~(0x2A)
+\item 
+\#define \textbf{ A\+D\+X\+L345\+\_\+\+R\+E\+G\+\_\+\+A\+C\+T\+\_\+\+T\+A\+P\+\_\+\+S\+T\+A\+T\+US}~(0x2B)
+\item 
+\#define \textbf{ A\+D\+X\+L345\+\_\+\+R\+E\+G\+\_\+\+B\+W\+\_\+\+R\+A\+TE}~(0x2C)
+\item 
+\#define \textbf{ A\+D\+X\+L345\+\_\+\+R\+E\+G\+\_\+\+P\+O\+W\+E\+R\+\_\+\+C\+TL}~(0x2D)
+\item 
+\#define \textbf{ A\+D\+X\+L345\+\_\+\+R\+E\+G\+\_\+\+I\+N\+T\+\_\+\+E\+N\+A\+B\+LE}~(0x2E)
+\item 
+\#define \textbf{ A\+D\+X\+L345\+\_\+\+R\+E\+G\+\_\+\+I\+N\+T\+\_\+\+M\+AP}~(0x2F)
+\item 
+\#define \textbf{ A\+D\+X\+L345\+\_\+\+R\+E\+G\+\_\+\+I\+N\+T\+\_\+\+S\+O\+U\+R\+CE}~(0x30)
+\item 
+\#define \textbf{ A\+D\+X\+L345\+\_\+\+R\+E\+G\+\_\+\+D\+A\+T\+A\+\_\+\+F\+O\+R\+M\+AT}~(0x31)
+\item 
+\#define \textbf{ A\+D\+X\+L345\+\_\+\+R\+E\+G\+\_\+\+D\+A\+T\+A\+X0}~(0x32)
+\item 
+\#define \textbf{ A\+D\+X\+L345\+\_\+\+R\+E\+G\+\_\+\+D\+A\+T\+A\+X1}~(0x33)
+\item 
+\#define \textbf{ A\+D\+X\+L345\+\_\+\+R\+E\+G\+\_\+\+D\+A\+T\+A\+Y0}~(0x34)
+\item 
+\#define \textbf{ A\+D\+X\+L345\+\_\+\+R\+E\+G\+\_\+\+D\+A\+T\+A\+Y1}~(0x35)
+\item 
+\#define \textbf{ A\+D\+X\+L345\+\_\+\+R\+E\+G\+\_\+\+D\+A\+T\+A\+Z0}~(0x36)
+\item 
+\#define \textbf{ A\+D\+X\+L345\+\_\+\+R\+E\+G\+\_\+\+D\+A\+T\+A\+Z1}~(0x37)
+\item 
+\#define \textbf{ A\+D\+X\+L345\+\_\+\+G\+R\+A\+V\+I\+T\+Y\+\_\+\+S\+UN}~273.\+95f
+\item 
+\#define \textbf{ A\+D\+X\+L345\+\_\+\+G\+R\+A\+V\+I\+T\+Y\+\_\+\+E\+A\+R\+TH}~9.\+80665f
+\item 
+\#define \textbf{ A\+D\+X\+L345\+\_\+\+G\+R\+A\+V\+I\+T\+Y\+\_\+\+M\+O\+ON}~1.\+622f
+\item 
+\#define \textbf{ A\+D\+X\+L345\+\_\+\+G\+R\+A\+V\+I\+T\+Y\+\_\+\+M\+A\+RS}~3.\+69f
+\item 
+\#define \textbf{ A\+D\+X\+L345\+\_\+\+G\+R\+A\+V\+I\+T\+Y\+\_\+\+N\+O\+NE}~1.\+00f
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \textbf{ A\+D\+X345\+\_\+\+Data\+Rate\+\_\+t} \{ \newline
+\textbf{ A\+D\+X\+L345\+\_\+\+D\+A\+T\+A\+R\+A\+T\+E\+\_\+3200\+HZ} = 0b1111, 
+\textbf{ A\+D\+X\+L345\+\_\+\+D\+A\+T\+A\+R\+A\+T\+E\+\_\+1600\+HZ} = 0b1110, 
+\textbf{ A\+D\+X\+L345\+\_\+\+D\+A\+T\+A\+R\+A\+T\+E\+\_\+800\+HZ} = 0b1101, 
+\textbf{ A\+D\+X\+L345\+\_\+\+D\+A\+T\+A\+R\+A\+T\+E\+\_\+400\+HZ} = 0b1100, 
+\newline
+\textbf{ A\+D\+X\+L345\+\_\+\+D\+A\+T\+A\+R\+A\+T\+E\+\_\+200\+HZ} = 0b1011, 
+\textbf{ A\+D\+X\+L345\+\_\+\+D\+A\+T\+A\+R\+A\+T\+E\+\_\+100\+HZ} = 0b1010, 
+\textbf{ A\+D\+X\+L345\+\_\+\+D\+A\+T\+A\+R\+A\+T\+E\+\_\+50\+HZ} = 0b1001, 
+\textbf{ A\+D\+X\+L345\+\_\+\+D\+A\+T\+A\+R\+A\+T\+E\+\_\+25\+HZ} = 0b1000, 
+\newline
+\textbf{ A\+D\+X\+L345\+\_\+\+D\+A\+T\+A\+R\+A\+T\+E\+\_\+12\+\_\+5\+HZ} = 0b0111, 
+\textbf{ A\+D\+X\+L345\+\_\+\+D\+A\+T\+A\+R\+A\+T\+E\+\_\+6\+\_\+25\+HZ} = 0b0110, 
+\textbf{ A\+D\+X\+L345\+\_\+\+D\+A\+T\+A\+R\+A\+T\+E\+\_\+3\+\_\+13\+HZ} = 0b0101, 
+\textbf{ A\+D\+X\+L345\+\_\+\+D\+A\+T\+A\+R\+A\+T\+E\+\_\+1\+\_\+56\+HZ} = 0b0100, 
+\newline
+\textbf{ A\+D\+X\+L345\+\_\+\+D\+A\+T\+A\+R\+A\+T\+E\+\_\+0\+\_\+78\+HZ} = 0b0011, 
+\textbf{ A\+D\+X\+L345\+\_\+\+D\+A\+T\+A\+R\+A\+T\+E\+\_\+0\+\_\+39\+HZ} = 0b0010, 
+\textbf{ A\+D\+X\+L345\+\_\+\+D\+A\+T\+A\+R\+A\+T\+E\+\_\+0\+\_\+20\+HZ} = 0b0001, 
+\textbf{ A\+D\+X\+L345\+\_\+\+D\+A\+T\+A\+R\+A\+T\+E\+\_\+0\+\_\+10\+HZ} = 0b0000
+ \}
+\item 
+enum \textbf{ A\+D\+X345\+\_\+\+Range\+\_\+t} \{ \textbf{ A\+D\+X\+L345\+\_\+\+R\+A\+N\+G\+E\+\_\+16G} = 0b11, 
+\textbf{ A\+D\+X\+L345\+\_\+\+R\+A\+N\+G\+E\+\_\+8G} = 0b10, 
+\textbf{ A\+D\+X\+L345\+\_\+\+R\+A\+N\+G\+E\+\_\+4G} = 0b01, 
+\textbf{ A\+D\+X\+L345\+\_\+\+R\+A\+N\+G\+E\+\_\+2G} = 0b00
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \textbf{ A\+D\+X\+L345\+\_\+\+Init} (void)
+\begin{DoxyCompactList}\small\item\em Initializes the A\+D\+X\+L345 Peripheral. \end{DoxyCompactList}\item 
+void \textbf{ setup\+Tap} (float threshold, float duration, float latency, float window)
+\begin{DoxyCompactList}\small\item\em Configs taping. \end{DoxyCompactList}\item 
+bool \textbf{ A\+D\+X\+L345\+\_\+is\+Tap} ()
+\begin{DoxyCompactList}\small\item\em Checks if it was tapped can\textquotesingle{}t be use with A\+D\+X\+L345\+\_\+is\+Double\+Tap. \end{DoxyCompactList}\item 
+bool \textbf{ A\+D\+X\+L345\+\_\+is\+Double\+Tap} ()
+\begin{DoxyCompactList}\small\item\em Checks if it was double tapped can\textquotesingle{}t be use with A\+D\+X\+L345\+\_\+is\+Tap. \end{DoxyCompactList}\item 
+int \textbf{ A\+D\+X\+L345\+\_\+\+Read} (float $\ast$x\+\_\+value, float $\ast$y\+\_\+value, float $\ast$z\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Reads A\+D\+X\+L345 data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Contains the A\+D\+X\+L345 A\+PI. 
+
+\begin{DoxyVersion}{Version}
+1.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+8 Jan 2020 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+Jose Filipe Cruz dos Santos 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\label{ADXL345_8h_a4b57ccec449cacb2e7d1aa89e6416355}} 
+\index{ADXL345.h@{ADXL345.h}!ADX345\_DataRate\_t@{ADX345\_DataRate\_t}}
+\index{ADX345\_DataRate\_t@{ADX345\_DataRate\_t}!ADXL345.h@{ADXL345.h}}
+\doxysubsubsection{ADX345\_DataRate\_t}
+{\footnotesize\ttfamily enum \textbf{ A\+D\+X345\+\_\+\+Data\+Rate\+\_\+t}}
+
+Data Rates \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADXL345\_DATARATE\_3200HZ@{ADXL345\_DATARATE\_3200HZ}!ADXL345.h@{ADXL345.h}}\index{ADXL345.h@{ADXL345.h}!ADXL345\_DATARATE\_3200HZ@{ADXL345\_DATARATE\_3200HZ}}}\mbox{\label{ADXL345_8h_a4b57ccec449cacb2e7d1aa89e6416355a08d837f35dceeb38bd7effc9c66e72be}} 
+A\+D\+X\+L345\+\_\+\+D\+A\+T\+A\+R\+A\+T\+E\+\_\+3200\+HZ&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADXL345\_DATARATE\_1600HZ@{ADXL345\_DATARATE\_1600HZ}!ADXL345.h@{ADXL345.h}}\index{ADXL345.h@{ADXL345.h}!ADXL345\_DATARATE\_1600HZ@{ADXL345\_DATARATE\_1600HZ}}}\mbox{\label{ADXL345_8h_a4b57ccec449cacb2e7d1aa89e6416355ad54656dc288532bda5822b04b2170f20}} 
+A\+D\+X\+L345\+\_\+\+D\+A\+T\+A\+R\+A\+T\+E\+\_\+1600\+HZ&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADXL345\_DATARATE\_800HZ@{ADXL345\_DATARATE\_800HZ}!ADXL345.h@{ADXL345.h}}\index{ADXL345.h@{ADXL345.h}!ADXL345\_DATARATE\_800HZ@{ADXL345\_DATARATE\_800HZ}}}\mbox{\label{ADXL345_8h_a4b57ccec449cacb2e7d1aa89e6416355ac3e455db9f299325db37d0f15c94b30b}} 
+A\+D\+X\+L345\+\_\+\+D\+A\+T\+A\+R\+A\+T\+E\+\_\+800\+HZ&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADXL345\_DATARATE\_400HZ@{ADXL345\_DATARATE\_400HZ}!ADXL345.h@{ADXL345.h}}\index{ADXL345.h@{ADXL345.h}!ADXL345\_DATARATE\_400HZ@{ADXL345\_DATARATE\_400HZ}}}\mbox{\label{ADXL345_8h_a4b57ccec449cacb2e7d1aa89e6416355a4d23138b36b807ca8242cff26151c1cf}} 
+A\+D\+X\+L345\+\_\+\+D\+A\+T\+A\+R\+A\+T\+E\+\_\+400\+HZ&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADXL345\_DATARATE\_200HZ@{ADXL345\_DATARATE\_200HZ}!ADXL345.h@{ADXL345.h}}\index{ADXL345.h@{ADXL345.h}!ADXL345\_DATARATE\_200HZ@{ADXL345\_DATARATE\_200HZ}}}\mbox{\label{ADXL345_8h_a4b57ccec449cacb2e7d1aa89e6416355a7d2ef06f6bca352dc9f9ab658c9cdb05}} 
+A\+D\+X\+L345\+\_\+\+D\+A\+T\+A\+R\+A\+T\+E\+\_\+200\+HZ&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADXL345\_DATARATE\_100HZ@{ADXL345\_DATARATE\_100HZ}!ADXL345.h@{ADXL345.h}}\index{ADXL345.h@{ADXL345.h}!ADXL345\_DATARATE\_100HZ@{ADXL345\_DATARATE\_100HZ}}}\mbox{\label{ADXL345_8h_a4b57ccec449cacb2e7d1aa89e6416355ad50ef6b3433a8d1073ec80661814ac4c}} 
+A\+D\+X\+L345\+\_\+\+D\+A\+T\+A\+R\+A\+T\+E\+\_\+100\+HZ&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADXL345\_DATARATE\_50HZ@{ADXL345\_DATARATE\_50HZ}!ADXL345.h@{ADXL345.h}}\index{ADXL345.h@{ADXL345.h}!ADXL345\_DATARATE\_50HZ@{ADXL345\_DATARATE\_50HZ}}}\mbox{\label{ADXL345_8h_a4b57ccec449cacb2e7d1aa89e6416355a0b400a26a6bca2763d1aa3d20156a286}} 
+A\+D\+X\+L345\+\_\+\+D\+A\+T\+A\+R\+A\+T\+E\+\_\+50\+HZ&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADXL345\_DATARATE\_25HZ@{ADXL345\_DATARATE\_25HZ}!ADXL345.h@{ADXL345.h}}\index{ADXL345.h@{ADXL345.h}!ADXL345\_DATARATE\_25HZ@{ADXL345\_DATARATE\_25HZ}}}\mbox{\label{ADXL345_8h_a4b57ccec449cacb2e7d1aa89e6416355a2e356981f6730d09415ef7175cd3e969}} 
+A\+D\+X\+L345\+\_\+\+D\+A\+T\+A\+R\+A\+T\+E\+\_\+25\+HZ&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADXL345\_DATARATE\_12\_5HZ@{ADXL345\_DATARATE\_12\_5HZ}!ADXL345.h@{ADXL345.h}}\index{ADXL345.h@{ADXL345.h}!ADXL345\_DATARATE\_12\_5HZ@{ADXL345\_DATARATE\_12\_5HZ}}}\mbox{\label{ADXL345_8h_a4b57ccec449cacb2e7d1aa89e6416355ae7579d13a727fc4175410a0aa517e6eb}} 
+A\+D\+X\+L345\+\_\+\+D\+A\+T\+A\+R\+A\+T\+E\+\_\+12\+\_\+5\+HZ&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADXL345\_DATARATE\_6\_25HZ@{ADXL345\_DATARATE\_6\_25HZ}!ADXL345.h@{ADXL345.h}}\index{ADXL345.h@{ADXL345.h}!ADXL345\_DATARATE\_6\_25HZ@{ADXL345\_DATARATE\_6\_25HZ}}}\mbox{\label{ADXL345_8h_a4b57ccec449cacb2e7d1aa89e6416355a2ca5f3f0c789f55f0ea2950e88a0d10f}} 
+A\+D\+X\+L345\+\_\+\+D\+A\+T\+A\+R\+A\+T\+E\+\_\+6\+\_\+25\+HZ&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADXL345\_DATARATE\_3\_13HZ@{ADXL345\_DATARATE\_3\_13HZ}!ADXL345.h@{ADXL345.h}}\index{ADXL345.h@{ADXL345.h}!ADXL345\_DATARATE\_3\_13HZ@{ADXL345\_DATARATE\_3\_13HZ}}}\mbox{\label{ADXL345_8h_a4b57ccec449cacb2e7d1aa89e6416355a4cb70cebaca3306ab9cef10821285ff8}} 
+A\+D\+X\+L345\+\_\+\+D\+A\+T\+A\+R\+A\+T\+E\+\_\+3\+\_\+13\+HZ&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADXL345\_DATARATE\_1\_56HZ@{ADXL345\_DATARATE\_1\_56HZ}!ADXL345.h@{ADXL345.h}}\index{ADXL345.h@{ADXL345.h}!ADXL345\_DATARATE\_1\_56HZ@{ADXL345\_DATARATE\_1\_56HZ}}}\mbox{\label{ADXL345_8h_a4b57ccec449cacb2e7d1aa89e6416355acd9ea648f7422d14defba70ebd4d0c69}} 
+A\+D\+X\+L345\+\_\+\+D\+A\+T\+A\+R\+A\+T\+E\+\_\+1\+\_\+56\+HZ&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADXL345\_DATARATE\_0\_78HZ@{ADXL345\_DATARATE\_0\_78HZ}!ADXL345.h@{ADXL345.h}}\index{ADXL345.h@{ADXL345.h}!ADXL345\_DATARATE\_0\_78HZ@{ADXL345\_DATARATE\_0\_78HZ}}}\mbox{\label{ADXL345_8h_a4b57ccec449cacb2e7d1aa89e6416355a23395d3313d19f3ecab715d007faf737}} 
+A\+D\+X\+L345\+\_\+\+D\+A\+T\+A\+R\+A\+T\+E\+\_\+0\+\_\+78\+HZ&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADXL345\_DATARATE\_0\_39HZ@{ADXL345\_DATARATE\_0\_39HZ}!ADXL345.h@{ADXL345.h}}\index{ADXL345.h@{ADXL345.h}!ADXL345\_DATARATE\_0\_39HZ@{ADXL345\_DATARATE\_0\_39HZ}}}\mbox{\label{ADXL345_8h_a4b57ccec449cacb2e7d1aa89e6416355a9517c5661f560d9274bce0f02f92eef0}} 
+A\+D\+X\+L345\+\_\+\+D\+A\+T\+A\+R\+A\+T\+E\+\_\+0\+\_\+39\+HZ&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADXL345\_DATARATE\_0\_20HZ@{ADXL345\_DATARATE\_0\_20HZ}!ADXL345.h@{ADXL345.h}}\index{ADXL345.h@{ADXL345.h}!ADXL345\_DATARATE\_0\_20HZ@{ADXL345\_DATARATE\_0\_20HZ}}}\mbox{\label{ADXL345_8h_a4b57ccec449cacb2e7d1aa89e6416355ac1effd43feccf8673a2162686dc02cd4}} 
+A\+D\+X\+L345\+\_\+\+D\+A\+T\+A\+R\+A\+T\+E\+\_\+0\+\_\+20\+HZ&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADXL345\_DATARATE\_0\_10HZ@{ADXL345\_DATARATE\_0\_10HZ}!ADXL345.h@{ADXL345.h}}\index{ADXL345.h@{ADXL345.h}!ADXL345\_DATARATE\_0\_10HZ@{ADXL345\_DATARATE\_0\_10HZ}}}\mbox{\label{ADXL345_8h_a4b57ccec449cacb2e7d1aa89e6416355a7ef42db0dc5ef80ae000d9567dce9f23}} 
+A\+D\+X\+L345\+\_\+\+D\+A\+T\+A\+R\+A\+T\+E\+\_\+0\+\_\+10\+HZ&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 95 of file A\+D\+X\+L345.\+h.
+
+\mbox{\label{ADXL345_8h_a5ea6ae5aace0e199d7bcf6ba2c106fe4}} 
+\index{ADXL345.h@{ADXL345.h}!ADX345\_Range\_t@{ADX345\_Range\_t}}
+\index{ADX345\_Range\_t@{ADX345\_Range\_t}!ADXL345.h@{ADXL345.h}}
+\doxysubsubsection{ADX345\_Range\_t}
+{\footnotesize\ttfamily enum \textbf{ A\+D\+X345\+\_\+\+Range\+\_\+t}}
+
+Data Ranges \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADXL345\_RANGE\_16G@{ADXL345\_RANGE\_16G}!ADXL345.h@{ADXL345.h}}\index{ADXL345.h@{ADXL345.h}!ADXL345\_RANGE\_16G@{ADXL345\_RANGE\_16G}}}\mbox{\label{ADXL345_8h_a5ea6ae5aace0e199d7bcf6ba2c106fe4ae5641dd5b58e2fdb7018903fb9c4e21b}} 
+A\+D\+X\+L345\+\_\+\+R\+A\+N\+G\+E\+\_\+16G&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADXL345\_RANGE\_8G@{ADXL345\_RANGE\_8G}!ADXL345.h@{ADXL345.h}}\index{ADXL345.h@{ADXL345.h}!ADXL345\_RANGE\_8G@{ADXL345\_RANGE\_8G}}}\mbox{\label{ADXL345_8h_a5ea6ae5aace0e199d7bcf6ba2c106fe4a84324e3172d029f3e0c74370b120d215}} 
+A\+D\+X\+L345\+\_\+\+R\+A\+N\+G\+E\+\_\+8G&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADXL345\_RANGE\_4G@{ADXL345\_RANGE\_4G}!ADXL345.h@{ADXL345.h}}\index{ADXL345.h@{ADXL345.h}!ADXL345\_RANGE\_4G@{ADXL345\_RANGE\_4G}}}\mbox{\label{ADXL345_8h_a5ea6ae5aace0e199d7bcf6ba2c106fe4af4839f1f2c196d523d8be06641263548}} 
+A\+D\+X\+L345\+\_\+\+R\+A\+N\+G\+E\+\_\+4G&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADXL345\_RANGE\_2G@{ADXL345\_RANGE\_2G}!ADXL345.h@{ADXL345.h}}\index{ADXL345.h@{ADXL345.h}!ADXL345\_RANGE\_2G@{ADXL345\_RANGE\_2G}}}\mbox{\label{ADXL345_8h_a5ea6ae5aace0e199d7bcf6ba2c106fe4adbe3b6f849ede28b1367a75f650fdc62}} 
+A\+D\+X\+L345\+\_\+\+R\+A\+N\+G\+E\+\_\+2G&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 118 of file A\+D\+X\+L345.\+h.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{ADXL345_8h_a8b534976940f09e90a216c7bcfbf8dd6}} 
+\index{ADXL345.h@{ADXL345.h}!ADXL345\_Init@{ADXL345\_Init}}
+\index{ADXL345\_Init@{ADXL345\_Init}!ADXL345.h@{ADXL345.h}}
+\doxysubsubsection{ADXL345\_Init()}
+{\footnotesize\ttfamily int A\+D\+X\+L345\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initializes the A\+D\+X\+L345 Peripheral. 
+
+
+
+Definition at line 37 of file A\+D\+X\+L345.\+c.
+
+
+
+References A\+D\+X\+L345\+\_\+\+D\+A\+T\+A\+R\+A\+T\+E\+\_\+100\+HZ, A\+D\+X\+L345\+\_\+\+D\+E\+V\+I\+D\+\_\+\+R\+E\+S\+E\+T\+\_\+\+V\+A\+L\+UE, A\+D\+X\+L345\+\_\+\+R\+A\+N\+G\+E\+\_\+2G, A\+D\+X\+L345\+\_\+\+R\+E\+G\+\_\+\+B\+W\+\_\+\+R\+A\+TE, A\+D\+X\+L345\+\_\+\+R\+E\+G\+\_\+\+D\+A\+T\+A\+\_\+\+F\+O\+R\+M\+AT, A\+D\+X\+L345\+\_\+\+R\+E\+G\+\_\+\+D\+E\+V\+ID, A\+D\+X\+L345\+\_\+\+R\+E\+G\+\_\+\+P\+O\+W\+E\+R\+\_\+\+C\+TL, read\+Register(), setup\+Tap(), S\+P\+I\+\_\+\+Config\+Transfer(), and write\+Register().
+
+
+
+Referenced by main().
+
+\mbox{\label{ADXL345_8h_a3751151b7eba20da7a279cf4ce45d7cb}} 
+\index{ADXL345.h@{ADXL345.h}!ADXL345\_isDoubleTap@{ADXL345\_isDoubleTap}}
+\index{ADXL345\_isDoubleTap@{ADXL345\_isDoubleTap}!ADXL345.h@{ADXL345.h}}
+\doxysubsubsection{ADXL345\_isDoubleTap()}
+{\footnotesize\ttfamily bool A\+D\+X\+L345\+\_\+is\+Double\+Tap (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Checks if it was double tapped can\textquotesingle{}t be use with A\+D\+X\+L345\+\_\+is\+Tap. 
+
+
+
+Definition at line 118 of file A\+D\+X\+L345.\+c.
+
+
+
+References A\+D\+X\+L345\+\_\+\+R\+E\+G\+\_\+\+I\+N\+T\+\_\+\+S\+O\+U\+R\+CE, and read\+Register().
+
+\mbox{\label{ADXL345_8h_aae8e9036157ce6d4564f064f0695ee51}} 
+\index{ADXL345.h@{ADXL345.h}!ADXL345\_isTap@{ADXL345\_isTap}}
+\index{ADXL345\_isTap@{ADXL345\_isTap}!ADXL345.h@{ADXL345.h}}
+\doxysubsubsection{ADXL345\_isTap()}
+{\footnotesize\ttfamily bool A\+D\+X\+L345\+\_\+is\+Tap (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Checks if it was tapped can\textquotesingle{}t be use with A\+D\+X\+L345\+\_\+is\+Double\+Tap. 
+
+
+
+Definition at line 112 of file A\+D\+X\+L345.\+c.
+
+
+
+References A\+D\+X\+L345\+\_\+\+R\+E\+G\+\_\+\+I\+N\+T\+\_\+\+S\+O\+U\+R\+CE, and read\+Register().
+
+
+
+Referenced by game\+Routine().
+
+\mbox{\label{ADXL345_8h_ae54c23328bc72ec7359eecef4ce2ed83}} 
+\index{ADXL345.h@{ADXL345.h}!ADXL345\_Read@{ADXL345\_Read}}
+\index{ADXL345\_Read@{ADXL345\_Read}!ADXL345.h@{ADXL345.h}}
+\doxysubsubsection{ADXL345\_Read()}
+{\footnotesize\ttfamily int A\+D\+X\+L345\+\_\+\+Read (\begin{DoxyParamCaption}\item[{float $\ast$}]{x\+\_\+value,  }\item[{float $\ast$}]{y\+\_\+value,  }\item[{float $\ast$}]{z\+\_\+value }\end{DoxyParamCaption})}
+
+
+
+Reads A\+D\+X\+L345 data. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em x\+\_\+value} & x axis value \\
+\hline
+\mbox{\texttt{ out}}  & {\em y\+\_\+value} & y axis value \\
+\hline
+\mbox{\texttt{ out}}  & {\em z\+\_\+value} & z axis value \\
+\hline
+\end{DoxyParams}
+X value
+
+Y value
+
+Z value
+
+Definition at line 124 of file A\+D\+X\+L345.\+c.
+
+
+
+References A\+D\+X\+L345\+\_\+\+R\+E\+G\+\_\+\+D\+A\+T\+A\+X0, A\+D\+X\+L345\+\_\+\+R\+E\+G\+\_\+\+D\+A\+T\+A\+X1, A\+D\+X\+L345\+\_\+\+R\+E\+G\+\_\+\+D\+A\+T\+A\+Y0, A\+D\+X\+L345\+\_\+\+R\+E\+G\+\_\+\+D\+A\+T\+A\+Y1, A\+D\+X\+L345\+\_\+\+R\+E\+G\+\_\+\+D\+A\+T\+A\+Z0, A\+D\+X\+L345\+\_\+\+R\+E\+G\+\_\+\+D\+A\+T\+A\+Z1, and read\+Register().
+
+\mbox{\label{ADXL345_8h_a6a554e6ac4d26bac4b26dd8a4d0a45f8}} 
+\index{ADXL345.h@{ADXL345.h}!setupTap@{setupTap}}
+\index{setupTap@{setupTap}!ADXL345.h@{ADXL345.h}}
+\doxysubsubsection{setupTap()}
+{\footnotesize\ttfamily void setup\+Tap (\begin{DoxyParamCaption}\item[{float}]{threshold,  }\item[{float}]{duration,  }\item[{float}]{latency,  }\item[{float}]{window }\end{DoxyParamCaption})}
+
+
+
+Configs taping. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em treshold} & defines treshold \\
+\hline
+{\em duration} & defines max duration of tap \\
+\hline
+{\em latency} & defines latency for double tap \\
+\hline
+{\em window} & defines window for double tap \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 78 of file A\+D\+X\+L345.\+c.
+
+
+
+References A\+D\+X\+L345\+\_\+\+R\+E\+G\+\_\+\+D\+UR, A\+D\+X\+L345\+\_\+\+R\+E\+G\+\_\+\+I\+N\+T\+\_\+\+E\+N\+A\+B\+LE, A\+D\+X\+L345\+\_\+\+R\+E\+G\+\_\+\+I\+N\+T\+\_\+\+M\+AP, A\+D\+X\+L345\+\_\+\+R\+E\+G\+\_\+\+L\+A\+T\+E\+NT, A\+D\+X\+L345\+\_\+\+R\+E\+G\+\_\+\+T\+A\+P\+\_\+\+A\+X\+ES, A\+D\+X\+L345\+\_\+\+R\+E\+G\+\_\+\+T\+H\+R\+E\+S\+H\+\_\+\+T\+AP, A\+D\+X\+L345\+\_\+\+R\+E\+G\+\_\+\+W\+I\+N\+D\+OW, read\+Register(), and write\+Register().
+
+
+
+Referenced by A\+D\+X\+L345\+\_\+\+Init().
+

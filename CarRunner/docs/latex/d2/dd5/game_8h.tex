@@ -1,0 +1,60 @@
+\doxysection{C\+:/\+Users/josee/\+Documents/\+I\+S\+E\+L/3\+\_\+\+Ano-\/5\+\_\+\+Semestre/\+S\+E1/\+Car\+Runner/inc/game.h File Reference}
+\label{game_8h}\index{C:/Users/josee/Documents/ISEL/3\_Ano-\/5\_Semestre/SE1/CarRunner/inc/game.h@{C:/Users/josee/Documents/ISEL/3\_Ano-\/5\_Semestre/SE1/CarRunner/inc/game.h}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \textbf{ game\+Init} ()
+\begin{DoxyCompactList}\small\item\em initializes the module \end{DoxyCompactList}\item 
+void \textbf{ game\+Routine} (void)
+\begin{DoxyCompactList}\small\item\em routine that interfaces with buttons, lcd and accelerometer to play the game. It also saves scores and player names. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{game_8h_a43ae9a7f0ac55585ed6375c580abcaf0}} 
+\index{game.h@{game.h}!gameInit@{gameInit}}
+\index{gameInit@{gameInit}!game.h@{game.h}}
+\doxysubsubsection{gameInit()}
+{\footnotesize\ttfamily void game\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+initializes the module 
+
+
+
+Definition at line 30 of file game.\+c.
+
+
+
+References car, and L\+C\+D\+Text\+\_\+\+Create\+Char().
+
+
+
+Referenced by main().
+
+\mbox{\label{game_8h_a7f21d8803ae2415c0414f9d09018204f}} 
+\index{game.h@{game.h}!gameRoutine@{gameRoutine}}
+\index{gameRoutine@{gameRoutine}!game.h@{game.h}}
+\doxysubsubsection{gameRoutine()}
+{\footnotesize\ttfamily void game\+Routine (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+routine that interfaces with buttons, lcd and accelerometer to play the game. It also saves scores and player names. 
+
+
+\begin{DoxyImageNoCaption}
+  \mbox{\includegraphics[width=\textwidth,height=\textheight/2,keepaspectratio=true]{inline_umlgraph_2}}
+\end{DoxyImageNoCaption}
+ 
+
+Definition at line 56 of file game.\+c.
+
+
+
+References A\+D\+X\+L345\+\_\+is\+Tap(), B\+U\+T\+T\+O\+N\+\_\+\+Get\+Buttons\+Events(), car, delay, init\+Values(), key\+\_\+state\+::key, L, L\+C\+D\+Text\+\_\+\+Clear(), L\+C\+D\+Text\+\_\+\+Locate(), L\+C\+D\+Text\+\_\+\+Printf(), L\+C\+D\+Text\+\_\+\+Write\+String(), points, P\+R\+E\+S\+S\+ED, R, read\+Scores(), save\+User(), key\+\_\+state\+::state, update\+Game\+Design(), update\+Game\+Logic(), W\+A\+I\+T\+\_\+\+Chrono\+Us(), and W\+A\+I\+T\+\_\+\+Get\+Elapsed\+Millis().
+
+
+
+Referenced by main().
+

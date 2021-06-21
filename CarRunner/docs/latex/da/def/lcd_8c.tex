@@ -1,0 +1,398 @@
+\doxysection{C\+:/\+Users/josee/\+Documents/\+I\+S\+E\+L/3\+\_\+\+Ano-\/5\+\_\+\+Semestre/\+S\+E1/\+S\+E2021/src/lcd.c File Reference}
+\label{lcd_8c}\index{C:/Users/josee/Documents/ISEL/3\_Ano-\/5\_Semestre/SE1/SE2021/src/lcd.c@{C:/Users/josee/Documents/ISEL/3\_Ano-\/5\_Semestre/SE1/SE2021/src/lcd.c}}
+{\ttfamily \#include \char`\"{}lcd.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}wait.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdarg.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+Include dependency graph for lcd.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=312pt]{db/dad/lcd_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ EN}~0
+\item 
+\#define \textbf{ RS}~1
+\item 
+\#define \textbf{ D\+B4}~6
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \textbf{ L\+C\+D\+Text\+\_\+\+Write\+Nibble} (char data, unsigned int rs)
+\item 
+void \textbf{ L\+C\+D\+Text\+\_\+\+Write\+Byte} (char data, unsigned int rs)
+\item 
+void \textbf{ L\+C\+D\+Text\+\_\+\+Init} (void)
+\begin{DoxyCompactList}\small\item\em Initiates the system to allow access to the L\+CD peripheral, using 2 lines with 16 columns and 4-\/bit communication. \end{DoxyCompactList}\item 
+void \textbf{ L\+C\+D\+Text\+\_\+\+Create\+Char} (unsigned char location, unsigned char charmap[$\,$])
+\begin{DoxyCompactList}\small\item\em Creates a character. \end{DoxyCompactList}\item 
+void \textbf{ L\+C\+D\+Text\+\_\+\+Write\+Cmd} (char cmd)
+\begin{DoxyCompactList}\small\item\em Gives an instruction to the L\+CD controller. \end{DoxyCompactList}\item 
+void \textbf{ L\+C\+D\+Text\+\_\+\+Write\+Char} (char ch)
+\begin{DoxyCompactList}\small\item\em Writes a character at the current cursor position. \end{DoxyCompactList}\item 
+void \textbf{ L\+C\+D\+Text\+\_\+\+Write\+String} (char $\ast$str)
+\begin{DoxyCompactList}\small\item\em Writes a string at the current cursor position. \end{DoxyCompactList}\item 
+void \textbf{ L\+C\+D\+Text\+\_\+\+Locate} (int row, int column)
+\begin{DoxyCompactList}\small\item\em Positions the cursor on the row and column of the display. \end{DoxyCompactList}\item 
+void \textbf{ L\+C\+D\+Text\+\_\+\+Clear} (void)
+\begin{DoxyCompactList}\small\item\em Clear the display using the command available in the peripheral A\+PI. \end{DoxyCompactList}\item 
+void \textbf{ L\+C\+D\+Text\+\_\+\+Printf} (char $\ast$fmt,...)
+\begin{DoxyCompactList}\small\item\em Writes the string fmt at the current cursor position. \end{DoxyCompactList}\item 
+void \textbf{ L\+C\+D\+Text\+\_\+\+Cursor\+On} ()
+\begin{DoxyCompactList}\small\item\em Turns on display cursor on. \end{DoxyCompactList}\item 
+void \textbf{ L\+C\+D\+Text\+\_\+\+Cursor\+Off} ()
+\begin{DoxyCompactList}\small\item\em Turns on display cursor off. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \textbf{ x}
+\item 
+int \textbf{ y}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\label{lcd_8c_acdecad1b5b1abdca1ba50a47addef513}} 
+\index{lcd.c@{lcd.c}!DB4@{DB4}}
+\index{DB4@{DB4}!lcd.c@{lcd.c}}
+\doxysubsubsection{DB4}
+{\footnotesize\ttfamily \#define D\+B4~6}
+
+
+
+Definition at line 19 of file lcd.\+c.
+
+\mbox{\label{lcd_8c_a22e6626f2c98ed902f8ded47f6438c05}} 
+\index{lcd.c@{lcd.c}!EN@{EN}}
+\index{EN@{EN}!lcd.c@{lcd.c}}
+\doxysubsubsection{EN}
+{\footnotesize\ttfamily \#define EN~0}
+
+
+
+Definition at line 17 of file lcd.\+c.
+
+\mbox{\label{lcd_8c_af8903d8eea3868940c60af887473b152}} 
+\index{lcd.c@{lcd.c}!RS@{RS}}
+\index{RS@{RS}!lcd.c@{lcd.c}}
+\doxysubsubsection{RS}
+{\footnotesize\ttfamily \#define RS~1}
+
+
+
+Definition at line 18 of file lcd.\+c.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{lcd_8c_ac1bdd6893daf2ea4733bfb2f40020378}} 
+\index{lcd.c@{lcd.c}!LCDText\_Clear@{LCDText\_Clear}}
+\index{LCDText\_Clear@{LCDText\_Clear}!lcd.c@{lcd.c}}
+\doxysubsubsection{LCDText\_Clear()}
+{\footnotesize\ttfamily void L\+C\+D\+Text\+\_\+\+Clear (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Clear the display using the command available in the peripheral A\+PI. 
+
+
+
+Definition at line 129 of file lcd.\+c.
+
+
+
+References L\+C\+D\+Text\+\_\+\+C\+M\+D\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+\_\+\+C\+L\+E\+AR, L\+C\+D\+Text\+\_\+\+Locate(), L\+C\+D\+Text\+\_\+\+Write\+Cmd(), and W\+A\+I\+T\+\_\+\+Chrono\+Us().
+
+
+
+Referenced by game\+Routine(), L\+C\+D\+Text\+\_\+\+Init(), Menu(), player\+Scores\+Show\+Down(), save\+User(), and Time\+\_\+change\+Routine().
+
+\mbox{\label{lcd_8c_a3375b768752a6c245966fcf02457de34}} 
+\index{lcd.c@{lcd.c}!LCDText\_CreateChar@{LCDText\_CreateChar}}
+\index{LCDText\_CreateChar@{LCDText\_CreateChar}!lcd.c@{lcd.c}}
+\doxysubsubsection{LCDText\_CreateChar()}
+{\footnotesize\ttfamily void L\+C\+D\+Text\+\_\+\+Create\+Char (\begin{DoxyParamCaption}\item[{unsigned char}]{location,  }\item[{unsigned char}]{charmap[$\,$] }\end{DoxyParamCaption})}
+
+
+
+Creates a character. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em location} & position in the character table \\
+\hline
+{\em charmap} & character design \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 69 of file lcd.\+c.
+
+
+
+References L\+C\+D\+Text\+\_\+\+Write\+Byte(), L\+C\+D\+Text\+\_\+\+Write\+Cmd(), and W\+A\+I\+T\+\_\+\+Chrono\+Us().
+
+
+
+Referenced by game\+Init(), and L\+C\+D\+Text\+\_\+\+Init().
+
+\mbox{\label{lcd_8c_a41162ebb05d61924fa1b0f3be6f2d8da}} 
+\index{lcd.c@{lcd.c}!LCDText\_CursorOff@{LCDText\_CursorOff}}
+\index{LCDText\_CursorOff@{LCDText\_CursorOff}!lcd.c@{lcd.c}}
+\doxysubsubsection{LCDText\_CursorOff()}
+{\footnotesize\ttfamily void L\+C\+D\+Text\+\_\+\+Cursor\+Off (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Turns on display cursor off. 
+
+
+
+Definition at line 148 of file lcd.\+c.
+
+
+
+References L\+C\+D\+Text\+\_\+\+C\+M\+D\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+\_\+\+ON, and L\+C\+D\+Text\+\_\+\+Write\+Cmd().
+
+
+
+Referenced by save\+User(), and Time\+\_\+change\+Routine().
+
+\mbox{\label{lcd_8c_ac96c6e567210f2be3ef3a477ddefd3fd}} 
+\index{lcd.c@{lcd.c}!LCDText\_CursorOn@{LCDText\_CursorOn}}
+\index{LCDText\_CursorOn@{LCDText\_CursorOn}!lcd.c@{lcd.c}}
+\doxysubsubsection{LCDText\_CursorOn()}
+{\footnotesize\ttfamily void L\+C\+D\+Text\+\_\+\+Cursor\+On (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Turns on display cursor on. 
+
+
+
+Definition at line 144 of file lcd.\+c.
+
+
+
+References L\+C\+D\+Text\+\_\+\+C\+M\+D\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+\_\+\+ON, and L\+C\+D\+Text\+\_\+\+Write\+Cmd().
+
+
+
+Referenced by save\+User(), and Time\+\_\+change\+Routine().
+
+\mbox{\label{lcd_8c_a762016d9342f7dbec16ae36654031760}} 
+\index{lcd.c@{lcd.c}!LCDText\_Init@{LCDText\_Init}}
+\index{LCDText\_Init@{LCDText\_Init}!lcd.c@{lcd.c}}
+\doxysubsubsection{LCDText\_Init()}
+{\footnotesize\ttfamily void L\+C\+D\+Text\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initiates the system to allow access to the L\+CD peripheral, using 2 lines with 16 columns and 4-\/bit communication. 
+
+
+
+Definition at line 45 of file lcd.\+c.
+
+
+
+References D\+B4, EN, L\+C\+D\+Text\+\_\+\+Clear(), L\+C\+D\+Text\+\_\+\+C\+M\+D\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+\_\+\+O\+FF, L\+C\+D\+Text\+\_\+\+C\+M\+D\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+\_\+\+ON, L\+C\+D\+Text\+\_\+\+C\+M\+D\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+M\+O\+D\+E\+\_\+\+S\+ET, L\+C\+D\+Text\+\_\+\+C\+M\+D\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+S\+ET, L\+C\+D\+Text\+\_\+\+Create\+Char(), L\+C\+D\+Text\+\_\+\+Locate(), L\+C\+D\+Text\+\_\+\+Write\+Cmd(), L\+C\+D\+Text\+\_\+\+Write\+Nibble(), RS, and W\+A\+I\+T\+\_\+\+Chrono\+Us().
+
+
+
+Referenced by main().
+
+\mbox{\label{lcd_8c_a7187e0fca7d1666198d63c6c972edee7}} 
+\index{lcd.c@{lcd.c}!LCDText\_Locate@{LCDText\_Locate}}
+\index{LCDText\_Locate@{LCDText\_Locate}!lcd.c@{lcd.c}}
+\doxysubsubsection{LCDText\_Locate()}
+{\footnotesize\ttfamily void L\+C\+D\+Text\+\_\+\+Locate (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{column }\end{DoxyParamCaption})}
+
+
+
+Positions the cursor on the row and column of the display. 
+
+Coloca o cursor na posicao (x,y) 
+\begin{DoxyParams}{Parameters}
+{\em row} & from 1 to 2 \\
+\hline
+{\em column} & from 0 to 15 \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 114 of file lcd.\+c.
+
+
+
+References L\+C\+D\+Text\+\_\+\+C\+M\+D\+\_\+\+S\+E\+T\+\_\+\+D\+D\+R\+A\+M\+\_\+\+A\+D\+DR, L\+C\+D\+Text\+\_\+\+C\+O\+L\+U\+M\+NS, L\+C\+D\+Text\+\_\+\+L\+I\+N\+E\+\_\+\+O\+F\+F\+S\+ET, L\+C\+D\+Text\+\_\+\+L\+I\+N\+ES, L\+C\+D\+Text\+\_\+\+Write\+Cmd(), x, and y.
+
+
+
+Referenced by game\+Routine(), L\+C\+D\+Text\+\_\+\+Clear(), L\+C\+D\+Text\+\_\+\+Init(), L\+C\+D\+Text\+\_\+\+Write\+String(), save\+User(), Time\+\_\+change\+Routine(), update\+\_\+\+Date\+Time\+Display(), and update\+Game\+Design().
+
+\mbox{\label{lcd_8c_abd9c9f5eb0a5e3cb33bd38f4b34a389b}} 
+\index{lcd.c@{lcd.c}!LCDText\_Printf@{LCDText\_Printf}}
+\index{LCDText\_Printf@{LCDText\_Printf}!lcd.c@{lcd.c}}
+\doxysubsubsection{LCDText\_Printf()}
+{\footnotesize\ttfamily void L\+C\+D\+Text\+\_\+\+Printf (\begin{DoxyParamCaption}\item[{char $\ast$}]{fmt,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+
+
+Writes the string fmt at the current cursor position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fmt} & format of the string \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 135 of file lcd.\+c.
+
+
+
+References L\+C\+D\+Text\+\_\+\+Write\+String().
+
+
+
+Referenced by game\+Routine(), and player\+Scores\+Show\+Down().
+
+\mbox{\label{lcd_8c_ae68ea4f2f700e363bc506f60b5815793}} 
+\index{lcd.c@{lcd.c}!LCDText\_WriteByte@{LCDText\_WriteByte}}
+\index{LCDText\_WriteByte@{LCDText\_WriteByte}!lcd.c@{lcd.c}}
+\doxysubsubsection{LCDText\_WriteByte()}
+{\footnotesize\ttfamily void L\+C\+D\+Text\+\_\+\+Write\+Byte (\begin{DoxyParamCaption}\item[{char}]{data,  }\item[{unsigned int}]{rs }\end{DoxyParamCaption})}
+
+
+
+Definition at line 40 of file lcd.\+c.
+
+
+
+References L\+C\+D\+Text\+\_\+\+Write\+Nibble().
+
+
+
+Referenced by L\+C\+D\+Text\+\_\+\+Create\+Char(), L\+C\+D\+Text\+\_\+\+Write\+Char(), and L\+C\+D\+Text\+\_\+\+Write\+Cmd().
+
+\mbox{\label{lcd_8c_ae2457428e83fd94180055837bd9f9675}} 
+\index{lcd.c@{lcd.c}!LCDText\_WriteChar@{LCDText\_WriteChar}}
+\index{LCDText\_WriteChar@{LCDText\_WriteChar}!lcd.c@{lcd.c}}
+\doxysubsubsection{LCDText\_WriteChar()}
+{\footnotesize\ttfamily void L\+C\+D\+Text\+\_\+\+Write\+Char (\begin{DoxyParamCaption}\item[{char}]{ch }\end{DoxyParamCaption})}
+
+
+
+Writes a character at the current cursor position. 
+
+
+
+Definition at line 86 of file lcd.\+c.
+
+
+
+References L\+C\+D\+Text\+\_\+\+D\+A\+TA, L\+C\+D\+Text\+\_\+\+Write\+Byte(), W\+A\+I\+T\+\_\+\+Chrono\+Us(), and x.
+
+
+
+Referenced by L\+C\+D\+Text\+\_\+\+Write\+String(), and save\+User().
+
+\mbox{\label{lcd_8c_a5f19eb2778765403be28d81489dcb0b1}} 
+\index{lcd.c@{lcd.c}!LCDText\_WriteCmd@{LCDText\_WriteCmd}}
+\index{LCDText\_WriteCmd@{LCDText\_WriteCmd}!lcd.c@{lcd.c}}
+\doxysubsubsection{LCDText\_WriteCmd()}
+{\footnotesize\ttfamily void L\+C\+D\+Text\+\_\+\+Write\+Cmd (\begin{DoxyParamCaption}\item[{char}]{cmd }\end{DoxyParamCaption})}
+
+
+
+Gives an instruction to the L\+CD controller. 
+
+
+
+Definition at line 81 of file lcd.\+c.
+
+
+
+References L\+C\+D\+Text\+\_\+\+C\+MD, L\+C\+D\+Text\+\_\+\+Write\+Byte(), and W\+A\+I\+T\+\_\+\+Chrono\+Us().
+
+
+
+Referenced by L\+C\+D\+Text\+\_\+\+Clear(), L\+C\+D\+Text\+\_\+\+Create\+Char(), L\+C\+D\+Text\+\_\+\+Cursor\+Off(), L\+C\+D\+Text\+\_\+\+Cursor\+On(), L\+C\+D\+Text\+\_\+\+Init(), and L\+C\+D\+Text\+\_\+\+Locate().
+
+\mbox{\label{lcd_8c_a882a67a85b9762e0ffa3bf12c4212770}} 
+\index{lcd.c@{lcd.c}!LCDText\_WriteNibble@{LCDText\_WriteNibble}}
+\index{LCDText\_WriteNibble@{LCDText\_WriteNibble}!lcd.c@{lcd.c}}
+\doxysubsubsection{LCDText\_WriteNibble()}
+{\footnotesize\ttfamily void L\+C\+D\+Text\+\_\+\+Write\+Nibble (\begin{DoxyParamCaption}\item[{char}]{data,  }\item[{unsigned int}]{rs }\end{DoxyParamCaption})}
+
+
+
+Definition at line 23 of file lcd.\+c.
+
+
+
+References D\+B4, EN, RS, and W\+A\+I\+T\+\_\+\+Chrono\+Us().
+
+
+
+Referenced by L\+C\+D\+Text\+\_\+\+Init(), and L\+C\+D\+Text\+\_\+\+Write\+Byte().
+
+\mbox{\label{lcd_8c_a346f0227c399d12098b2b1d1e5d46da0}} 
+\index{lcd.c@{lcd.c}!LCDText\_WriteString@{LCDText\_WriteString}}
+\index{LCDText\_WriteString@{LCDText\_WriteString}!lcd.c@{lcd.c}}
+\doxysubsubsection{LCDText\_WriteString()}
+{\footnotesize\ttfamily void L\+C\+D\+Text\+\_\+\+Write\+String (\begin{DoxyParamCaption}\item[{char $\ast$}]{str }\end{DoxyParamCaption})}
+
+
+
+Writes a string at the current cursor position. 
+
+
+
+Definition at line 92 of file lcd.\+c.
+
+
+
+References L\+C\+D\+Text\+\_\+\+C\+O\+L\+U\+M\+NS, L\+C\+D\+Text\+\_\+\+L\+I\+N\+ES, L\+C\+D\+Text\+\_\+\+Locate(), L\+C\+D\+Text\+\_\+\+Write\+Char(), W\+A\+I\+T\+\_\+\+Chrono\+Us(), x, and y.
+
+
+
+Referenced by game\+Routine(), L\+C\+D\+Text\+\_\+\+Printf(), Menu(), player\+Scores\+Show\+Down(), save\+User(), Time\+\_\+change\+Routine(), update\+\_\+\+Date\+Time\+Display(), and update\+Game\+Design().
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\label{lcd_8c_a6150e0515f7202e2fb518f7206ed97dc}} 
+\index{lcd.c@{lcd.c}!x@{x}}
+\index{x@{x}!lcd.c@{lcd.c}}
+\doxysubsubsection{x}
+{\footnotesize\ttfamily int x}
+
+
+
+Definition at line 21 of file lcd.\+c.
+
+
+
+Referenced by L\+C\+D\+Text\+\_\+\+Locate(), L\+C\+D\+Text\+\_\+\+Write\+Char(), and L\+C\+D\+Text\+\_\+\+Write\+String().
+
+\mbox{\label{lcd_8c_a0a2f84ed7838f07779ae24c5a9086d33}} 
+\index{lcd.c@{lcd.c}!y@{y}}
+\index{y@{y}!lcd.c@{lcd.c}}
+\doxysubsubsection{y}
+{\footnotesize\ttfamily int y}
+
+
+
+Definition at line 21 of file lcd.\+c.
+
+
+
+Referenced by L\+C\+D\+Text\+\_\+\+Locate(), and L\+C\+D\+Text\+\_\+\+Write\+String().
+

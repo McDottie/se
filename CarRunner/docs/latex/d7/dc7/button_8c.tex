@@ -1,0 +1,146 @@
+\doxysection{C\+:/\+Users/josee/\+Documents/\+I\+S\+E\+L/3\+\_\+\+Ano-\/5\+\_\+\+Semestre/\+S\+E1/\+S\+E2021/src/button.c File Reference}
+\label{button_8c}\index{C:/Users/josee/Documents/ISEL/3\_Ano-\/5\_Semestre/SE1/SE2021/src/button.c@{C:/Users/josee/Documents/ISEL/3\_Ano-\/5\_Semestre/SE1/SE2021/src/button.c}}
+{\ttfamily \#include \char`\"{}button.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}wait.\+h\char`\"{}}\newline
+Include dependency graph for button.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{dc/deb/button_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ B\+U\+T\+T\+O\+N\+\_\+\+O\+NE}~24
+\item 
+\#define \textbf{ B\+U\+T\+T\+O\+N\+\_\+\+T\+WO}~25
+\item 
+\#define \textbf{ B\+U\+T\+T\+O\+N\+\_\+\+T\+H\+R\+EE}~26
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \textbf{ B\+U\+T\+T\+O\+N\+\_\+\+Init} (void)
+\begin{DoxyCompactList}\small\item\em Initializes every button and sets mode for to pull-\/up. \end{DoxyCompactList}\item 
+int \textbf{ B\+U\+T\+T\+O\+N\+\_\+\+Hit} (void)
+\begin{DoxyCompactList}\small\item\em Gets pressed button non-\/blocking version. \end{DoxyCompactList}\item 
+int \textbf{ B\+U\+T\+T\+O\+N\+\_\+\+Read} (void)
+\begin{DoxyCompactList}\small\item\em Blocks while button\+\_\+\+Hit result equals -\/1. \end{DoxyCompactList}\item 
+\textbf{ key\+\_\+state} \textbf{ B\+U\+T\+T\+O\+N\+\_\+\+Get\+Buttons\+Events} ()
+\begin{DoxyCompactList}\small\item\em Pressed button state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ key\+\_\+state} \textbf{ key\+State}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{button_8c_a30dd2420f464cfd92fc3844c17c882f6}} 
+\index{button.c@{button.c}!BUTTON\_GetButtonsEvents@{BUTTON\_GetButtonsEvents}}
+\index{BUTTON\_GetButtonsEvents@{BUTTON\_GetButtonsEvents}!button.c@{button.c}}
+\doxysubsubsection{BUTTON\_GetButtonsEvents()}
+{\footnotesize\ttfamily \textbf{ key\+\_\+state} B\+U\+T\+T\+O\+N\+\_\+\+Get\+Buttons\+Events (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Pressed button state. 
+
+\begin{DoxyReturn}{Returns}
+button state code (bitmap)\+: pressed ,released , repeated 
+\end{DoxyReturn}
+
+
+Definition at line 72 of file button.\+c.
+
+
+
+References B\+U\+T\+T\+O\+N\+\_\+\+Hit(), and key\+State.
+
+
+
+Referenced by game\+Routine(), main(), Menu(), player\+Scores\+Show\+Down(), save\+User(), and Time\+\_\+change\+Routine().
+
+\mbox{\label{button_8c_a9f00b0aebf4efaa3684a0e2ed2bfee08}} 
+\index{button.c@{button.c}!BUTTON\_Hit@{BUTTON\_Hit}}
+\index{BUTTON\_Hit@{BUTTON\_Hit}!button.c@{button.c}}
+\doxysubsubsection{BUTTON\_Hit()}
+{\footnotesize\ttfamily int B\+U\+T\+T\+O\+N\+\_\+\+Hit (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Gets pressed button non-\/blocking version. 
+
+\begin{DoxyReturn}{Returns}
+button code (bitmap) if pressed otherwise -\/1 
+\end{DoxyReturn}
+
+
+Definition at line 41 of file button.\+c.
+
+
+
+References B\+U\+T\+T\+O\+N\+\_\+\+O\+NE, key\+\_\+state\+::key, key\+State, P\+R\+E\+S\+S\+ED, R\+E\+L\+E\+A\+S\+ED, R\+E\+P\+E\+A\+T\+ED, key\+\_\+state\+::state, and W\+A\+I\+T\+\_\+\+Chrono\+Us().
+
+
+
+Referenced by B\+U\+T\+T\+O\+N\+\_\+\+Get\+Buttons\+Events(), B\+U\+T\+T\+O\+N\+\_\+\+Init(), and B\+U\+T\+T\+O\+N\+\_\+\+Read().
+
+\mbox{\label{button_8c_aa550fbf7e9db2cbff32e2e878b25e56b}} 
+\index{button.c@{button.c}!BUTTON\_Init@{BUTTON\_Init}}
+\index{BUTTON\_Init@{BUTTON\_Init}!button.c@{button.c}}
+\doxysubsubsection{BUTTON\_Init()}
+{\footnotesize\ttfamily void B\+U\+T\+T\+O\+N\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initializes every button and sets mode for to pull-\/up. 
+
+Initializes the system to premit the access to buttons. 
+
+Definition at line 32 of file button.\+c.
+
+
+
+References B\+U\+T\+T\+O\+N\+\_\+\+Hit(), B\+U\+T\+T\+O\+N\+\_\+\+O\+NE, and key\+State.
+
+
+
+Referenced by main().
+
+\mbox{\label{button_8c_a12337b45f487876c9fde8a07328ac13b}} 
+\index{button.c@{button.c}!BUTTON\_Read@{BUTTON\_Read}}
+\index{BUTTON\_Read@{BUTTON\_Read}!button.c@{button.c}}
+\doxysubsubsection{BUTTON\_Read()}
+{\footnotesize\ttfamily int B\+U\+T\+T\+O\+N\+\_\+\+Read (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Blocks while button\+\_\+\+Hit result equals -\/1. 
+
+Gets pressed button blocking version. 
+
+Definition at line 64 of file button.\+c.
+
+
+
+References B\+U\+T\+T\+O\+N\+\_\+\+Hit().
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\label{button_8c_afd427ca8b6e92da18df9d8b6ff630df8}} 
+\index{button.c@{button.c}!keyState@{keyState}}
+\index{keyState@{keyState}!button.c@{button.c}}
+\doxysubsubsection{keyState}
+{\footnotesize\ttfamily \textbf{ key\+\_\+state} key\+State}
+
+
+
+Definition at line 27 of file button.\+c.
+
+
+
+Referenced by B\+U\+T\+T\+O\+N\+\_\+\+Get\+Buttons\+Events(), B\+U\+T\+T\+O\+N\+\_\+\+Hit(), B\+U\+T\+T\+O\+N\+\_\+\+Init(), main(), Menu(), and player\+Scores\+Show\+Down().
+

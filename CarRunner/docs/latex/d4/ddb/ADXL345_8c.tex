@@ -1,0 +1,224 @@
+\doxysection{C\+:/\+Users/josee/\+Documents/\+I\+S\+E\+L/3\+\_\+\+Ano-\/5\+\_\+\+Semestre/\+S\+E1/\+S\+E2021/src/\+A\+D\+X\+L345.c File Reference}
+\label{ADXL345_8c}\index{C:/Users/josee/Documents/ISEL/3\_Ano-\/5\_Semestre/SE1/SE2021/src/ADXL345.c@{C:/Users/josee/Documents/ISEL/3\_Ano-\/5\_Semestre/SE1/SE2021/src/ADXL345.c}}
+{\ttfamily \#include \char`\"{}A\+D\+X\+L345.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}spi.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}L\+P\+C17xx.\+h\char`\"{}}\newline
+Include dependency graph for A\+D\+X\+L345.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=285pt]{dd/de1/ADXL345_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ constrain}(amt,  low,  high)~((amt)$<$(low)?(low)\+:((amt)$>$(high)?(high)\+:(amt)))
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \textbf{ write\+Register} (unsigned short reg, unsigned short value)
+\item 
+void \textbf{ read\+Registers} (unsigned short $\ast$reg, unsigned short value, int size)
+\item 
+void \textbf{ read\+Register} (unsigned short reg, unsigned short $\ast$ret\+Value)
+\item 
+int \textbf{ A\+D\+X\+L345\+\_\+\+Init} ()
+\begin{DoxyCompactList}\small\item\em Initializes the A\+D\+X\+L345 Peripheral. \end{DoxyCompactList}\item 
+void \textbf{ setup\+Tap} (float threshold, float duration, float latency, float window)
+\begin{DoxyCompactList}\small\item\em Configs taping. \end{DoxyCompactList}\item 
+bool \textbf{ A\+D\+X\+L345\+\_\+is\+Tap} ()
+\begin{DoxyCompactList}\small\item\em Checks if it was tapped can\textquotesingle{}t be use with A\+D\+X\+L345\+\_\+is\+Double\+Tap. \end{DoxyCompactList}\item 
+bool \textbf{ A\+D\+X\+L345\+\_\+is\+Double\+Tap} ()
+\begin{DoxyCompactList}\small\item\em Checks if it was double tapped can\textquotesingle{}t be use with A\+D\+X\+L345\+\_\+is\+Tap. \end{DoxyCompactList}\item 
+int \textbf{ A\+D\+X\+L345\+\_\+\+Read} (float $\ast$x\+\_\+value, float $\ast$y\+\_\+value, float $\ast$z\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Reads A\+D\+X\+L345 data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\label{ADXL345_8c_a7df4a1319e5665c9040aa1838eef987c}} 
+\index{ADXL345.c@{ADXL345.c}!constrain@{constrain}}
+\index{constrain@{constrain}!ADXL345.c@{ADXL345.c}}
+\doxysubsubsection{constrain}
+{\footnotesize\ttfamily \#define constrain(\begin{DoxyParamCaption}\item[{}]{amt,  }\item[{}]{low,  }\item[{}]{high }\end{DoxyParamCaption})~((amt)$<$(low)?(low)\+:((amt)$>$(high)?(high)\+:(amt)))}
+
+
+
+Definition at line 5 of file A\+D\+X\+L345.\+c.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{ADXL345_8c_a8a64ce2969d6f48bc73054688cd07601}} 
+\index{ADXL345.c@{ADXL345.c}!ADXL345\_Init@{ADXL345\_Init}}
+\index{ADXL345\_Init@{ADXL345\_Init}!ADXL345.c@{ADXL345.c}}
+\doxysubsubsection{ADXL345\_Init()}
+{\footnotesize\ttfamily int A\+D\+X\+L345\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initializes the A\+D\+X\+L345 Peripheral. 
+
+
+
+Definition at line 37 of file A\+D\+X\+L345.\+c.
+
+
+
+References A\+D\+X\+L345\+\_\+\+D\+A\+T\+A\+R\+A\+T\+E\+\_\+100\+HZ, A\+D\+X\+L345\+\_\+\+D\+E\+V\+I\+D\+\_\+\+R\+E\+S\+E\+T\+\_\+\+V\+A\+L\+UE, A\+D\+X\+L345\+\_\+\+R\+A\+N\+G\+E\+\_\+2G, A\+D\+X\+L345\+\_\+\+R\+E\+G\+\_\+\+B\+W\+\_\+\+R\+A\+TE, A\+D\+X\+L345\+\_\+\+R\+E\+G\+\_\+\+D\+A\+T\+A\+\_\+\+F\+O\+R\+M\+AT, A\+D\+X\+L345\+\_\+\+R\+E\+G\+\_\+\+D\+E\+V\+ID, A\+D\+X\+L345\+\_\+\+R\+E\+G\+\_\+\+P\+O\+W\+E\+R\+\_\+\+C\+TL, read\+Register(), setup\+Tap(), S\+P\+I\+\_\+\+Config\+Transfer(), and write\+Register().
+
+
+
+Referenced by main().
+
+\mbox{\label{ADXL345_8c_a3751151b7eba20da7a279cf4ce45d7cb}} 
+\index{ADXL345.c@{ADXL345.c}!ADXL345\_isDoubleTap@{ADXL345\_isDoubleTap}}
+\index{ADXL345\_isDoubleTap@{ADXL345\_isDoubleTap}!ADXL345.c@{ADXL345.c}}
+\doxysubsubsection{ADXL345\_isDoubleTap()}
+{\footnotesize\ttfamily bool A\+D\+X\+L345\+\_\+is\+Double\+Tap (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Checks if it was double tapped can\textquotesingle{}t be use with A\+D\+X\+L345\+\_\+is\+Tap. 
+
+
+
+Definition at line 118 of file A\+D\+X\+L345.\+c.
+
+
+
+References A\+D\+X\+L345\+\_\+\+R\+E\+G\+\_\+\+I\+N\+T\+\_\+\+S\+O\+U\+R\+CE, and read\+Register().
+
+\mbox{\label{ADXL345_8c_aae8e9036157ce6d4564f064f0695ee51}} 
+\index{ADXL345.c@{ADXL345.c}!ADXL345\_isTap@{ADXL345\_isTap}}
+\index{ADXL345\_isTap@{ADXL345\_isTap}!ADXL345.c@{ADXL345.c}}
+\doxysubsubsection{ADXL345\_isTap()}
+{\footnotesize\ttfamily bool A\+D\+X\+L345\+\_\+is\+Tap (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Checks if it was tapped can\textquotesingle{}t be use with A\+D\+X\+L345\+\_\+is\+Double\+Tap. 
+
+
+
+Definition at line 112 of file A\+D\+X\+L345.\+c.
+
+
+
+References A\+D\+X\+L345\+\_\+\+R\+E\+G\+\_\+\+I\+N\+T\+\_\+\+S\+O\+U\+R\+CE, and read\+Register().
+
+
+
+Referenced by game\+Routine().
+
+\mbox{\label{ADXL345_8c_ae54c23328bc72ec7359eecef4ce2ed83}} 
+\index{ADXL345.c@{ADXL345.c}!ADXL345\_Read@{ADXL345\_Read}}
+\index{ADXL345\_Read@{ADXL345\_Read}!ADXL345.c@{ADXL345.c}}
+\doxysubsubsection{ADXL345\_Read()}
+{\footnotesize\ttfamily int A\+D\+X\+L345\+\_\+\+Read (\begin{DoxyParamCaption}\item[{float $\ast$}]{x\+\_\+value,  }\item[{float $\ast$}]{y\+\_\+value,  }\item[{float $\ast$}]{z\+\_\+value }\end{DoxyParamCaption})}
+
+
+
+Reads A\+D\+X\+L345 data. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em x\+\_\+value} & x axis value \\
+\hline
+\mbox{\texttt{ out}}  & {\em y\+\_\+value} & y axis value \\
+\hline
+\mbox{\texttt{ out}}  & {\em z\+\_\+value} & z axis value \\
+\hline
+\end{DoxyParams}
+X value
+
+Y value
+
+Z value
+
+Definition at line 124 of file A\+D\+X\+L345.\+c.
+
+
+
+References A\+D\+X\+L345\+\_\+\+R\+E\+G\+\_\+\+D\+A\+T\+A\+X0, A\+D\+X\+L345\+\_\+\+R\+E\+G\+\_\+\+D\+A\+T\+A\+X1, A\+D\+X\+L345\+\_\+\+R\+E\+G\+\_\+\+D\+A\+T\+A\+Y0, A\+D\+X\+L345\+\_\+\+R\+E\+G\+\_\+\+D\+A\+T\+A\+Y1, A\+D\+X\+L345\+\_\+\+R\+E\+G\+\_\+\+D\+A\+T\+A\+Z0, A\+D\+X\+L345\+\_\+\+R\+E\+G\+\_\+\+D\+A\+T\+A\+Z1, and read\+Register().
+
+\mbox{\label{ADXL345_8c_a0e11c845302c3c61651b273be2fd0cf9}} 
+\index{ADXL345.c@{ADXL345.c}!readRegister@{readRegister}}
+\index{readRegister@{readRegister}!ADXL345.c@{ADXL345.c}}
+\doxysubsubsection{readRegister()}
+{\footnotesize\ttfamily void read\+Register (\begin{DoxyParamCaption}\item[{unsigned short}]{reg,  }\item[{unsigned short $\ast$}]{ret\+Value }\end{DoxyParamCaption})}
+
+
+
+Definition at line 23 of file A\+D\+X\+L345.\+c.
+
+
+
+References S\+P\+I\+\_\+\+Transfer().
+
+
+
+Referenced by A\+D\+X\+L345\+\_\+\+Init(), A\+D\+X\+L345\+\_\+is\+Double\+Tap(), A\+D\+X\+L345\+\_\+is\+Tap(), A\+D\+X\+L345\+\_\+\+Read(), and setup\+Tap().
+
+\mbox{\label{ADXL345_8c_a928ab41b39807da5e3cb8f495e99586c}} 
+\index{ADXL345.c@{ADXL345.c}!readRegisters@{readRegisters}}
+\index{readRegisters@{readRegisters}!ADXL345.c@{ADXL345.c}}
+\doxysubsubsection{readRegisters()}
+{\footnotesize\ttfamily void read\+Registers (\begin{DoxyParamCaption}\item[{unsigned short $\ast$}]{reg,  }\item[{unsigned short}]{value,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+
+
+Definition at line 19 of file A\+D\+X\+L345.\+c.
+
+\mbox{\label{ADXL345_8c_a6a554e6ac4d26bac4b26dd8a4d0a45f8}} 
+\index{ADXL345.c@{ADXL345.c}!setupTap@{setupTap}}
+\index{setupTap@{setupTap}!ADXL345.c@{ADXL345.c}}
+\doxysubsubsection{setupTap()}
+{\footnotesize\ttfamily void setup\+Tap (\begin{DoxyParamCaption}\item[{float}]{threshold,  }\item[{float}]{duration,  }\item[{float}]{latency,  }\item[{float}]{window }\end{DoxyParamCaption})}
+
+
+
+Configs taping. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em treshold} & defines treshold \\
+\hline
+{\em duration} & defines max duration of tap \\
+\hline
+{\em latency} & defines latency for double tap \\
+\hline
+{\em window} & defines window for double tap \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 78 of file A\+D\+X\+L345.\+c.
+
+
+
+References A\+D\+X\+L345\+\_\+\+R\+E\+G\+\_\+\+D\+UR, A\+D\+X\+L345\+\_\+\+R\+E\+G\+\_\+\+I\+N\+T\+\_\+\+E\+N\+A\+B\+LE, A\+D\+X\+L345\+\_\+\+R\+E\+G\+\_\+\+I\+N\+T\+\_\+\+M\+AP, A\+D\+X\+L345\+\_\+\+R\+E\+G\+\_\+\+L\+A\+T\+E\+NT, A\+D\+X\+L345\+\_\+\+R\+E\+G\+\_\+\+T\+A\+P\+\_\+\+A\+X\+ES, A\+D\+X\+L345\+\_\+\+R\+E\+G\+\_\+\+T\+H\+R\+E\+S\+H\+\_\+\+T\+AP, A\+D\+X\+L345\+\_\+\+R\+E\+G\+\_\+\+W\+I\+N\+D\+OW, read\+Register(), and write\+Register().
+
+
+
+Referenced by A\+D\+X\+L345\+\_\+\+Init().
+
+\mbox{\label{ADXL345_8c_af3310a0deedc61822abc7ea3007d68d5}} 
+\index{ADXL345.c@{ADXL345.c}!writeRegister@{writeRegister}}
+\index{writeRegister@{writeRegister}!ADXL345.c@{ADXL345.c}}
+\doxysubsubsection{writeRegister()}
+{\footnotesize\ttfamily void write\+Register (\begin{DoxyParamCaption}\item[{unsigned short}]{reg,  }\item[{unsigned short}]{value }\end{DoxyParamCaption})}
+
+
+
+Definition at line 7 of file A\+D\+X\+L345.\+c.
+
+
+
+References S\+P\+I\+\_\+\+Transfer().
+
+
+
+Referenced by A\+D\+X\+L345\+\_\+\+Init(), and setup\+Tap().
+

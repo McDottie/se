@@ -1,0 +1,78 @@
+\doxysection{C\+:/\+Users/josee/\+Documents/\+I\+S\+E\+L/3\+\_\+\+Ano-\/5\+\_\+\+Semestre/\+S\+E1/\+Car\+Runner/inc/time\+\_\+helper.h File Reference}
+\label{time__helper_8h}\index{C:/Users/josee/Documents/ISEL/3\_Ano-\/5\_Semestre/SE1/CarRunner/inc/time\_helper.h@{C:/Users/josee/Documents/ISEL/3\_Ano-\/5\_Semestre/SE1/CarRunner/inc/time\_helper.h}}
+{\ttfamily \#include \char`\"{}rtc.\+h\char`\"{}}\newline
+Include dependency graph for time\+\_\+helper.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{d9/d14/time__helper_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \textbf{ Time\+\_\+change\+Routine} (time\+\_\+t seconds)
+\begin{DoxyCompactList}\small\item\em routine that interfaces with lcd and buttons to change time in rtc \end{DoxyCompactList}\item 
+void \textbf{ update\+\_\+\+Date\+Time\+Display} (struct tm datetime)
+\begin{DoxyCompactList}\small\item\em updates lcd with date and time \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{time__helper_8h_a3d09c604a329253d63a4053e10edbbba}} 
+\index{time\_helper.h@{time\_helper.h}!Time\_changeRoutine@{Time\_changeRoutine}}
+\index{Time\_changeRoutine@{Time\_changeRoutine}!time\_helper.h@{time\_helper.h}}
+\doxysubsubsection{Time\_changeRoutine()}
+{\footnotesize\ttfamily void Time\+\_\+change\+Routine (\begin{DoxyParamCaption}\item[{time\+\_\+t}]{seconds }\end{DoxyParamCaption})}
+
+
+
+routine that interfaces with lcd and buttons to change time in rtc 
+
+
+\begin{DoxyParams}{Parameters}
+{\em seconds} & starting time\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyImageNoCaption}
+  \mbox{\includegraphics[width=\textwidth,height=\textheight/2,keepaspectratio=true]{inline_umlgraph_4}}
+\end{DoxyImageNoCaption}
+ 
+
+Definition at line 30 of file time\+\_\+helper.\+c.
+
+
+
+References B\+U\+T\+T\+O\+N\+\_\+\+Get\+Buttons\+Events(), key\+\_\+state\+::key, L\+C\+D\+Text\+\_\+\+Clear(), L\+C\+D\+Text\+\_\+\+Cursor\+Off(), L\+C\+D\+Text\+\_\+\+Cursor\+On(), L\+C\+D\+Text\+\_\+\+Locate(), L\+C\+D\+Text\+\_\+\+Write\+String(), P\+R\+E\+S\+S\+ED, R\+T\+C\+\_\+\+Set\+Value(), key\+\_\+state\+::state, and update\+\_\+\+Date\+Time\+Display().
+
+
+
+Referenced by routine\+Chooser().
+
+\mbox{\label{time__helper_8h_a958e6faf695f5b2090ca49efb5312446}} 
+\index{time\_helper.h@{time\_helper.h}!update\_DateTimeDisplay@{update\_DateTimeDisplay}}
+\index{update\_DateTimeDisplay@{update\_DateTimeDisplay}!time\_helper.h@{time\_helper.h}}
+\doxysubsubsection{update\_DateTimeDisplay()}
+{\footnotesize\ttfamily void update\+\_\+\+Date\+Time\+Display (\begin{DoxyParamCaption}\item[{struct tm}]{datetime }\end{DoxyParamCaption})}
+
+
+
+updates lcd with date and time 
+
+
+\begin{DoxyParams}{Parameters}
+{\em datetime} & time to be displayed \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 85 of file time\+\_\+helper.\+c.
+
+
+
+References L\+C\+D\+Text\+\_\+\+Locate(), and L\+C\+D\+Text\+\_\+\+Write\+String().
+
+
+
+Referenced by main(), and Time\+\_\+change\+Routine().
+

@@ -1,0 +1,105 @@
+\doxysection{C\+:/\+Users/josee/\+Documents/\+I\+S\+E\+L/3\+\_\+\+Ano-\/5\+\_\+\+Semestre/\+S\+E1/\+S\+E2021/inc/spi.h File Reference}
+\label{spi_8h}\index{C:/Users/josee/Documents/ISEL/3\_Ano-\/5\_Semestre/SE1/SE2021/inc/spi.h@{C:/Users/josee/Documents/ISEL/3\_Ano-\/5\_Semestre/SE1/SE2021/inc/spi.h}}
+
+
+Contains the spi peripheral manager A\+PI.  
+
+
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \textbf{ S\+P\+I\+\_\+\+Init} (void)
+\begin{DoxyCompactList}\small\item\em Faz a iniciação do controlador e configura os respetivos pinos. \end{DoxyCompactList}\item 
+void \textbf{ S\+P\+I\+\_\+\+Config\+Transfer} (int frequency, int bit\+Data, int mode)
+\begin{DoxyCompactList}\small\item\em Configures the transfer. \end{DoxyCompactList}\item 
+int \textbf{ S\+P\+I\+\_\+\+Transfer} (unsigned short $\ast$tx\+Buffer, unsigned short $\ast$rx\+Buffer, int lenght)
+\begin{DoxyCompactList}\small\item\em Makes a transfer. Returns the success or error in the transfer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Contains the spi peripheral manager A\+PI. 
+
+\begin{DoxyVersion}{Version}
+1.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+17 Dec 2020 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+Jose Filipe Cruz dos Santos 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{spi_8h_afdfd38280ebbf6be99ed3540c0678313}} 
+\index{spi.h@{spi.h}!SPI\_ConfigTransfer@{SPI\_ConfigTransfer}}
+\index{SPI\_ConfigTransfer@{SPI\_ConfigTransfer}!spi.h@{spi.h}}
+\doxysubsubsection{SPI\_ConfigTransfer()}
+{\footnotesize\ttfamily void S\+P\+I\+\_\+\+Config\+Transfer (\begin{DoxyParamCaption}\item[{int}]{frequency,  }\item[{int}]{bit\+Data,  }\item[{int}]{mode }\end{DoxyParamCaption})}
+
+
+
+Configures the transfer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em frequency} & send/reception frequency \\
+\hline
+{\em bit\+Data} & number of bits of changed data \\
+\hline
+{\em mode} & transfer mode is a two bit value (1st bit = C\+P\+OL, 2nd bit = C\+P\+HA). \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 15 of file spi.\+c.
+
+
+
+Referenced by A\+D\+X\+L345\+\_\+\+Init().
+
+\mbox{\label{spi_8h_a292196e767158c66f03cbcc244fc802b}} 
+\index{spi.h@{spi.h}!SPI\_Init@{SPI\_Init}}
+\index{SPI\_Init@{SPI\_Init}!spi.h@{spi.h}}
+\doxysubsubsection{SPI\_Init()}
+{\footnotesize\ttfamily void S\+P\+I\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Faz a iniciação do controlador e configura os respetivos pinos. 
+
+
+
+Definition at line 7 of file spi.\+c.
+
+
+
+Referenced by main().
+
+\mbox{\label{spi_8h_adf7db1666629f8a6c11d0be20e592940}} 
+\index{spi.h@{spi.h}!SPI\_Transfer@{SPI\_Transfer}}
+\index{SPI\_Transfer@{SPI\_Transfer}!spi.h@{spi.h}}
+\doxysubsubsection{SPI\_Transfer()}
+{\footnotesize\ttfamily int S\+P\+I\+\_\+\+Transfer (\begin{DoxyParamCaption}\item[{unsigned short $\ast$}]{tx\+Buffer,  }\item[{unsigned short $\ast$}]{rx\+Buffer,  }\item[{int}]{lenght }\end{DoxyParamCaption})}
+
+
+
+Makes a transfer. Returns the success or error in the transfer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tx\+Buffer} & transfer ruffer contains transfer data \\
+\hline
+{\em rx\+Buffer} & recieve buffer contains recieved data \\
+\hline
+{\em length} & how many data is there to be transfered/recieved \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 35 of file spi.\+c.
+
+
+
+Referenced by read\+Register(), and write\+Register().
+

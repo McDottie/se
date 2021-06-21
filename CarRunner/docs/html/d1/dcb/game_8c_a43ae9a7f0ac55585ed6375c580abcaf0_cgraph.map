@@ -1,0 +1,8 @@
+<map id="gameInit" name="gameInit">
+<area shape="rect" id="node1" title="initializes the module" alt="" coords="5,33,76,60"/>
+<area shape="rect" id="node2" href="$d2/ded/lcd_8h.html#a3375b768752a6c245966fcf02457de34" title="Creates a character." alt="" coords="124,33,268,60"/>
+<area shape="rect" id="node3" href="$da/def/lcd_8c.html#ae68ea4f2f700e363bc506f60b5815793" title=" " alt="" coords="501,33,639,60"/>
+<area shape="rect" id="node5" href="$df/d7c/group__WAIT__Public__Functions.html#ga1c152ed7920e9c4118a0cad2d776e816" title="Waits waitUs microseconds." alt="" coords="881,33,1000,60"/>
+<area shape="rect" id="node6" href="$da/def/lcd_8c.html#a5f19eb2778765403be28d81489dcb0b1" title="Gives an instruction to the LCD controller." alt="" coords="316,84,453,111"/>
+<area shape="rect" id="node4" href="$da/def/lcd_8c.html#a882a67a85b9762e0ffa3bf12c4212770" title=" " alt="" coords="687,33,833,60"/>
+</map>

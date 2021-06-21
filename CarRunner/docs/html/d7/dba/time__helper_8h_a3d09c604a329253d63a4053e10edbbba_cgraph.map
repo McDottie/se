@@ -1,0 +1,18 @@
+<map id="Time_changeRoutine" name="Time_changeRoutine">
+<area shape="rect" id="node1" title="routine that interfaces with lcd and buttons to change time in rtc" alt="" coords="5,233,148,260"/>
+<area shape="rect" id="node2" href="$d7/d0e/button_8h.html#a2944f616818b235ccbc2415f7e3b902f" title="Pressed button state." alt="" coords="196,31,381,57"/>
+<area shape="rect" id="node5" href="$d2/ded/lcd_8h.html#ac1bdd6893daf2ea4733bfb2f40020378" title="Clear the display using the command available in the peripheral API." alt="" coords="447,157,556,184"/>
+<area shape="rect" id="node10" href="$d2/ded/lcd_8h.html#a41162ebb05d61924fa1b0f3be6f2d8da" title="Turns on display cursor off." alt="" coords="621,259,755,285"/>
+<area shape="rect" id="node11" href="$d2/ded/lcd_8h.html#ac96c6e567210f2be3ef3a477ddefd3fd" title="Turns on display cursor on." alt="" coords="434,88,569,115"/>
+<area shape="rect" id="node12" href="$d2/ded/lcd_8h.html#a7187e0fca7d1666198d63c6c972edee7" title="Positions the cursor on the row and column of the display." alt="" coords="442,309,561,336"/>
+<area shape="rect" id="node13" href="$d2/ded/lcd_8h.html#a346f0227c399d12098b2b1d1e5d46da0" title="Writes a string at the current cursor position." alt="" coords="429,360,573,387"/>
+<area shape="rect" id="node15" href="$dc/d1b/rtc_8h.html#a14fa105430d9febf19fe275cee4664d8" title="Updates RTC." alt="" coords="235,360,342,387"/>
+<area shape="rect" id="node16" href="$d3/d36/time__helper_8c.html#a308e0bb0c3298a97422fb39a878c11e5" title="updates lcd with date and time" alt="" coords="205,309,372,336"/>
+<area shape="rect" id="node3" href="$d7/dc7/button_8c.html#a9f00b0aebf4efaa3684a0e2ed2bfee08" title="Gets pressed button non&#45;blocking version." alt="" coords="640,5,736,32"/>
+<area shape="rect" id="node4" href="$df/d7c/group__WAIT__Public__Functions.html#ga1c152ed7920e9c4118a0cad2d776e816" title="Waits waitUs microseconds." alt="" coords="1368,208,1487,235"/>
+<area shape="rect" id="node6" href="$da/def/lcd_8c.html#a7187e0fca7d1666198d63c6c972edee7" title="Positions the cursor on the row and column of the display." alt="" coords="629,208,747,235"/>
+<area shape="rect" id="node7" href="$da/def/lcd_8c.html#a5f19eb2778765403be28d81489dcb0b1" title="Gives an instruction to the LCD controller." alt="" coords="803,208,940,235"/>
+<area shape="rect" id="node8" href="$da/def/lcd_8c.html#ae68ea4f2f700e363bc506f60b5815793" title=" " alt="" coords="988,233,1125,260"/>
+<area shape="rect" id="node9" href="$da/def/lcd_8c.html#a882a67a85b9762e0ffa3bf12c4212770" title=" " alt="" coords="1173,233,1320,260"/>
+<area shape="rect" id="node14" href="$da/def/lcd_8c.html#ae2457428e83fd94180055837bd9f9675" title="Writes a character at the current cursor position." alt="" coords="803,284,940,311"/>
+</map>

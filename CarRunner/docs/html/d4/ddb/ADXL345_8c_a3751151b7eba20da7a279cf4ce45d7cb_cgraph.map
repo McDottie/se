@@ -1,0 +1,5 @@
+<map id="ADXL345_isDoubleTap" name="ADXL345_isDoubleTap">
+<area shape="rect" id="node1" title="Checks if it was double tapped can&#39;t be use with ADXL345_isTap." alt="" coords="5,5,159,32"/>
+<area shape="rect" id="node2" href="$d4/ddb/ADXL345_8c.html#a0e11c845302c3c61651b273be2fd0cf9" title=" " alt="" coords="207,5,301,32"/>
+<area shape="rect" id="node3" href="$da/d87/spi_8h.html#adf7db1666629f8a6c11d0be20e592940" title="Makes a transfer. Returns the success or error in the transfer." alt="" coords="349,5,445,32"/>
+</map>

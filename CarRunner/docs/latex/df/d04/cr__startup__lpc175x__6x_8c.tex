@@ -1,0 +1,192 @@
+\doxysection{C\+:/\+Users/josee/\+Documents/\+I\+S\+E\+L/3\+\_\+\+Ano-\/5\+\_\+\+Semestre/\+S\+E1/\+Car\+Runner/src/cr\+\_\+startup\+\_\+lpc175x\+\_\+6x.c File Reference}
+\label{cr__startup__lpc175x__6x_8c}\index{C:/Users/josee/Documents/ISEL/3\_Ano-\/5\_Semestre/SE1/CarRunner/src/cr\_startup\_lpc175x\_6x.c@{C:/Users/josee/Documents/ISEL/3\_Ano-\/5\_Semestre/SE1/CarRunner/src/cr\_startup\_lpc175x\_6x.c}}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ W\+E\+AK}~\textbf{ \+\_\+\+\_\+attribute\+\_\+\+\_\+} ((weak))
+\item 
+\#define \textbf{ A\+L\+I\+AS}(f)~\textbf{ \+\_\+\+\_\+attribute\+\_\+\+\_\+} ((weak, alias (\#f)))
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \textbf{ Reset\+I\+SR} (void)
+\item 
+\textbf{ W\+E\+AK} void \textbf{ N\+M\+I\+\_\+\+Handler} (void)
+\item 
+\textbf{ W\+E\+AK} void \textbf{ Hard\+Fault\+\_\+\+Handler} (void)
+\item 
+\textbf{ W\+E\+AK} void \textbf{ Mem\+Manage\+\_\+\+Handler} (void)
+\item 
+\textbf{ W\+E\+AK} void \textbf{ Bus\+Fault\+\_\+\+Handler} (void)
+\item 
+\textbf{ W\+E\+AK} void \textbf{ Usage\+Fault\+\_\+\+Handler} (void)
+\item 
+\textbf{ W\+E\+AK} void \textbf{ S\+V\+C\+\_\+\+Handler} (void)
+\item 
+\textbf{ W\+E\+AK} void \textbf{ Debug\+Mon\+\_\+\+Handler} (void)
+\item 
+\textbf{ W\+E\+AK} void \textbf{ Pend\+S\+V\+\_\+\+Handler} (void)
+\item 
+\textbf{ W\+E\+AK} void \textbf{ Sys\+Tick\+\_\+\+Handler} (void)
+\item 
+\textbf{ W\+E\+AK} void \textbf{ Int\+Default\+Handler} (void)
+\item 
+void \textbf{ W\+D\+T\+\_\+\+I\+R\+Q\+Handler} (void T\+I\+M\+E\+R0\+\_\+\+I\+R\+Q\+Handler() \textbf{ A\+L\+I\+AS}(\textbf{ Int\+Default\+Handler}) void)
+\item 
+\textbf{ \+\_\+\+\_\+attribute\+\_\+\+\_\+} ((section(\char`\"{}.after\+\_\+vectors\char`\"{})))
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \textbf{ \+\_\+\+\_\+data\+\_\+section\+\_\+table}
+\item 
+unsigned int \textbf{ \+\_\+\+\_\+data\+\_\+section\+\_\+table\+\_\+end}
+\item 
+unsigned int \textbf{ \+\_\+\+\_\+bss\+\_\+section\+\_\+table}
+\item 
+unsigned int \textbf{ \+\_\+\+\_\+bss\+\_\+section\+\_\+table\+\_\+end}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\label{cr__startup__lpc175x__6x_8c_a0bcadbfb9fcd175b07b4d0463e54397f}} 
+\index{cr\_startup\_lpc175x\_6x.c@{cr\_startup\_lpc175x\_6x.c}!ALIAS@{ALIAS}}
+\index{ALIAS@{ALIAS}!cr\_startup\_lpc175x\_6x.c@{cr\_startup\_lpc175x\_6x.c}}
+\doxysubsubsection{ALIAS}
+{\footnotesize\ttfamily \#define A\+L\+I\+AS(\begin{DoxyParamCaption}\item[{}]{f }\end{DoxyParamCaption})~\textbf{ \+\_\+\+\_\+attribute\+\_\+\+\_\+} ((weak, alias (\#f)))}
+
+
+
+Definition at line 37 of file cr\+\_\+startup\+\_\+lpc175x\+\_\+6x.\+c.
+
+\mbox{\label{cr__startup__lpc175x__6x_8c_ad1480e9557edcc543498ca259cee6c7d}} 
+\index{cr\_startup\_lpc175x\_6x.c@{cr\_startup\_lpc175x\_6x.c}!WEAK@{WEAK}}
+\index{WEAK@{WEAK}!cr\_startup\_lpc175x\_6x.c@{cr\_startup\_lpc175x\_6x.c}}
+\doxysubsubsection{WEAK}
+{\footnotesize\ttfamily \#define W\+E\+AK~\textbf{ \+\_\+\+\_\+attribute\+\_\+\+\_\+} ((weak))}
+
+
+
+Definition at line 36 of file cr\+\_\+startup\+\_\+lpc175x\+\_\+6x.\+c.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{cr__startup__lpc175x__6x_8c_adce420b900676fa0caed5a713cac82fb}} 
+\index{cr\_startup\_lpc175x\_6x.c@{cr\_startup\_lpc175x\_6x.c}!\_\_attribute\_\_@{\_\_attribute\_\_}}
+\index{\_\_attribute\_\_@{\_\_attribute\_\_}!cr\_startup\_lpc175x\_6x.c@{cr\_startup\_lpc175x\_6x.c}}
+\doxysubsubsection{\_\_attribute\_\_()}
+{\footnotesize\ttfamily \+\_\+\+\_\+attribute\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{(section(\char`\"{}.after\+\_\+vectors\char`\"{}))}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 221 of file cr\+\_\+startup\+\_\+lpc175x\+\_\+6x.\+c.
+
+\mbox{\label{cr__startup__lpc175x__6x_8c_ae216256baeae935e04745241645d44c0}} 
+\index{cr\_startup\_lpc175x\_6x.c@{cr\_startup\_lpc175x\_6x.c}!BusFault\_Handler@{BusFault\_Handler}}
+\index{BusFault\_Handler@{BusFault\_Handler}!cr\_startup\_lpc175x\_6x.c@{cr\_startup\_lpc175x\_6x.c}}
+\doxysubsubsection{BusFault\_Handler()}
+{\footnotesize\ttfamily \textbf{ W\+E\+AK} void Bus\+Fault\+\_\+\+Handler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\label{cr__startup__lpc175x__6x_8c_af332e2a018a0e7c3c0b8730bc638588a}} 
+\index{cr\_startup\_lpc175x\_6x.c@{cr\_startup\_lpc175x\_6x.c}!DebugMon\_Handler@{DebugMon\_Handler}}
+\index{DebugMon\_Handler@{DebugMon\_Handler}!cr\_startup\_lpc175x\_6x.c@{cr\_startup\_lpc175x\_6x.c}}
+\doxysubsubsection{DebugMon\_Handler()}
+{\footnotesize\ttfamily \textbf{ W\+E\+AK} void Debug\+Mon\+\_\+\+Handler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\label{cr__startup__lpc175x__6x_8c_abf5d8b089d5aceaf6a281f9bb81ac731}} 
+\index{cr\_startup\_lpc175x\_6x.c@{cr\_startup\_lpc175x\_6x.c}!HardFault\_Handler@{HardFault\_Handler}}
+\index{HardFault\_Handler@{HardFault\_Handler}!cr\_startup\_lpc175x\_6x.c@{cr\_startup\_lpc175x\_6x.c}}
+\doxysubsubsection{HardFault\_Handler()}
+{\footnotesize\ttfamily \textbf{ W\+E\+AK} void Hard\+Fault\+\_\+\+Handler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\label{cr__startup__lpc175x__6x_8c_abf37bc77b79673bf5babd3ac42291616}} 
+\index{cr\_startup\_lpc175x\_6x.c@{cr\_startup\_lpc175x\_6x.c}!IntDefaultHandler@{IntDefaultHandler}}
+\index{IntDefaultHandler@{IntDefaultHandler}!cr\_startup\_lpc175x\_6x.c@{cr\_startup\_lpc175x\_6x.c}}
+\doxysubsubsection{IntDefaultHandler()}
+{\footnotesize\ttfamily \textbf{ W\+E\+AK} void Int\+Default\+Handler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\label{cr__startup__lpc175x__6x_8c_a4c321f9a17eb0936f512e064affbbaed}} 
+\index{cr\_startup\_lpc175x\_6x.c@{cr\_startup\_lpc175x\_6x.c}!MemManage\_Handler@{MemManage\_Handler}}
+\index{MemManage\_Handler@{MemManage\_Handler}!cr\_startup\_lpc175x\_6x.c@{cr\_startup\_lpc175x\_6x.c}}
+\doxysubsubsection{MemManage\_Handler()}
+{\footnotesize\ttfamily \textbf{ W\+E\+AK} void Mem\+Manage\+\_\+\+Handler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\label{cr__startup__lpc175x__6x_8c_ae5eb40c717803d8eae9630d1f7237fd7}} 
+\index{cr\_startup\_lpc175x\_6x.c@{cr\_startup\_lpc175x\_6x.c}!NMI\_Handler@{NMI\_Handler}}
+\index{NMI\_Handler@{NMI\_Handler}!cr\_startup\_lpc175x\_6x.c@{cr\_startup\_lpc175x\_6x.c}}
+\doxysubsubsection{NMI\_Handler()}
+{\footnotesize\ttfamily \textbf{ W\+E\+AK} void N\+M\+I\+\_\+\+Handler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\label{cr__startup__lpc175x__6x_8c_a24fd4a50e601121b29d900129e4602db}} 
+\index{cr\_startup\_lpc175x\_6x.c@{cr\_startup\_lpc175x\_6x.c}!PendSV\_Handler@{PendSV\_Handler}}
+\index{PendSV\_Handler@{PendSV\_Handler}!cr\_startup\_lpc175x\_6x.c@{cr\_startup\_lpc175x\_6x.c}}
+\doxysubsubsection{PendSV\_Handler()}
+{\footnotesize\ttfamily \textbf{ W\+E\+AK} void Pend\+S\+V\+\_\+\+Handler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\label{cr__startup__lpc175x__6x_8c_a516ff8924be921fa3a1bb7754b1f5734}} 
+\index{cr\_startup\_lpc175x\_6x.c@{cr\_startup\_lpc175x\_6x.c}!ResetISR@{ResetISR}}
+\index{ResetISR@{ResetISR}!cr\_startup\_lpc175x\_6x.c@{cr\_startup\_lpc175x\_6x.c}}
+\doxysubsubsection{ResetISR()}
+{\footnotesize\ttfamily void Reset\+I\+SR (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\label{cr__startup__lpc175x__6x_8c_a553d3c6fbc0ff764fa70b866b5c79e3e}} 
+\index{cr\_startup\_lpc175x\_6x.c@{cr\_startup\_lpc175x\_6x.c}!SVC\_Handler@{SVC\_Handler}}
+\index{SVC\_Handler@{SVC\_Handler}!cr\_startup\_lpc175x\_6x.c@{cr\_startup\_lpc175x\_6x.c}}
+\doxysubsubsection{SVC\_Handler()}
+{\footnotesize\ttfamily \textbf{ W\+E\+AK} void S\+V\+C\+\_\+\+Handler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\label{cr__startup__lpc175x__6x_8c_ab80f32111a0725c9f4cdfb9d6c9b7f82}} 
+\index{cr\_startup\_lpc175x\_6x.c@{cr\_startup\_lpc175x\_6x.c}!SysTick\_Handler@{SysTick\_Handler}}
+\index{SysTick\_Handler@{SysTick\_Handler}!cr\_startup\_lpc175x\_6x.c@{cr\_startup\_lpc175x\_6x.c}}
+\doxysubsubsection{SysTick\_Handler()}
+{\footnotesize\ttfamily \textbf{ W\+E\+AK} void Sys\+Tick\+\_\+\+Handler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 19 of file wait.\+c.
+
+\mbox{\label{cr__startup__lpc175x__6x_8c_a5fad9d61e19fbc1f3d3e53fbe0082c83}} 
+\index{cr\_startup\_lpc175x\_6x.c@{cr\_startup\_lpc175x\_6x.c}!UsageFault\_Handler@{UsageFault\_Handler}}
+\index{UsageFault\_Handler@{UsageFault\_Handler}!cr\_startup\_lpc175x\_6x.c@{cr\_startup\_lpc175x\_6x.c}}
+\doxysubsubsection{UsageFault\_Handler()}
+{\footnotesize\ttfamily \textbf{ W\+E\+AK} void Usage\+Fault\+\_\+\+Handler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\label{cr__startup__lpc175x__6x_8c_a9da6c5649ecdf2603e62fe05b05ea10d}} 
+\index{cr\_startup\_lpc175x\_6x.c@{cr\_startup\_lpc175x\_6x.c}!WDT\_IRQHandler@{WDT\_IRQHandler}}
+\index{WDT\_IRQHandler@{WDT\_IRQHandler}!cr\_startup\_lpc175x\_6x.c@{cr\_startup\_lpc175x\_6x.c}}
+\doxysubsubsection{WDT\_IRQHandler()}
+{\footnotesize\ttfamily void W\+D\+T\+\_\+\+I\+R\+Q\+Handler (\begin{DoxyParamCaption}\item[{void T\+I\+M\+E\+R0\+\_\+\+I\+R\+Q\+Handler() \textbf{ A\+L\+I\+AS}(\textbf{ Int\+Default\+Handler})}]{void }\end{DoxyParamCaption})}
+
+
+
+Definition at line 77 of file cr\+\_\+startup\+\_\+lpc175x\+\_\+6x.\+c.
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\label{cr__startup__lpc175x__6x_8c_a5876e5d2bb28455dd6e109ceb6a328d8}} 
+\index{cr\_startup\_lpc175x\_6x.c@{cr\_startup\_lpc175x\_6x.c}!\_\_bss\_section\_table@{\_\_bss\_section\_table}}
+\index{\_\_bss\_section\_table@{\_\_bss\_section\_table}!cr\_startup\_lpc175x\_6x.c@{cr\_startup\_lpc175x\_6x.c}}
+\doxysubsubsection{\_\_bss\_section\_table}
+{\footnotesize\ttfamily unsigned int \+\_\+\+\_\+bss\+\_\+section\+\_\+table}
+
+\mbox{\label{cr__startup__lpc175x__6x_8c_a6365f813efb5c531f6eb7f031e28e6c1}} 
+\index{cr\_startup\_lpc175x\_6x.c@{cr\_startup\_lpc175x\_6x.c}!\_\_bss\_section\_table\_end@{\_\_bss\_section\_table\_end}}
+\index{\_\_bss\_section\_table\_end@{\_\_bss\_section\_table\_end}!cr\_startup\_lpc175x\_6x.c@{cr\_startup\_lpc175x\_6x.c}}
+\doxysubsubsection{\_\_bss\_section\_table\_end}
+{\footnotesize\ttfamily unsigned int \+\_\+\+\_\+bss\+\_\+section\+\_\+table\+\_\+end}
+
+\mbox{\label{cr__startup__lpc175x__6x_8c_aa8f8f3229652f39c672fdb9309f96247}} 
+\index{cr\_startup\_lpc175x\_6x.c@{cr\_startup\_lpc175x\_6x.c}!\_\_data\_section\_table@{\_\_data\_section\_table}}
+\index{\_\_data\_section\_table@{\_\_data\_section\_table}!cr\_startup\_lpc175x\_6x.c@{cr\_startup\_lpc175x\_6x.c}}
+\doxysubsubsection{\_\_data\_section\_table}
+{\footnotesize\ttfamily unsigned int \+\_\+\+\_\+data\+\_\+section\+\_\+table}
+
+\mbox{\label{cr__startup__lpc175x__6x_8c_a09092262b7b68d7b89c9dcea506c5388}} 
+\index{cr\_startup\_lpc175x\_6x.c@{cr\_startup\_lpc175x\_6x.c}!\_\_data\_section\_table\_end@{\_\_data\_section\_table\_end}}
+\index{\_\_data\_section\_table\_end@{\_\_data\_section\_table\_end}!cr\_startup\_lpc175x\_6x.c@{cr\_startup\_lpc175x\_6x.c}}
+\doxysubsubsection{\_\_data\_section\_table\_end}
+{\footnotesize\ttfamily unsigned int \+\_\+\+\_\+data\+\_\+section\+\_\+table\+\_\+end}
+

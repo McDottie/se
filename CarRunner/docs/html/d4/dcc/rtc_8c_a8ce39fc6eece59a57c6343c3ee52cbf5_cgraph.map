@@ -1,0 +1,5 @@
+<map id="RTC_Init" name="RTC_Init">
+<area shape="rect" id="node1" title="Initiates the system to allow access to the RTC peripheral." alt="" coords="5,5,76,32"/>
+<area shape="rect" id="node2" href="$d4/dcc/rtc_8c.html#acefa177b35b24cdd98a156950f7d051b" title="Performs the RTC update with the value of the seconds parameter." alt="" coords="124,5,249,32"/>
+<area shape="rect" id="node3" href="$d4/dcc/rtc_8c.html#a14fa105430d9febf19fe275cee4664d8" title="Updates RTC." alt="" coords="297,5,404,32"/>
+</map>

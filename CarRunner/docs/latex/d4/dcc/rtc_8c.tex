@@ -1,0 +1,143 @@
+\doxysection{C\+:/\+Users/josee/\+Documents/\+I\+S\+E\+L/3\+\_\+\+Ano-\/5\+\_\+\+Semestre/\+S\+E1/\+S\+E2021/src/rtc.c File Reference}
+\label{rtc_8c}\index{C:/Users/josee/Documents/ISEL/3\_Ano-\/5\_Semestre/SE1/SE2021/src/rtc.c@{C:/Users/josee/Documents/ISEL/3\_Ano-\/5\_Semestre/SE1/SE2021/src/rtc.c}}
+{\ttfamily \#include \char`\"{}rtc.\+h\char`\"{}}\newline
+Include dependency graph for rtc.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{d9/d37/rtc_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \textbf{ R\+T\+C\+\_\+\+Init} (time\+\_\+t seconds)
+\begin{DoxyCompactList}\small\item\em Initiates the system to allow access to the R\+TC peripheral. \end{DoxyCompactList}\item 
+void \textbf{ R\+T\+C\+\_\+\+Get\+Value} (struct tm $\ast$date\+Time)
+\item 
+void \textbf{ R\+T\+C\+\_\+\+Set\+Value} (struct tm $\ast$date\+Time)
+\begin{DoxyCompactList}\small\item\em Updates R\+TC. \end{DoxyCompactList}\item 
+void \textbf{ R\+T\+C\+\_\+\+Set\+Seconds} (time\+\_\+t seconds)
+\begin{DoxyCompactList}\small\item\em Performs the R\+TC update with the value of the seconds parameter. \end{DoxyCompactList}\item 
+time\+\_\+t \textbf{ R\+T\+C\+\_\+\+Get\+Seconds} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{rtc_8c_aed5e5912abe16282e6934f5c108f4ca9}} 
+\index{rtc.c@{rtc.c}!RTC\_GetSeconds@{RTC\_GetSeconds}}
+\index{RTC\_GetSeconds@{RTC\_GetSeconds}!rtc.c@{rtc.c}}
+\doxysubsubsection{RTC\_GetSeconds()}
+{\footnotesize\ttfamily time\+\_\+t R\+T\+C\+\_\+\+Get\+Seconds (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+Returns the current value of the R\+TC, in seconds since 00\+:00\+:00 U\+TC on January 1 1970 
+\end{DoxyReturn}
+
+
+Definition at line 64 of file rtc.\+c.
+
+
+
+References R\+T\+C\+\_\+\+Get\+Value().
+
+
+
+Referenced by routine\+Chooser().
+
+\mbox{\label{rtc_8c_a506e5d1d8d538575e4739d85f4db7ff1}} 
+\index{rtc.c@{rtc.c}!RTC\_GetValue@{RTC\_GetValue}}
+\index{RTC\_GetValue@{RTC\_GetValue}!rtc.c@{rtc.c}}
+\doxysubsubsection{RTC\_GetValue()}
+{\footnotesize\ttfamily void R\+T\+C\+\_\+\+Get\+Value (\begin{DoxyParamCaption}\item[{struct tm $\ast$}]{date\+Time }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em date\+Time} & current R\+TC value ajusted to 00\+:00\+:00 U\+TC from 1 January 1970. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 25 of file rtc.\+c.
+
+
+
+Referenced by main(), and R\+T\+C\+\_\+\+Get\+Seconds().
+
+\mbox{\label{rtc_8c_a8ce39fc6eece59a57c6343c3ee52cbf5}} 
+\index{rtc.c@{rtc.c}!RTC\_Init@{RTC\_Init}}
+\index{RTC\_Init@{RTC\_Init}!rtc.c@{rtc.c}}
+\doxysubsubsection{RTC\_Init()}
+{\footnotesize\ttfamily void R\+T\+C\+\_\+\+Init (\begin{DoxyParamCaption}\item[{time\+\_\+t}]{seconds }\end{DoxyParamCaption})}
+
+
+
+Initiates the system to allow access to the R\+TC peripheral. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em seconds} & The R\+TC is started with this value, which represents the seconds since 00\+:00\+:00 U\+TC from 1 January 1970. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 14 of file rtc.\+c.
+
+
+
+References R\+T\+C\+\_\+\+Set\+Seconds().
+
+
+
+Referenced by main().
+
+\mbox{\label{rtc_8c_acefa177b35b24cdd98a156950f7d051b}} 
+\index{rtc.c@{rtc.c}!RTC\_SetSeconds@{RTC\_SetSeconds}}
+\index{RTC\_SetSeconds@{RTC\_SetSeconds}!rtc.c@{rtc.c}}
+\doxysubsubsection{RTC\_SetSeconds()}
+{\footnotesize\ttfamily void R\+T\+C\+\_\+\+Set\+Seconds (\begin{DoxyParamCaption}\item[{time\+\_\+t}]{seconds }\end{DoxyParamCaption})}
+
+
+
+Performs the R\+TC update with the value of the seconds parameter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em seconds} & represents the seconds since 00\+:00\+:00 U\+TC of 1 January 1970. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 59 of file rtc.\+c.
+
+
+
+References R\+T\+C\+\_\+\+Set\+Value().
+
+
+
+Referenced by R\+T\+C\+\_\+\+Init().
+
+\mbox{\label{rtc_8c_a14fa105430d9febf19fe275cee4664d8}} 
+\index{rtc.c@{rtc.c}!RTC\_SetValue@{RTC\_SetValue}}
+\index{RTC\_SetValue@{RTC\_SetValue}!rtc.c@{rtc.c}}
+\doxysubsubsection{RTC\_SetValue()}
+{\footnotesize\ttfamily void R\+T\+C\+\_\+\+Set\+Value (\begin{DoxyParamCaption}\item[{struct tm $\ast$}]{date\+Time }\end{DoxyParamCaption})}
+
+
+
+Updates R\+TC. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em date\+Time} & value that is set to update R\+TC. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 45 of file rtc.\+c.
+
+
+
+Referenced by R\+T\+C\+\_\+\+Set\+Seconds(), and Time\+\_\+change\+Routine().
+

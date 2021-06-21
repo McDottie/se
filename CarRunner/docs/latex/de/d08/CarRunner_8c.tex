@@ -1,0 +1,155 @@
+\doxysection{C\+:/\+Users/josee/\+Documents/\+I\+S\+E\+L/3\+\_\+\+Ano-\/5\+\_\+\+Semestre/\+S\+E1/\+Car\+Runner/src/\+Car\+Runner.c File Reference}
+\label{CarRunner_8c}\index{C:/Users/josee/Documents/ISEL/3\_Ano-\/5\_Semestre/SE1/CarRunner/src/CarRunner.c@{C:/Users/josee/Documents/ISEL/3\_Ano-\/5\_Semestre/SE1/CarRunner/src/CarRunner.c}}
+{\ttfamily \#include $<$cr\+\_\+section\+\_\+macros.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}lcd.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}time\+\_\+helper.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}button.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}rtc.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}wait.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}A\+D\+X\+L345.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}spi.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}saver.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Car\+Runner.\+h\char`\"{}}\newline
+Include dependency graph for Car\+Runner.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d9/d70/CarRunner_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ P\+R\+E\+S\+S\+I\+N\+G\+\_\+\+T\+I\+ME}~2000
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \textbf{ main} (void)
+\item 
+void \textbf{ Menu} ()
+\item 
+void \textbf{ routine\+Chooser} (int routine)
+\item 
+void \textbf{ player\+Scores\+Show\+Down} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \textbf{ menu\+\_\+options} [3] = \{\char`\"{}Change Time\char`\"{},\char`\"{}Show Players\textbackslash{}n\+Scores\char`\"{}, \char`\"{}Exit\char`\"{}\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\label{CarRunner_8c_aaea57e2b5d2fcc24b20f8947721732f7}} 
+\index{CarRunner.c@{CarRunner.c}!PRESSING\_TIME@{PRESSING\_TIME}}
+\index{PRESSING\_TIME@{PRESSING\_TIME}!CarRunner.c@{CarRunner.c}}
+\doxysubsubsection{PRESSING\_TIME}
+{\footnotesize\ttfamily \#define P\+R\+E\+S\+S\+I\+N\+G\+\_\+\+T\+I\+ME~2000}
+
+
+
+Definition at line 30 of file Car\+Runner.\+c.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{CarRunner_8c_a840291bc02cba5474a4cb46a9b9566fe}} 
+\index{CarRunner.c@{CarRunner.c}!main@{main}}
+\index{main@{main}!CarRunner.c@{CarRunner.c}}
+\doxysubsubsection{main()}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyImageNoCaption}
+  \mbox{\includegraphics[width=\textwidth,height=\textheight/2,keepaspectratio=true]{inline_umlgraph_6}}
+\end{DoxyImageNoCaption}
+ 
+
+Definition at line 47 of file Car\+Runner.\+c.
+
+
+
+References A\+D\+X\+L345\+\_\+\+Init(), B\+U\+T\+T\+O\+N\+\_\+\+Get\+Buttons\+Events(), B\+U\+T\+T\+O\+N\+\_\+\+Init(), game\+Init(), game\+Routine(), key\+\_\+state\+::key, key\+State, L, L\+C\+D\+Text\+\_\+\+Init(), Menu(), P\+R\+E\+S\+S\+ED, P\+R\+E\+S\+S\+I\+N\+G\+\_\+\+T\+I\+ME, R, R\+E\+P\+E\+A\+T\+ED, R\+T\+C\+\_\+\+Get\+Value(), R\+T\+C\+\_\+\+Init(), S, S\+P\+I\+\_\+\+Init(), key\+\_\+state\+::state, update\+\_\+\+Date\+Time\+Display(), W\+A\+I\+T\+\_\+\+Get\+Elapsed\+Millis(), and W\+A\+I\+T\+\_\+\+Init().
+
+\mbox{\label{CarRunner_8c_afdf1ca9e7afc3e7ec41b47fea4b3d80d}} 
+\index{CarRunner.c@{CarRunner.c}!Menu@{Menu}}
+\index{Menu@{Menu}!CarRunner.c@{CarRunner.c}}
+\doxysubsubsection{Menu()}
+{\footnotesize\ttfamily void Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyImageNoCaption}
+  \mbox{\includegraphics[width=\textwidth,height=\textheight/2,keepaspectratio=true]{inline_umlgraph_8}}
+\end{DoxyImageNoCaption}
+ 
+
+Definition at line 109 of file Car\+Runner.\+c.
+
+
+
+References B\+U\+T\+T\+O\+N\+\_\+\+Get\+Buttons\+Events(), key\+\_\+state\+::key, key\+State, L, L\+C\+D\+Text\+\_\+\+Clear(), L\+C\+D\+Text\+\_\+\+Write\+String(), menu\+\_\+options, P\+R\+E\+S\+S\+ED, R, routine\+Chooser(), S, and key\+\_\+state\+::state.
+
+
+
+Referenced by main().
+
+\mbox{\label{CarRunner_8c_ab67ab825590b48557d1732484940a6a3}} 
+\index{CarRunner.c@{CarRunner.c}!playerScoresShowDown@{playerScoresShowDown}}
+\index{playerScoresShowDown@{playerScoresShowDown}!CarRunner.c@{CarRunner.c}}
+\doxysubsubsection{playerScoresShowDown()}
+{\footnotesize\ttfamily void player\+Scores\+Show\+Down (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyImageNoCaption}
+  \mbox{\includegraphics[width=\textwidth,height=\textheight/2,keepaspectratio=true]{inline_umlgraph_10}}
+\end{DoxyImageNoCaption}
+ 
+
+Definition at line 176 of file Car\+Runner.\+c.
+
+
+
+References B\+U\+T\+T\+O\+N\+\_\+\+Get\+Buttons\+Events(), key\+\_\+state\+::key, key\+State, L, L\+C\+D\+Text\+\_\+\+Clear(), L\+C\+D\+Text\+\_\+\+Printf(), L\+C\+D\+Text\+\_\+\+Write\+String(), list\+Size(), P\+R\+E\+S\+S\+ED, R, read\+Names(), read\+Scores(), S, scores, key\+\_\+state\+::state, and W\+A\+I\+T\+\_\+\+Chrono\+Us().
+
+
+
+Referenced by routine\+Chooser().
+
+\mbox{\label{CarRunner_8c_a18e3ef9037a022b853f82460dc9fb422}} 
+\index{CarRunner.c@{CarRunner.c}!routineChooser@{routineChooser}}
+\index{routineChooser@{routineChooser}!CarRunner.c@{CarRunner.c}}
+\doxysubsubsection{routineChooser()}
+{\footnotesize\ttfamily void routine\+Chooser (\begin{DoxyParamCaption}\item[{int}]{routine }\end{DoxyParamCaption})}
+
+
+
+Definition at line 150 of file Car\+Runner.\+c.
+
+
+
+References player\+Scores\+Show\+Down(), R\+T\+C\+\_\+\+Get\+Seconds(), and Time\+\_\+change\+Routine().
+
+
+
+Referenced by Menu().
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\label{CarRunner_8c_abb74ace85ec2d03bf1e0496d430fdc19}} 
+\index{CarRunner.c@{CarRunner.c}!menu\_options@{menu\_options}}
+\index{menu\_options@{menu\_options}!CarRunner.c@{CarRunner.c}}
+\doxysubsubsection{menu\_options}
+{\footnotesize\ttfamily char$\ast$ menu\+\_\+options[3] = \{\char`\"{}Change Time\char`\"{},\char`\"{}Show Players\textbackslash{}n\+Scores\char`\"{}, \char`\"{}Exit\char`\"{}\}}
+
+
+
+Definition at line 93 of file Car\+Runner.\+c.
+
+
+
+Referenced by Menu().
+

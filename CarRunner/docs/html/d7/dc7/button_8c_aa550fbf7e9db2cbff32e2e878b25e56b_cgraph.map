@@ -1,0 +1,5 @@
+<map id="BUTTON_Init" name="BUTTON_Init">
+<area shape="rect" id="node1" title="Initializes every button and sets mode for to pull&#45;up." alt="" coords="5,5,103,32"/>
+<area shape="rect" id="node2" href="$d7/dc7/button_8c.html#a9f00b0aebf4efaa3684a0e2ed2bfee08" title="Gets pressed button non&#45;blocking version." alt="" coords="151,5,247,32"/>
+<area shape="rect" id="node3" href="$df/d7c/group__WAIT__Public__Functions.html#ga1c152ed7920e9c4118a0cad2d776e816" title="Waits waitUs microseconds." alt="" coords="295,5,413,32"/>
+</map>

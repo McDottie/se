@@ -1,0 +1,8 @@
+<map id="LCDText_Clear" name="LCDText_Clear">
+<area shape="rect" id="node1" title="Clear the display using the command available in the peripheral API." alt="" coords="5,56,115,83"/>
+<area shape="rect" id="node2" href="$da/def/lcd_8c.html#a7187e0fca7d1666198d63c6c972edee7" title="Positions the cursor on the row and column of the display." alt="" coords="163,5,281,32"/>
+<area shape="rect" id="node3" href="$da/def/lcd_8c.html#a5f19eb2778765403be28d81489dcb0b1" title="Gives an instruction to the LCD controller." alt="" coords="329,31,467,57"/>
+<area shape="rect" id="node6" href="$df/d7c/group__WAIT__Public__Functions.html#ga1c152ed7920e9c4118a0cad2d776e816" title="Waits waitUs microseconds." alt="" coords="895,56,1013,83"/>
+<area shape="rect" id="node4" href="$da/def/lcd_8c.html#ae68ea4f2f700e363bc506f60b5815793" title=" " alt="" coords="515,5,652,32"/>
+<area shape="rect" id="node5" href="$da/def/lcd_8c.html#a882a67a85b9762e0ffa3bf12c4212770" title=" " alt="" coords="700,5,847,32"/>
+</map>

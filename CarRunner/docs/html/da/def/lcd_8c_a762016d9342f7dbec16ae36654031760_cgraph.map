@@ -1,0 +1,10 @@
+<map id="LCDText_Init" name="LCDText_Init">
+<area shape="rect" id="node1" title="Initiates the system to allow access to the LCD peripheral, using 2 lines with 16 columns and 4&#45;bit c..." alt="" coords="5,169,101,196"/>
+<area shape="rect" id="node2" href="$da/def/lcd_8c.html#ac1bdd6893daf2ea4733bfb2f40020378" title="Clear the display using the command available in the peripheral API." alt="" coords="149,93,259,120"/>
+<area shape="rect" id="node3" href="$da/def/lcd_8c.html#a7187e0fca7d1666198d63c6c972edee7" title="Positions the cursor on the row and column of the display." alt="" coords="319,144,438,171"/>
+<area shape="rect" id="node4" href="$da/def/lcd_8c.html#a5f19eb2778765403be28d81489dcb0b1" title="Gives an instruction to the LCD controller." alt="" coords="499,144,636,171"/>
+<area shape="rect" id="node6" href="$da/def/lcd_8c.html#a882a67a85b9762e0ffa3bf12c4212770" title=" " alt="" coords="869,245,1016,272"/>
+<area shape="rect" id="node7" href="$df/d7c/group__WAIT__Public__Functions.html#ga1c152ed7920e9c4118a0cad2d776e816" title="Waits waitUs microseconds." alt="" coords="1064,144,1183,171"/>
+<area shape="rect" id="node8" href="$da/def/lcd_8c.html#a3375b768752a6c245966fcf02457de34" title="Creates a character." alt="" coords="307,245,451,272"/>
+<area shape="rect" id="node5" href="$da/def/lcd_8c.html#ae68ea4f2f700e363bc506f60b5815793" title=" " alt="" coords="684,245,821,272"/>
+</map>

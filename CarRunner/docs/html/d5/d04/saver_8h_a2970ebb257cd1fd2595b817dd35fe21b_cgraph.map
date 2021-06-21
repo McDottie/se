@@ -1,0 +1,8 @@
+<map id="readScores" name="readScores">
+<area shape="rect" id="node1" title="reads from flash all the scores" alt="" coords="5,31,93,57"/>
+<area shape="rect" id="node2" href="$d1/dee/saver_8c.html#a4ae339342810f583b863eb857cabbc43" title=" " alt="" coords="141,31,232,57"/>
+<area shape="rect" id="node3" href="$da/da8/Flash_8h.html#a8434ff2fd7738e952662618266f8d4ea" title=" " alt="" coords="280,5,428,32"/>
+<area shape="rect" id="node4" href="$da/da8/Flash_8h.html#a3db6ec18c90224fb77b17365442f9247" title="Write the data block. This Function can only access sectors from sector 16 to 29." alt="" coords="289,56,419,83"/>
+<area shape="rect" id="node5" href="$d3/d00/Flash_8c.html#a698f741fbd7c45bf458536045c2bd495" title="Deletes the contents of a sector, or multiple sectors, of FLASH. To delete only one sector,..." alt="" coords="476,31,627,57"/>
+<area shape="rect" id="node6" href="$d3/d00/Flash_8c.html#a6e88ebccaaac4dc6f071ebd23d08036b" title=" " alt="" coords="484,81,619,108"/>
+</map>

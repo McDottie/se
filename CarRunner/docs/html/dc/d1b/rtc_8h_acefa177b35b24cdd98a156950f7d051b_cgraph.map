@@ -1,0 +1,4 @@
+<map id="RTC_SetSeconds" name="RTC_SetSeconds">
+<area shape="rect" id="node1" title="Performs the RTC update with the value of the seconds parameter." alt="" coords="5,5,131,32"/>
+<area shape="rect" id="node2" href="$d4/dcc/rtc_8c.html#a14fa105430d9febf19fe275cee4664d8" title="Updates RTC." alt="" coords="179,5,285,32"/>
+</map>

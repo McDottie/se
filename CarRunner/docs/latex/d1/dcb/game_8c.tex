@@ -1,0 +1,291 @@
+\doxysection{C\+:/\+Users/josee/\+Documents/\+I\+S\+E\+L/3\+\_\+\+Ano-\/5\+\_\+\+Semestre/\+S\+E1/\+Car\+Runner/src/game.c File Reference}
+\label{game_8c}\index{C:/Users/josee/Documents/ISEL/3\_Ano-\/5\_Semestre/SE1/CarRunner/src/game.c@{C:/Users/josee/Documents/ISEL/3\_Ano-\/5\_Semestre/SE1/CarRunner/src/game.c}}
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}game.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}saver.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}wait.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lcd.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}button.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Car\+Runner.\+h\char`\"{}}\newline
+Include dependency graph for game.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/de8/game_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ C\+AR}~1
+\item 
+\#define \textbf{ O\+BS}~2
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \textbf{ game\+Init} ()
+\begin{DoxyCompactList}\small\item\em initializes the module \end{DoxyCompactList}\item 
+void \textbf{ game\+Routine} ()
+\begin{DoxyCompactList}\small\item\em routine that interfaces with buttons, lcd and accelerometer to play the game. It also saves scores and player names. \end{DoxyCompactList}\item 
+void \textbf{ save\+User} (int \textbf{ points})
+\item 
+void \textbf{ init\+Values} ()
+\item 
+int \textbf{ update\+Game\+Logic} ()
+\item 
+void \textbf{ update\+Game\+Design} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+bool \textbf{ car} = 0
+\item 
+bool \textbf{ up\+Road} [16] = \{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0\}
+\item 
+bool \textbf{ down\+Road} [16] = \{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0\}
+\item 
+int \textbf{ probability\+To\+Spawn} = 20
+\item 
+int \textbf{ points} = 0
+\item 
+int \textbf{ delay} = 1000
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\label{game_8c_a1ff500177d91664413d59db9f49ecbaf}} 
+\index{game.c@{game.c}!CAR@{CAR}}
+\index{CAR@{CAR}!game.c@{game.c}}
+\doxysubsubsection{CAR}
+{\footnotesize\ttfamily \#define C\+AR~1}
+
+
+
+Definition at line 18 of file game.\+c.
+
+\mbox{\label{game_8c_a100c68e576715ae019c2ec8e90f342ec}} 
+\index{game.c@{game.c}!OBS@{OBS}}
+\index{OBS@{OBS}!game.c@{game.c}}
+\doxysubsubsection{OBS}
+{\footnotesize\ttfamily \#define O\+BS~2}
+
+
+
+Definition at line 19 of file game.\+c.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{game_8c_a43ae9a7f0ac55585ed6375c580abcaf0}} 
+\index{game.c@{game.c}!gameInit@{gameInit}}
+\index{gameInit@{gameInit}!game.c@{game.c}}
+\doxysubsubsection{gameInit()}
+{\footnotesize\ttfamily void game\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+initializes the module 
+
+
+
+Definition at line 30 of file game.\+c.
+
+
+
+References car, and L\+C\+D\+Text\+\_\+\+Create\+Char().
+
+
+
+Referenced by main().
+
+\mbox{\label{game_8c_a92bda1189af04213af823bf0e3f5c3e8}} 
+\index{game.c@{game.c}!gameRoutine@{gameRoutine}}
+\index{gameRoutine@{gameRoutine}!game.c@{game.c}}
+\doxysubsubsection{gameRoutine()}
+{\footnotesize\ttfamily void game\+Routine (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+routine that interfaces with buttons, lcd and accelerometer to play the game. It also saves scores and player names. 
+
+
+\begin{DoxyImageNoCaption}
+  \mbox{\includegraphics[width=\textwidth,height=\textheight/2,keepaspectratio=true]{inline_umlgraph_12}}
+\end{DoxyImageNoCaption}
+ 
+
+Definition at line 56 of file game.\+c.
+
+
+
+References A\+D\+X\+L345\+\_\+is\+Tap(), B\+U\+T\+T\+O\+N\+\_\+\+Get\+Buttons\+Events(), car, delay, init\+Values(), key\+\_\+state\+::key, L, L\+C\+D\+Text\+\_\+\+Clear(), L\+C\+D\+Text\+\_\+\+Locate(), L\+C\+D\+Text\+\_\+\+Printf(), L\+C\+D\+Text\+\_\+\+Write\+String(), points, P\+R\+E\+S\+S\+ED, R, read\+Scores(), save\+User(), key\+\_\+state\+::state, update\+Game\+Design(), update\+Game\+Logic(), W\+A\+I\+T\+\_\+\+Chrono\+Us(), and W\+A\+I\+T\+\_\+\+Get\+Elapsed\+Millis().
+
+
+
+Referenced by main().
+
+\mbox{\label{game_8c_af01da115d6b9e37a69b63e8d0db640de}} 
+\index{game.c@{game.c}!initValues@{initValues}}
+\index{initValues@{initValues}!game.c@{game.c}}
+\doxysubsubsection{initValues()}
+{\footnotesize\ttfamily void init\+Values (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 179 of file game.\+c.
+
+
+
+References car, delay, down\+Road, points, probability\+To\+Spawn, and up\+Road.
+
+
+
+Referenced by game\+Routine().
+
+\mbox{\label{game_8c_ae2a3552aec8bec9021c1063049400e3b}} 
+\index{game.c@{game.c}!saveUser@{saveUser}}
+\index{saveUser@{saveUser}!game.c@{game.c}}
+\doxysubsubsection{saveUser()}
+{\footnotesize\ttfamily void save\+User (\begin{DoxyParamCaption}\item[{int}]{points }\end{DoxyParamCaption})}
+
+
+\begin{DoxyImageNoCaption}
+  \mbox{\includegraphics[width=\textwidth,height=\textheight/2,keepaspectratio=true]{inline_umlgraph_14}}
+\end{DoxyImageNoCaption}
+ 
+
+Definition at line 127 of file game.\+c.
+
+
+
+References B\+U\+T\+T\+O\+N\+\_\+\+Get\+Buttons\+Events(), key\+\_\+state\+::key, L, L\+C\+D\+Text\+\_\+\+Clear(), L\+C\+D\+Text\+\_\+\+Cursor\+Off(), L\+C\+D\+Text\+\_\+\+Cursor\+On(), L\+C\+D\+Text\+\_\+\+Locate(), L\+C\+D\+Text\+\_\+\+Write\+Char(), L\+C\+D\+Text\+\_\+\+Write\+String(), points, P\+R\+E\+S\+S\+ED, R, R\+E\+P\+E\+A\+T\+ED, S, save\+Score(), key\+\_\+state\+::state, and W\+A\+I\+T\+\_\+\+Get\+Elapsed\+Millis().
+
+
+
+Referenced by game\+Routine().
+
+\mbox{\label{game_8c_ac517e3bd03587b0c6cfcdb72a57a1ccf}} 
+\index{game.c@{game.c}!updateGameDesign@{updateGameDesign}}
+\index{updateGameDesign@{updateGameDesign}!game.c@{game.c}}
+\doxysubsubsection{updateGameDesign()}
+{\footnotesize\ttfamily void update\+Game\+Design (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 251 of file game.\+c.
+
+
+
+References C\+AR, car, down\+Road, L\+C\+D\+Text\+\_\+\+Locate(), L\+C\+D\+Text\+\_\+\+Write\+String(), O\+BS, and up\+Road.
+
+
+
+Referenced by game\+Routine().
+
+\mbox{\label{game_8c_a9750389b435950c569d46a81cc21caca}} 
+\index{game.c@{game.c}!updateGameLogic@{updateGameLogic}}
+\index{updateGameLogic@{updateGameLogic}!game.c@{game.c}}
+\doxysubsubsection{updateGameLogic()}
+{\footnotesize\ttfamily int update\+Game\+Logic (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 190 of file game.\+c.
+
+
+
+References car, delay, down\+Road, points, probability\+To\+Spawn, and up\+Road.
+
+
+
+Referenced by game\+Routine().
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\label{game_8c_aa1864ec638b72a3a2d94ea106c2f1f54}} 
+\index{game.c@{game.c}!car@{car}}
+\index{car@{car}!game.c@{game.c}}
+\doxysubsubsection{car}
+{\footnotesize\ttfamily bool car = 0}
+
+
+
+Definition at line 23 of file game.\+c.
+
+
+
+Referenced by game\+Init(), game\+Routine(), init\+Values(), update\+Game\+Design(), and update\+Game\+Logic().
+
+\mbox{\label{game_8c_a6f1be1f780ff54ec75b41451cd4d90bd}} 
+\index{game.c@{game.c}!delay@{delay}}
+\index{delay@{delay}!game.c@{game.c}}
+\doxysubsubsection{delay}
+{\footnotesize\ttfamily int delay = 1000}
+
+
+
+Definition at line 28 of file game.\+c.
+
+
+
+Referenced by game\+Routine(), init\+Values(), and update\+Game\+Logic().
+
+\mbox{\label{game_8c_a5687a1d5724cf6e7ea5c82eb2bb84ba8}} 
+\index{game.c@{game.c}!downRoad@{downRoad}}
+\index{downRoad@{downRoad}!game.c@{game.c}}
+\doxysubsubsection{downRoad}
+{\footnotesize\ttfamily bool down\+Road[16] = \{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0\}}
+
+
+
+Definition at line 25 of file game.\+c.
+
+
+
+Referenced by init\+Values(), update\+Game\+Design(), and update\+Game\+Logic().
+
+\mbox{\label{game_8c_af7f8f4a4e39e09fdb5e9f02330ecabef}} 
+\index{game.c@{game.c}!points@{points}}
+\index{points@{points}!game.c@{game.c}}
+\doxysubsubsection{points}
+{\footnotesize\ttfamily int points = 0}
+
+
+
+Definition at line 27 of file game.\+c.
+
+
+
+Referenced by game\+Routine(), init\+Values(), save\+User(), and update\+Game\+Logic().
+
+\mbox{\label{game_8c_a8a57b46bc85e48c14b542545ffe17e0f}} 
+\index{game.c@{game.c}!probabilityToSpawn@{probabilityToSpawn}}
+\index{probabilityToSpawn@{probabilityToSpawn}!game.c@{game.c}}
+\doxysubsubsection{probabilityToSpawn}
+{\footnotesize\ttfamily int probability\+To\+Spawn = 20}
+
+
+
+Definition at line 26 of file game.\+c.
+
+
+
+Referenced by init\+Values(), and update\+Game\+Logic().
+
+\mbox{\label{game_8c_a93b50c6364a276c0d433111860c5ed97}} 
+\index{game.c@{game.c}!upRoad@{upRoad}}
+\index{upRoad@{upRoad}!game.c@{game.c}}
+\doxysubsubsection{upRoad}
+{\footnotesize\ttfamily bool up\+Road[16] = \{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0\}}
+
+
+
+Definition at line 24 of file game.\+c.
+
+
+
+Referenced by init\+Values(), update\+Game\+Design(), and update\+Game\+Logic().
+

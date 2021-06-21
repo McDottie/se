@@ -1,0 +1,7 @@
+<map id="ADXL345_REGISTERS" name="ADXL345_REGISTERS">
+<area shape="rect" id="node1" href="$d0/df5/group__ADXL345__TAP__REGISTERS.html" title=" " alt="" coords="233,5,421,31"/>
+<area shape="rect" id="node2" href="$d4/d37/group__ADXL345__OUTPUT__DATA__REGISTERS.html" title=" " alt="" coords="239,55,414,95"/>
+<area shape="rect" id="node3" href="$dd/d70/group__ADXL345__CONFIG__REGISTERS.html" title=" " alt="" coords="221,120,433,145"/>
+<area shape="rect" id="node4" href="$d6/dfe/group__ADXL345__INTERRUPT__REGISTERS.html" title=" " alt="" coords="209,169,444,195"/>
+<area shape="rect" id="node5" title=" " alt="" coords="5,92,161,117"/>
+</map>

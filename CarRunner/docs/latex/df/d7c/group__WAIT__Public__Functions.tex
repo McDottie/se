@@ -1,0 +1,119 @@
+\doxysection{W\+A\+IT Public Functions}
+\label{group__WAIT__Public__Functions}\index{WAIT Public Functions@{WAIT Public Functions}}
+Collaboration diagram for W\+A\+IT Public Functions\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=273pt]{df/d7c/group__WAIT__Public__Functions}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int32\+\_\+t \textbf{ W\+A\+I\+T\+\_\+\+Init} (void)
+\begin{DoxyCompactList}\small\item\em Initialises the wait A\+PI for 1 ms resolution. \end{DoxyCompactList}\item 
+void \textbf{ W\+A\+I\+T\+\_\+\+Milliseconds} (uint32\+\_\+t millis)
+\begin{DoxyCompactList}\small\item\em Waits a number of milliseconds. \end{DoxyCompactList}\item 
+uint32\+\_\+t \textbf{ W\+A\+I\+T\+\_\+\+Get\+Elapsed\+Millis} (uint32\+\_\+t start)
+\begin{DoxyCompactList}\small\item\em Get difference in milliseconds from parameter. \end{DoxyCompactList}\item 
+void \textbf{ W\+A\+I\+T\+\_\+\+Chrono\+Us} (uint32\+\_\+t wait\+Us)
+\begin{DoxyCompactList}\small\item\em Waits wait\+Us microseconds. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{group__WAIT__Public__Functions_ga1c152ed7920e9c4118a0cad2d776e816}} 
+\index{WAIT Public Functions@{WAIT Public Functions}!WAIT\_ChronoUs@{WAIT\_ChronoUs}}
+\index{WAIT\_ChronoUs@{WAIT\_ChronoUs}!WAIT Public Functions@{WAIT Public Functions}}
+\doxysubsubsection{WAIT\_ChronoUs()}
+{\footnotesize\ttfamily void W\+A\+I\+T\+\_\+\+Chrono\+Us (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{wait\+Us }\end{DoxyParamCaption})}
+
+
+
+Waits wait\+Us microseconds. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em wait\+Us} & miliseconds to wait \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 50 of file wait.\+c.
+
+
+
+Referenced by B\+U\+T\+T\+O\+N\+\_\+\+Hit(), game\+Routine(), L\+C\+D\+Text\+\_\+\+Clear(), L\+C\+D\+Text\+\_\+\+Create\+Char(), L\+C\+D\+Text\+\_\+\+Init(), L\+C\+D\+Text\+\_\+\+Write\+Char(), L\+C\+D\+Text\+\_\+\+Write\+Cmd(), L\+C\+D\+Text\+\_\+\+Write\+Nibble(), L\+C\+D\+Text\+\_\+\+Write\+String(), and player\+Scores\+Show\+Down().
+
+\mbox{\label{group__WAIT__Public__Functions_ga704472853537ff855081d868bf2460a4}} 
+\index{WAIT Public Functions@{WAIT Public Functions}!WAIT\_GetElapsedMillis@{WAIT\_GetElapsedMillis}}
+\index{WAIT\_GetElapsedMillis@{WAIT\_GetElapsedMillis}!WAIT Public Functions@{WAIT Public Functions}}
+\doxysubsubsection{WAIT\_GetElapsedMillis()}
+{\footnotesize\ttfamily uint32\+\_\+t W\+A\+I\+T\+\_\+\+Get\+Elapsed\+Millis (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{start }\end{DoxyParamCaption})}
+
+
+
+Get difference in milliseconds from parameter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em start} & if 0 get current milliseconds. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 45 of file wait.\+c.
+
+
+
+Referenced by game\+Routine(), main(), and save\+User().
+
+\mbox{\label{group__WAIT__Public__Functions_gaaf04f7010b8ca45e1053834d176b04f2}} 
+\index{WAIT Public Functions@{WAIT Public Functions}!WAIT\_Init@{WAIT\_Init}}
+\index{WAIT\_Init@{WAIT\_Init}!WAIT Public Functions@{WAIT Public Functions}}
+\doxysubsubsection{WAIT\_Init()}
+{\footnotesize\ttfamily int32\+\_\+t W\+A\+I\+T\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initialises the wait A\+PI for 1 ms resolution. 
+
+\begin{DoxyReturn}{Returns}
+0 if initialisation successed; -\/1 if fails. 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+This function must be called prior to any other W\+A\+IT functions, and use the S\+Y\+S\+T\+I\+CK resource. 
+\end{DoxyNote}
+
+
+Definition at line 32 of file wait.\+c.
+
+
+
+References S\+Y\+S\+T\+I\+C\+K\+\_\+\+F\+R\+EQ.
+
+
+
+Referenced by main().
+
+\mbox{\label{group__WAIT__Public__Functions_ga8d3111b31ffb9bce9b32370b46ae00fb}} 
+\index{WAIT Public Functions@{WAIT Public Functions}!WAIT\_Milliseconds@{WAIT\_Milliseconds}}
+\index{WAIT\_Milliseconds@{WAIT\_Milliseconds}!WAIT Public Functions@{WAIT Public Functions}}
+\doxysubsubsection{WAIT\_Milliseconds()}
+{\footnotesize\ttfamily void W\+A\+I\+T\+\_\+\+Milliseconds (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{millis }\end{DoxyParamCaption})}
+
+
+
+Waits a number of milliseconds. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em millis} & the whole number of milliseconds to wait. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 24 of file wait.\+c.
+

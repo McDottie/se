@@ -1,0 +1,6 @@
+<map id="setupTap" name="setupTap">
+<area shape="rect" id="node1" title="Configs taping." alt="" coords="5,31,80,57"/>
+<area shape="rect" id="node2" href="$d4/ddb/ADXL345_8c.html#a0e11c845302c3c61651b273be2fd0cf9" title=" " alt="" coords="129,5,224,32"/>
+<area shape="rect" id="node4" href="$d4/ddb/ADXL345_8c.html#af3310a0deedc61822abc7ea3007d68d5" title=" " alt="" coords="128,56,225,83"/>
+<area shape="rect" id="node3" href="$da/d87/spi_8h.html#adf7db1666629f8a6c11d0be20e592940" title="Makes a transfer. Returns the success or error in the transfer." alt="" coords="273,31,369,57"/>
+</map>
