@@ -32,13 +32,14 @@ void vESPTester(void * pvParameters){
 		bool res1 = ESP01_SetMode(STATION);
 		char ** r;
 		//int i = ESP01_ListAPs(r);
-		//bool res2 = ESP01_ConnectAP("Vodafone-3A8807", "V9g2ZEsVM7");
+		bool res2 = ESP01_ConnectAP("Vodafone-3A8807", "V9g2ZEsVM7");
 		//bool res2 = ESP01_ConnectAP("HUAWEI", "12345678");
-		bool res2 = ESP01_ConnectAP("LAPTOP-TQA8JN5P 2398", "S%3144b4");
+		//bool res2 = ESP01_ConnectAP("LAPTOP-TQA8JN5P 2398", "S%3144b4");
 
 		bool res3 = ESP01_SetDNS("1.1.1.1","1.0.0.1");
 		bool res4 = ESP01_ConnectServer("TCP","iot-se2021.ddns.net",8090);
-		//bool res4 = ESP01_ConnectServer("TCP","194.210.194.82",8080);
+		//bool res4 = ESP01_ConnectServer("TCP","192.168.1.71",50421);
+
 		char message[8];
 
 		memcpy(message, "GET / \r\n",8);
@@ -46,8 +47,7 @@ void vESPTester(void * pvParameters){
 		bool res5 = ESP01_Send(message, 8);
 		char * res6 = ESP01_RecvActive();
 
-
-		//printf("%d,%d,%d",result,res1,res2);
+		printf(res6);
 	}
 }
 

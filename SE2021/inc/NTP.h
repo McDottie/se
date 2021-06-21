@@ -41,18 +41,6 @@ typedef struct
 	uint32_t txTm_f; // 32 bits. Transmit time-stamp fraction of a second.
 } ntp_packet; // Total: 384 bits or 48 bytes
 
-uint8_t li_vn_mode = 0xE3; // LI, Version, Mode
-uint8_t stratum = 0; // Stratum, or type of clock
-uint8_t poll = 6; // Polling Interval
-uint8_t precision = 0xEC; // Peer Clock Precision
-
-uint32_t txTm_s; // Transmit time-stamp seconds
-uint32_t txTm_f; // Transmit time-stamp fraction
-
-uint32_t ntohl(uint32_t netlong) {
-	return __builtin_bswap32(netlong);
-}
-
 int NTP_Init(char* server, int port);
 ntp_packet NTP_Request();
 #endif /* NTP_H_ */

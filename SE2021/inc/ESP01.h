@@ -11,6 +11,7 @@
 #define ESP01_H_
 
 #include "uart.h"
+#include <stdarg.h>
 #include <stdbool.h>
 
 #define ESP01_INSTRUCTION_PREFIX    "AT+"

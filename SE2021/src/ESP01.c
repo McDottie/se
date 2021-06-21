@@ -54,15 +54,14 @@ void ESP01_Init() {
 
 bool ESP01_Restore(){
 	char result[4];
-	return ESP01_Command(10000, "RESTORE", "O", result, "OK");
+	return ESP01_Command(10000, "RESTORE", "OK", result, "OK");
 }
 
 bool ESP01_Test() {
-    UART_Printf("%s%s","AT",ESP01_INSTRUCTION_SUFIX);
-    unsigned char c[3];
-    int res;
+	char * cmd = "AT";
 
-    return ESP01_GetResponse(100000,c,"O","OK");;
+	char result[4];
+	return ESP01_CommandPrefix(10000,"", cmd, result, "OK", "OK");
 }
 
 int ESP01_NumberOfArgs(char* format){
@@ -104,11 +103,18 @@ bool ESP01_VGetResponse(int timeout, char* response, char * start, unsigned char
 		read = UART_GetChar(&responseHolder[sum]);
 		if(read) {
 			sum++;
-			int len = strlen(responseHolder);
-			if(!started && len == startLen) {
-				if(strcmp(responseHolder,start) != 0) {
-					memset(responseHolder, 0, ESP01_MAX_RSP_SIZE);
-					sum = 0;
+
+			if(!started && sum == startLen) {
+				if(memcmp(responseHolder,start,startLen) != 0) {
+					if(startLen > 1) {
+						char holder[startLen];
+						memcpy(holder,responseHolder,startLen);
+						memcpy(responseHolder,&holder[1],startLen-1);
+						sum--;
+					} else {
+						memset(responseHolder, 0, ESP01_MAX_RSP_SIZE);
+						sum = 0;
+					}
 				} else {
 					started = true;
 				}
@@ -117,7 +123,7 @@ bool ESP01_VGetResponse(int timeout, char* response, char * start, unsigned char
 			responseHolder[sum] = 0;
 			int res = vsscanf(responseHolder,format, args);
 
-			if(res == 0 && strcmp(responseHolder,format) == 0) {
+			if(res == 0 && memcmp(responseHolder,format,sum) == 0) {
 				//int i = regexec(regex, responseHolder,0 , NULL, REG_NOTBOL);
 
 				memcpy(response, responseHolder, sum);
@@ -164,7 +170,7 @@ bool ESP01_SetMode(enum ESP01_MODE mode) {
 	cmd[8] = 0;
     char * response = pvPortMalloc(4);
 
-    return ESP01_Command(3000, cmd, response, "O", "OK");
+    return ESP01_Command(3000, cmd, response, "OK", "OK");
 }
 
 
@@ -188,7 +194,7 @@ bool ESP01_ConnectAP(char ssid[16], char password[32]){
 	sprintf(cmd, "CWJAP=\"%s\",\"%s\"",ssid,password);
 
 	char * response = pvPortMalloc(4);
-	bool r = ESP01_Command(30000, cmd, response, "O","OK");
+	bool r = ESP01_Command(30000, cmd, response, "OK","OK");
 	return r;
 }
 
@@ -204,7 +210,7 @@ bool ESP01_CIPDNS(bool enable,char* server0, char* server1){
 
 	sprintf(cmd, "CIPDNS_CUR=%d,\"%s\",\"%s\"",enable,server0,server1);
 	char response[3];
-	bool r =  ESP01_Command(30000, cmd, response, "O", "OK");
+	bool r =  ESP01_Command(30000, cmd, response, "OK", "OK");
 	return r;
 }
 
@@ -213,7 +219,7 @@ bool ESP01_ConnectServer(char * connectionType, char * IP, int port){
 	char cmd[len];
 	sprintf(cmd, "CIPSTART=\"%s\",\"%s\",%d",connectionType, IP, port);
 	char response[3];
-	bool r = ESP01_Command(30000, cmd, response, "O", "OK");
+	bool r = ESP01_Command(30000, cmd, response, "CONNECT\r\n\r\nOK", "CONNECT\r\n\r\nOK");
 	return r;
 }
 
@@ -224,14 +230,14 @@ bool ESP01_Send(char * message, int len){
 	sprintf(cmd, "CIPSEND=%d",len);
 
 	char response[8];
-	if(ESP01_Command(30000, cmd, response, "O", ">")) {
+	if(ESP01_Command(30000, cmd, response, ">", ">")) {
 		UART_WriteBuffer(message, len);
 
 	} else {
 		return false;
 	}
 
-	bool r =  ESP01_GetResponse(3000, response,"O", "SEND OK");
+	bool r =  ESP01_GetResponse(3000, response,"SEND", "SEND OK");
 	return r;
 }
 
@@ -239,7 +245,7 @@ bool ESP01_Echo(bool echoOn) {
 	char cmd[3];
 	sprintf(cmd, "E%d",echoOn);
 	char result[4];
-	return ESP01_CommandPrefix(10000,"AT", cmd, result, "O", "OK");
+	return ESP01_CommandPrefix(10000,"AT", cmd, result, "OK", "OK");
 }
 
 bool ESP01_RecvMode(enum ESP01_RECV_MODE mode){
@@ -249,7 +255,7 @@ bool ESP01_RecvMode(enum ESP01_RECV_MODE mode){
 	cmd[13] = 0;
     char * response = pvPortMalloc(4);
 
-    ESP01_Command(10000, cmd, response, "O", "OK");
+    ESP01_Command(10000, cmd, response, "OK", "OK");
 }
 
 char * ESP01_RecvPassive(){
@@ -273,9 +279,17 @@ char * ESP01_RecvPassive(){
 }
 
 char * ESP01_RecvActive() {
-	char response[10];
-	int len = 0;
-	ESP01_GetResponse(10000, response, "+IPD", "+IPD,%d[^:]", len);
-	len +=1;
-	return "H";
+	char * response = pvPortMalloc(1024);
+	int len;
+	char * dd = pvPortMalloc(1);
+
+	bool success = ESP01_GetResponse(45000, response, "+IPD","+IPD,%d%[:]", &len,dd);//"+IPD,%d:%[^\r\n]%[^CLOSED]"
+
+	vPortFree(dd);
+	vPortFree(response);
+
+	char * retData = pvPortMalloc(len);
+	UART_ReadBuffer(retData, len);
+
+	return retData;
 }

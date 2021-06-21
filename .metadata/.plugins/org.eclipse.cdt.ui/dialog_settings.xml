@@ -2,7 +2,7 @@
 <section name="Workbench">
 	<item key="LastUsedSourceTemplate" value="Default C source template"/>
 	<item key="LastUsedHeaderTemplate" value="Default C header template"/>
-	<item key="org.eclipse.cdt.utils.ui.controls.FileListControl" value="${workspace_loc:/esp01Test/inc}"/>
+	<item key="org.eclipse.cdt.utils.ui.controls.FileListControl" value="FreeRTOS-Kernel"/>
 	<section name="completion_proposal_size">
 		<item key="contextSelector.size.x" value="346"/>
 		<item key="contextSelector.size.y" value="336"/>
@@ -18,9 +18,9 @@
 	<section name="org.eclipse.cdt.ui.OPEN_ACTION_SELECTION_DIALOG_SECTION">
 		<item key="DIALOG_X_ORIGIN" value="642"/>
 		<item key="DIALOG_Y_ORIGIN" value="47"/>
-		<item key="DIALOG_WIDTH" value="1258"/>
-		<item key="DIALOG_HEIGHT" value="711"/>
-		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-18|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+		<item key="DIALOG_WIDTH" value="398"/>
+		<item key="DIALOG_HEIGHT" value="438"/>
+		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
 	</section>
 	<section name="org.eclipse.cdt.ui.text.hover.CMacroExpansionExploration.internal">
 		<item key="size.width" value="1120"/>

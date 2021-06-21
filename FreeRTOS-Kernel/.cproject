@@ -44,7 +44,7 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/CMSIS_CORE_LPC17xx/inc}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/FreeRTOS-Kernel/include}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/FreeRTOS-Kernel/src/portable}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/esp01Test/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/ntpTest/inc}&quot;"/>
 								</option>
 								<option id="com.crt.advproject.gcc.hdrlib.694633535" name="Library headers" superClass="com.crt.advproject.gcc.hdrlib" useByScannerDiscovery="false" value="com.crt.advproject.gcc.hdrlib.newlibnano" valueType="enumerated"/>
 								<option id="com.crt.advproject.gcc.arch.2024673784" name="Architecture" superClass="com.crt.advproject.gcc.arch" useByScannerDiscovery="false" value="com.crt.advproject.gcc.target.cm3" valueType="enumerated"/>

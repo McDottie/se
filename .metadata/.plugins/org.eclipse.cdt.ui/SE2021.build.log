@@ -1,8 +1,8 @@
-22:45:56 **** Incremental Build of configuration Debug for project SE2021 ****
+18:06:58 **** Incremental Build of configuration Debug for project SE2021 ****
 make -r all 
 Building file: ../src/ESP01.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -D__NEWLIB__ -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\SE2021\inc" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-test\inc" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CMSIS_CORE_LPC17xx\inc" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\include" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\src\portable" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m3 -mthumb -D__NEWLIB__ -fstack-usage -MMD -MP -MF"src/ESP01.d" -MT"src/ESP01.o" -MT"src/ESP01.d" -o "src/ESP01.o" "../src/ESP01.c"
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -D__NEWLIB__ -I"G:\isel\SE2\se\SE2021\inc" -I"G:\isel\SE2\se\FreeRTOS-test\inc" -I"G:\isel\SE2\se\CMSIS_CORE_LPC17xx\inc" -I"G:\isel\SE2\se\FreeRTOS-Kernel\include" -I"G:\isel\SE2\se\FreeRTOS-Kernel\src\portable" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m3 -mthumb -D__NEWLIB__ -fstack-usage -MMD -MP -MF"src/ESP01.d" -MT"src/ESP01.o" -MT"src/ESP01.d" -o "src/ESP01.o" "../src/ESP01.c"
 ../src/ESP01.c: In function 'ESP01_Init':
 ../src/ESP01.c:45:9: warning: unused variable 'prevC' [-Wunused-variable]
    45 |     int prevC = 0;
@@ -15,297 +15,298 @@ arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17x
       |                   ^~~
 ../src/ESP01.c: In function 'ESP01_Restore':
 ../src/ESP01.c:57:41: warning: pointer targets in passing argument 3 of 'ESP01_Command' differ in signedness [-Wpointer-sign]
-   57 |  return ESP01_Command(10000, "RESTORE", "O", result, "OK");
-      |                                         ^~~
+   57 |  return ESP01_Command(10000, "RESTORE", "OK", result, "OK");
+      |                                         ^~~~
       |                                         |
       |                                         char *
 In file included from ../src/ESP01.c:21:
-C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\SE2021\inc/ESP01.h:40:63: note: expected 'unsigned char *' but argument is of type 'char *'
-   40 | bool ESP01_Command(int timeout, char* command, unsigned char* response, char * start, unsigned char * format, ...);
+G:\isel\SE2\se\SE2021\inc/ESP01.h:41:63: note: expected 'unsigned char *' but argument is of type 'char *'
+   41 | bool ESP01_Command(int timeout, char* command, unsigned char* response, char * start, unsigned char * format, ...);
       |                                                ~~~~~~~~~~~~~~~^~~~~~~~
-../src/ESP01.c:57:54: warning: pointer targets in passing argument 5 of 'ESP01_Command' differ in signedness [-Wpointer-sign]
-   57 |  return ESP01_Command(10000, "RESTORE", "O", result, "OK");
-      |                                                      ^~~~
-      |                                                      |
-      |                                                      char *
+../src/ESP01.c:57:55: warning: pointer targets in passing argument 5 of 'ESP01_Command' differ in signedness [-Wpointer-sign]
+   57 |  return ESP01_Command(10000, "RESTORE", "OK", result, "OK");
+      |                                                       ^~~~
+      |                                                       |
+      |                                                       char *
 In file included from ../src/ESP01.c:21:
-C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\SE2021\inc/ESP01.h:40:103: note: expected 'unsigned char *' but argument is of type 'char *'
-   40 | bool ESP01_Command(int timeout, char* command, unsigned char* response, char * start, unsigned char * format, ...);
+G:\isel\SE2\se\SE2021\inc/ESP01.h:41:103: note: expected 'unsigned char *' but argument is of type 'char *'
+   41 | bool ESP01_Command(int timeout, char* command, unsigned char* response, char * start, unsigned char * format, ...);
       |                                                                                       ~~~~~~~~~~~~~~~~^~~~~~
 ../src/ESP01.c: In function 'ESP01_Test':
-../src/ESP01.c:65:37: warning: pointer targets in passing argument 2 of 'ESP01_GetResponse' differ in signedness [-Wpointer-sign]
-   65 |     return ESP01_GetResponse(100000,c,"O","OK");;
-      |                                     ^
-      |                                     |
-      |                                     unsigned char *
+../src/ESP01.c:64:44: warning: pointer targets in passing argument 4 of 'ESP01_CommandPrefix' differ in signedness [-Wpointer-sign]
+   64 |  return ESP01_CommandPrefix(10000,"", cmd, result, "OK", "OK");
+      |                                            ^~~~~~
+      |                                            |
+      |                                            char *
 In file included from ../src/ESP01.c:21:
-C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\SE2021\inc/ESP01.h:46:43: note: expected 'char *' but argument is of type 'unsigned char *'
-   46 | bool ESP01_GetResponse(int timeout, char* response, char * start, unsigned char * format, ...);
-      |                                     ~~~~~~^~~~~~~~
-../src/ESP01.c:65:43: warning: pointer targets in passing argument 4 of 'ESP01_GetResponse' differ in signedness [-Wpointer-sign]
-   65 |     return ESP01_GetResponse(100000,c,"O","OK");;
-      |                                           ^~~~
-      |                                           |
-      |                                           char *
+G:\isel\SE2\se\SE2021\inc/ESP01.h:39:82: note: expected 'unsigned char *' but argument is of type 'char *'
+   39 | bool ESP01_CommandPrefix(int timeout,char* prefix, char* command, unsigned char* response, char * start, unsigned char * format, ...);
+      |                                                                   ~~~~~~~~~~~~~~~^~~~~~~~
+../src/ESP01.c:64:58: warning: pointer targets in passing argument 6 of 'ESP01_CommandPrefix' differ in signedness [-Wpointer-sign]
+   64 |  return ESP01_CommandPrefix(10000,"", cmd, result, "OK", "OK");
+      |                                                          ^~~~
+      |                                                          |
+      |                                                          char *
 In file included from ../src/ESP01.c:21:
-C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\SE2021\inc/ESP01.h:46:83: note: expected 'unsigned char *' but argument is of type 'char *'
-   46 | bool ESP01_GetResponse(int timeout, char* response, char * start, unsigned char * format, ...);
-      |                                                                   ~~~~~~~~~~~~~~~~^~~~~~
-../src/ESP01.c:63:9: warning: unused variable 'res' [-Wunused-variable]
-   63 |     int res;
-      |         ^~~
+G:\isel\SE2\se\SE2021\inc/ESP01.h:39:122: note: expected 'unsigned char *' but argument is of type 'char *'
+   39 | bool ESP01_CommandPrefix(int timeout,char* prefix, char* command, unsigned char* response, char * start, unsigned char * format, ...);
+      |                                                                                                          ~~~~~~~~~~~~~~~~^~~~~~
 ../src/ESP01.c: In function 'ESP01_VGetResponse':
-../src/ESP01.c:91:33: warning: pointer targets in passing argument 1 of 'ESP01_NumberOfArgs' differ in signedness [-Wpointer-sign]
-   91 |  int count = ESP01_NumberOfArgs(format);
+../src/ESP01.c:90:33: warning: pointer targets in passing argument 1 of 'ESP01_NumberOfArgs' differ in signedness [-Wpointer-sign]
+   90 |  int count = ESP01_NumberOfArgs(format);
       |                                 ^~~~~~
       |                                 |
       |                                 unsigned char *
-../src/ESP01.c:68:30: note: expected 'char *' but argument is of type 'unsigned char *'
-   68 | int ESP01_NumberOfArgs(char* format){
+../src/ESP01.c:67:30: note: expected 'char *' but argument is of type 'unsigned char *'
+   67 | int ESP01_NumberOfArgs(char* format){
       |                        ~~~~~~^~~~~~
-../src/ESP01.c:102:2: warning: implicit declaration of function 'vTaskDelay' [-Wimplicit-function-declaration]
-  102 |  vTaskDelay(1000);
+../src/ESP01.c:101:2: warning: implicit declaration of function 'vTaskDelay' [-Wimplicit-function-declaration]
+  101 |  vTaskDelay(1000);
       |  ^~~~~~~~~~
-../src/ESP01.c:104:23: warning: pointer targets in passing argument 1 of 'UART_GetChar' differ in signedness [-Wpointer-sign]
-  104 |   read = UART_GetChar(&responseHolder[sum]);
+../src/ESP01.c:103:23: warning: pointer targets in passing argument 1 of 'UART_GetChar' differ in signedness [-Wpointer-sign]
+  103 |   read = UART_GetChar(&responseHolder[sum]);
       |                       ^~~~~~~~~~~~~~~~~~~~
       |                       |
       |                       char *
-In file included from C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\SE2021\inc/ESP01.h:13,
+In file included from G:\isel\SE2\se\SE2021\inc/ESP01.h:13,
                  from ../src/ESP01.c:21:
-C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\SE2021\inc/uart.h:85:34: note: expected 'unsigned char *' but argument is of type 'char *'
+G:\isel\SE2\se\SE2021\inc/uart.h:85:34: note: expected 'unsigned char *' but argument is of type 'char *'
    85 | bool UART_GetChar(unsigned char *ch);
       |                   ~~~~~~~~~~~~~~~^~
-../src/ESP01.c:118:37: warning: pointer targets in passing argument 2 of 'vsscanf' differ in signedness [-Wpointer-sign]
-  118 |    int res = vsscanf(responseHolder,format, args);
+../src/ESP01.c:124:37: warning: pointer targets in passing argument 2 of 'vsscanf' differ in signedness [-Wpointer-sign]
+  124 |    int res = vsscanf(responseHolder,format, args);
       |                                     ^~~~~~
       |                                     |
       |                                     unsigned char *
 In file included from ../src/ESP01.c:17:
-c:\nxp\mcuxpressoide_11.3.1_5262\ide\plugins\com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133\tools\arm-none-eabi\include\stdio.h:274:38: note: expected 'const char * restrict' but argument is of type 'unsigned char *'
+f:\mcuxpressoide_11.3.1_5262\ide\plugins\com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133\tools\arm-none-eabi\include\stdio.h:274:38: note: expected 'const char * restrict' but argument is of type 'unsigned char *'
   274 | int vsscanf (const char *__restrict, const char *__restrict, __VALIST)
       |                                      ^
-../src/ESP01.c:120:41: warning: pointer targets in passing argument 2 of 'strcmp' differ in signedness [-Wpointer-sign]
-  120 |    if(res == 0 && strcmp(responseHolder,format) == 0) {
-      |                                         ^~~~~~
-      |                                         |
-      |                                         unsigned char *
-In file included from ../src/ESP01.c:16:
-c:\nxp\mcuxpressoide_11.3.1_5262\ide\plugins\com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133\tools\arm-none-eabi\include\string.h:36:28: note: expected 'const char *' but argument is of type 'unsigned char *'
-   36 | int  strcmp (const char *, const char *);
-      |                            ^~~~~~~~~~~~
 ../src/ESP01.c: In function 'ESP01_VCommandPrefix':
-../src/ESP01.c:149:40: warning: pointer targets in passing argument 2 of 'ESP01_VGetResponse' differ in signedness [-Wpointer-sign]
-  149 |  bool res = ESP01_VGetResponse(timeout,response,start,format,args);
+../src/ESP01.c:155:40: warning: pointer targets in passing argument 2 of 'ESP01_VGetResponse' differ in signedness [-Wpointer-sign]
+  155 |  bool res = ESP01_VGetResponse(timeout,response,start,format,args);
       |                                        ^~~~~~~~
       |                                        |
       |                                        unsigned char *
-../src/ESP01.c:90:44: note: expected 'char *' but argument is of type 'unsigned char *'
-   90 | bool ESP01_VGetResponse(int timeout, char* response, char * start, unsigned char * format, va_list args) {
+../src/ESP01.c:89:44: note: expected 'char *' but argument is of type 'unsigned char *'
+   89 | bool ESP01_VGetResponse(int timeout, char* response, char * start, unsigned char * format, va_list args) {
       |                                      ~~~~~~^~~~~~~~
 ../src/ESP01.c: In function 'ESP01_SetMode':
-../src/ESP01.c:167:37: warning: pointer targets in passing argument 3 of 'ESP01_Command' differ in signedness [-Wpointer-sign]
-  167 |     return ESP01_Command(3000, cmd, response, "O", "OK");
+../src/ESP01.c:173:37: warning: pointer targets in passing argument 3 of 'ESP01_Command' differ in signedness [-Wpointer-sign]
+  173 |     return ESP01_Command(3000, cmd, response, "OK", "OK");
       |                                     ^~~~~~~~
       |                                     |
       |                                     char *
-../src/ESP01.c:153:63: note: expected 'unsigned char *' but argument is of type 'char *'
-  153 | bool ESP01_Command(int timeout, char* command, unsigned char* response, char * start, unsigned char * format, ...) {
+../src/ESP01.c:159:63: note: expected 'unsigned char *' but argument is of type 'char *'
+  159 | bool ESP01_Command(int timeout, char* command, unsigned char* response, char * start, unsigned char * format, ...) {
       |                                                ~~~~~~~~~~~~~~~^~~~~~~~
-../src/ESP01.c:167:52: warning: pointer targets in passing argument 5 of 'ESP01_Command' differ in signedness [-Wpointer-sign]
-  167 |     return ESP01_Command(3000, cmd, response, "O", "OK");
-      |                                                    ^~~~
-      |                                                    |
-      |                                                    char *
-../src/ESP01.c:153:103: note: expected 'unsigned char *' but argument is of type 'char *'
-  153 | bool ESP01_Command(int timeout, char* command, unsigned char* response, char * start, unsigned char * format, ...) {
-      |                                                                                       ~~~~~~~~~~~~~~~~^~~~~~
-../src/ESP01.c: In function 'ESP01_ListAPs':
-../src/ESP01.c:177:32: warning: pointer targets in passing argument 3 of 'ESP01_Command' differ in signedness [-Wpointer-sign]
-  177 |  ESP01_Command(10000, "CWLAP", res, "+CWLAP:", "+CWLAP:%s%[^OK]", aps,ok);
-      |                                ^~~
-      |                                |
-      |                                char *
-../src/ESP01.c:153:63: note: expected 'unsigned char *' but argument is of type 'char *'
-  153 | bool ESP01_Command(int timeout, char* command, unsigned char* response, char * start, unsigned char * format, ...) {
-      |                                                ~~~~~~~~~~~~~~~^~~~~~~~
-../src/ESP01.c:177:48: warning: pointer targets in passing argument 5 of 'ESP01_Command' differ in signedness [-Wpointer-sign]
-  177 |  ESP01_Command(10000, "CWLAP", res, "+CWLAP:", "+CWLAP:%s%[^OK]", aps,ok);
-      |                                                ^~~~~~~~~~~~~~~~~
-      |                                                |
-      |                                                char *
-../src/ESP01.c:153:103: note: expected 'unsigned char *' but argument is of type 'char *'
-  153 | bool ESP01_Command(int timeout, char* command, unsigned char* response, char * start, unsigned char * format, ...) {
-      |                                                                                       ~~~~~~~~~~~~~~~~^~~~~~
-../src/ESP01.c: In function 'ESP01_ConnectAP':
-../src/ESP01.c:191:37: warning: pointer targets in passing argument 3 of 'ESP01_Command' differ in signedness [-Wpointer-sign]
-  191 |  bool r = ESP01_Command(30000, cmd, response, "O","OK");
-      |                                     ^~~~~~~~
-      |                                     |
-      |                                     char *
-../src/ESP01.c:153:63: note: expected 'unsigned char *' but argument is of type 'char *'
-  153 | bool ESP01_Command(int timeout, char* command, unsigned char* response, char * start, unsigned char * format, ...) {
-      |                                                ~~~~~~~~~~~~~~~^~~~~~~~
-../src/ESP01.c:191:51: warning: pointer targets in passing argument 5 of 'ESP01_Command' differ in signedness [-Wpointer-sign]
-  191 |  bool r = ESP01_Command(30000, cmd, response, "O","OK");
-      |                                                   ^~~~
-      |                                                   |
-      |                                                   char *
-../src/ESP01.c:153:103: note: expected 'unsigned char *' but argument is of type 'char *'
-  153 | bool ESP01_Command(int timeout, char* command, unsigned char* response, char * start, unsigned char * format, ...) {
-      |                                                                                       ~~~~~~~~~~~~~~~~^~~~~~
-../src/ESP01.c: In function 'ESP01_CIPDNS':
-../src/ESP01.c:207:38: warning: pointer targets in passing argument 3 of 'ESP01_Command' differ in signedness [-Wpointer-sign]
-  207 |  bool r =  ESP01_Command(30000, cmd, response, "O", "OK");
-      |                                      ^~~~~~~~
-      |                                      |
-      |                                      char *
-../src/ESP01.c:153:63: note: expected 'unsigned char *' but argument is of type 'char *'
-  153 | bool ESP01_Command(int timeout, char* command, unsigned char* response, char * start, unsigned char * format, ...) {
-      |                                                ~~~~~~~~~~~~~~~^~~~~~~~
-../src/ESP01.c:207:53: warning: pointer targets in passing argument 5 of 'ESP01_Command' differ in signedness [-Wpointer-sign]
-  207 |  bool r =  ESP01_Command(30000, cmd, response, "O", "OK");
+../src/ESP01.c:173:53: warning: pointer targets in passing argument 5 of 'ESP01_Command' differ in signedness [-Wpointer-sign]
+  173 |     return ESP01_Command(3000, cmd, response, "OK", "OK");
       |                                                     ^~~~
       |                                                     |
       |                                                     char *
-../src/ESP01.c:153:103: note: expected 'unsigned char *' but argument is of type 'char *'
-  153 | bool ESP01_Command(int timeout, char* command, unsigned char* response, char * start, unsigned char * format, ...) {
+../src/ESP01.c:159:103: note: expected 'unsigned char *' but argument is of type 'char *'
+  159 | bool ESP01_Command(int timeout, char* command, unsigned char* response, char * start, unsigned char * format, ...) {
       |                                                                                       ~~~~~~~~~~~~~~~~^~~~~~
-../src/ESP01.c: In function 'ESP01_ConnectServer':
-../src/ESP01.c:216:37: warning: pointer targets in passing argument 3 of 'ESP01_Command' differ in signedness [-Wpointer-sign]
-  216 |  bool r = ESP01_Command(30000, cmd, response, "O", "OK");
+../src/ESP01.c: In function 'ESP01_ListAPs':
+../src/ESP01.c:183:32: warning: pointer targets in passing argument 3 of 'ESP01_Command' differ in signedness [-Wpointer-sign]
+  183 |  ESP01_Command(10000, "CWLAP", res, "+CWLAP:", "+CWLAP:%s%[^OK]", aps,ok);
+      |                                ^~~
+      |                                |
+      |                                char *
+../src/ESP01.c:159:63: note: expected 'unsigned char *' but argument is of type 'char *'
+  159 | bool ESP01_Command(int timeout, char* command, unsigned char* response, char * start, unsigned char * format, ...) {
+      |                                                ~~~~~~~~~~~~~~~^~~~~~~~
+../src/ESP01.c:183:48: warning: pointer targets in passing argument 5 of 'ESP01_Command' differ in signedness [-Wpointer-sign]
+  183 |  ESP01_Command(10000, "CWLAP", res, "+CWLAP:", "+CWLAP:%s%[^OK]", aps,ok);
+      |                                                ^~~~~~~~~~~~~~~~~
+      |                                                |
+      |                                                char *
+../src/ESP01.c:159:103: note: expected 'unsigned char *' but argument is of type 'char *'
+  159 | bool ESP01_Command(int timeout, char* command, unsigned char* response, char * start, unsigned char * format, ...) {
+      |                                                                                       ~~~~~~~~~~~~~~~~^~~~~~
+../src/ESP01.c: In function 'ESP01_ConnectAP':
+../src/ESP01.c:197:37: warning: pointer targets in passing argument 3 of 'ESP01_Command' differ in signedness [-Wpointer-sign]
+  197 |  bool r = ESP01_Command(30000, cmd, response, "OK","OK");
       |                                     ^~~~~~~~
       |                                     |
       |                                     char *
-../src/ESP01.c:153:63: note: expected 'unsigned char *' but argument is of type 'char *'
-  153 | bool ESP01_Command(int timeout, char* command, unsigned char* response, char * start, unsigned char * format, ...) {
+../src/ESP01.c:159:63: note: expected 'unsigned char *' but argument is of type 'char *'
+  159 | bool ESP01_Command(int timeout, char* command, unsigned char* response, char * start, unsigned char * format, ...) {
       |                                                ~~~~~~~~~~~~~~~^~~~~~~~
-../src/ESP01.c:216:52: warning: pointer targets in passing argument 5 of 'ESP01_Command' differ in signedness [-Wpointer-sign]
-  216 |  bool r = ESP01_Command(30000, cmd, response, "O", "OK");
+../src/ESP01.c:197:52: warning: pointer targets in passing argument 5 of 'ESP01_Command' differ in signedness [-Wpointer-sign]
+  197 |  bool r = ESP01_Command(30000, cmd, response, "OK","OK");
       |                                                    ^~~~
       |                                                    |
       |                                                    char *
-../src/ESP01.c:153:103: note: expected 'unsigned char *' but argument is of type 'char *'
-  153 | bool ESP01_Command(int timeout, char* command, unsigned char* response, char * start, unsigned char * format, ...) {
+../src/ESP01.c:159:103: note: expected 'unsigned char *' but argument is of type 'char *'
+  159 | bool ESP01_Command(int timeout, char* command, unsigned char* response, char * start, unsigned char * format, ...) {
       |                                                                                       ~~~~~~~~~~~~~~~~^~~~~~
-../src/ESP01.c: In function 'ESP01_Send':
-../src/ESP01.c:227:31: warning: pointer targets in passing argument 3 of 'ESP01_Command' differ in signedness [-Wpointer-sign]
-  227 |  if(ESP01_Command(30000, cmd, response, "O", ">")) {
-      |                               ^~~~~~~~
-      |                               |
-      |                               char *
-../src/ESP01.c:153:63: note: expected 'unsigned char *' but argument is of type 'char *'
-  153 | bool ESP01_Command(int timeout, char* command, unsigned char* response, char * start, unsigned char * format, ...) {
+../src/ESP01.c: In function 'ESP01_CIPDNS':
+../src/ESP01.c:213:38: warning: pointer targets in passing argument 3 of 'ESP01_Command' differ in signedness [-Wpointer-sign]
+  213 |  bool r =  ESP01_Command(30000, cmd, response, "OK", "OK");
+      |                                      ^~~~~~~~
+      |                                      |
+      |                                      char *
+../src/ESP01.c:159:63: note: expected 'unsigned char *' but argument is of type 'char *'
+  159 | bool ESP01_Command(int timeout, char* command, unsigned char* response, char * start, unsigned char * format, ...) {
       |                                                ~~~~~~~~~~~~~~~^~~~~~~~
-../src/ESP01.c:227:46: warning: pointer targets in passing argument 5 of 'ESP01_Command' differ in signedness [-Wpointer-sign]
-  227 |  if(ESP01_Command(30000, cmd, response, "O", ">")) {
-      |                                              ^~~
-      |                                              |
-      |                                              char *
-../src/ESP01.c:153:103: note: expected 'unsigned char *' but argument is of type 'char *'
-  153 | bool ESP01_Command(int timeout, char* command, unsigned char* response, char * start, unsigned char * format, ...) {
+../src/ESP01.c:213:54: warning: pointer targets in passing argument 5 of 'ESP01_Command' differ in signedness [-Wpointer-sign]
+  213 |  bool r =  ESP01_Command(30000, cmd, response, "OK", "OK");
+      |                                                      ^~~~
+      |                                                      |
+      |                                                      char *
+../src/ESP01.c:159:103: note: expected 'unsigned char *' but argument is of type 'char *'
+  159 | bool ESP01_Command(int timeout, char* command, unsigned char* response, char * start, unsigned char * format, ...) {
       |                                                                                       ~~~~~~~~~~~~~~~~^~~~~~
-../src/ESP01.c:228:20: warning: pointer targets in passing argument 1 of 'UART_WriteBuffer' differ in signedness [-Wpointer-sign]
-  228 |   UART_WriteBuffer(message, len);
-      |                    ^~~~~~~
-      |                    |
-      |                    char *
-In file included from C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\SE2021\inc/ESP01.h:13,
-                 from ../src/ESP01.c:21:
-C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\SE2021\inc/uart.h:93:42: note: expected 'unsigned char *' but argument is of type 'char *'
-   93 | uint32_t UART_WriteBuffer(unsigned char *buffer, int len);
-      |                           ~~~~~~~~~~~~~~~^~~~~~
-../src/ESP01.c:234:50: warning: pointer targets in passing argument 4 of 'ESP01_GetResponse' differ in signedness [-Wpointer-sign]
-  234 |  bool r =  ESP01_GetResponse(3000, response,"O", "SEND OK");
-      |                                                  ^~~~~~~~~
-      |                                                  |
-      |                                                  char *
-../src/ESP01.c:84:83: note: expected 'unsigned char *' but argument is of type 'char *'
-   84 | bool ESP01_GetResponse(int timeout, char* response, char * start, unsigned char * format, ...) {
-      |                                                                   ~~~~~~~~~~~~~~~~^~~~~~
-../src/ESP01.c: In function 'ESP01_Echo':
-../src/ESP01.c:242:46: warning: pointer targets in passing argument 4 of 'ESP01_CommandPrefix' differ in signedness [-Wpointer-sign]
-  242 |  return ESP01_CommandPrefix(10000,"AT", cmd, result, "O", "OK");
-      |                                              ^~~~~~
-      |                                              |
-      |                                              char *
-../src/ESP01.c:140:82: note: expected 'unsigned char *' but argument is of type 'char *'
-  140 | bool ESP01_CommandPrefix(int timeout,char* prefix, char* command, unsigned char* response, char * start, unsigned char * format, ...){
-      |                                                                   ~~~~~~~~~~~~~~~^~~~~~~~
-../src/ESP01.c:242:59: warning: pointer targets in passing argument 6 of 'ESP01_CommandPrefix' differ in signedness [-Wpointer-sign]
-  242 |  return ESP01_CommandPrefix(10000,"AT", cmd, result, "O", "OK");
-      |                                                           ^~~~
-      |                                                           |
-      |                                                           char *
-../src/ESP01.c:140:122: note: expected 'unsigned char *' but argument is of type 'char *'
-  140 | bool ESP01_CommandPrefix(int timeout,char* prefix, char* command, unsigned char* response, char * start, unsigned char * format, ...){
-      |                                                                                                          ~~~~~~~~~~~~~~~~^~~~~~
-../src/ESP01.c: In function 'ESP01_RecvMode':
-../src/ESP01.c:252:31: warning: pointer targets in passing argument 3 of 'ESP01_Command' differ in signedness [-Wpointer-sign]
-  252 |     ESP01_Command(10000, cmd, response, "O", "OK");
-      |                               ^~~~~~~~
-      |                               |
-      |                               char *
-../src/ESP01.c:153:63: note: expected 'unsigned char *' but argument is of type 'char *'
-  153 | bool ESP01_Command(int timeout, char* command, unsigned char* response, char * start, unsigned char * format, ...) {
-      |                                                ~~~~~~~~~~~~~~~^~~~~~~~
-../src/ESP01.c:252:46: warning: pointer targets in passing argument 5 of 'ESP01_Command' differ in signedness [-Wpointer-sign]
-  252 |     ESP01_Command(10000, cmd, response, "O", "OK");
-      |                                              ^~~~
-      |                                              |
-      |                                              char *
-../src/ESP01.c:153:103: note: expected 'unsigned char *' but argument is of type 'char *'
-  153 | bool ESP01_Command(int timeout, char* command, unsigned char* response, char * start, unsigned char * format, ...) {
-      |                                                                                       ~~~~~~~~~~~~~~~~^~~~~~
-../src/ESP01.c: In function 'ESP01_RecvPassive':
-../src/ESP01.c:258:37: warning: pointer targets in passing argument 3 of 'ESP01_Command' differ in signedness [-Wpointer-sign]
-  258 |  ESP01_Command(10000, "CIPRECVLEN", response,"+CIPRECVLEN:", "+CIPRECVLEN:%d", len);
+../src/ESP01.c: In function 'ESP01_ConnectServer':
+../src/ESP01.c:222:37: warning: pointer targets in passing argument 3 of 'ESP01_Command' differ in signedness [-Wpointer-sign]
+  222 |  bool r = ESP01_Command(30000, cmd, response, "CONNECT\r\n\r\nOK", "CONNECT\r\n\r\nOK");
       |                                     ^~~~~~~~
       |                                     |
       |                                     char *
-../src/ESP01.c:153:63: note: expected 'unsigned char *' but argument is of type 'char *'
-  153 | bool ESP01_Command(int timeout, char* command, unsigned char* response, char * start, unsigned char * format, ...) {
+../src/ESP01.c:159:63: note: expected 'unsigned char *' but argument is of type 'char *'
+  159 | bool ESP01_Command(int timeout, char* command, unsigned char* response, char * start, unsigned char * format, ...) {
       |                                                ~~~~~~~~~~~~~~~^~~~~~~~
-../src/ESP01.c:258:62: warning: pointer targets in passing argument 5 of 'ESP01_Command' differ in signedness [-Wpointer-sign]
-  258 |  ESP01_Command(10000, "CIPRECVLEN", response,"+CIPRECVLEN:", "+CIPRECVLEN:%d", len);
+../src/ESP01.c:222:68: warning: pointer targets in passing argument 5 of 'ESP01_Command' differ in signedness [-Wpointer-sign]
+  222 |  bool r = ESP01_Command(30000, cmd, response, "CONNECT\r\n\r\nOK", "CONNECT\r\n\r\nOK");
+      |                                                                    ^~~~~~~~~~~~~~~~~~~
+      |                                                                    |
+      |                                                                    char *
+../src/ESP01.c:159:103: note: expected 'unsigned char *' but argument is of type 'char *'
+  159 | bool ESP01_Command(int timeout, char* command, unsigned char* response, char * start, unsigned char * format, ...) {
+      |                                                                                       ~~~~~~~~~~~~~~~~^~~~~~
+../src/ESP01.c: In function 'ESP01_Send':
+../src/ESP01.c:233:31: warning: pointer targets in passing argument 3 of 'ESP01_Command' differ in signedness [-Wpointer-sign]
+  233 |  if(ESP01_Command(30000, cmd, response, ">", ">")) {
+      |                               ^~~~~~~~
+      |                               |
+      |                               char *
+../src/ESP01.c:159:63: note: expected 'unsigned char *' but argument is of type 'char *'
+  159 | bool ESP01_Command(int timeout, char* command, unsigned char* response, char * start, unsigned char * format, ...) {
+      |                                                ~~~~~~~~~~~~~~~^~~~~~~~
+../src/ESP01.c:233:46: warning: pointer targets in passing argument 5 of 'ESP01_Command' differ in signedness [-Wpointer-sign]
+  233 |  if(ESP01_Command(30000, cmd, response, ">", ">")) {
+      |                                              ^~~
+      |                                              |
+      |                                              char *
+../src/ESP01.c:159:103: note: expected 'unsigned char *' but argument is of type 'char *'
+  159 | bool ESP01_Command(int timeout, char* command, unsigned char* response, char * start, unsigned char * format, ...) {
+      |                                                                                       ~~~~~~~~~~~~~~~~^~~~~~
+../src/ESP01.c:234:20: warning: pointer targets in passing argument 1 of 'UART_WriteBuffer' differ in signedness [-Wpointer-sign]
+  234 |   UART_WriteBuffer(message, len);
+      |                    ^~~~~~~
+      |                    |
+      |                    char *
+In file included from G:\isel\SE2\se\SE2021\inc/ESP01.h:13,
+                 from ../src/ESP01.c:21:
+G:\isel\SE2\se\SE2021\inc/uart.h:93:42: note: expected 'unsigned char *' but argument is of type 'char *'
+   93 | uint32_t UART_WriteBuffer(unsigned char *buffer, int len);
+      |                           ~~~~~~~~~~~~~~~^~~~~~
+../src/ESP01.c:240:53: warning: pointer targets in passing argument 4 of 'ESP01_GetResponse' differ in signedness [-Wpointer-sign]
+  240 |  bool r =  ESP01_GetResponse(3000, response,"SEND", "SEND OK");
+      |                                                     ^~~~~~~~~
+      |                                                     |
+      |                                                     char *
+../src/ESP01.c:83:83: note: expected 'unsigned char *' but argument is of type 'char *'
+   83 | bool ESP01_GetResponse(int timeout, char* response, char * start, unsigned char * format, ...) {
+      |                                                                   ~~~~~~~~~~~~~~~~^~~~~~
+../src/ESP01.c: In function 'ESP01_Echo':
+../src/ESP01.c:248:46: warning: pointer targets in passing argument 4 of 'ESP01_CommandPrefix' differ in signedness [-Wpointer-sign]
+  248 |  return ESP01_CommandPrefix(10000,"AT", cmd, result, "OK", "OK");
+      |                                              ^~~~~~
+      |                                              |
+      |                                              char *
+../src/ESP01.c:146:82: note: expected 'unsigned char *' but argument is of type 'char *'
+  146 | bool ESP01_CommandPrefix(int timeout,char* prefix, char* command, unsigned char* response, char * start, unsigned char * format, ...){
+      |                                                                   ~~~~~~~~~~~~~~~^~~~~~~~
+../src/ESP01.c:248:60: warning: pointer targets in passing argument 6 of 'ESP01_CommandPrefix' differ in signedness [-Wpointer-sign]
+  248 |  return ESP01_CommandPrefix(10000,"AT", cmd, result, "OK", "OK");
+      |                                                            ^~~~
+      |                                                            |
+      |                                                            char *
+../src/ESP01.c:146:122: note: expected 'unsigned char *' but argument is of type 'char *'
+  146 | bool ESP01_CommandPrefix(int timeout,char* prefix, char* command, unsigned char* response, char * start, unsigned char * format, ...){
+      |                                                                                                          ~~~~~~~~~~~~~~~~^~~~~~
+../src/ESP01.c: In function 'ESP01_RecvMode':
+../src/ESP01.c:258:31: warning: pointer targets in passing argument 3 of 'ESP01_Command' differ in signedness [-Wpointer-sign]
+  258 |     ESP01_Command(10000, cmd, response, "OK", "OK");
+      |                               ^~~~~~~~
+      |                               |
+      |                               char *
+../src/ESP01.c:159:63: note: expected 'unsigned char *' but argument is of type 'char *'
+  159 | bool ESP01_Command(int timeout, char* command, unsigned char* response, char * start, unsigned char * format, ...) {
+      |                                                ~~~~~~~~~~~~~~~^~~~~~~~
+../src/ESP01.c:258:47: warning: pointer targets in passing argument 5 of 'ESP01_Command' differ in signedness [-Wpointer-sign]
+  258 |     ESP01_Command(10000, cmd, response, "OK", "OK");
+      |                                               ^~~~
+      |                                               |
+      |                                               char *
+../src/ESP01.c:159:103: note: expected 'unsigned char *' but argument is of type 'char *'
+  159 | bool ESP01_Command(int timeout, char* command, unsigned char* response, char * start, unsigned char * format, ...) {
+      |                                                                                       ~~~~~~~~~~~~~~~~^~~~~~
+../src/ESP01.c: In function 'ESP01_RecvPassive':
+../src/ESP01.c:264:37: warning: pointer targets in passing argument 3 of 'ESP01_Command' differ in signedness [-Wpointer-sign]
+  264 |  ESP01_Command(10000, "CIPRECVLEN", response,"+CIPRECVLEN:", "+CIPRECVLEN:%d", len);
+      |                                     ^~~~~~~~
+      |                                     |
+      |                                     char *
+../src/ESP01.c:159:63: note: expected 'unsigned char *' but argument is of type 'char *'
+  159 | bool ESP01_Command(int timeout, char* command, unsigned char* response, char * start, unsigned char * format, ...) {
+      |                                                ~~~~~~~~~~~~~~~^~~~~~~~
+../src/ESP01.c:264:62: warning: pointer targets in passing argument 5 of 'ESP01_Command' differ in signedness [-Wpointer-sign]
+  264 |  ESP01_Command(10000, "CIPRECVLEN", response,"+CIPRECVLEN:", "+CIPRECVLEN:%d", len);
       |                                                              ^~~~~~~~~~~~~~~~
       |                                                              |
       |                                                              char *
-../src/ESP01.c:153:103: note: expected 'unsigned char *' but argument is of type 'char *'
-  153 | bool ESP01_Command(int timeout, char* command, unsigned char* response, char * start, unsigned char * format, ...) {
+../src/ESP01.c:159:103: note: expected 'unsigned char *' but argument is of type 'char *'
+  159 | bool ESP01_Command(int timeout, char* command, unsigned char* response, char * start, unsigned char * format, ...) {
       |                                                                                       ~~~~~~~~~~~~~~~~^~~~~~
-../src/ESP01.c:270:39: warning: pointer targets in passing argument 3 of 'ESP01_Command' differ in signedness [-Wpointer-sign]
-  270 |  ESP01_Command(10000, "CIPRECVDATA=", response,"+CIPRECVDATA:", "+CIPRECVDATA:(%d),(%s)%[^OK]",data,actualLen);
+../src/ESP01.c:276:39: warning: pointer targets in passing argument 3 of 'ESP01_Command' differ in signedness [-Wpointer-sign]
+  276 |  ESP01_Command(10000, "CIPRECVDATA=", response,"+CIPRECVDATA:", "+CIPRECVDATA:(%d),(%s)%[^OK]",data,actualLen);
       |                                       ^~~~~~~~
       |                                       |
       |                                       char *
-../src/ESP01.c:153:63: note: expected 'unsigned char *' but argument is of type 'char *'
-  153 | bool ESP01_Command(int timeout, char* command, unsigned char* response, char * start, unsigned char * format, ...) {
+../src/ESP01.c:159:63: note: expected 'unsigned char *' but argument is of type 'char *'
+  159 | bool ESP01_Command(int timeout, char* command, unsigned char* response, char * start, unsigned char * format, ...) {
       |                                                ~~~~~~~~~~~~~~~^~~~~~~~
-../src/ESP01.c:270:65: warning: pointer targets in passing argument 5 of 'ESP01_Command' differ in signedness [-Wpointer-sign]
-  270 |  ESP01_Command(10000, "CIPRECVDATA=", response,"+CIPRECVDATA:", "+CIPRECVDATA:(%d),(%s)%[^OK]",data,actualLen);
+../src/ESP01.c:276:65: warning: pointer targets in passing argument 5 of 'ESP01_Command' differ in signedness [-Wpointer-sign]
+  276 |  ESP01_Command(10000, "CIPRECVDATA=", response,"+CIPRECVDATA:", "+CIPRECVDATA:(%d),(%s)%[^OK]",data,actualLen);
       |                                                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       |                                                                 |
       |                                                                 char *
-../src/ESP01.c:153:103: note: expected 'unsigned char *' but argument is of type 'char *'
-  153 | bool ESP01_Command(int timeout, char* command, unsigned char* response, char * start, unsigned char * format, ...) {
+../src/ESP01.c:159:103: note: expected 'unsigned char *' but argument is of type 'char *'
+  159 | bool ESP01_Command(int timeout, char* command, unsigned char* response, char * start, unsigned char * format, ...) {
       |                                                                                       ~~~~~~~~~~~~~~~~^~~~~~
 ../src/ESP01.c: In function 'ESP01_RecvActive':
-../src/ESP01.c:278:45: warning: pointer targets in passing argument 4 of 'ESP01_GetResponse' differ in signedness [-Wpointer-sign]
-  278 |  ESP01_GetResponse(10000, response, "+IPD", "+IPD,%d[^:]", len);
-      |                                             ^~~~~~~~~~~~~
-      |                                             |
-      |                                             char *
-../src/ESP01.c:84:83: note: expected 'unsigned char *' but argument is of type 'char *'
-   84 | bool ESP01_GetResponse(int timeout, char* response, char * start, unsigned char * format, ...) {
+../src/ESP01.c:286:59: warning: pointer targets in passing argument 4 of 'ESP01_GetResponse' differ in signedness [-Wpointer-sign]
+  286 |  bool success = ESP01_GetResponse(45000, response, "+IPD","+IPD,%d%[:]", &len,dd);//"+IPD,%d:%[^\r\n]%[^CLOSED]"
+      |                                                           ^~~~~~~~~~~~~
+      |                                                           |
+      |                                                           char *
+../src/ESP01.c:83:83: note: expected 'unsigned char *' but argument is of type 'char *'
+   83 | bool ESP01_GetResponse(int timeout, char* response, char * start, unsigned char * format, ...) {
       |                                                                   ~~~~~~~~~~~~~~~~^~~~~~
+../src/ESP01.c:292:18: warning: pointer targets in passing argument 1 of 'UART_ReadBuffer' differ in signedness [-Wpointer-sign]
+  292 |  UART_ReadBuffer(retData, len);
+      |                  ^~~~~~~
+      |                  |
+      |                  char *
+In file included from G:\isel\SE2\se\SE2021\inc/ESP01.h:13,
+                 from ../src/ESP01.c:21:
+G:\isel\SE2\se\SE2021\inc/uart.h:95:35: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+   95 | uint32_t UART_ReadBuffer(uint8_t *buffer, uint32_t len);
+      |                          ~~~~~~~~~^~~~~~
+../src/ESP01.c:286:7: warning: unused variable 'success' [-Wunused-variable]
+  286 |  bool success = ESP01_GetResponse(45000, response, "+IPD","+IPD,%d%[:]", &len,dd);//"+IPD,%d:%[^\r\n]%[^CLOSED]"
+      |       ^~~~~~~
 ../src/ESP01.c: In function 'ESP01_RecvMode':
-../src/ESP01.c:253:1: warning: control reaches end of non-void function [-Wreturn-type]
-  253 | }
+../src/ESP01.c:259:1: warning: control reaches end of non-void function [-Wreturn-type]
+  259 | }
       | ^
 ../src/ESP01.c: In function 'ESP01_RecvPassive':
-../src/ESP01.c:270:2: warning: 'actualLen' is used uninitialized in this function [-Wuninitialized]
-  270 |  ESP01_Command(10000, "CIPRECVDATA=", response,"+CIPRECVDATA:", "+CIPRECVDATA:(%d),(%s)%[^OK]",data,actualLen);
+../src/ESP01.c:276:2: warning: 'actualLen' is used uninitialized in this function [-Wuninitialized]
+  276 |  ESP01_Command(10000, "CIPRECVDATA=", response,"+CIPRECVDATA:", "+CIPRECVDATA:(%d),(%s)%[^OK]",data,actualLen);
       |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Finished building: ../src/ESP01.c
  
@@ -321,9 +322,9 @@ arm-none-eabi-size "libSE2021.a" ; # arm-none-eabi-objdump -h -S "libSE2021.a" >
    text	   data	    bss	    dec	    hex	filename
     796	      0	      0	    796	    31c	ADXL345.o (ex libSE2021.a)
     762	      0	      0	    762	    2fa	EEPROM.o (ex libSE2021.a)
-   3500	      0	      0	   3500	    dac	ESP01.o (ex libSE2021.a)
+   3639	      0	      0	   3639	    e37	ESP01.o (ex libSE2021.a)
     768	      4	      0	    772	    304	Flash.o (ex libSE2021.a)
-    216	      3	      9	    228	     e4	NTP.o (ex libSE2021.a)
+    178	      3	      9	    190	     be	NTP.o (ex libSE2021.a)
     274	      0	      8	    282	    11a	button.o (ex libSE2021.a)
    1904	      4	     20	   1928	    788	i2c.o (ex libSE2021.a)
     822	      0	      8	    830	    33e	lcd.o (ex libSE2021.a)
@@ -336,5 +337,5 @@ arm-none-eabi-size "libSE2021.a" ; # arm-none-eabi-objdump -h -S "libSE2021.a" >
     258	      0	      4	    262	    106	wait.o (ex libSE2021.a)
  
 
-22:45:56 Build Finished. 0 errors, 39 warnings. (took 775ms)
+18:06:58 Build Finished. 0 errors, 39 warnings. (took 763ms)
 

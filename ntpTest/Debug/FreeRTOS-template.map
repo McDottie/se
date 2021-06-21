@@ -1,0 +1,1155 @@
+Archive member included to satisfy reference by file (symbol)
+
+C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
+                              ./src/cr_startup_lpc175x_6x-FreeRTOS.o (SystemInit)
+C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(port.o)
+                              ./src/cr_startup_lpc175x_6x-FreeRTOS.o (vPortSVCHandler)
+C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+                              C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(port.o) (pxCurrentTCB)
+C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(heap_4.o)
+                              C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o) (pvPortMalloc)
+C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(list.o)
+                              C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o) (vListInitialise)
+c:/nxp/mcuxpressoide_11.3.1_5262/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133/tools/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7-m/nofp\libgcc.a(_aeabi_ldivmod.o)
+                              C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o) (__aeabi_ldivmod)
+c:/nxp/mcuxpressoide_11.3.1_5262/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133/tools/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7-m/nofp\libgcc.a(_aeabi_uldivmod.o)
+                              C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o) (__aeabi_uldivmod)
+c:/nxp/mcuxpressoide_11.3.1_5262/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133/tools/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7-m/nofp\libgcc.a(_udivmoddi4.o)
+                              c:/nxp/mcuxpressoide_11.3.1_5262/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133/tools/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7-m/nofp\libgcc.a(_aeabi_ldivmod.o) (__udivmoddi4)
+c:/nxp/mcuxpressoide_11.3.1_5262/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133/tools/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7-m/nofp\libgcc.a(_dvmd_tls.o)
+                              c:/nxp/mcuxpressoide_11.3.1_5262/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133/tools/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7-m/nofp\libgcc.a(_aeabi_ldivmod.o) (__aeabi_ldiv0)
+c:/nxp/mcuxpressoide_11.3.1_5262/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133/tools/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(lib_a-memset.o)
+                              C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o) (memset)
+
+Discarded input sections
+
+ .group         0x00000000        0xc ./src/cr_startup_lpc175x_6x-FreeRTOS.o
+ .text          0x00000000        0x0 ./src/cr_startup_lpc175x_6x-FreeRTOS.o
+ .data          0x00000000        0x0 ./src/cr_startup_lpc175x_6x-FreeRTOS.o
+ .bss           0x00000000        0x0 ./src/cr_startup_lpc175x_6x-FreeRTOS.o
+ .group         0x00000000        0xc ./src/crp.o
+ .group         0x00000000        0xc ./src/crp.o
+ .text          0x00000000        0x0 ./src/crp.o
+ .data          0x00000000        0x0 ./src/crp.o
+ .bss           0x00000000        0x0 ./src/crp.o
+ .debug_macro   0x00000000      0xab4 ./src/crp.o
+ .group         0x00000000        0xc ./src/main.o
+ .group         0x00000000        0xc ./src/main.o
+ .group         0x00000000        0xc ./src/main.o
+ .group         0x00000000        0xc ./src/main.o
+ .group         0x00000000        0xc ./src/main.o
+ .group         0x00000000        0xc ./src/main.o
+ .group         0x00000000        0xc ./src/main.o
+ .group         0x00000000        0xc ./src/main.o
+ .group         0x00000000        0xc ./src/main.o
+ .group         0x00000000        0xc ./src/main.o
+ .group         0x00000000        0xc ./src/main.o
+ .group         0x00000000        0xc ./src/main.o
+ .group         0x00000000        0xc ./src/main.o
+ .group         0x00000000        0xc ./src/main.o
+ .group         0x00000000        0xc ./src/main.o
+ .group         0x00000000        0xc ./src/main.o
+ .group         0x00000000        0xc ./src/main.o
+ .group         0x00000000        0xc ./src/main.o
+ .group         0x00000000        0xc ./src/main.o
+ .group         0x00000000        0xc ./src/main.o
+ .group         0x00000000        0xc ./src/main.o
+ .group         0x00000000        0xc ./src/main.o
+ .group         0x00000000        0xc ./src/main.o
+ .group         0x00000000        0xc ./src/main.o
+ .group         0x00000000        0xc ./src/main.o
+ .group         0x00000000        0xc ./src/main.o
+ .group         0x00000000        0xc ./src/main.o
+ .group         0x00000000        0xc ./src/main.o
+ .group         0x00000000        0xc ./src/main.o
+ .group         0x00000000        0xc ./src/main.o
+ .group         0x00000000        0xc ./src/main.o
+ .group         0x00000000        0xc ./src/main.o
+ .group         0x00000000        0xc ./src/main.o
+ .group         0x00000000        0xc ./src/main.o
+ .group         0x00000000        0xc ./src/main.o
+ .group         0x00000000        0xc ./src/main.o
+ .group         0x00000000        0xc ./src/main.o
+ .group         0x00000000        0xc ./src/main.o
+ .group         0x00000000        0xc ./src/main.o
+ .group         0x00000000        0xc ./src/main.o
+ .group         0x00000000        0xc ./src/main.o
+ .group         0x00000000        0xc ./src/main.o
+ .group         0x00000000        0xc ./src/main.o
+ .group         0x00000000        0xc ./src/main.o
+ .group         0x00000000        0xc ./src/main.o
+ .group         0x00000000        0xc ./src/main.o
+ .group         0x00000000        0xc ./src/main.o
+ .group         0x00000000        0xc ./src/main.o
+ .group         0x00000000        0xc ./src/main.o
+ .group         0x00000000        0xc ./src/main.o
+ .group         0x00000000        0xc ./src/main.o
+ .group         0x00000000        0xc ./src/main.o
+ .group         0x00000000        0xc ./src/main.o
+ .group         0x00000000        0xc ./src/main.o
+ .text          0x00000000        0x0 ./src/main.o
+ .data          0x00000000        0x0 ./src/main.o
+ .bss           0x00000000        0x0 ./src/main.o
+ .debug_macro   0x00000000      0xab4 ./src/main.o
+ .group         0x00000000        0xc ./src/printf-stdarg.o
+ .group         0x00000000        0xc ./src/printf-stdarg.o
+ .text          0x00000000        0x0 ./src/printf-stdarg.o
+ .data          0x00000000        0x0 ./src/printf-stdarg.o
+ .bss           0x00000000        0x0 ./src/printf-stdarg.o
+ .text.__semihost
+                0x00000000       0x22 ./src/printf-stdarg.o
+ .text.semihost_write
+                0x00000000       0x36 ./src/printf-stdarg.o
+ .text.putchar  0x00000000       0x1c ./src/printf-stdarg.o
+ .text.printchar
+                0x00000000       0x34 ./src/printf-stdarg.o
+ .text.prints   0x00000000       0xb0 ./src/printf-stdarg.o
+ .text.printi   0x00000000       0xd8 ./src/printf-stdarg.o
+ .rodata.print.str1.4
+                0x00000000        0x7 ./src/printf-stdarg.o
+ .text.print    0x00000000      0x1c8 ./src/printf-stdarg.o
+ .text.printf   0x00000000       0x28 ./src/printf-stdarg.o
+ .text.sprintf  0x00000000       0x2c ./src/printf-stdarg.o
+ .text.snprintf
+                0x00000000       0x2e ./src/printf-stdarg.o
+ .debug_info    0x00000000      0x49e ./src/printf-stdarg.o
+ .debug_abbrev  0x00000000      0x157 ./src/printf-stdarg.o
+ .debug_aranges
+                0x00000000       0x68 ./src/printf-stdarg.o
+ .debug_ranges  0x00000000       0x58 ./src/printf-stdarg.o
+ .debug_macro   0x00000000       0x44 ./src/printf-stdarg.o
+ .debug_macro   0x00000000      0xab4 ./src/printf-stdarg.o
+ .debug_macro   0x00000000       0x58 ./src/printf-stdarg.o
+ .debug_line    0x00000000      0x469 ./src/printf-stdarg.o
+ .debug_str     0x00000000     0x3072 ./src/printf-stdarg.o
+ .comment       0x00000000       0x4d ./src/printf-stdarg.o
+ .debug_frame   0x00000000      0x1d8 ./src/printf-stdarg.o
+ .ARM.attributes
+                0x00000000       0x2d ./src/printf-stdarg.o
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
+ .text          0x00000000        0x0 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
+ .data          0x00000000        0x0 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
+ .bss           0x00000000        0x0 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
+ .text.SystemCoreClockUpdate
+                0x00000000       0xb8 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
+ .debug_macro   0x00000000       0x1c C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
+ .debug_macro   0x00000000       0x3a C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
+ .debug_macro   0x00000000       0x2d C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
+ .debug_macro   0x00000000      0xbb1 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
+ .debug_macro   0x00000000      0x2c7 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(port.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(port.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(port.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(port.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(port.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(port.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(port.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(port.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(port.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(port.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(port.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(port.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(port.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(port.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(port.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(port.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(port.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(port.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(port.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(port.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(port.o)
+ .bss           0x00000000        0x0 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(port.o)
+ .debug_macro   0x00000000      0x174 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(port.o)
+ .debug_macro   0x00000000       0x22 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(port.o)
+ .debug_macro   0x00000000      0x103 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(port.o)
+ .debug_macro   0x00000000       0x6a C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(port.o)
+ .debug_macro   0x00000000      0x1df C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(port.o)
+ .debug_macro   0x00000000       0x1c C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(port.o)
+ .debug_macro   0x00000000       0x3a C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(port.o)
+ .debug_macro   0x00000000       0x2d C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(port.o)
+ .debug_macro   0x00000000      0xbb1 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(port.o)
+ .debug_macro   0x00000000      0x2c7 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(port.o)
+ .debug_macro   0x00000000       0xdc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(port.o)
+ .debug_macro   0x00000000      0x15a C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(port.o)
+ .debug_macro   0x00000000       0xe3 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(port.o)
+ .debug_macro   0x00000000       0x1c C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(port.o)
+ .debug_macro   0x00000000       0x26 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(port.o)
+ .debug_macro   0x00000000      0x4e8 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(port.o)
+ .debug_macro   0x00000000       0xb5 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(port.o)
+ .debug_macro   0x00000000       0xaa C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(port.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+ .data          0x00000000        0x0 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+ .debug_macro   0x00000000      0xa96 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+ .debug_macro   0x00000000       0x18 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+ .debug_macro   0x00000000       0x22 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+ .debug_macro   0x00000000       0x4c C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+ .debug_macro   0x00000000       0x94 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+ .debug_macro   0x00000000       0x3c C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+ .debug_macro   0x00000000       0x34 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+ .debug_macro   0x00000000       0x16 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+ .debug_macro   0x00000000       0x43 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+ .debug_macro   0x00000000       0x57 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+ .debug_macro   0x00000000       0x34 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+ .debug_macro   0x00000000       0x10 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+ .debug_macro   0x00000000       0x58 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+ .debug_macro   0x00000000       0x71 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+ .debug_macro   0x00000000       0x1c C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+ .debug_macro   0x00000000      0x12a C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+ .debug_macro   0x00000000      0x339 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+ .debug_macro   0x00000000       0x35 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+ .debug_macro   0x00000000      0x103 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+ .debug_macro   0x00000000       0x6a C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+ .debug_macro   0x00000000      0x1df C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+ .debug_macro   0x00000000       0x1c C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+ .debug_macro   0x00000000       0x3a C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+ .debug_macro   0x00000000       0x2d C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+ .debug_macro   0x00000000      0xbb1 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+ .debug_macro   0x00000000      0x2c7 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+ .debug_macro   0x00000000       0xdc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+ .debug_macro   0x00000000      0x15a C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+ .debug_macro   0x00000000       0xe3 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+ .debug_macro   0x00000000       0x1c C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+ .debug_macro   0x00000000       0x26 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+ .debug_macro   0x00000000      0x4e8 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+ .debug_macro   0x00000000       0xb5 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+ .debug_macro   0x00000000       0xaa C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(heap_4.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(heap_4.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(heap_4.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(heap_4.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(heap_4.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(heap_4.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(heap_4.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(heap_4.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(heap_4.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(heap_4.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(heap_4.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(heap_4.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(heap_4.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(heap_4.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(heap_4.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(heap_4.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(heap_4.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(heap_4.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(heap_4.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(heap_4.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(heap_4.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(heap_4.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(heap_4.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(heap_4.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(heap_4.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(heap_4.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(heap_4.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(heap_4.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(heap_4.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(heap_4.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(heap_4.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(heap_4.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(heap_4.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(heap_4.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(heap_4.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(heap_4.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(heap_4.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(heap_4.o)
+ .data          0x00000000        0x0 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(heap_4.o)
+ .rodata        0x00000000        0x4 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(heap_4.o)
+ .debug_macro   0x00000000      0xa96 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(heap_4.o)
+ .debug_macro   0x00000000       0x18 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(heap_4.o)
+ .debug_macro   0x00000000       0x22 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(heap_4.o)
+ .debug_macro   0x00000000       0x4c C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(heap_4.o)
+ .debug_macro   0x00000000       0x94 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(heap_4.o)
+ .debug_macro   0x00000000       0x3c C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(heap_4.o)
+ .debug_macro   0x00000000       0x34 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(heap_4.o)
+ .debug_macro   0x00000000       0x16 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(heap_4.o)
+ .debug_macro   0x00000000      0x10e C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(heap_4.o)
+ .debug_macro   0x00000000       0x8d C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(heap_4.o)
+ .debug_macro   0x00000000       0x16 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(heap_4.o)
+ .debug_macro   0x00000000       0x43 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(heap_4.o)
+ .debug_macro   0x00000000       0x57 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(heap_4.o)
+ .debug_macro   0x00000000       0x34 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(heap_4.o)
+ .debug_macro   0x00000000       0x10 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(heap_4.o)
+ .debug_macro   0x00000000       0x58 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(heap_4.o)
+ .debug_macro   0x00000000       0x71 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(heap_4.o)
+ .debug_macro   0x00000000       0x1c C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(heap_4.o)
+ .debug_macro   0x00000000      0x12a C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(heap_4.o)
+ .debug_macro   0x00000000      0x339 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(heap_4.o)
+ .debug_macro   0x00000000       0x16 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(heap_4.o)
+ .debug_macro   0x00000000       0x29 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(heap_4.o)
+ .debug_macro   0x00000000      0x103 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(heap_4.o)
+ .debug_macro   0x00000000       0x6a C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(heap_4.o)
+ .debug_macro   0x00000000      0x1df C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(heap_4.o)
+ .debug_macro   0x00000000       0x1c C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(heap_4.o)
+ .debug_macro   0x00000000       0x3a C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(heap_4.o)
+ .debug_macro   0x00000000       0x2d C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(heap_4.o)
+ .debug_macro   0x00000000      0xbb1 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(heap_4.o)
+ .debug_macro   0x00000000      0x2c7 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(heap_4.o)
+ .debug_macro   0x00000000       0xdc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(heap_4.o)
+ .debug_macro   0x00000000      0x15a C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(heap_4.o)
+ .debug_macro   0x00000000       0xe3 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(heap_4.o)
+ .debug_macro   0x00000000       0x1c C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(heap_4.o)
+ .debug_macro   0x00000000       0x26 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(heap_4.o)
+ .debug_macro   0x00000000      0x4e8 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(heap_4.o)
+ .debug_macro   0x00000000       0xb5 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(heap_4.o)
+ .debug_macro   0x00000000       0xaa C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(heap_4.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(list.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(list.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(list.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(list.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(list.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(list.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(list.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(list.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(list.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(list.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(list.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(list.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(list.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(list.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(list.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(list.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(list.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(list.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(list.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(list.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(list.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(list.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(list.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(list.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(list.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(list.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(list.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(list.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(list.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(list.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(list.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(list.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(list.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(list.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(list.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(list.o)
+ .group         0x00000000        0xc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(list.o)
+ .data          0x00000000        0x0 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(list.o)
+ .bss           0x00000000        0x0 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(list.o)
+ .debug_macro   0x00000000      0xa96 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(list.o)
+ .debug_macro   0x00000000       0x18 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(list.o)
+ .debug_macro   0x00000000       0x22 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(list.o)
+ .debug_macro   0x00000000       0x4c C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(list.o)
+ .debug_macro   0x00000000       0x94 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(list.o)
+ .debug_macro   0x00000000       0x3c C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(list.o)
+ .debug_macro   0x00000000       0x34 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(list.o)
+ .debug_macro   0x00000000       0x16 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(list.o)
+ .debug_macro   0x00000000      0x10e C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(list.o)
+ .debug_macro   0x00000000       0x8d C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(list.o)
+ .debug_macro   0x00000000       0x16 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(list.o)
+ .debug_macro   0x00000000       0x43 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(list.o)
+ .debug_macro   0x00000000       0x57 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(list.o)
+ .debug_macro   0x00000000       0x34 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(list.o)
+ .debug_macro   0x00000000       0x10 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(list.o)
+ .debug_macro   0x00000000       0x58 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(list.o)
+ .debug_macro   0x00000000       0x71 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(list.o)
+ .debug_macro   0x00000000       0x1c C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(list.o)
+ .debug_macro   0x00000000      0x12a C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(list.o)
+ .debug_macro   0x00000000      0x339 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(list.o)
+ .debug_macro   0x00000000       0x16 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(list.o)
+ .debug_macro   0x00000000       0x29 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(list.o)
+ .debug_macro   0x00000000      0x103 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(list.o)
+ .debug_macro   0x00000000       0x6a C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(list.o)
+ .debug_macro   0x00000000      0x1df C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(list.o)
+ .debug_macro   0x00000000       0x1c C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(list.o)
+ .debug_macro   0x00000000       0x3a C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(list.o)
+ .debug_macro   0x00000000       0x2d C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(list.o)
+ .debug_macro   0x00000000      0xbb1 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(list.o)
+ .debug_macro   0x00000000      0x2c7 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(list.o)
+ .debug_macro   0x00000000       0xdc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(list.o)
+ .debug_macro   0x00000000      0x15a C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(list.o)
+ .debug_macro   0x00000000       0xe3 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(list.o)
+ .debug_macro   0x00000000       0x1c C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(list.o)
+ .debug_macro   0x00000000       0x26 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(list.o)
+ .debug_macro   0x00000000      0x4e8 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(list.o)
+ .debug_macro   0x00000000       0xb5 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(list.o)
+ .text          0x00000000       0xa0 c:/nxp/mcuxpressoide_11.3.1_5262/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133/tools/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7-m/nofp\libgcc.a(_aeabi_ldivmod.o)
+ .data          0x00000000        0x0 c:/nxp/mcuxpressoide_11.3.1_5262/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133/tools/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7-m/nofp\libgcc.a(_aeabi_ldivmod.o)
+ .bss           0x00000000        0x0 c:/nxp/mcuxpressoide_11.3.1_5262/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133/tools/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7-m/nofp\libgcc.a(_aeabi_ldivmod.o)
+ .debug_frame   0x00000000       0x44 c:/nxp/mcuxpressoide_11.3.1_5262/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133/tools/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7-m/nofp\libgcc.a(_aeabi_ldivmod.o)
+ .ARM.attributes
+                0x00000000       0x1d c:/nxp/mcuxpressoide_11.3.1_5262/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133/tools/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7-m/nofp\libgcc.a(_aeabi_ldivmod.o)
+ .text          0x00000000       0x30 c:/nxp/mcuxpressoide_11.3.1_5262/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133/tools/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7-m/nofp\libgcc.a(_aeabi_uldivmod.o)
+ .data          0x00000000        0x0 c:/nxp/mcuxpressoide_11.3.1_5262/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133/tools/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7-m/nofp\libgcc.a(_aeabi_uldivmod.o)
+ .bss           0x00000000        0x0 c:/nxp/mcuxpressoide_11.3.1_5262/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133/tools/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7-m/nofp\libgcc.a(_aeabi_uldivmod.o)
+ .debug_frame   0x00000000       0x2c c:/nxp/mcuxpressoide_11.3.1_5262/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133/tools/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7-m/nofp\libgcc.a(_aeabi_uldivmod.o)
+ .ARM.attributes
+                0x00000000       0x1d c:/nxp/mcuxpressoide_11.3.1_5262/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133/tools/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7-m/nofp\libgcc.a(_aeabi_uldivmod.o)
+ .text          0x00000000      0x2c4 c:/nxp/mcuxpressoide_11.3.1_5262/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133/tools/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7-m/nofp\libgcc.a(_udivmoddi4.o)
+ .data          0x00000000        0x0 c:/nxp/mcuxpressoide_11.3.1_5262/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133/tools/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7-m/nofp\libgcc.a(_udivmoddi4.o)
+ .bss           0x00000000        0x0 c:/nxp/mcuxpressoide_11.3.1_5262/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133/tools/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7-m/nofp\libgcc.a(_udivmoddi4.o)
+ .ARM.extab     0x00000000        0x0 c:/nxp/mcuxpressoide_11.3.1_5262/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133/tools/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7-m/nofp\libgcc.a(_udivmoddi4.o)
+ .ARM.exidx     0x00000000        0x8 c:/nxp/mcuxpressoide_11.3.1_5262/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133/tools/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7-m/nofp\libgcc.a(_udivmoddi4.o)
+ .debug_frame   0x00000000       0x34 c:/nxp/mcuxpressoide_11.3.1_5262/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133/tools/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7-m/nofp\libgcc.a(_udivmoddi4.o)
+ .ARM.attributes
+                0x00000000       0x2d c:/nxp/mcuxpressoide_11.3.1_5262/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133/tools/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7-m/nofp\libgcc.a(_udivmoddi4.o)
+ .text          0x00000000        0x4 c:/nxp/mcuxpressoide_11.3.1_5262/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133/tools/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7-m/nofp\libgcc.a(_dvmd_tls.o)
+ .data          0x00000000        0x0 c:/nxp/mcuxpressoide_11.3.1_5262/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133/tools/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7-m/nofp\libgcc.a(_dvmd_tls.o)
+ .bss           0x00000000        0x0 c:/nxp/mcuxpressoide_11.3.1_5262/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133/tools/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7-m/nofp\libgcc.a(_dvmd_tls.o)
+ .ARM.attributes
+                0x00000000       0x1d c:/nxp/mcuxpressoide_11.3.1_5262/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133/tools/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7-m/nofp\libgcc.a(_dvmd_tls.o)
+ .text          0x00000000        0x0 c:/nxp/mcuxpressoide_11.3.1_5262/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133/tools/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(lib_a-memset.o)
+ .data          0x00000000        0x0 c:/nxp/mcuxpressoide_11.3.1_5262/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133/tools/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(lib_a-memset.o)
+ .bss           0x00000000        0x0 c:/nxp/mcuxpressoide_11.3.1_5262/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133/tools/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(lib_a-memset.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+MFlash512        0x00000000         0x00080000         xr
+RamLoc32         0x10000000         0x00008000         xrw
+RamAHB32         0x2007c000         0x00008000         xrw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD ./src/cr_startup_lpc175x_6x-FreeRTOS.o
+LOAD ./src/crp.o
+LOAD ./src/main.o
+LOAD ./src/printf-stdarg.o
+LOAD C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a
+LOAD C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a
+START GROUP
+LOAD c:/nxp/mcuxpressoide_11.3.1_5262/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133/tools/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7-m/nofp\libgcc.a
+LOAD c:/nxp/mcuxpressoide_11.3.1_5262/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133/tools/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a
+LOAD c:/nxp/mcuxpressoide_11.3.1_5262/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133/tools/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libm.a
+LOAD c:/nxp/mcuxpressoide_11.3.1_5262/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133/tools/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_newlib_nohost.a
+END GROUP
+                0x00000000                __base_MFlash512 = 0x0
+                0x00000000                __base_Flash = 0x0
+                0x00080000                __top_MFlash512 = 0x80000
+                0x00080000                __top_Flash = 0x80000
+                0x10000000                __base_RamLoc32 = 0x10000000
+                0x10000000                __base_RAM = 0x10000000
+                0x10008000                __top_RamLoc32 = 0x10008000
+                0x10008000                __top_RAM = 0x10008000
+                0x2007c000                __base_RamAHB32 = 0x2007c000
+                0x2007c000                __base_RAM2 = 0x2007c000
+                0x20084000                __top_RamAHB32 = 0x20084000
+                0x20084000                __top_RAM2 = 0x20084000
+
+.text           0x00000000     0x2a50
+ FILL mask 0xff
+                0x00000000                __vectors_start__ = ABSOLUTE (.)
+ *(.isr_vector)
+ .isr_vector    0x00000000       0xcc ./src/cr_startup_lpc175x_6x-FreeRTOS.o
+                0x00000000                g_pfnVectors
+                0x000000cc                . = ALIGN (0x4)
+                0x000000cc                __section_table_start = .
+                0x000000cc                __data_section_table = .
+                0x000000cc        0x4 LONG 0x2a50 LOADADDR (.data)
+                0x000000d0        0x4 LONG 0x10000000 ADDR (.data)
+                0x000000d4        0x4 LONG 0x8 SIZEOF (.data)
+                0x000000d8        0x4 LONG 0x2a50 LOADADDR (.data_RAM2)
+                0x000000dc        0x4 LONG 0x2007c000 ADDR (.data_RAM2)
+                0x000000e0        0x4 LONG 0x0 SIZEOF (.data_RAM2)
+                0x000000e4                __data_section_table_end = .
+                0x000000e4                __bss_section_table = .
+                0x000000e4        0x4 LONG 0x10000008 ADDR (.bss)
+                0x000000e8        0x4 LONG 0x312c SIZEOF (.bss)
+                0x000000ec        0x4 LONG 0x2007c000 ADDR (.bss_RAM2)
+                0x000000f0        0x4 LONG 0x0 SIZEOF (.bss_RAM2)
+                0x000000f4                __bss_section_table_end = .
+                0x000000f4                __section_table_end = .
+ *(.after_vectors*)
+ .after_vectors
+                0x000000f4      0x130 ./src/cr_startup_lpc175x_6x-FreeRTOS.o
+                0x000000f4                data_init
+                0x00000138                bss_init
+                0x00000170                ResetISR
+                0x000001e8                NMI_Handler
+                0x000001ee                HardFault_Handler
+                0x000001f4                MemManage_Handler
+                0x000001fa                BusFault_Handler
+                0x00000200                UsageFault_Handler
+                0x00000206                SVC_Handler
+                0x0000020c                DebugMon_Handler
+                0x00000212                PendSV_Handler
+                0x00000218                SysTick_Handler
+                0x0000021e                EINT3_IRQHandler
+                0x0000021e                CANActivity_IRQHandler
+                0x0000021e                TIMER3_IRQHandler
+                0x0000021e                UART0_IRQHandler
+                0x0000021e                UART1_IRQHandler
+                0x0000021e                EINT2_IRQHandler
+                0x0000021e                USBActivity_IRQHandler
+                0x0000021e                IntDefaultHandler
+                0x0000021e                PLL0_IRQHandler
+                0x0000021e                I2C0_IRQHandler
+                0x0000021e                I2C1_IRQHandler
+                0x0000021e                SSP0_IRQHandler
+                0x0000021e                I2S_IRQHandler
+                0x0000021e                I2C2_IRQHandler
+                0x0000021e                RTC_IRQHandler
+                0x0000021e                TIMER0_IRQHandler
+                0x0000021e                SPI_IRQHandler
+                0x0000021e                RIT_IRQHandler
+                0x0000021e                EINT1_IRQHandler
+                0x0000021e                TIMER1_IRQHandler
+                0x0000021e                UART2_IRQHandler
+                0x0000021e                ADC_IRQHandler
+                0x0000021e                SSP1_IRQHandler
+                0x0000021e                USB_IRQHandler
+                0x0000021e                BOD_IRQHandler
+                0x0000021e                PLL1_IRQHandler
+                0x0000021e                WDT_IRQHandler
+                0x0000021e                PWM1_IRQHandler
+                0x0000021e                QEI_IRQHandler
+                0x0000021e                EINT0_IRQHandler
+                0x0000021e                CAN_IRQHandler
+                0x0000021e                DMA_IRQHandler
+                0x0000021e                TIMER2_IRQHandler
+                0x0000021e                UART3_IRQHandler
+                0x0000021e                MCPWM_IRQHandler
+                0x0000021e                ENET_IRQHandler
+                0x000002fc                . = 0x2fc
+ *fill*         0x00000224       0xd8 ff
+                0x000002fc                PROVIDE (__CRP_WORD_START__ = .)
+ *(.crp)
+ .crp           0x000002fc        0x4 ./src/crp.o
+                0x000002fc                CRP_WORD
+                0x00000300                PROVIDE (__CRP_WORD_END__ = .)
+                0x00000001                ASSERT (! ((__CRP_WORD_START__ == __CRP_WORD_END__)), Linker CRP Enabled, but no CRP_WORD provided within application)
+ *(.text*)
+ .text.main     0x00000300        0xe ./src/main.o
+                0x00000300                main
+ .text.vApplicationStackOverflowHook
+                0x0000030e        0xc ./src/main.o
+                0x0000030e                vApplicationStackOverflowHook
+ *fill*         0x0000031a        0x2 ff
+ .text.vConfigureTimerForRunTimeStats
+                0x0000031c       0x74 ./src/main.o
+                0x0000031c                vConfigureTimerForRunTimeStats
+ .text.SystemInit
+                0x00000390       0xdc C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
+                0x00000390                SystemInit
+ *fill*         0x0000046c        0x4 ff
+ .text          0x00000470      0x264 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(port.o)
+                0x00000470                pxPortInitialiseStack
+                0x000004fa                vPortSVCHandler
+                0x00000542                xPortStartScheduler
+                0x00000584                vPortEndScheduler
+                0x00000590                vPortEnterCritical
+                0x000005c4                vPortExitCritical
+                0x000005f8                xPortPendSVHandler
+                0x00000646                xPortSysTickHandler
+                0x0000068c                vPortSetupTimerInterrupt
+ .text          0x000006d4     0x1dec C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+                0x000006d4                xTaskCreate
+                0x0000093c                vTaskDelete
+                0x00000a38                vTaskDelayUntil
+                0x00000ad8                vTaskDelay
+                0x00000b20                eTaskGetState
+                0x00000bd0                uxTaskPriorityGet
+                0x00000c04                uxTaskPriorityGetFromISR
+                0x00000c5c                vTaskPrioritySet
+                0x00000d94                vTaskSuspend
+                0x00000edc                vTaskResume
+                0x00000f7c                xTaskResumeFromISR
+                0x00001040                vTaskStartScheduler
+                0x000010b4                vTaskEndScheduler
+                0x000010e4                vTaskSuspendAll
+                0x00001100                xTaskResumeAll
+                0x0000121c                xTaskGetTickCount
+                0x00001238                xTaskGetTickCountFromISR
+                0x00001258                uxTaskGetNumberOfTasks
+                0x0000126c                pcTaskGetName
+                0x00001298                uxTaskGetSystemState
+                0x000013b8                xTaskCatchUpTicks
+                0x000013e4                xTaskIncrementTick
+                0x00001534                vTaskSwitchContext
+                0x0000161c                vTaskPlaceOnEventList
+                0x00001648                vTaskPlaceOnUnorderedEventList
+                0x00001684                xTaskRemoveFromEventList
+                0x0000172c                vTaskRemoveFromUnorderedEventList
+                0x000017b0                vTaskSetTimeOutState
+                0x000017e0                vTaskInternalSetTimeOutState
+                0x0000180c                xTaskCheckForTimeOut
+                0x00001898                vTaskMissedYield
+                0x000018b0                uxTaskGetTaskNumber
+                0x000018da                vTaskSetTaskNumber
+                0x000019e8                vTaskGetInfo
+                0x00001be4                xTaskGetCurrentTaskHandle
+                0x00001c00                xTaskPriorityInherit
+                0x00001cec                xTaskPriorityDisinherit
+                0x00001da0                vTaskPriorityDisinheritAfterTimeout
+                0x00001e7c                uxTaskResetEventItemValue
+                0x00001eac                pvTaskIncrementMutexHeldCount
+                0x00001ed4                ulTaskNotifyTake
+                0x00001f64                xTaskNotifyWait
+                0x00002018                xTaskGenericNotify
+                0x00002128                xTaskGenericNotifyFromISR
+                0x0000227c                vTaskNotifyGiveFromISR
+                0x00002360                xTaskNotifyStateClear
+                0x000023ac                ulTaskNotifyValueClear
+ .text          0x000024c0      0x418 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(heap_4.o)
+                0x000024c0                pvPortMalloc
+                0x000025f4                vPortFree
+                0x00002674                xPortGetFreeHeapSize
+                0x00002688                xPortGetMinimumEverFreeHeapSize
+                0x0000269c                vPortInitialiseBlocks
+                0x0000281c                vPortGetHeapStats
+ .text          0x000028d8      0x15e C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(list.o)
+                0x000028d8                vListInitialise
+                0x00002916                vListInitialiseItem
+                0x0000292e                vListInsertEnd
+                0x00002974                vListInsert
+                0x000029e4                uxListRemove
+ .text.memset   0x00002a36       0x10 c:/nxp/mcuxpressoide_11.3.1_5262/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133/tools/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(lib_a-memset.o)
+                0x00002a36                memset
+ */tasks.o(.rodata*)
+ *(.rodata .rodata.* .constdata .constdata.*)
+ *fill*         0x00002a46        0x2 ff
+ .rodata.str1.4
+                0x00002a48        0x5 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+                0x00002a50                . = ALIGN (0x4)
+ *fill*         0x00002a4d        0x3 ff
+
+.glue_7         0x00002a50        0x0
+ .glue_7        0x00002a50        0x0 linker stubs
+
+.glue_7t        0x00002a50        0x0
+ .glue_7t       0x00002a50        0x0 linker stubs
+
+.vfp11_veneer   0x00002a50        0x0
+ .vfp11_veneer  0x00002a50        0x0 linker stubs
+
+.v4_bx          0x00002a50        0x0
+ .v4_bx         0x00002a50        0x0 linker stubs
+
+.iplt           0x00002a50        0x0
+ .iplt          0x00002a50        0x0 ./src/cr_startup_lpc175x_6x-FreeRTOS.o
+
+.rel.dyn        0x00002a50        0x0
+ .rel.iplt      0x00002a50        0x0 ./src/cr_startup_lpc175x_6x-FreeRTOS.o
+
+.ARM.extab
+ *(.ARM.extab* .gnu.linkonce.armextab.*)
+
+.ARM.exidx      0x00002a50        0x0
+                0x00002a50                __exidx_start = .
+ *(.ARM.exidx* .gnu.linkonce.armexidx.*)
+                0x00002a50                __exidx_end = .
+                0x00002a50                _etext = .
+
+.data_RAM2      0x2007c000        0x0 load address 0x00002a50
+ FILL mask 0xff
+                [!provide]                PROVIDE (__start_data_RAM2 = .)
+                [!provide]                PROVIDE (__start_data_RamAHB32 = .)
+ *(.ramfunc.$RAM2)
+ *(.ramfunc.$RamAHB32)
+ *(.data.$RAM2)
+ *(.data.$RamAHB32)
+ *(.data.$RAM2.*)
+ *(.data.$RamAHB32.*)
+                0x2007c000                . = ALIGN (0x4)
+                [!provide]                PROVIDE (__end_data_RAM2 = .)
+                [!provide]                PROVIDE (__end_data_RamAHB32 = .)
+
+.uninit_RESERVED
+                0x10000000        0x0
+                0x10000000                _start_uninit_RESERVED = .
+ *(.bss.$RESERVED*)
+                0x10000000                . = ALIGN (0x4)
+                0x10000000                _end_uninit_RESERVED = .
+
+.data           0x10000000        0x8 load address 0x00002a50
+ FILL mask 0xff
+                0x10000000                _data = .
+                [!provide]                PROVIDE (__start_data_RAM = .)
+                [!provide]                PROVIDE (__start_data_RamLoc32 = .)
+ *(vtable)
+ *(.ramfunc*)
+ *(CodeQuickAccess)
+ *(DataQuickAccess)
+ *(RamFunction)
+ *(.data*)
+ .data.SystemCoreClock
+                0x10000000        0x4 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
+                0x10000000                SystemCoreClock
+ .data          0x10000004        0x4 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(port.o)
+                0x10000008                . = ALIGN (0x4)
+                0x10000008                _edata = .
+                [!provide]                PROVIDE (__end_data_RAM = .)
+                [!provide]                PROVIDE (__end_data_RamLoc32 = .)
+
+.igot.plt       0x10000008        0x0 load address 0x00002a58
+ .igot.plt      0x10000008        0x0 ./src/cr_startup_lpc175x_6x-FreeRTOS.o
+
+.bss_RAM2       0x2007c000        0x0
+                [!provide]                PROVIDE (__start_bss_RAM2 = .)
+                [!provide]                PROVIDE (__start_bss_RamAHB32 = .)
+ *(.bss.$RAM2)
+ *(.bss.$RamAHB32)
+ *(.bss.$RAM2.*)
+ *(.bss.$RamAHB32.*)
+                0x2007c000                . = ALIGN ((. != 0x0)?0x4:0x1)
+                [!provide]                PROVIDE (__end_bss_RAM2 = .)
+                [!provide]                PROVIDE (__end_bss_RamAHB32 = .)
+
+.bss            0x10000008     0x312c
+                0x10000008                _bss = .
+                [!provide]                PROVIDE (__start_bss_RAM = .)
+                [!provide]                PROVIDE (__start_bss_RamLoc32 = .)
+ *(.bss*)
+ .bss           0x10000008      0x10c C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+                0x10000008                pxCurrentTCB
+ .bss           0x10000114     0x3020 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(heap_4.o)
+ *(COMMON)
+                0x10003134                . = ALIGN (0x4)
+                0x10003134                _ebss = .
+                [!provide]                PROVIDE (__end_bss_RAM = .)
+                [!provide]                PROVIDE (__end_bss_RamLoc32 = .)
+                [!provide]                PROVIDE (end = .)
+
+.noinit_RAM2    0x2007c000        0x0
+                [!provide]                PROVIDE (__start_noinit_RAM2 = .)
+                [!provide]                PROVIDE (__start_noinit_RamAHB32 = .)
+ *(.noinit.$RAM2)
+ *(.noinit.$RamAHB32)
+ *(.noinit.$RAM2.*)
+ *(.noinit.$RamAHB32.*)
+                0x2007c000                . = ALIGN (0x4)
+                [!provide]                PROVIDE (__end_noinit_RAM2 = .)
+                [!provide]                PROVIDE (__end_noinit_RamAHB32 = .)
+
+.noinit         0x10003134        0x0
+                0x10003134                _noinit = .
+                [!provide]                PROVIDE (__start_noinit_RAM = .)
+                [!provide]                PROVIDE (__start_noinit_RamLoc32 = .)
+ *(.noinit*)
+                0x10003134                . = ALIGN (0x4)
+                0x10003134                _end_noinit = .
+                [!provide]                PROVIDE (__end_noinit_RAM = .)
+                [!provide]                PROVIDE (__end_noinit_RamLoc32 = .)
+                [!provide]                PROVIDE (_pvHeapStart = DEFINED (__user_heap_base)?__user_heap_base:.)
+                0x10008000                PROVIDE (_vStackTop = DEFINED (__user_stack_top)?__user_stack_top:(__top_RamLoc32 - 0x0))
+                0xefff74c6                PROVIDE (__valid_user_code_checksum = (0x0 - ((((((_vStackTop + (ResetISR + 0x1)) + (NMI_Handler + 0x1)) + (HardFault_Handler + 0x1)) + (DEFINED (MemManage_Handler)?MemManage_Handler:0x0 + 0x1)) + (DEFINED (BusFault_Handler)?BusFault_Handler:0x0 + 0x1)) + (DEFINED (UsageFault_Handler)?UsageFault_Handler:0x0 + 0x1))))
+                0x00000000                _image_start = LOADADDR (.text)
+                0x00002a58                _image_end = (LOADADDR (.data) + SIZEOF (.data))
+                0x00002a58                _image_size = (_image_end - _image_start)
+OUTPUT(FreeRTOS-template.axf elf32-littlearm)
+LOAD linker stubs
+
+.debug_info     0x00000000     0x546d
+ .debug_info    0x00000000      0x276 ./src/cr_startup_lpc175x_6x-FreeRTOS.o
+ .debug_info    0x00000276       0x40 ./src/crp.o
+ .debug_info    0x000002b6      0xdc2 ./src/main.o
+ .debug_info    0x00001078      0x37d C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
+ .debug_info    0x000013f5      0x317 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(port.o)
+ .debug_info    0x0000170c     0x24a7 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+ .debug_info    0x00003bb3      0xd0e C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(heap_4.o)
+ .debug_info    0x000048c1      0xbac C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(list.o)
+
+.debug_abbrev   0x00000000      0xeac
+ .debug_abbrev  0x00000000      0x12a ./src/cr_startup_lpc175x_6x-FreeRTOS.o
+ .debug_abbrev  0x0000012a       0x38 ./src/crp.o
+ .debug_abbrev  0x00000162      0x20a ./src/main.o
+ .debug_abbrev  0x0000036c      0x11c C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
+ .debug_abbrev  0x00000488      0x20c C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(port.o)
+ .debug_abbrev  0x00000694      0x3a9 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+ .debug_abbrev  0x00000a3d      0x278 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(heap_4.o)
+ .debug_abbrev  0x00000cb5      0x1f7 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(list.o)
+
+.debug_aranges  0x00000000      0x170
+ .debug_aranges
+                0x00000000       0x80 ./src/cr_startup_lpc175x_6x-FreeRTOS.o
+ .debug_aranges
+                0x00000080       0x18 ./src/crp.o
+ .debug_aranges
+                0x00000098       0x30 ./src/main.o
+ .debug_aranges
+                0x000000c8       0x28 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
+ .debug_aranges
+                0x000000f0       0x20 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(port.o)
+ .debug_aranges
+                0x00000110       0x20 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+ .debug_aranges
+                0x00000130       0x20 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(heap_4.o)
+ .debug_aranges
+                0x00000150       0x20 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(list.o)
+
+.debug_ranges   0x00000000       0xa8
+ .debug_ranges  0x00000000       0x70 ./src/cr_startup_lpc175x_6x-FreeRTOS.o
+ .debug_ranges  0x00000070       0x20 ./src/main.o
+ .debug_ranges  0x00000090       0x18 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
+
+.debug_macro    0x00000000     0x6055
+ .debug_macro   0x00000000       0x1d ./src/cr_startup_lpc175x_6x-FreeRTOS.o
+ .debug_macro   0x0000001d      0xab4 ./src/cr_startup_lpc175x_6x-FreeRTOS.o
+ .debug_macro   0x00000ad1       0x1a ./src/crp.o
+ .debug_macro   0x00000aeb       0x34 ./src/crp.o
+ .debug_macro   0x00000b1f      0x29b ./src/main.o
+ .debug_macro   0x00000dba       0x22 ./src/main.o
+ .debug_macro   0x00000ddc       0x4c ./src/main.o
+ .debug_macro   0x00000e28       0x18 ./src/main.o
+ .debug_macro   0x00000e40       0x94 ./src/main.o
+ .debug_macro   0x00000ed4       0x3c ./src/main.o
+ .debug_macro   0x00000f10       0x34 ./src/main.o
+ .debug_macro   0x00000f44       0x57 ./src/main.o
+ .debug_macro   0x00000f9b      0x174 ./src/main.o
+ .debug_macro   0x0000110f      0x339 ./src/main.o
+ .debug_macro   0x00001448       0x16 ./src/main.o
+ .debug_macro   0x0000145e       0x43 ./src/main.o
+ .debug_macro   0x000014a1       0x34 ./src/main.o
+ .debug_macro   0x000014d5       0x10 ./src/main.o
+ .debug_macro   0x000014e5       0x58 ./src/main.o
+ .debug_macro   0x0000153d       0x71 ./src/main.o
+ .debug_macro   0x000015ae       0x1c ./src/main.o
+ .debug_macro   0x000015ca      0x12a ./src/main.o
+ .debug_macro   0x000016f4       0x10 ./src/main.o
+ .debug_macro   0x00001704       0x35 ./src/main.o
+ .debug_macro   0x00001739       0x10 ./src/main.o
+ .debug_macro   0x00001749       0x10 ./src/main.o
+ .debug_macro   0x00001759       0x10 ./src/main.o
+ .debug_macro   0x00001769       0x6a ./src/main.o
+ .debug_macro   0x000017d3       0x1c ./src/main.o
+ .debug_macro   0x000017ef       0x52 ./src/main.o
+ .debug_macro   0x00001841       0x22 ./src/main.o
+ .debug_macro   0x00001863       0x10 ./src/main.o
+ .debug_macro   0x00001873       0x40 ./src/main.o
+ .debug_macro   0x000018b3       0xd5 ./src/main.o
+ .debug_macro   0x00001988       0x1c ./src/main.o
+ .debug_macro   0x000019a4       0x3d ./src/main.o
+ .debug_macro   0x000019e1       0x35 ./src/main.o
+ .debug_macro   0x00001a16       0x1c ./src/main.o
+ .debug_macro   0x00001a32       0x10 ./src/main.o
+ .debug_macro   0x00001a42       0x10 ./src/main.o
+ .debug_macro   0x00001a52       0x16 ./src/main.o
+ .debug_macro   0x00001a68      0x145 ./src/main.o
+ .debug_macro   0x00001bad       0x22 ./src/main.o
+ .debug_macro   0x00001bcf      0x103 ./src/main.o
+ .debug_macro   0x00001cd2      0x1df ./src/main.o
+ .debug_macro   0x00001eb1       0x1c ./src/main.o
+ .debug_macro   0x00001ecd       0x3a ./src/main.o
+ .debug_macro   0x00001f07       0x2d ./src/main.o
+ .debug_macro   0x00001f34      0xbb1 ./src/main.o
+ .debug_macro   0x00002ae5      0x2c7 ./src/main.o
+ .debug_macro   0x00002dac       0xdc ./src/main.o
+ .debug_macro   0x00002e88      0x15a ./src/main.o
+ .debug_macro   0x00002fe2       0xe3 ./src/main.o
+ .debug_macro   0x000030c5       0x1c ./src/main.o
+ .debug_macro   0x000030e1       0x26 ./src/main.o
+ .debug_macro   0x00003107      0x4e8 ./src/main.o
+ .debug_macro   0x000035ef       0xb5 ./src/main.o
+ .debug_macro   0x000036a4       0xaa ./src/main.o
+ .debug_macro   0x0000374e      0x12d C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
+ .debug_macro   0x0000387b      0xaae C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
+ .debug_macro   0x00004329       0x10 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
+ .debug_macro   0x00004339      0x12e C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
+ .debug_macro   0x00004467      0x5b3 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
+ .debug_macro   0x00004a1a      0x1b3 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(port.o)
+ .debug_macro   0x00004bcd      0xa96 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(port.o)
+ .debug_macro   0x00005663       0x8e C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(port.o)
+ .debug_macro   0x000056f1       0x51 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(port.o)
+ .debug_macro   0x00005742      0x2b5 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+ .debug_macro   0x000059f7       0x16 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+ .debug_macro   0x00005a0d      0x10e C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+ .debug_macro   0x00005b1b       0x8d C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+ .debug_macro   0x00005ba8       0x16 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+ .debug_macro   0x00005bbe       0x29 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+ .debug_macro   0x00005be7       0x16 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+ .debug_macro   0x00005bfd       0x91 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+ .debug_macro   0x00005c8e       0x10 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+ .debug_macro   0x00005c9e      0x1ef C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(heap_4.o)
+ .debug_macro   0x00005e8d      0x1c8 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(list.o)
+
+.debug_line     0x00000000     0x3670
+ .debug_line    0x00000000      0x169 ./src/cr_startup_lpc175x_6x-FreeRTOS.o
+ .debug_line    0x00000169       0xb6 ./src/crp.o
+ .debug_line    0x0000021f      0x71c ./src/main.o
+ .debug_line    0x0000093b      0x473 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
+ .debug_line    0x00000dae      0x5ed C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(port.o)
+ .debug_line    0x0000139b     0x1408 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+ .debug_line    0x000027a3      0x828 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(heap_4.o)
+ .debug_line    0x00002fcb      0x6a5 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(list.o)
+
+.debug_str      0x00000000    0x15edb
+ .debug_str     0x00000000     0x2fb2 ./src/cr_startup_lpc175x_6x-FreeRTOS.o
+                               0x2fc5 (size before relaxing)
+ .debug_str     0x00002fb2       0xe9 ./src/crp.o
+                               0x2ec9 (size before relaxing)
+ .debug_str     0x0000309b     0xea70 ./src/main.o
+                              0x11adc (size before relaxing)
+ .debug_str     0x00011b0b     0x1a8e C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
+                               0xa226 (size before relaxing)
+ .debug_str     0x00013599      0x776 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(port.o)
+                               0xdcbb (size before relaxing)
+ .debug_str     0x00013d0f     0x1e11 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+                              0x127c0 (size before relaxing)
+ .debug_str     0x00015b20      0x32b C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(heap_4.o)
+                              0x10c43 (size before relaxing)
+ .debug_str     0x00015e4b       0x90 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(list.o)
+                              0x1036f (size before relaxing)
+
+.comment        0x00000000       0x4c
+ .comment       0x00000000       0x4c ./src/cr_startup_lpc175x_6x-FreeRTOS.o
+                                 0x4d (size before relaxing)
+ .comment       0x0000004c       0x4d ./src/crp.o
+ .comment       0x0000004c       0x4d ./src/main.o
+ .comment       0x0000004c       0x4d C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
+ .comment       0x0000004c       0x4d C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(port.o)
+ .comment       0x0000004c       0x4d C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+ .comment       0x0000004c       0x4d C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(heap_4.o)
+ .comment       0x0000004c       0x4d C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(list.o)
+
+.ARM.attributes
+                0x00000000       0x2d
+ .ARM.attributes
+                0x00000000       0x2d ./src/cr_startup_lpc175x_6x-FreeRTOS.o
+ .ARM.attributes
+                0x0000002d       0x33 ./src/crp.o
+ .ARM.attributes
+                0x00000060       0x2d ./src/main.o
+ .ARM.attributes
+                0x0000008d       0x2d C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
+ .ARM.attributes
+                0x000000ba       0x2d C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(port.o)
+ .ARM.attributes
+                0x000000e7       0x2d C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+ .ARM.attributes
+                0x00000114       0x2d C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(heap_4.o)
+ .ARM.attributes
+                0x00000141       0x2d C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(list.o)
+ .ARM.attributes
+                0x0000016e       0x2d c:/nxp/mcuxpressoide_11.3.1_5262/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133/tools/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(lib_a-memset.o)
+
+.debug_frame    0x00000000      0xdec
+ .debug_frame   0x00000000      0x170 ./src/cr_startup_lpc175x_6x-FreeRTOS.o
+ .debug_frame   0x00000170       0x70 ./src/main.o
+ .debug_frame   0x000001e0       0x3c C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
+ .debug_frame   0x0000021c      0x160 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(port.o)
+ .debug_frame   0x0000037c      0x84c C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+ .debug_frame   0x00000bc8      0x12c C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(heap_4.o)
+ .debug_frame   0x00000cf4       0xd8 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(list.o)
+ .debug_frame   0x00000dcc       0x20 c:/nxp/mcuxpressoide_11.3.1_5262/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133/tools/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(lib_a-memset.o)
+
+Cross Reference Table
+
+Symbol                                            File
+ADC_IRQHandler                                    ./src/cr_startup_lpc175x_6x-FreeRTOS.o
+BOD_IRQHandler                                    ./src/cr_startup_lpc175x_6x-FreeRTOS.o
+BusFault_Handler                                  ./src/cr_startup_lpc175x_6x-FreeRTOS.o
+CANActivity_IRQHandler                            ./src/cr_startup_lpc175x_6x-FreeRTOS.o
+CAN_IRQHandler                                    ./src/cr_startup_lpc175x_6x-FreeRTOS.o
+CRP_WORD                                          ./src/crp.o
+DMA_IRQHandler                                    ./src/cr_startup_lpc175x_6x-FreeRTOS.o
+DebugMon_Handler                                  ./src/cr_startup_lpc175x_6x-FreeRTOS.o
+EINT0_IRQHandler                                  ./src/cr_startup_lpc175x_6x-FreeRTOS.o
+EINT1_IRQHandler                                  ./src/cr_startup_lpc175x_6x-FreeRTOS.o
+EINT2_IRQHandler                                  ./src/cr_startup_lpc175x_6x-FreeRTOS.o
+EINT3_IRQHandler                                  ./src/cr_startup_lpc175x_6x-FreeRTOS.o
+ENET_IRQHandler                                   ./src/cr_startup_lpc175x_6x-FreeRTOS.o
+HardFault_Handler                                 ./src/cr_startup_lpc175x_6x-FreeRTOS.o
+I2C0_IRQHandler                                   ./src/cr_startup_lpc175x_6x-FreeRTOS.o
+I2C1_IRQHandler                                   ./src/cr_startup_lpc175x_6x-FreeRTOS.o
+I2C2_IRQHandler                                   ./src/cr_startup_lpc175x_6x-FreeRTOS.o
+I2S_IRQHandler                                    ./src/cr_startup_lpc175x_6x-FreeRTOS.o
+IntDefaultHandler                                 ./src/cr_startup_lpc175x_6x-FreeRTOS.o
+MCPWM_IRQHandler                                  ./src/cr_startup_lpc175x_6x-FreeRTOS.o
+MemManage_Handler                                 ./src/cr_startup_lpc175x_6x-FreeRTOS.o
+NMI_Handler                                       ./src/cr_startup_lpc175x_6x-FreeRTOS.o
+PLL0_IRQHandler                                   ./src/cr_startup_lpc175x_6x-FreeRTOS.o
+PLL1_IRQHandler                                   ./src/cr_startup_lpc175x_6x-FreeRTOS.o
+PWM1_IRQHandler                                   ./src/cr_startup_lpc175x_6x-FreeRTOS.o
+PendSV_Handler                                    ./src/cr_startup_lpc175x_6x-FreeRTOS.o
+QEI_IRQHandler                                    ./src/cr_startup_lpc175x_6x-FreeRTOS.o
+RIT_IRQHandler                                    ./src/cr_startup_lpc175x_6x-FreeRTOS.o
+RTC_IRQHandler                                    ./src/cr_startup_lpc175x_6x-FreeRTOS.o
+ResetISR                                          ./src/cr_startup_lpc175x_6x-FreeRTOS.o
+SPI_IRQHandler                                    ./src/cr_startup_lpc175x_6x-FreeRTOS.o
+SSP0_IRQHandler                                   ./src/cr_startup_lpc175x_6x-FreeRTOS.o
+SSP1_IRQHandler                                   ./src/cr_startup_lpc175x_6x-FreeRTOS.o
+SVC_Handler                                       ./src/cr_startup_lpc175x_6x-FreeRTOS.o
+SysTick_Handler                                   ./src/cr_startup_lpc175x_6x-FreeRTOS.o
+SystemCoreClock                                   C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
+                                                  C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(port.o)
+                                                  ./src/main.o
+SystemCoreClockUpdate                             C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
+SystemInit                                        C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
+                                                  ./src/cr_startup_lpc175x_6x-FreeRTOS.o
+TIMER0_IRQHandler                                 ./src/cr_startup_lpc175x_6x-FreeRTOS.o
+TIMER1_IRQHandler                                 ./src/cr_startup_lpc175x_6x-FreeRTOS.o
+TIMER2_IRQHandler                                 ./src/cr_startup_lpc175x_6x-FreeRTOS.o
+TIMER3_IRQHandler                                 ./src/cr_startup_lpc175x_6x-FreeRTOS.o
+UART0_IRQHandler                                  ./src/cr_startup_lpc175x_6x-FreeRTOS.o
+UART1_IRQHandler                                  ./src/cr_startup_lpc175x_6x-FreeRTOS.o
+UART2_IRQHandler                                  ./src/cr_startup_lpc175x_6x-FreeRTOS.o
+UART3_IRQHandler                                  ./src/cr_startup_lpc175x_6x-FreeRTOS.o
+USBActivity_IRQHandler                            ./src/cr_startup_lpc175x_6x-FreeRTOS.o
+USB_IRQHandler                                    ./src/cr_startup_lpc175x_6x-FreeRTOS.o
+UsageFault_Handler                                ./src/cr_startup_lpc175x_6x-FreeRTOS.o
+WDT_IRQHandler                                    ./src/cr_startup_lpc175x_6x-FreeRTOS.o
+__aeabi_idiv0                                     c:/nxp/mcuxpressoide_11.3.1_5262/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133/tools/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7-m/nofp\libgcc.a(_dvmd_tls.o)
+__aeabi_ldiv0                                     c:/nxp/mcuxpressoide_11.3.1_5262/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133/tools/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7-m/nofp\libgcc.a(_dvmd_tls.o)
+                                                  c:/nxp/mcuxpressoide_11.3.1_5262/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133/tools/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7-m/nofp\libgcc.a(_aeabi_uldivmod.o)
+                                                  c:/nxp/mcuxpressoide_11.3.1_5262/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133/tools/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7-m/nofp\libgcc.a(_aeabi_ldivmod.o)
+__aeabi_ldivmod                                   c:/nxp/mcuxpressoide_11.3.1_5262/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133/tools/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7-m/nofp\libgcc.a(_aeabi_ldivmod.o)
+                                                  C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
+__aeabi_uldivmod                                  c:/nxp/mcuxpressoide_11.3.1_5262/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133/tools/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7-m/nofp\libgcc.a(_aeabi_uldivmod.o)
+                                                  C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
+__bss_section_table_end                           ./src/cr_startup_lpc175x_6x-FreeRTOS.o
+__data_section_table                              ./src/cr_startup_lpc175x_6x-FreeRTOS.o
+__data_section_table_end                          ./src/cr_startup_lpc175x_6x-FreeRTOS.o
+__udivmoddi4                                      c:/nxp/mcuxpressoide_11.3.1_5262/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133/tools/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7-m/nofp\libgcc.a(_udivmoddi4.o)
+                                                  c:/nxp/mcuxpressoide_11.3.1_5262/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133/tools/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7-m/nofp\libgcc.a(_aeabi_uldivmod.o)
+                                                  c:/nxp/mcuxpressoide_11.3.1_5262/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133/tools/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7-m/nofp\libgcc.a(_aeabi_ldivmod.o)
+__valid_user_code_checksum                        ./src/cr_startup_lpc175x_6x-FreeRTOS.o
+_vStackTop                                        ./src/cr_startup_lpc175x_6x-FreeRTOS.o
+bss_init                                          ./src/cr_startup_lpc175x_6x-FreeRTOS.o
+data_init                                         ./src/cr_startup_lpc175x_6x-FreeRTOS.o
+eTaskGetState                                     C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+g_pfnVectors                                      ./src/cr_startup_lpc175x_6x-FreeRTOS.o
+main                                              ./src/main.o
+                                                  ./src/cr_startup_lpc175x_6x-FreeRTOS.o
+memset                                            c:/nxp/mcuxpressoide_11.3.1_5262/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133/tools/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc_nano.a(lib_a-memset.o)
+                                                  C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+pcTaskGetName                                     C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+printf                                            ./src/printf-stdarg.o
+pvPortMalloc                                      C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(heap_4.o)
+                                                  C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+pvTaskIncrementMutexHeldCount                     C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+pxCurrentTCB                                      C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+                                                  C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(port.o)
+pxPortInitialiseStack                             C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(port.o)
+                                                  C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+snprintf                                          ./src/printf-stdarg.o
+sprintf                                           ./src/printf-stdarg.o
+ulTaskNotifyTake                                  C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+ulTaskNotifyValueClear                            C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+uxListRemove                                      C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(list.o)
+                                                  C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+uxTaskGetNumberOfTasks                            C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+uxTaskGetSystemState                              C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+uxTaskGetTaskNumber                               C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+uxTaskPriorityGet                                 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+uxTaskPriorityGetFromISR                          C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+uxTaskResetEventItemValue                         C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+vApplicationStackOverflowHook                     ./src/main.o
+                                                  C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+vConfigureTimerForRunTimeStats                    ./src/main.o
+                                                  C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+vListInitialise                                   C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(list.o)
+                                                  C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+vListInitialiseItem                               C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(list.o)
+                                                  C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+vListInsert                                       C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(list.o)
+                                                  C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+vListInsertEnd                                    C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(list.o)
+                                                  C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+vPortEndScheduler                                 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(port.o)
+                                                  C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+vPortEnterCritical                                C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(port.o)
+                                                  C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(heap_4.o)
+                                                  C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+vPortExitCritical                                 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(port.o)
+                                                  C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(heap_4.o)
+                                                  C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+vPortFree                                         C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(heap_4.o)
+                                                  C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+vPortGetHeapStats                                 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(heap_4.o)
+vPortInitialiseBlocks                             C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(heap_4.o)
+vPortSVCHandler                                   C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(port.o)
+                                                  ./src/cr_startup_lpc175x_6x-FreeRTOS.o
+vPortSetupTimerInterrupt                          C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(port.o)
+vTaskDelay                                        C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+vTaskDelayUntil                                   C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+vTaskDelete                                       C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+vTaskEndScheduler                                 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+vTaskGetInfo                                      C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+vTaskInternalSetTimeOutState                      C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+vTaskMissedYield                                  C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+vTaskNotifyGiveFromISR                            C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+vTaskPlaceOnEventList                             C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+vTaskPlaceOnUnorderedEventList                    C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+vTaskPriorityDisinheritAfterTimeout               C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+vTaskPrioritySet                                  C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+vTaskRemoveFromUnorderedEventList                 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+vTaskResume                                       C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+vTaskSetTaskNumber                                C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+vTaskSetTimeOutState                              C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+vTaskStartScheduler                               C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+                                                  ./src/main.o
+vTaskSuspend                                      C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+vTaskSuspendAll                                   C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+                                                  C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(heap_4.o)
+vTaskSwitchContext                                C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+                                                  C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(port.o)
+xPortGetFreeHeapSize                              C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(heap_4.o)
+xPortGetMinimumEverFreeHeapSize                   C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(heap_4.o)
+xPortPendSVHandler                                C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(port.o)
+                                                  ./src/cr_startup_lpc175x_6x-FreeRTOS.o
+xPortStartScheduler                               C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(port.o)
+                                                  C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+xPortSysTickHandler                               C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(port.o)
+                                                  ./src/cr_startup_lpc175x_6x-FreeRTOS.o
+xTaskCatchUpTicks                                 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+xTaskCheckForTimeOut                              C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+xTaskCreate                                       C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+xTaskGenericNotify                                C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+xTaskGenericNotifyFromISR                         C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+xTaskGetCurrentTaskHandle                         C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+xTaskGetTickCount                                 C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+xTaskGetTickCountFromISR                          C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+xTaskIncrementTick                                C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+                                                  C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(port.o)
+xTaskNotifyStateClear                             C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+xTaskNotifyWait                                   C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+xTaskPriorityDisinherit                           C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+xTaskPriorityInherit                              C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+xTaskRemoveFromEventList                          C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+xTaskResumeAll                                    C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
+                                                  C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(heap_4.o)
+xTaskResumeFromISR                                C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug\libFreeRTOS-Kernel.a(tasks.o)
