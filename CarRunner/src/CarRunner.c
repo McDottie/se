@@ -12,10 +12,18 @@
 #include "LPC17xx.h"
 #endif
 
+/* Kernel includes. */
+#include "FreeRTOS.h"
+#include "task.h"
+
+#include "queue.h"
+
 #include <cr_section_macros.h>
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
+
 #include "lcd.h"
 #include "time_helper.h"
 #include "button.h"
@@ -26,69 +34,14 @@
 #include "saver.h"
 #include "CarRunner.h"
 
+#include <definitions_variables.h>
+
 
 #define PRESSING_TIME 2000
 
-/**
- @startuml
-	[*] -> initPeripherals
-	title CarRunner Main loop
-
-	initPeripherals --> waitEvent
-	waitEvent --> waitEvent : after 1s
-	waitEvent --> Game : keypressed == S and PRESSED
-	waitEvent --> Menu : keypressed == L&R for 2s
-	waitEvent : update_DateTimeDisplay
-	Game --> waitEvent
-	Menu --> waitEvent
-
- @enduml
-*/
-int main(void) {
-	WAIT_Init();
-	BUTTON_Init();
-	LCDText_Init();
-	RTC_Init(0);
-	gameInit();
-	SPI_Init();
-
-	while(ADXL345_Init() == -1);
-
-	int start;
-	int dateTime_Stamp;
-	struct tm dateTime;
-	key_state keyState;
-
-	while(1) {
-		//time Update
-		if(WAIT_GetElapsedMillis(dateTime_Stamp) >= 1000) {
-			dateTime_Stamp = WAIT_GetElapsedMillis(0);
-			RTC_GetValue(&dateTime);
-			update_DateTimeDisplay(dateTime);
-		}
-
-		keyState = BUTTON_GetButtonsEvents();
-
-		switch(keyState.key) {
-			case S:
-				if(keyState.state == PRESSED)
-					gameRoutine();
-				break;
-			case L|R:
-				if (keyState.state == PRESSED)
-					start = WAIT_GetElapsedMillis(0);
-				if (keyState.state == REPEATED && WAIT_GetElapsedMillis(start) >= PRESSING_TIME)
-					Menu();
-
-				break;
-			default:
-				break;
-		}
-
-	}
-	return 0;
-}
-
+QueueHandle_t xQueueRunGame,xQueueRunMenu,xQueueLCD;
+key_state keySt = {0,RELEASED};
+volatile bool toUpdateTime = false;
 
 char * menu_options[3] = {"Change Time","Show Players\nScores", "Exit"};
 
@@ -108,35 +61,29 @@ char * menu_options[3] = {"Change Time","Show Players\nScores", "Exit"};
 */
 void Menu() {
 
-	key_state keyState;
 	int i = 0;
 
-	LCDText_Clear();
-	LCDText_WriteString(menu_options[i]);
+	printSimple(menu_options[i],100);
 
 	while(1){
-		keyState = BUTTON_GetButtonsEvents();
-		if(keyState.state == PRESSED)
-		switch(keyState.key) {
+		if(keySt.state == PRESSED)
+		switch(keySt.key) {
 			case S:
 				if (i == 2)
 					return;
 
 				routineChooser(i);
-				LCDText_Clear();
-				LCDText_WriteString(menu_options[i]);
+				printSimple(menu_options[i],100);
 				break;
 			case L:
 				i--;
 				if (i < 0) i = 2;
-				LCDText_Clear();
-				LCDText_WriteString(menu_options[i]);
+				printSimple(menu_options[i],100);
 				break;
 			case R:
 				i++;
 				if (i > 2) i = 0;
-				LCDText_Clear();
-				LCDText_WriteString(menu_options[i]);
+				printSimple(menu_options[i],100);
 				break;
 			default:
 				break;
@@ -145,12 +92,10 @@ void Menu() {
 
 }
 
-
-
 void routineChooser(int routine){
 	switch(routine) {
 	case 0:
-		Time_changeRoutine(RTC_GetSeconds());
+		TIME_ChangeRoutine(RTC_GetSeconds());
 		break;
 	case 1:
 		playerScoresShowDown();
@@ -179,7 +124,7 @@ void playerScoresShowDown(){
 	if(size == 0) {
 		LCDText_Clear();
 		LCDText_WriteString("NO PLAYERS\nSCORES YET");
-		WAIT_ChronoUs(3000000);
+		WAIT_Milliseconds(3000);
 		return;
 	}
 
@@ -220,7 +165,198 @@ void playerScoresShowDown(){
 		}
 	}
 	for(int i = 0; i < size; i++) {
-		free(strings[i]);
+		vPortFree(strings[i]);
 	}
-	free(scores);
+	vPortFree(scores);
 }
+
+
+void vMainLoop(void * pvParameters){
+	GAME_Init();
+	SPI_Init();
+
+	while(ADXL345_Init() == -1);
+
+	int start;
+	int dateTime_Stamp;
+	struct tm dateTime;
+
+	//time Update
+	toUpdateTime = true;
+
+	while(1) {
+		int message;
+
+		switch(keySt.key) {
+			case S:
+				if(keySt.state == PRESSED) {
+					message = 1;
+					toUpdateTime = false;
+					xQueueSend(xQueueRunGame,(void *)message,0);
+					//gameRoutine();
+
+					xQueueReceive(xQueueRunGame, &message, portMAX_DELAY);
+					toUpdateTime = true;
+				}
+
+				break;
+			case L|R:
+				if (keySt.state == PRESSED)
+					start = WAIT_GetElapsedMillis(0);
+				if (keySt.state == REPEATED && WAIT_GetElapsedMillis(start) >= PRESSING_TIME) {
+					message = 1;
+					toUpdateTime = false;
+					xQueueSend(xQueueRunMenu,(void *)message,0);
+					//Menu();
+					xQueueReceive(xQueueRunMenu, &message, portMAX_DELAY);
+					toUpdateTime = true;
+				}
+				break;
+			default:
+				break;
+		}
+
+	}
+	return 0;
+}
+
+void vButtonHandler(void * pvParameters){
+	while(1)  {
+		keySt = BUTTON_GetButtonsEvents();
+	}
+}
+
+void vGame(void * pvParameters){
+	int message;
+	while(1) {
+		xQueueReceive(xQueueRunGame, &message, portMAX_DELAY);
+		GAME_Routine();
+	}
+}
+
+void vMenu(void * pvParameters){
+	int message;
+	while(1) {
+		xQueueReceive(xQueueRunMenu, &message, portMAX_DELAY);
+		Menu();
+	}
+}
+
+void vLCDManager(void * pvParameters){
+	LCDText_Init();
+
+	LCD_Mesage message;
+	while(1){
+		if(xQueueReceive(xQueueLCD, &message, 100) ) {
+			if(message.toClear) {
+				LCDText_Clear();
+			}
+
+			if(message.toMove) {
+				LCDText_Locate(message.row, message.col);
+			}
+
+			if(message.toPrint) {
+				LCDText_WriteString(message.string);
+				vPortFree(message.string);
+			}
+
+		}
+	}
+}
+
+void vTimeHandler(){
+	RTC_Init(0);
+
+	int dateTime_Stamp = WAIT_GetElapsedMillis(0);
+	struct tm dateTime;
+
+	while(1) {
+		if(toUpdateTime && WAIT_GetElapsedMillis(dateTime_Stamp) >= 1000) {
+			dateTime_Stamp = WAIT_GetElapsedMillis(0);
+			RTC_GetValue(&dateTime);
+			TIME_UpdateDateTimeDisplay(dateTime);
+
+		}
+	}
+}
+
+/**
+ @startuml
+	[*] -> initPeripherals
+	title CarRunner Main loop
+
+	initPeripherals --> waitEvent
+	waitEvent --> waitEvent : after 1s
+	waitEvent --> Game : keypressed == S and PRESSED
+	waitEvent --> Menu : keypressed == L&R for 2s
+	waitEvent : update_DateTimeDisplay
+	Game --> waitEvent
+	Menu --> waitEvent
+
+ @enduml
+*/
+int main(void) {
+	WAIT_Init();
+
+	xQueueRunGame = xQueueCreate(1,sizeof(int));
+	xQueueRunMenu = xQueueCreate(1,sizeof(int));
+	xQueueLCD = xQueueCreate(10,sizeof(LCD_Mesage));
+
+	xTaskCreate(vMainLoop, "MainLoop", 1024, (void *) 0, 1, NULL);
+	//xTaskCreate(vButtonHandler, "ButtonHandler", 200, (void *) 0, 1, NULL);
+
+	//xTaskCreate(vGame, "Game", 200, (void *) 0, 1, NULL);
+	//xTaskCreate(vMenu, "Menu", 200, (void *) 0, 1, NULL);
+
+	xTaskCreate(vLCDManager, "LCDManager", 400, (void *) 0, 1, NULL);
+	xTaskCreate(vTimeHandler, "TimeHandler", 300, (void *) 0, 1, NULL);
+
+	vTaskStartScheduler();
+	return 0 ;
+}
+
+
+/*-----------------------------------------------------------*/
+
+void vApplicationStackOverflowHook( TaskHandle_t pxTask, char *pcTaskName )
+{
+	/* This function will get called if a task overflows its stack. */
+
+	( void ) pxTask;
+	( void ) pcTaskName;
+
+	for( ;; );
+}
+/*-----------------------------------------------------------*/
+
+/*-----------------------------------------------------------*/
+
+void vConfigureTimerForRunTimeStats( void )
+{
+const unsigned long TCR_COUNT_RESET = 2, CTCR_CTM_TIMER = 0x00, TCR_COUNT_ENABLE = 0x01;
+
+	/* This function configures a timer that is used as the time base when
+	collecting run time statistical information - basically the percentage
+	of CPU time that each task is utilising.  It is called automatically when
+	the scheduler is started (assuming configGENERATE_RUN_TIME_STATS is set
+	to 1). */
+
+	/* Power up and feed the timer. */
+	LPC_SC->PCONP |= (1 << 2);
+	LPC_SC->PCLKSEL0 = (LPC_SC->PCLKSEL0 & (~(0x3<<4))) | (0x01 << 4);
+
+	/* Reset Timer 1 */
+	LPC_TIM1->TCR = TCR_COUNT_RESET;
+
+	/* Just count up. */
+	LPC_TIM1->CTCR = CTCR_CTM_TIMER;
+
+	/* Prescale to a frequency that is good enough to get a decent resolution,
+	but not too fast so as to overflow all the time. */
+	LPC_TIM1->PR =  ( configCPU_CLOCK_HZ / 10000UL ) - 1UL;
+
+	/* Start the counter. */
+	LPC_TIM1->TCR = TCR_COUNT_ENABLE;
+}
+/*-----------------------------------------------------------*/

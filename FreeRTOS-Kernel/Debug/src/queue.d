@@ -1,6 +1,6 @@
 src/queue.o src/queue.d: ../src/queue.c \
  G:\isel\SE2\se\FreeRTOS-Kernel\include/FreeRTOS.h \
- G:\isel\SE2\se\ntpTest\inc/FreeRTOSConfig.h \
+ G:\isel\SE2\se\CarRunner\inc/FreeRTOSConfig.h \
  G:\isel\SE2\se\CMSIS_CORE_LPC17xx\inc/LPC17xx.h \
  G:\isel\SE2\se\CMSIS_CORE_LPC17xx\inc/core_cm3.h \
  G:\isel\SE2\se\CMSIS_CORE_LPC17xx\inc/core_cmInstr.h \
@@ -18,7 +18,7 @@ src/queue.o src/queue.d: ../src/queue.c \
 
 G:\isel\SE2\se\FreeRTOS-Kernel\include/FreeRTOS.h:
 
-G:\isel\SE2\se\ntpTest\inc/FreeRTOSConfig.h:
+G:\isel\SE2\se\CarRunner\inc/FreeRTOSConfig.h:
 
 G:\isel\SE2\se\CMSIS_CORE_LPC17xx\inc/LPC17xx.h:
 

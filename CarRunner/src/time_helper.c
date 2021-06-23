@@ -4,6 +4,11 @@
  *  Created on: 5 Jan 2021
  *      Author: $(author)
  */
+#include <stdbool.h>
+
+#include "FreeRTOS.h"
+#include "task.h"
+
 #include "lcd.h"
 #include "time_helper.h"
 #include "button.h"
@@ -27,12 +32,12 @@
 
 @enduml
 */
-void Time_changeRoutine(time_t seconds) {
+void TIME_ChangeRoutine(time_t seconds) {
 
     LCDText_Clear();
     struct tm *dateTime = gmtime(&seconds);
 
-    update_DateTimeDisplay(*dateTime);
+    TIME_UpdateDateTimeDisplay(*dateTime);
     LCDText_Locate(1, 0);
 	LCDText_WriteString("Maintenance Mode");
 
@@ -50,14 +55,14 @@ void Time_changeRoutine(time_t seconds) {
     		switch(state.key) {
 				case 1:
 					*to_sum[count] += 1;
-					update_DateTimeDisplay(*dateTime);
+					TIME_UpdateDateTimeDisplay(*dateTime);
 					LCDText_Locate(0, pos[count]);
 					break;
 				case 2:
 					*to_sum[count] -= 1;
 					if(*to_sum[count] < 0)
 						*to_sum[count] += 1;
-					update_DateTimeDisplay(*dateTime);
+					TIME_UpdateDateTimeDisplay(*dateTime);
 					LCDText_Locate(0, pos[count]);
 					break;
 				case 4:
@@ -81,10 +86,10 @@ void Time_changeRoutine(time_t seconds) {
     LCDText_CursorOff();
 }
 
-
-void update_DateTimeDisplay(struct tm dateTime){
-	LCDText_Locate(0,0);
-	char buffer[26];
+//TODO make task with flag to run or dont
+void TIME_UpdateDateTimeDisplay(struct tm dateTime){
+	//LCDText_Locate(0,0);
+	char buffer = pvPortMalloc(26);
 	strftime(buffer, 26, "%Y-%m-%d %H:%M", &dateTime);
-	LCDText_WriteString(buffer);
+	printComplex(true, true, true, false, 0, 0, buffer, 100);
 }

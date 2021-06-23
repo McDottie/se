@@ -34,7 +34,7 @@ void LCDText_WriteNibble(char data, unsigned int rs)
 	LPC_GPIO0->FIOPIN = LPC_GPIO0->FIOPIN | (data<<DB4);
 
 	LPC_GPIO0->FIOCLR = (1<<EN);
-	WAIT_ChronoUs(30); //de forma a corrigir problemas de dessincronização
+	WAIT_Milliseconds(1); //de forma a corrigir problemas de dessincronização
 }
 
 void LCDText_WriteByte(char data, unsigned int rs) {
@@ -47,11 +47,11 @@ void LCDText_Init(void) {
 	LPC_GPIO0->FIODIR = LPC_GPIO0->FIODIR | (1<<RS);
 	LPC_GPIO0->FIODIR = LPC_GPIO0->FIODIR | (1<<EN);
 
-	WAIT_ChronoUs(26000);
+	WAIT_Milliseconds(26);
 	LCDText_WriteNibble(0x3, 0);
-	WAIT_ChronoUs(5000);
+	WAIT_Milliseconds(5);
 	LCDText_WriteNibble(0x3, 0);
-	WAIT_ChronoUs(1000);
+	WAIT_Milliseconds(1);
 	LCDText_WriteNibble(0x3, 0);
 	LCDText_WriteNibble(0x2, 0);
 	LCDText_WriteCmd( LCDText_CMD_FUNCTION_SET );
@@ -73,20 +73,20 @@ void LCDText_CreateChar(unsigned char location, unsigned char charmap[]) {
 	for(int i = 0; i < 8; ++i) {//o representa o numero de linhas
 		ramAdress= charmap[i];
 		LCDText_WriteByte(ramAdress,1);
-		WAIT_ChronoUs(1000);
+		WAIT_Milliseconds(1);
 	}
 
 }
 
 void LCDText_WriteCmd(char cmd){
 	LCDText_WriteByte(cmd, LCDText_CMD);
-	WAIT_ChronoUs(30);
+	WAIT_Milliseconds(1);
 }
 
 void LCDText_WriteChar(char ch ) {
 	x++;
 	LCDText_WriteByte(ch, LCDText_DATA );
-	WAIT_ChronoUs(100);
+	WAIT_Milliseconds(1);
 }
 
 void LCDText_WriteString(char *str) {
@@ -103,7 +103,7 @@ void LCDText_WriteString(char *str) {
 			LCDText_Locate(y, 0);
 		}else
 			LCDText_WriteChar( *str++);
-		WAIT_ChronoUs(1000);
+		WAIT_Milliseconds(1);
 	}
 }
 
@@ -128,7 +128,7 @@ void LCDText_Locate(int row, int column) {
 
 void LCDText_Clear(void) {
 	LCDText_WriteCmd( LCDText_CMD_DISPLAY_CLEAR );
-	WAIT_ChronoUs(5500);
+	WAIT_Milliseconds(6);
 	LCDText_Locate(0, 0);
 }
 

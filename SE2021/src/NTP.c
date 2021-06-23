@@ -10,6 +10,9 @@
 
 #include "NTP.h"
 #include "ESP01.h"
+#include <time.h>
+
+#define SEVENTY_YEARS 2208984820
 
 uint8_t li_vn_mode = 0xE3; // LI, Version, Mode
 uint8_t stratum = 0; // Stratum, or type of clock
@@ -41,6 +44,12 @@ ntp_packet NTP_Request() {//uint32_t lastCorrectTime, uint32_t currentTime) {
     ESP01_Send((char *)&defaultSendPacket, 48);
     char * result = ESP01_RecvActive();
     ntp_packet * retPacket = (ntp_packet *)result;
+    uint32_t seconds = ntohl(retPacket->rxTm_s) - SEVENTY_YEARS;
+    struct tm * dateTime = gmtime(&seconds);
+    uint32_t y = dateTime->tm_year;
+    uint32_t d = dateTime->tm_mday;
+    uint32_t m = dateTime->tm_mon;
+
     return defaultSendPacket;
 }
 

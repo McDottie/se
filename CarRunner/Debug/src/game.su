@@ -1,6 +1,6 @@
-game.c:30:6:gameInit	24	static
-game.c:39:6:gameRoutine	32	static
-game.c:95:6:saveUser	56	static
-game.c:147:6:initValues	16	static
-game.c:158:5:updateGameLogic	32	static
-game.c:219:6:updateGameDesign	56	static
+game.c:31:6:GAME_Init	24	static
+game.c:57:6:GAME_Routine	24	static
+game.c:127:6:saveUser	48	static
+game.c:177:6:initValues	16	static
+game.c:188:5:updateGameLogic	32	static
+game.c:249:6:updateGameDesign	56	static

@@ -5,6 +5,7 @@
  *      Author: josee
  */
 
+#include <definitions_variables.h>
 #include <stdbool.h>
 #include <stdlib.h>
 #include "game.h"
@@ -27,7 +28,7 @@ int probabilityToSpawn = 20;
 int points = 0;
 int delay = 1000;
 
-void gameInit(){
+void GAME_Init(){
 	unsigned char car[] = {0x00, 0x00, 0x00, 0x00, 0x0C, 0x1F, 0x0A, 0x00};
 	unsigned char obs1[] = {0x00, 0x04, 0x0A, 0x15, 0x0A, 0x04, 0x00, 0x00};
 
@@ -53,7 +54,7 @@ void gameInit(){
 	saveUser --> [*]
 @enduml
 */
-void gameRoutine(){
+void GAME_Routine(){
 	srand(WAIT_GetElapsedMillis(0));
 
 	initValues();
@@ -61,7 +62,6 @@ void gameRoutine(){
     int elapsed = WAIT_GetElapsedMillis(0) + 1000;
     LCDText_Clear();
 
-    key_state ks;
     bool gameOver = false;
     do {
     	bool tap = ADXL345_isTap();
@@ -74,9 +74,9 @@ void gameRoutine(){
     		updateGameDesign();
     	}
 
-    	ks = BUTTON_GetButtonsEvents();
-    	if (ks.state == PRESSED) {
-    		switch(ks.key){
+
+    	if (keySt.state == PRESSED) {
+    		switch(keySt.key){
 				case L:
 					car = 0;
 					break;
@@ -130,7 +130,6 @@ void saveUser(int points){
 	LCDText_Clear();
     LCDText_WriteString("INSERT YOUR NAME");
 
-    key_state ks;
 	int pos = 0;
 	char currChar = 64;
 
@@ -139,16 +138,15 @@ void saveUser(int points){
 	int stamp = WAIT_GetElapsedMillis(0);
 	LCDText_CursorOn();
     while(1) {
-    	ks = BUTTON_GetButtonsEvents();
 
-    	if (ks.state == REPEATED && ks.key == S && WAIT_GetElapsedMillis(stamp) > 2000) {
+    	if (keySt.state == REPEATED && keySt.key == S && WAIT_GetElapsedMillis(stamp) > 2000) {
     		break;
     	}
 
-		if (ks.state == PRESSED) {
+		if (keySt.state == PRESSED) {
 			stamp = WAIT_GetElapsedMillis(0);
 
-			switch(ks.key){
+			switch(keySt.key){
 				case L:
 					currChar++;
 					LCDText_WriteChar(currChar);

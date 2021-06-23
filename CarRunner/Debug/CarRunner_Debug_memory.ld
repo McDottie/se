@@ -5,8 +5,8 @@
  * (c) NXP Semiconductors 2013-2021
  * Generated linker script file for LPC1769
  * Created from memory.ldt by FMCreateLinkMemory
- * Using Freemarker v2.3.23
- * MCUXpresso IDE v11.2.1 [Build 4149] [2020-10-07] on 01-Feb-2021 16:23:52
+ * Using Freemarker v2.3.30
+ * MCUXpresso IDE v11.3.1 [Build 5262] [2021-04-02] on 23/jun/2021 15:45:32
  */
 
 MEMORY

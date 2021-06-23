@@ -11,11 +11,11 @@
 /**
  * @brief initializes the module
  */
-void gameInit();
+void GAME_Init();
 
 /**
  * @brief routine that interfaces with buttons, lcd and accelerometer to play the game. It also saves scores and player names.
  */
-void gameRoutine(void);
+void GAME_Routine(void);
 
 #endif /* GAME_H_ */

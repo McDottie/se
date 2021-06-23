@@ -1,2 +1,2 @@
-time_helper.c:13:6:Time_changeRoutine	120	static
-time_helper.c:68:6:update_DateTimeDisplay	40	static
+time_helper.c:35:6:TIME_ChangeRoutine	120	static
+time_helper.c:90:6:TIME_UpdateDateTimeDisplay	32	static
