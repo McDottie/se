@@ -12,7 +12,7 @@
 #include "ESP01.h"
 #include <time.h>
 
-#define SEVENTY_YEARS 2208984820
+#define SEVENTY_YEARS 2208988800UL
 
 uint8_t li_vn_mode = 0xE3; // LI, Version, Mode
 uint8_t stratum = 0; // Stratum, or type of clock
@@ -31,7 +31,7 @@ int NTP_Init(char* server, int port) {
     return ESP01_ConnectServer("UDP", server, port);
 }
 
-ntp_packet NTP_Request() {//uint32_t lastCorrectTime, uint32_t currentTime) {
+time_t NTP_Request(int tries) {//uint32_t lastCorrectTime, uint32_t currentTime) {
     ntp_packet defaultSendPacket = {
         .li_vn_mode = li_vn_mode,
         .stratum = stratum,
@@ -40,17 +40,23 @@ ntp_packet NTP_Request() {//uint32_t lastCorrectTime, uint32_t currentTime) {
         //.refTm_s = lastCorrectTime,
         //.origTm_s = currentTime,
     };
+    bool responded = false;
+    int count = 0;
+    char * result;
+    while(!responded && count < tries) {
+    	count++;
+    	responded = ESP01_Send((char *)&defaultSendPacket, 48);
+    	result = ESP01_RecvActive();
+    	if(!result) responded = false;
+    }
 
-    ESP01_Send((char *)&defaultSendPacket, 48);
-    char * result = ESP01_RecvActive();
+    if(!responded) return 0;
+
     ntp_packet * retPacket = (ntp_packet *)result;
-    uint32_t seconds = ntohl(retPacket->rxTm_s) - SEVENTY_YEARS;
-    struct tm * dateTime = gmtime(&seconds);
-    uint32_t y = dateTime->tm_year;
-    uint32_t d = dateTime->tm_mday;
-    uint32_t m = dateTime->tm_mon;
-
-    return defaultSendPacket;
+    time_t seconds = ntohl(retPacket->rxTm_s) - SEVENTY_YEARS;
+    vPortFree(result);
+    //struct tm * dateTime = gmtime(&seconds);
+    return seconds;
 }
 
 

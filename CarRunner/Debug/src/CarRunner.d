@@ -1,76 +1,88 @@
 src/CarRunner.o src/CarRunner.d: ../src/CarRunner.c \
- G:\isel\SE2\se\CMSIS_CORE_LPC17xx\inc/LPC17xx.h \
- G:\isel\SE2\se\CMSIS_CORE_LPC17xx\inc/core_cm3.h \
- G:\isel\SE2\se\CMSIS_CORE_LPC17xx\inc/core_cmInstr.h \
- G:\isel\SE2\se\CMSIS_CORE_LPC17xx\inc/core_cmFunc.h \
- G:\isel\SE2\se\CMSIS_CORE_LPC17xx\inc/system_LPC17xx.h \
- G:\isel\SE2\se\FreeRTOS-Kernel\include/FreeRTOS.h \
- G:\isel\SE2\se\CarRunner\inc/FreeRTOSConfig.h \
- G:\isel\SE2\se\FreeRTOS-Kernel\include/projdefs.h \
- G:\isel\SE2\se\FreeRTOS-Kernel\include/portable.h \
- G:\isel\SE2\se\FreeRTOS-Kernel\include/deprecated_definitions.h \
- G:\isel\SE2\se\FreeRTOS-Kernel\src\portable/portmacro.h \
- G:\isel\SE2\se\FreeRTOS-Kernel\include/mpu_wrappers.h \
- G:\isel\SE2\se\FreeRTOS-Kernel\include/task.h \
- G:\isel\SE2\se\FreeRTOS-Kernel\include/list.h \
- G:\isel\SE2\se\FreeRTOS-Kernel\include/queue.h \
- G:\isel\SE2\se\FreeRTOS-Kernel\include/task.h \
- G:\isel\SE2\se\SE2021\inc/lcd.h \
- G:\isel\SE2\se\CarRunner\inc/time_helper.h \
- G:\isel\SE2\se\SE2021\inc/rtc.h G:\isel\SE2\se\SE2021\inc/button.h \
- G:\isel\SE2\se\SE2021\inc/wait.h G:\isel\SE2\se\SE2021\inc/ADXL345.h \
- G:\isel\SE2\se\SE2021\inc/spi.h G:\isel\SE2\se\CarRunner\inc/saver.h \
- G:\isel\SE2\se\CarRunner\inc/CarRunner.h \
- G:\isel\SE2\se\CarRunner\inc/definitions_variables.h
+ C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CMSIS_CORE_LPC17xx\inc/LPC17xx.h \
+ C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CMSIS_CORE_LPC17xx\inc/core_cm3.h \
+ C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CMSIS_CORE_LPC17xx\inc/core_cmInstr.h \
+ C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CMSIS_CORE_LPC17xx\inc/core_cmFunc.h \
+ C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CMSIS_CORE_LPC17xx\inc/system_LPC17xx.h \
+ C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\include/FreeRTOS.h \
+ C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CarRunner\inc/FreeRTOSConfig.h \
+ C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\include/projdefs.h \
+ C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\include/portable.h \
+ C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\include/deprecated_definitions.h \
+ C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\src\portable/portmacro.h \
+ C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\include/mpu_wrappers.h \
+ C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\include/task.h \
+ C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\include/list.h \
+ C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\include/queue.h \
+ C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\include/task.h \
+ C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\SE2021\inc/lcd.h \
+ C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CarRunner\inc/time_helper.h \
+ C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\SE2021\inc/rtc.h \
+ C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\SE2021\inc/button.h \
+ C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\SE2021\inc/wait.h \
+ C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\SE2021\inc/ADXL345.h \
+ C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\SE2021\inc/spi.h \
+ C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\SE2021\inc/ESP01.h \
+ C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\SE2021\inc/uart.h \
+ C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\SE2021\inc/NTP.h \
+ C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CarRunner\inc/saver.h \
+ C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CarRunner\inc/CarRunner.h \
+ C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CarRunner\inc/definitions_variables.h
 
-G:\isel\SE2\se\CMSIS_CORE_LPC17xx\inc/LPC17xx.h:
+C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CMSIS_CORE_LPC17xx\inc/LPC17xx.h:
 
-G:\isel\SE2\se\CMSIS_CORE_LPC17xx\inc/core_cm3.h:
+C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CMSIS_CORE_LPC17xx\inc/core_cm3.h:
 
-G:\isel\SE2\se\CMSIS_CORE_LPC17xx\inc/core_cmInstr.h:
+C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CMSIS_CORE_LPC17xx\inc/core_cmInstr.h:
 
-G:\isel\SE2\se\CMSIS_CORE_LPC17xx\inc/core_cmFunc.h:
+C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CMSIS_CORE_LPC17xx\inc/core_cmFunc.h:
 
-G:\isel\SE2\se\CMSIS_CORE_LPC17xx\inc/system_LPC17xx.h:
+C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CMSIS_CORE_LPC17xx\inc/system_LPC17xx.h:
 
-G:\isel\SE2\se\FreeRTOS-Kernel\include/FreeRTOS.h:
+C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\include/FreeRTOS.h:
 
-G:\isel\SE2\se\CarRunner\inc/FreeRTOSConfig.h:
+C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CarRunner\inc/FreeRTOSConfig.h:
 
-G:\isel\SE2\se\FreeRTOS-Kernel\include/projdefs.h:
+C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\include/projdefs.h:
 
-G:\isel\SE2\se\FreeRTOS-Kernel\include/portable.h:
+C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\include/portable.h:
 
-G:\isel\SE2\se\FreeRTOS-Kernel\include/deprecated_definitions.h:
+C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\include/deprecated_definitions.h:
 
-G:\isel\SE2\se\FreeRTOS-Kernel\src\portable/portmacro.h:
+C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\src\portable/portmacro.h:
 
-G:\isel\SE2\se\FreeRTOS-Kernel\include/mpu_wrappers.h:
+C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\include/mpu_wrappers.h:
 
-G:\isel\SE2\se\FreeRTOS-Kernel\include/task.h:
+C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\include/task.h:
 
-G:\isel\SE2\se\FreeRTOS-Kernel\include/list.h:
+C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\include/list.h:
 
-G:\isel\SE2\se\FreeRTOS-Kernel\include/queue.h:
+C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\include/queue.h:
 
-G:\isel\SE2\se\FreeRTOS-Kernel\include/task.h:
+C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\include/task.h:
 
-G:\isel\SE2\se\SE2021\inc/lcd.h:
+C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\SE2021\inc/lcd.h:
 
-G:\isel\SE2\se\CarRunner\inc/time_helper.h:
+C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CarRunner\inc/time_helper.h:
 
-G:\isel\SE2\se\SE2021\inc/rtc.h:
+C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\SE2021\inc/rtc.h:
 
-G:\isel\SE2\se\SE2021\inc/button.h:
+C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\SE2021\inc/button.h:
 
-G:\isel\SE2\se\SE2021\inc/wait.h:
+C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\SE2021\inc/wait.h:
 
-G:\isel\SE2\se\SE2021\inc/ADXL345.h:
+C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\SE2021\inc/ADXL345.h:
 
-G:\isel\SE2\se\SE2021\inc/spi.h:
+C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\SE2021\inc/spi.h:
 
-G:\isel\SE2\se\CarRunner\inc/saver.h:
+C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\SE2021\inc/ESP01.h:
 
-G:\isel\SE2\se\CarRunner\inc/CarRunner.h:
+C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\SE2021\inc/uart.h:
 
-G:\isel\SE2\se\CarRunner\inc/definitions_variables.h:
+C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\SE2021\inc/NTP.h:
+
+C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CarRunner\inc/saver.h:
+
+C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CarRunner\inc/CarRunner.h:
+
+C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CarRunner\inc/definitions_variables.h:

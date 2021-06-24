@@ -4,9 +4,242 @@
 		<extension point="org.eclipse.cdt.core.LanguageSettingsProvider">
 			<provider id="com.crt.advproject.GCCBuildCommandParser">
 				<language id="org.eclipse.cdt.core.gcc">
+					<resource project-relative-path="src/ESP01.c">
+						<entry kind="includePath" name="/${ProjName}/inc">
+							<flag value="VALUE_WORKSPACE_PATH"/>
+						</entry>
+						<entry kind="includePath" name="/CarRunner/inc">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="includePath" name="/CMSIS_CORE_LPC17xx/inc">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="includePath" name="/FreeRTOS-Kernel/include">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="includePath" name="/FreeRTOS-Kernel/src/portable">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="macro" name="CORE_M3" value="1"/>
+						<entry kind="macro" name="DEBUG" value="1"/>
+						<entry kind="macro" name="__CODE_RED" value="1"/>
+						<entry kind="macro" name="__LPC17XX__" value="1"/>
+						<entry kind="macro" name="__NEWLIB__" value="1"/>
+						<entry kind="macro" name="__USE_CMSIS" value="CMSIS_CORE_LPC17xx"/>
+					</resource>
+					<resource project-relative-path="src/button.c">
+						<entry kind="includePath" name="/${ProjName}/inc">
+							<flag value="VALUE_WORKSPACE_PATH"/>
+						</entry>
+						<entry kind="includePath" name="/CarRunner/inc">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="includePath" name="/CMSIS_CORE_LPC17xx/inc">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="includePath" name="/FreeRTOS-Kernel/include">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="includePath" name="/FreeRTOS-Kernel/src/portable">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="macro" name="CORE_M3" value="1"/>
+						<entry kind="macro" name="DEBUG" value="1"/>
+						<entry kind="macro" name="__CODE_RED" value="1"/>
+						<entry kind="macro" name="__LPC17XX__" value="1"/>
+						<entry kind="macro" name="__NEWLIB__" value="1"/>
+						<entry kind="macro" name="__USE_CMSIS" value="CMSIS_CORE_LPC17xx"/>
+					</resource>
+					<resource project-relative-path="src/i2c.c">
+						<entry kind="includePath" name="/${ProjName}/inc">
+							<flag value="VALUE_WORKSPACE_PATH"/>
+						</entry>
+						<entry kind="includePath" name="/CarRunner/inc">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="includePath" name="/CMSIS_CORE_LPC17xx/inc">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="includePath" name="/FreeRTOS-Kernel/include">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="includePath" name="/FreeRTOS-Kernel/src/portable">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="macro" name="CORE_M3" value="1"/>
+						<entry kind="macro" name="DEBUG" value="1"/>
+						<entry kind="macro" name="__CODE_RED" value="1"/>
+						<entry kind="macro" name="__LPC17XX__" value="1"/>
+						<entry kind="macro" name="__NEWLIB__" value="1"/>
+						<entry kind="macro" name="__USE_CMSIS" value="CMSIS_CORE_LPC17xx"/>
+					</resource>
 					<resource project-relative-path="src/NTP.c">
 						<entry kind="includePath" name="/${ProjName}/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
+						</entry>
+						<entry kind="includePath" name="/CarRunner/inc">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="includePath" name="/CMSIS_CORE_LPC17xx/inc">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="includePath" name="/FreeRTOS-Kernel/include">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="includePath" name="/FreeRTOS-Kernel/src/portable">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="macro" name="CORE_M3" value="1"/>
+						<entry kind="macro" name="DEBUG" value="1"/>
+						<entry kind="macro" name="__CODE_RED" value="1"/>
+						<entry kind="macro" name="__LPC17XX__" value="1"/>
+						<entry kind="macro" name="__NEWLIB__" value="1"/>
+						<entry kind="macro" name="__USE_CMSIS" value="CMSIS_CORE_LPC17xx"/>
+					</resource>
+					<resource project-relative-path="src/EEPROM.c">
+						<entry kind="includePath" name="/${ProjName}/inc">
+							<flag value="VALUE_WORKSPACE_PATH"/>
+						</entry>
+						<entry kind="includePath" name="/CarRunner/inc">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="includePath" name="/CMSIS_CORE_LPC17xx/inc">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="includePath" name="/FreeRTOS-Kernel/include">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="includePath" name="/FreeRTOS-Kernel/src/portable">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="macro" name="CORE_M3" value="1"/>
+						<entry kind="macro" name="DEBUG" value="1"/>
+						<entry kind="macro" name="__CODE_RED" value="1"/>
+						<entry kind="macro" name="__LPC17XX__" value="1"/>
+						<entry kind="macro" name="__NEWLIB__" value="1"/>
+						<entry kind="macro" name="__USE_CMSIS" value="CMSIS_CORE_LPC17xx"/>
+					</resource>
+					<resource project-relative-path="src/transport.c">
+						<entry kind="includePath" name="/${ProjName}/inc">
+							<flag value="VALUE_WORKSPACE_PATH"/>
+						</entry>
+						<entry kind="includePath" name="/CarRunner/inc">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="includePath" name="/CMSIS_CORE_LPC17xx/inc">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="includePath" name="/FreeRTOS-Kernel/include">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="includePath" name="/FreeRTOS-Kernel/src/portable">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="macro" name="CORE_M3" value="1"/>
+						<entry kind="macro" name="DEBUG" value="1"/>
+						<entry kind="macro" name="__CODE_RED" value="1"/>
+						<entry kind="macro" name="__LPC17XX__" value="1"/>
+						<entry kind="macro" name="__NEWLIB__" value="1"/>
+						<entry kind="macro" name="__USE_CMSIS" value="CMSIS_CORE_LPC17xx"/>
+					</resource>
+					<resource project-relative-path="src/uart.c">
+						<entry kind="includePath" name="/${ProjName}/inc">
+							<flag value="VALUE_WORKSPACE_PATH"/>
+						</entry>
+						<entry kind="includePath" name="/CarRunner/inc">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="includePath" name="/CMSIS_CORE_LPC17xx/inc">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="includePath" name="/FreeRTOS-Kernel/include">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="includePath" name="/FreeRTOS-Kernel/src/portable">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="macro" name="CORE_M3" value="1"/>
+						<entry kind="macro" name="DEBUG" value="1"/>
+						<entry kind="macro" name="__CODE_RED" value="1"/>
+						<entry kind="macro" name="__LPC17XX__" value="1"/>
+						<entry kind="macro" name="__NEWLIB__" value="1"/>
+						<entry kind="macro" name="__USE_CMSIS" value="CMSIS_CORE_LPC17xx"/>
+					</resource>
+					<resource project-relative-path="src/Flash.c">
+						<entry kind="includePath" name="/${ProjName}/inc">
+							<flag value="VALUE_WORKSPACE_PATH"/>
+						</entry>
+						<entry kind="includePath" name="/CarRunner/inc">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="includePath" name="/CMSIS_CORE_LPC17xx/inc">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="includePath" name="/FreeRTOS-Kernel/include">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="includePath" name="/FreeRTOS-Kernel/src/portable">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="macro" name="CORE_M3" value="1"/>
+						<entry kind="macro" name="DEBUG" value="1"/>
+						<entry kind="macro" name="__CODE_RED" value="1"/>
+						<entry kind="macro" name="__LPC17XX__" value="1"/>
+						<entry kind="macro" name="__NEWLIB__" value="1"/>
+						<entry kind="macro" name="__USE_CMSIS" value="CMSIS_CORE_LPC17xx"/>
+					</resource>
+					<resource project-relative-path="src/led.c">
+						<entry kind="includePath" name="/${ProjName}/inc">
+							<flag value="VALUE_WORKSPACE_PATH"/>
+						</entry>
+						<entry kind="includePath" name="/CarRunner/inc">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="includePath" name="/CMSIS_CORE_LPC17xx/inc">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="includePath" name="/FreeRTOS-Kernel/include">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="includePath" name="/FreeRTOS-Kernel/src/portable">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="macro" name="CORE_M3" value="1"/>
+						<entry kind="macro" name="DEBUG" value="1"/>
+						<entry kind="macro" name="__CODE_RED" value="1"/>
+						<entry kind="macro" name="__LPC17XX__" value="1"/>
+						<entry kind="macro" name="__NEWLIB__" value="1"/>
+						<entry kind="macro" name="__USE_CMSIS" value="CMSIS_CORE_LPC17xx"/>
+					</resource>
+					<resource project-relative-path="src/printf-stdarg.c">
+						<entry kind="includePath" name="/${ProjName}/inc">
+							<flag value="VALUE_WORKSPACE_PATH"/>
+						</entry>
+						<entry kind="includePath" name="/CarRunner/inc">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="includePath" name="/CMSIS_CORE_LPC17xx/inc">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="includePath" name="/FreeRTOS-Kernel/include">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="includePath" name="/FreeRTOS-Kernel/src/portable">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="macro" name="CORE_M3" value="1"/>
+						<entry kind="macro" name="DEBUG" value="1"/>
+						<entry kind="macro" name="__CODE_RED" value="1"/>
+						<entry kind="macro" name="__LPC17XX__" value="1"/>
+						<entry kind="macro" name="__NEWLIB__" value="1"/>
+						<entry kind="macro" name="__USE_CMSIS" value="CMSIS_CORE_LPC17xx"/>
+					</resource>
+					<resource project-relative-path="src/rtc.c">
+						<entry kind="includePath" name="/${ProjName}/inc">
+							<flag value="VALUE_WORKSPACE_PATH"/>
+						</entry>
+						<entry kind="includePath" name="/CarRunner/inc">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
 						<entry kind="includePath" name="/CMSIS_CORE_LPC17xx/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
@@ -28,7 +261,99 @@
 						<entry kind="includePath" name="/${ProjName}/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/FreeRTOS-test/inc">
+						<entry kind="includePath" name="/CarRunner/inc">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="includePath" name="/CMSIS_CORE_LPC17xx/inc">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="includePath" name="/FreeRTOS-Kernel/include">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="includePath" name="/FreeRTOS-Kernel/src/portable">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="macro" name="CORE_M3" value="1"/>
+						<entry kind="macro" name="DEBUG" value="1"/>
+						<entry kind="macro" name="__CODE_RED" value="1"/>
+						<entry kind="macro" name="__LPC17XX__" value="1"/>
+						<entry kind="macro" name="__NEWLIB__" value="1"/>
+						<entry kind="macro" name="__USE_CMSIS" value="CMSIS_CORE_LPC17xx"/>
+					</resource>
+					<resource project-relative-path="src/ADXL345.c">
+						<entry kind="includePath" name="/${ProjName}/inc">
+							<flag value="VALUE_WORKSPACE_PATH"/>
+						</entry>
+						<entry kind="includePath" name="/CarRunner/inc">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="includePath" name="/CMSIS_CORE_LPC17xx/inc">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="includePath" name="/FreeRTOS-Kernel/include">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="includePath" name="/FreeRTOS-Kernel/src/portable">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="macro" name="CORE_M3" value="1"/>
+						<entry kind="macro" name="DEBUG" value="1"/>
+						<entry kind="macro" name="__CODE_RED" value="1"/>
+						<entry kind="macro" name="__LPC17XX__" value="1"/>
+						<entry kind="macro" name="__NEWLIB__" value="1"/>
+						<entry kind="macro" name="__USE_CMSIS" value="CMSIS_CORE_LPC17xx"/>
+					</resource>
+					<resource project-relative-path="src/wait.c">
+						<entry kind="includePath" name="/${ProjName}/inc">
+							<flag value="VALUE_WORKSPACE_PATH"/>
+						</entry>
+						<entry kind="includePath" name="/CarRunner/inc">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="includePath" name="/CMSIS_CORE_LPC17xx/inc">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="includePath" name="/FreeRTOS-Kernel/include">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="includePath" name="/FreeRTOS-Kernel/src/portable">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="macro" name="CORE_M3" value="1"/>
+						<entry kind="macro" name="DEBUG" value="1"/>
+						<entry kind="macro" name="__CODE_RED" value="1"/>
+						<entry kind="macro" name="__LPC17XX__" value="1"/>
+						<entry kind="macro" name="__NEWLIB__" value="1"/>
+						<entry kind="macro" name="__USE_CMSIS" value="CMSIS_CORE_LPC17xx"/>
+					</resource>
+					<resource project-relative-path="src/spi.c">
+						<entry kind="includePath" name="/${ProjName}/inc">
+							<flag value="VALUE_WORKSPACE_PATH"/>
+						</entry>
+						<entry kind="includePath" name="/CarRunner/inc">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="includePath" name="/CMSIS_CORE_LPC17xx/inc">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="includePath" name="/FreeRTOS-Kernel/include">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="includePath" name="/FreeRTOS-Kernel/src/portable">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="macro" name="CORE_M3" value="1"/>
+						<entry kind="macro" name="DEBUG" value="1"/>
+						<entry kind="macro" name="__CODE_RED" value="1"/>
+						<entry kind="macro" name="__LPC17XX__" value="1"/>
+						<entry kind="macro" name="__NEWLIB__" value="1"/>
+						<entry kind="macro" name="__USE_CMSIS" value="CMSIS_CORE_LPC17xx"/>
+					</resource>
+					<resource project-relative-path="src/utils.c">
+						<entry kind="includePath" name="/${ProjName}/inc">
+							<flag value="VALUE_WORKSPACE_PATH"/>
+						</entry>
+						<entry kind="includePath" name="/CarRunner/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
 						<entry kind="includePath" name="/CMSIS_CORE_LPC17xx/inc">
@@ -51,13 +376,13 @@
 			</provider>
 			<provider id="com.crt.advproject.GCCBuildSpecCompilerParser">
 				<language id="org.eclipse.cdt.core.gcc">
-					<entry kind="includePath" name="F:/MCUXpressoIDE_11.3.1_5262/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133/tools/lib/gcc/arm-none-eabi/9.3.1/include">
+					<entry kind="includePath" name="C:/nxp/MCUXpressoIDE_11.3.1_5262/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133/tools/lib/gcc/arm-none-eabi/9.3.1/include">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="includePath" name="F:/MCUXpressoIDE_11.3.1_5262/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133/tools/lib/gcc/arm-none-eabi/9.3.1/include-fixed">
+					<entry kind="includePath" name="C:/nxp/MCUXpressoIDE_11.3.1_5262/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133/tools/lib/gcc/arm-none-eabi/9.3.1/include-fixed">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="includePath" name="F:/MCUXpressoIDE_11.3.1_5262/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133/tools/arm-none-eabi/include">
+					<entry kind="includePath" name="C:/nxp/MCUXpressoIDE_11.3.1_5262/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133/tools/arm-none-eabi/include">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
 					<entry kind="macro" name="__ACCUM_EPSILON__" value="0x1P-15K">
@@ -1331,22 +1656,22 @@
 					</entry>
 				</language>
 				<language id="org.eclipse.cdt.core.g++">
-					<entry kind="includePath" name="F:/MCUXpressoIDE_11.3.1_5262/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133/tools/arm-none-eabi/include/c++/9.3.1">
+					<entry kind="includePath" name="C:/nxp/MCUXpressoIDE_11.3.1_5262/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133/tools/arm-none-eabi/include/c++/9.3.1">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="includePath" name="F:/MCUXpressoIDE_11.3.1_5262/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133/tools/arm-none-eabi/include/c++/9.3.1/arm-none-eabi/thumb/v7e-m/nofp">
+					<entry kind="includePath" name="C:/nxp/MCUXpressoIDE_11.3.1_5262/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133/tools/arm-none-eabi/include/c++/9.3.1/arm-none-eabi/thumb/v7e-m/nofp">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="includePath" name="F:/MCUXpressoIDE_11.3.1_5262/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133/tools/arm-none-eabi/include/c++/9.3.1/backward">
+					<entry kind="includePath" name="C:/nxp/MCUXpressoIDE_11.3.1_5262/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133/tools/arm-none-eabi/include/c++/9.3.1/backward">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="includePath" name="F:/MCUXpressoIDE_11.3.1_5262/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133/tools/lib/gcc/arm-none-eabi/9.3.1/include">
+					<entry kind="includePath" name="C:/nxp/MCUXpressoIDE_11.3.1_5262/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133/tools/lib/gcc/arm-none-eabi/9.3.1/include">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="includePath" name="F:/MCUXpressoIDE_11.3.1_5262/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133/tools/lib/gcc/arm-none-eabi/9.3.1/include-fixed">
+					<entry kind="includePath" name="C:/nxp/MCUXpressoIDE_11.3.1_5262/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133/tools/lib/gcc/arm-none-eabi/9.3.1/include-fixed">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="includePath" name="F:/MCUXpressoIDE_11.3.1_5262/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133/tools/arm-none-eabi/include">
+					<entry kind="includePath" name="C:/nxp/MCUXpressoIDE_11.3.1_5262/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133/tools/arm-none-eabi/include">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
 					<entry kind="macro" name="__ACCUM_EPSILON__" value="0x1P-15K">
@@ -1395,9 +1720,6 @@
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
 					<entry kind="macro" name="__ARM_FEATURE_CLZ" value="1">
-						<flag value="BUILTIN|READONLY"/>
-					</entry>
-					<entry kind="macro" name="__ARM_FEATURE_COPROC" value="1">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
 					<entry kind="macro" name="__ARM_FEATURE_COPROC" value="15">
@@ -1493,6 +1815,9 @@
 					<entry kind="macro" name="__DBL_HAS_DENORM__" value="1">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
+					<entry kind="macro" name="__DBL_HAS_INFINITY__" value="1">
+						<flag value="BUILTIN|READONLY"/>
+					</entry>
 					<entry kind="macro" name="__DBL_HAS_QUIET_NAN__" value="1">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
@@ -1514,19 +1839,16 @@
 					<entry kind="macro" name="__DBL_MIN_EXP__" value="(-1021)">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="macro" name="__DEC128_EPSILON__" value="1E-33DL">
+					<entry kind="macro" name="__DBL_MIN__" value="double(2.2250738585072014e-308L)">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="macro" name="__DEC128_MANT_DIG__" value="double(2.2250738585072014e-308L)">
+					<entry kind="macro" name="__DEC128_EPSILON__" value="1E-33DL">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
 					<entry kind="macro" name="__DEC128_MANT_DIG__" value="34">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
 					<entry kind="macro" name="__DEC128_MAX_EXP__" value="6145">
-						<flag value="BUILTIN|READONLY"/>
-					</entry>
-					<entry kind="macro" name="__DEC128_MAX__" value="1">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
 					<entry kind="macro" name="__DEC128_MAX__" value="9.999999999999999999999999999999999E6144DL">
@@ -1619,6 +1941,9 @@
 					<entry kind="macro" name="__FLT32X_DIG__" value="15">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
+					<entry kind="macro" name="__FLT32X_EPSILON__" value="2.2204460492503131e-16F32x">
+						<flag value="BUILTIN|READONLY"/>
+					</entry>
 					<entry kind="macro" name="__FLT32X_HAS_DENORM__" value="1">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
@@ -1635,6 +1960,9 @@
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
 					<entry kind="macro" name="__FLT32X_MAX_EXP__" value="1024">
+						<flag value="BUILTIN|READONLY"/>
+					</entry>
+					<entry kind="macro" name="__FLT32X_MAX__" value="1.7976931348623157e+308F32x">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
 					<entry kind="macro" name="__FLT32X_MIN_10_EXP__" value="(-307)">
@@ -1706,9 +2034,6 @@
 					<entry kind="macro" name="__FLT64_HAS_INFINITY__" value="1">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="macro" name="__FLT64_HAS_QUIET_NAN__" value="0xffffffffffffffffULL">
-						<flag value="BUILTIN|READONLY"/>
-					</entry>
 					<entry kind="macro" name="__FLT64_HAS_QUIET_NAN__" value="1">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
@@ -1728,6 +2053,9 @@
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
 					<entry kind="macro" name="__FLT64_MIN_EXP__" value="(-1021)">
+						<flag value="BUILTIN|READONLY"/>
+					</entry>
+					<entry kind="macro" name="__FLT64_MIN__" value="2.2250738585072014e-308F64">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
 					<entry kind="macro" name="__FLT_DECIMAL_DIG__" value="9">
@@ -1827,6 +2155,9 @@
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
 					<entry kind="macro" name="__GCC_ATOMIC_WCHAR_T_LOCK_FREE" value="2">
+						<flag value="BUILTIN|READONLY"/>
+					</entry>
+					<entry kind="macro" name="__GCC_HAVE_SYNC_COMPARE_AND_SWAP_1" value="1">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
 					<entry kind="macro" name="__GCC_HAVE_SYNC_COMPARE_AND_SWAP_2" value="1">
@@ -2063,6 +2394,9 @@
 					<entry kind="macro" name="__LDBL_MAX_10_EXP__" value="308">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
+					<entry kind="macro" name="__LDBL_MAX_EXP__" value="1024">
+						<flag value="BUILTIN|READONLY"/>
+					</entry>
 					<entry kind="macro" name="__LDBL_MAX__" value="1.7976931348623157e+308L">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
@@ -2112,6 +2446,9 @@
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
 					<entry kind="macro" name="__LLFRACT_IBIT__" value="0">
+						<flag value="BUILTIN|READONLY"/>
+					</entry>
+					<entry kind="macro" name="__LLFRACT_MAX__" value="0X7FFFFFFFFFFFFFFFP-63LLR">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
 					<entry kind="macro" name="__LLFRACT_MIN__" value="(-0.5LLR-0.5LLR)">
@@ -2174,13 +2511,7 @@
 					<entry kind="macro" name="__SACCUM_MAX__" value="0X7FFFP-7HK">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="macro" name="__SACCUM_MIN__" value="2.2250738585072014e-308F64">
-						<flag value="BUILTIN|READONLY"/>
-					</entry>
 					<entry kind="macro" name="__SACCUM_MIN__" value="(-0X1P7HK-0X1P7HK)">
-						<flag value="BUILTIN|READONLY"/>
-					</entry>
-					<entry kind="macro" name="__SA_FBIT__" value="0.0UHK">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
 					<entry kind="macro" name="__SA_FBIT__" value="15">
@@ -2205,9 +2536,6 @@
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
 					<entry kind="macro" name="__SFRACT_MAX__" value="0X7FP-7HR">
-						<flag value="BUILTIN|READONLY"/>
-					</entry>
-					<entry kind="macro" name="__SFRACT_MIN__" value="1024">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
 					<entry kind="macro" name="__SFRACT_MIN__" value="(-0.5HR-0.5HR)">
@@ -2282,9 +2610,6 @@
 					<entry kind="macro" name="__SQ_FBIT__" value="31">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="macro" name="__SQ_IBIT__" value="0X7FFFFFFFFFFFFFFFP-63LLR">
-						<flag value="BUILTIN|READONLY"/>
-					</entry>
 					<entry kind="macro" name="__SQ_IBIT__" value="0">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
@@ -2318,19 +2643,16 @@
 					<entry kind="macro" name="__TQ_IBIT__" value="0">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="macro" name="__UACCUM_EPSILON__" value="2.2204460492503131e-16F32x">
-						<flag value="BUILTIN|READONLY"/>
-					</entry>
 					<entry kind="macro" name="__UACCUM_EPSILON__" value="0x1P-16UK">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
 					<entry kind="macro" name="__UACCUM_FBIT__" value="16">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="macro" name="__UACCUM_IBIT__" value="1.7976931348623157e+308F32x">
+					<entry kind="macro" name="__UACCUM_IBIT__" value="16">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="macro" name="__UACCUM_IBIT__" value="16">
+					<entry kind="macro" name="__UACCUM_MAX__" value="0XFFFFFFFFP-16UK">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
 					<entry kind="macro" name="__UACCUM_MIN__" value="0.0UK">
@@ -2436,6 +2758,9 @@
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
 					<entry kind="macro" name="__UINT_FAST32_TYPE__" value="unsigned int">
+						<flag value="BUILTIN|READONLY"/>
+					</entry>
+					<entry kind="macro" name="__UINT_FAST64_MAX__" value="0xffffffffffffffffULL">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
 					<entry kind="macro" name="__UINT_FAST64_TYPE__" value="long long unsigned int">
@@ -2549,6 +2874,9 @@
 					<entry kind="macro" name="__USACCUM_MAX__" value="0XFFFFP-8UHK">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
+					<entry kind="macro" name="__USACCUM_MIN__" value="0.0UHK">
+						<flag value="BUILTIN|READONLY"/>
+					</entry>
 					<entry kind="macro" name="__USA_FBIT__" value="16">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
@@ -2583,9 +2911,6 @@
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
 					<entry kind="macro" name="__UTA_FBIT__" value="64">
-						<flag value="BUILTIN|READONLY"/>
-					</entry>
-					<entry kind="macro" name="__UTA_IBIT__" value="0XFFFFFFFFP-16UK">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
 					<entry kind="macro" name="__UTA_IBIT__" value="64">
@@ -2755,13 +3080,13 @@
 		<extension point="org.eclipse.cdt.core.LanguageSettingsProvider">
 			<provider id="com.crt.advproject.GCCBuildSpecCompilerParser">
 				<language id="org.eclipse.cdt.core.gcc">
-					<entry kind="includePath" name="F:/MCUXpressoIDE_11.3.1_5262/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133/tools/lib/gcc/arm-none-eabi/9.3.1/include">
+					<entry kind="includePath" name="C:/nxp/MCUXpressoIDE_11.3.1_5262/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133/tools/lib/gcc/arm-none-eabi/9.3.1/include">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="includePath" name="F:/MCUXpressoIDE_11.3.1_5262/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133/tools/lib/gcc/arm-none-eabi/9.3.1/include-fixed">
+					<entry kind="includePath" name="C:/nxp/MCUXpressoIDE_11.3.1_5262/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133/tools/lib/gcc/arm-none-eabi/9.3.1/include-fixed">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="includePath" name="F:/MCUXpressoIDE_11.3.1_5262/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133/tools/arm-none-eabi/include">
+					<entry kind="includePath" name="C:/nxp/MCUXpressoIDE_11.3.1_5262/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133/tools/arm-none-eabi/include">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
 					<entry kind="macro" name="__ACCUM_EPSILON__" value="0x1P-15K">
@@ -4038,22 +4363,22 @@
 					</entry>
 				</language>
 				<language id="org.eclipse.cdt.core.g++">
-					<entry kind="includePath" name="F:/MCUXpressoIDE_11.3.1_5262/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133/tools/arm-none-eabi/include/c++/9.3.1">
+					<entry kind="includePath" name="C:/nxp/MCUXpressoIDE_11.3.1_5262/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133/tools/arm-none-eabi/include/c++/9.3.1">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="includePath" name="F:/MCUXpressoIDE_11.3.1_5262/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133/tools/arm-none-eabi/include/c++/9.3.1/arm-none-eabi/thumb/v7e-m/nofp">
+					<entry kind="includePath" name="C:/nxp/MCUXpressoIDE_11.3.1_5262/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133/tools/arm-none-eabi/include/c++/9.3.1/arm-none-eabi/thumb/v7e-m/nofp">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="includePath" name="F:/MCUXpressoIDE_11.3.1_5262/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133/tools/arm-none-eabi/include/c++/9.3.1/backward">
+					<entry kind="includePath" name="C:/nxp/MCUXpressoIDE_11.3.1_5262/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133/tools/arm-none-eabi/include/c++/9.3.1/backward">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="includePath" name="F:/MCUXpressoIDE_11.3.1_5262/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133/tools/lib/gcc/arm-none-eabi/9.3.1/include">
+					<entry kind="includePath" name="C:/nxp/MCUXpressoIDE_11.3.1_5262/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133/tools/lib/gcc/arm-none-eabi/9.3.1/include">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="includePath" name="F:/MCUXpressoIDE_11.3.1_5262/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133/tools/lib/gcc/arm-none-eabi/9.3.1/include-fixed">
+					<entry kind="includePath" name="C:/nxp/MCUXpressoIDE_11.3.1_5262/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133/tools/lib/gcc/arm-none-eabi/9.3.1/include-fixed">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="includePath" name="F:/MCUXpressoIDE_11.3.1_5262/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133/tools/arm-none-eabi/include">
+					<entry kind="includePath" name="C:/nxp/MCUXpressoIDE_11.3.1_5262/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133/tools/arm-none-eabi/include">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
 					<entry kind="macro" name="__ACCUM_EPSILON__" value="0x1P-15K">

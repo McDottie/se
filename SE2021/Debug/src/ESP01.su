@@ -26,6 +26,7 @@ ESP01.c:205:6:ESP01_CIPDNS	72	static
 ESP01.c:217:6:ESP01_ConnectServer	56	dynamic
 ESP01.c:226:6:ESP01_Send	56	static
 ESP01.c:244:6:ESP01_Echo	32	static
-ESP01.c:251:6:ESP01_RecvMode	48	static
-ESP01.c:261:8:ESP01_RecvPassive	64	static
-ESP01.c:281:8:ESP01_RecvActive	40	static
+ESP01.c:253:6:ESP01_RecvMode	48	static
+ESP01.c:265:8:ESP01_RecvPassive	64	static
+ESP01.c:285:8:ESP01_RecvActive	40	static
+ESP01.c:305:19:ESP01_CIPStatus	32	static

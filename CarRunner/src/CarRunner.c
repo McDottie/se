@@ -31,6 +31,8 @@
 #include "wait.h"
 #include "ADXL345.h"
 #include "spi.h"
+#include "ESP01.h"
+#include "NTP.h"
 #include "saver.h"
 #include "CarRunner.h"
 
@@ -39,12 +41,26 @@
 
 #define PRESSING_TIME 2000
 
-QueueHandle_t xQueueRunGame,xQueueRunMenu,xQueueLCD;
-key_state keySt = {0,RELEASED};
+QueueHandle_t xQueueRunGame,xQueueRunMenu,xQueueLCD,xQueueButton;
+volatile key_state keySt = {0,RELEASED};
+
+volatile int conStatus = 0;
 volatile bool toUpdateTime = false;
 
 char * menu_options[3] = {"Change Time","Show Players\nScores", "Exit"};
 
+void routineChooser(int routine){
+	switch(routine) {
+	case 0:
+		TIME_ChangeRoutine(RTC_GetSeconds());
+		break;
+	case 1:
+		playerScoresShowDown();
+		break;
+	default:
+		break;
+	}
+}
 
 /**
  @startuml
@@ -90,19 +106,6 @@ void Menu() {
 		}
 	}
 
-}
-
-void routineChooser(int routine){
-	switch(routine) {
-	case 0:
-		TIME_ChangeRoutine(RTC_GetSeconds());
-		break;
-	case 1:
-		playerScoresShowDown();
-		break;
-	default:
-		break;
-	}
 }
 
 /**
@@ -172,14 +175,12 @@ void playerScoresShowDown(){
 
 
 void vMainLoop(void * pvParameters){
-	GAME_Init();
+	//GAME_Init();
 	SPI_Init();
 
 	while(ADXL345_Init() == -1);
 
 	int start;
-	int dateTime_Stamp;
-	struct tm dateTime;
 
 	//time Update
 	toUpdateTime = true;
@@ -192,7 +193,7 @@ void vMainLoop(void * pvParameters){
 				if(keySt.state == PRESSED) {
 					message = 1;
 					toUpdateTime = false;
-					xQueueSend(xQueueRunGame,(void *)message,0);
+					xQueueSend(xQueueRunGame,(void *)&message,0);
 					//gameRoutine();
 
 					xQueueReceive(xQueueRunGame, &message, portMAX_DELAY);
@@ -206,7 +207,7 @@ void vMainLoop(void * pvParameters){
 				if (keySt.state == REPEATED && WAIT_GetElapsedMillis(start) >= PRESSING_TIME) {
 					message = 1;
 					toUpdateTime = false;
-					xQueueSend(xQueueRunMenu,(void *)message,0);
+					xQueueSend(xQueueRunMenu,(void *)&message,0);
 					//Menu();
 					xQueueReceive(xQueueRunMenu, &message, portMAX_DELAY);
 					toUpdateTime = true;
@@ -221,8 +222,24 @@ void vMainLoop(void * pvParameters){
 }
 
 void vButtonHandler(void * pvParameters){
+	key_state prev = {0, RELEASED};
+	int timeStamp = -1;
 	while(1)  {
-		keySt = BUTTON_GetButtonsEvents();
+		key_state keySt = BUTTON_GetButtonsEvents();
+		if(keySt.key != prev.key || keySt.state != prev.state) {
+			if(keySt.state == REPEATED) {
+				if(timeStamp == -1) {
+					timeStamp = WAIT_GetElapsedMillis(0);
+				} else if(WAIT_GetElapsedMillis(timeStamp) > 100) {//TODO CREATE CONSTANT
+					timeStamp == -1;
+					xQueueSend(xQueueButton, &keySt, 0);
+					prev = keySt;
+				}
+			} else {
+				xQueueSend(xQueueButton, &keySt, 0);
+				prev = keySt;
+			}
+		}
 	}
 }
 
@@ -244,10 +261,11 @@ void vMenu(void * pvParameters){
 
 void vLCDManager(void * pvParameters){
 	LCDText_Init();
+	LCDText_CursorOn();
 
 	LCD_Mesage message;
 	while(1){
-		if(xQueueReceive(xQueueLCD, &message, 100) ) {
+		if(xQueueReceive(xQueueLCD, &message, portMAX_DELAY)) {
 			if(message.toClear) {
 				LCDText_Clear();
 			}
@@ -266,7 +284,12 @@ void vLCDManager(void * pvParameters){
 }
 
 void vTimeHandler(){
-	RTC_Init(0);
+
+	while(conStatus != CON);
+
+	NTP_Init(NTP_DEFAULT_SERVER, NTP_DEFAULT_PORT);
+
+	RTC_Init(NTP_Request(5));
 
 	int dateTime_Stamp = WAIT_GetElapsedMillis(0);
 	struct tm dateTime;
@@ -276,8 +299,23 @@ void vTimeHandler(){
 			dateTime_Stamp = WAIT_GetElapsedMillis(0);
 			RTC_GetValue(&dateTime);
 			TIME_UpdateDateTimeDisplay(dateTime);
-
 		}
+	}
+}
+
+
+void vConnection() {
+	ESP01_Init();
+	conStatus = STARTING;
+	bool res = ESP01_Echo(0);
+	while(!ESP01_Test());
+	while(!ESP01_SetMode(STATION));
+	while(!ESP01_ConnectAP("HUAWEI", "12345678"));
+	ESP01_SetDNS("1.1.1.1","1.0.0.1");
+	conStatus = CON;
+
+	while(1) {
+
 	}
 }
 
@@ -302,12 +340,15 @@ int main(void) {
 	xQueueRunGame = xQueueCreate(1,sizeof(int));
 	xQueueRunMenu = xQueueCreate(1,sizeof(int));
 	xQueueLCD = xQueueCreate(10,sizeof(LCD_Mesage));
+	xQueueButton = xQueueCreate(20,sizeof(key_state));
 
-	xTaskCreate(vMainLoop, "MainLoop", 1024, (void *) 0, 1, NULL);
-	//xTaskCreate(vButtonHandler, "ButtonHandler", 200, (void *) 0, 1, NULL);
+	xTaskCreate(vConnection, "Connection", 600, (void *) 0, 1, NULL);
 
-	//xTaskCreate(vGame, "Game", 200, (void *) 0, 1, NULL);
-	//xTaskCreate(vMenu, "Menu", 200, (void *) 0, 1, NULL);
+	xTaskCreate(vMainLoop, "MainLoop", 400, (void *) 0, 1, NULL);
+	xTaskCreate(vButtonHandler, "ButtonHandler", 200, (void *) 0, 1, NULL);
+
+	xTaskCreate(vGame, "Game", 200, (void *) 0, 1, NULL);
+	xTaskCreate(vMenu, "Menu", 200, (void *) 0, 1, NULL);
 
 	xTaskCreate(vLCDManager, "LCDManager", 400, (void *) 0, 1, NULL);
 	xTaskCreate(vTimeHandler, "TimeHandler", 300, (void *) 0, 1, NULL);

@@ -89,7 +89,8 @@ void TIME_ChangeRoutine(time_t seconds) {
 //TODO make task with flag to run or dont
 void TIME_UpdateDateTimeDisplay(struct tm dateTime){
 	//LCDText_Locate(0,0);
-	char buffer = pvPortMalloc(26);
-	strftime(buffer, 26, "%Y-%m-%d %H:%M", &dateTime);
+	char * buffer = pvPortMalloc(26);
+	//strftime(buffer, 26, "%Y-%m-%d %H:%M", &dateTime);
+	sprintf(buffer, "%04d/%02d/%02d %02d:%02d",dateTime.tm_year+1900,dateTime.tm_mon+1, dateTime.tm_mday, dateTime.tm_hour,dateTime.tm_min);
 	printComplex(true, true, true, false, 0, 0, buffer, 100);
 }

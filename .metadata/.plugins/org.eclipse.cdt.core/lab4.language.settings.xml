@@ -48,6 +48,38 @@
 						<entry kind="includePath" name="/CMSIS_CORE_LPC17xx/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
+						<entry kind="includePath" name="/FreeRTOS-Kernel/include">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="includePath" name="/FreeRTOS-Kernel/src/portable">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="macro" name="CORE_M3" value="1"/>
+						<entry kind="macro" name="DEBUG" value="1"/>
+						<entry kind="macro" name="__CODE_RED" value="1"/>
+						<entry kind="macro" name="__LPC17XX__" value="1"/>
+						<entry kind="macro" name="__REDLIB__" value="1"/>
+						<entry kind="macro" name="__USE_CMSIS" value="CMSIS_CORE_LPC17xx"/>
+					</resource>
+					<resource project-relative-path="src/cr_startup_lpc175x_6x-FreeRTOS.c">
+						<entry kind="includePath" name="/${ProjName}/inc">
+							<flag value="VALUE_WORKSPACE_PATH"/>
+						</entry>
+						<entry kind="includePath" name="/SE2021/inc">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="includePath" name="/CMSIS_CORE_LPC17xx/inc">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="includePath" name="/FreeRTOS-Kernel/include">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="includePath" name="/FreeRTOS-Kernel/src/portable">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="includePath" name="/${ProjName}/Debug/reeRTOS.c">
+							<flag value="VALUE_WORKSPACE_PATH|FRAMEWORK"/>
+						</entry>
 						<entry kind="macro" name="CORE_M3" value="1"/>
 						<entry kind="macro" name="DEBUG" value="1"/>
 						<entry kind="macro" name="__CODE_RED" value="1"/>
@@ -59,10 +91,10 @@
 			</provider>
 			<provider id="com.crt.advproject.GCCBuildSpecCompilerParser">
 				<language id="org.eclipse.cdt.core.gcc">
-					<entry kind="includePath" name="C:/nxp/MCUXpressoIDE_11.2.1_4149/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.2.0.202008311134/tools/redlib/include">
+					<entry kind="includePath" name="C:/nxp/MCUXpressoIDE_11.3.1_5262/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133/tools/redlib/include">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="includePath" name="C:/nxp/MCUXpressoIDE_11.2.1_4149/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.2.0.202008311134/tools/features/include">
+					<entry kind="includePath" name="C:/nxp/MCUXpressoIDE_11.3.1_5262/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133/tools/features/include">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
 					<entry kind="macro" name="__ACCUM_EPSILON__" value="0x1P-15K">
@@ -548,7 +580,7 @@
 					<entry kind="macro" name="__GCC_IEC_559_COMPLEX" value="0">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="macro" name="__GNUC_MINOR__" value="2">
+					<entry kind="macro" name="__GNUC_MINOR__" value="3">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
 					<entry kind="macro" name="__GNUC_PATCHLEVEL__" value="1">
@@ -1289,7 +1321,7 @@
 					<entry kind="macro" name="__UTQ_IBIT__" value="0">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="macro" name="__VERSION__" value="&quot;9.2.1 20191025 (release) [ARM/arm-9-branch revision 277599]&quot;">
+					<entry kind="macro" name="__VERSION__" value="&quot;9.3.1 20200408 (release)&quot;">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
 					<entry kind="macro" name="__VFP_FP__" value="1">
@@ -1336,22 +1368,22 @@
 					</entry>
 				</language>
 				<language id="org.eclipse.cdt.core.g++">
-					<entry kind="includePath" name="C:/nxp/MCUXpressoIDE_11.2.1_4149/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.2.0.202008311134/tools/arm-none-eabi/include/c++/9.2.1">
+					<entry kind="includePath" name="C:/nxp/MCUXpressoIDE_11.3.1_5262/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133/tools/arm-none-eabi/include/c++/9.3.1">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="includePath" name="C:/nxp/MCUXpressoIDE_11.2.1_4149/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.2.0.202008311134/tools/arm-none-eabi/include/c++/9.2.1/arm-none-eabi/thumb/v7e-m/nofp">
+					<entry kind="includePath" name="C:/nxp/MCUXpressoIDE_11.3.1_5262/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133/tools/arm-none-eabi/include/c++/9.3.1/arm-none-eabi/thumb/v7e-m/nofp">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="includePath" name="C:/nxp/MCUXpressoIDE_11.2.1_4149/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.2.0.202008311134/tools/arm-none-eabi/include/c++/9.2.1/backward">
+					<entry kind="includePath" name="C:/nxp/MCUXpressoIDE_11.3.1_5262/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133/tools/arm-none-eabi/include/c++/9.3.1/backward">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="includePath" name="C:/nxp/MCUXpressoIDE_11.2.1_4149/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.2.0.202008311134/tools/lib/gcc/arm-none-eabi/9.2.1/include">
+					<entry kind="includePath" name="C:/nxp/MCUXpressoIDE_11.3.1_5262/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133/tools/lib/gcc/arm-none-eabi/9.3.1/include">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="includePath" name="C:/nxp/MCUXpressoIDE_11.2.1_4149/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.2.0.202008311134/tools/lib/gcc/arm-none-eabi/9.2.1/include-fixed">
+					<entry kind="includePath" name="C:/nxp/MCUXpressoIDE_11.3.1_5262/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133/tools/lib/gcc/arm-none-eabi/9.3.1/include-fixed">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="includePath" name="C:/nxp/MCUXpressoIDE_11.2.1_4149/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.2.0.202008311134/tools/arm-none-eabi/include">
+					<entry kind="includePath" name="C:/nxp/MCUXpressoIDE_11.3.1_5262/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133/tools/arm-none-eabi/include">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
 					<entry kind="macro" name="__ACCUM_EPSILON__" value="0x1P-15K">
@@ -1852,7 +1884,7 @@
 					<entry kind="macro" name="__GCC_IEC_559_COMPLEX" value="0">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="macro" name="__GNUC_MINOR__" value="2">
+					<entry kind="macro" name="__GNUC_MINOR__" value="3">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
 					<entry kind="macro" name="__GNUC_PATCHLEVEL__" value="1">
@@ -2602,7 +2634,7 @@
 					<entry kind="macro" name="__UTQ_IBIT__" value="0">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="macro" name="__VERSION__" value="&quot;9.2.1 20191025 (release) [ARM/arm-9-branch revision 277599]&quot;">
+					<entry kind="macro" name="__VERSION__" value="&quot;9.3.1 20200408 (release)&quot;">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
 					<entry kind="macro" name="__VFP_FP__" value="1">
@@ -2760,10 +2792,10 @@
 		<extension point="org.eclipse.cdt.core.LanguageSettingsProvider">
 			<provider id="com.crt.advproject.GCCBuildSpecCompilerParser">
 				<language id="org.eclipse.cdt.core.gcc">
-					<entry kind="includePath" name="C:/nxp/MCUXpressoIDE_11.2.1_4149/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.2.0.202008311134/tools/redlib/include">
+					<entry kind="includePath" name="C:/nxp/MCUXpressoIDE_11.3.1_5262/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133/tools/redlib/include">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="includePath" name="C:/nxp/MCUXpressoIDE_11.2.1_4149/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.2.0.202008311134/tools/features/include">
+					<entry kind="includePath" name="C:/nxp/MCUXpressoIDE_11.3.1_5262/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133/tools/features/include">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
 					<entry kind="macro" name="__ACCUM_EPSILON__" value="0x1P-15K">
@@ -3249,7 +3281,7 @@
 					<entry kind="macro" name="__GCC_IEC_559_COMPLEX" value="0">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="macro" name="__GNUC_MINOR__" value="2">
+					<entry kind="macro" name="__GNUC_MINOR__" value="3">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
 					<entry kind="macro" name="__GNUC_PATCHLEVEL__" value="1">
@@ -3993,7 +4025,7 @@
 					<entry kind="macro" name="__UTQ_IBIT__" value="0">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="macro" name="__VERSION__" value="&quot;9.2.1 20191025 (release) [ARM/arm-9-branch revision 277599]&quot;">
+					<entry kind="macro" name="__VERSION__" value="&quot;9.3.1 20200408 (release)&quot;">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
 					<entry kind="macro" name="__VFP_FP__" value="1">
@@ -4040,22 +4072,22 @@
 					</entry>
 				</language>
 				<language id="org.eclipse.cdt.core.g++">
-					<entry kind="includePath" name="C:/nxp/MCUXpressoIDE_11.2.1_4149/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.2.0.202008311134/tools/arm-none-eabi/include/c++/9.2.1">
+					<entry kind="includePath" name="C:/nxp/MCUXpressoIDE_11.3.1_5262/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133/tools/arm-none-eabi/include/c++/9.3.1">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="includePath" name="C:/nxp/MCUXpressoIDE_11.2.1_4149/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.2.0.202008311134/tools/arm-none-eabi/include/c++/9.2.1/arm-none-eabi/thumb/v7e-m/nofp">
+					<entry kind="includePath" name="C:/nxp/MCUXpressoIDE_11.3.1_5262/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133/tools/arm-none-eabi/include/c++/9.3.1/arm-none-eabi/thumb/v7e-m/nofp">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="includePath" name="C:/nxp/MCUXpressoIDE_11.2.1_4149/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.2.0.202008311134/tools/arm-none-eabi/include/c++/9.2.1/backward">
+					<entry kind="includePath" name="C:/nxp/MCUXpressoIDE_11.3.1_5262/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133/tools/arm-none-eabi/include/c++/9.3.1/backward">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="includePath" name="C:/nxp/MCUXpressoIDE_11.2.1_4149/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.2.0.202008311134/tools/lib/gcc/arm-none-eabi/9.2.1/include">
+					<entry kind="includePath" name="C:/nxp/MCUXpressoIDE_11.3.1_5262/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133/tools/lib/gcc/arm-none-eabi/9.3.1/include">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="includePath" name="C:/nxp/MCUXpressoIDE_11.2.1_4149/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.2.0.202008311134/tools/lib/gcc/arm-none-eabi/9.2.1/include-fixed">
+					<entry kind="includePath" name="C:/nxp/MCUXpressoIDE_11.3.1_5262/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133/tools/lib/gcc/arm-none-eabi/9.3.1/include-fixed">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="includePath" name="C:/nxp/MCUXpressoIDE_11.2.1_4149/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.2.0.202008311134/tools/arm-none-eabi/include">
+					<entry kind="includePath" name="C:/nxp/MCUXpressoIDE_11.3.1_5262/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.3.0.202008311133/tools/arm-none-eabi/include">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
 					<entry kind="macro" name="__ACCUM_EPSILON__" value="0x1P-15K">
@@ -4556,7 +4588,7 @@
 					<entry kind="macro" name="__GCC_IEC_559_COMPLEX" value="0">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="macro" name="__GNUC_MINOR__" value="2">
+					<entry kind="macro" name="__GNUC_MINOR__" value="3">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
 					<entry kind="macro" name="__GNUC_PATCHLEVEL__" value="1">
@@ -5309,7 +5341,7 @@
 					<entry kind="macro" name="__UTQ_IBIT__" value="0">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="macro" name="__VERSION__" value="&quot;9.2.1 20191025 (release) [ARM/arm-9-branch revision 277599]&quot;">
+					<entry kind="macro" name="__VERSION__" value="&quot;9.3.1 20200408 (release)&quot;">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
 					<entry kind="macro" name="__VFP_FP__" value="1">

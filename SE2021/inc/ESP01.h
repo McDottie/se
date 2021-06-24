@@ -30,6 +30,14 @@ enum ESP01_RECV_MODE{
 	ACTIVE,
 	PASSIVE
 };
+
+enum ESP01_Status {
+	CONNECTED_AP = 2,
+	CONNECTED_SERVER,
+	DISCONNECTED_SERVER,
+	DISCONNECTED_AP
+};
+
 void ESP01_Init();
 
 bool ESP01_Test();
@@ -65,5 +73,7 @@ bool ESP01_RecvMode(enum ESP01_RECV_MODE mode);
 char * ESP01_RecvPassive();
 
 char * ESP01_RecvActive();
+
+enum ESP01_Status ESP01_CIPStatus();
 
 #endif

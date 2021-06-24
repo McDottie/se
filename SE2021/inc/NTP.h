@@ -13,6 +13,7 @@
 #define NTP_DEFAULT_PORT 	(123)
 
 #include <stdint.h>
+#include <time.h>
 
 typedef struct
 {
@@ -42,5 +43,5 @@ typedef struct
 } ntp_packet; // Total: 384 bits or 48 bytes
 
 int NTP_Init(char* server, int port);
-ntp_packet NTP_Request();
+time_t NTP_Request(int tries);
 #endif /* NTP_H_ */

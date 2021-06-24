@@ -1,6 +1,7 @@
 src/saver.o src/saver.d: ../src/saver.c \
- G:\isel\SE2\se\CarRunner\inc/saver.h G:\isel\SE2\se\SE2021\inc/flash.h
+ C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CarRunner\inc/saver.h \
+ C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\SE2021\inc/flash.h
 
-G:\isel\SE2\se\CarRunner\inc/saver.h:
+C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CarRunner\inc/saver.h:
 
-G:\isel\SE2\se\SE2021\inc/flash.h:
+C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\SE2021\inc/flash.h:

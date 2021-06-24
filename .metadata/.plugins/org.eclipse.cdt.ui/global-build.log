@@ -1,40 +1,102 @@
-15:47:33 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC17xx ****
+22:42:43 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC17xx ****
 make -r all 
 make: Nothing to be done for 'all'.
-15:47:33 **** Incremental Build of configuration Debug for project SE2021 ****
-make -r all 
-Building file: ../src/lcd.c
+22:42:45 **** Incremental Build of configuration Debug for project CarRunner ****
+make -r -j8 all 
+Building file: ../src/CarRunner.c
+Building file: ../src/definitions_variables.c
+Building file: ../src/game.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -D__NEWLIB__ -I"G:\isel\SE2\se\SE2021\inc" -I"G:\isel\SE2\se\FreeRTOS-test\inc" -I"G:\isel\SE2\se\CMSIS_CORE_LPC17xx\inc" -I"G:\isel\SE2\se\FreeRTOS-Kernel\include" -I"G:\isel\SE2\se\FreeRTOS-Kernel\src\portable" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m3 -mthumb -D__NEWLIB__ -fstack-usage -MMD -MP -MF"src/lcd.d" -MT"src/lcd.o" -MT"src/lcd.d" -o "src/lcd.o" "../src/lcd.c"
-../src/lcd.c: In function 'LCDText_WriteString':
-../src/lcd.c:102:4: warning: value computed is not used [-Wunused-value]
-  102 |    *str++;
-      |    ^~~~~~
-Finished building: ../src/lcd.c
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -D__NEWLIB__ -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CarRunner\inc" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\SE2021\inc" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CMSIS_CORE_LPC17xx\inc" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\include" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\src\portable" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m3 -mthumb -D__NEWLIB__ -fstack-usage -specs=nano.specs -MMD -MP -MF"src/CarRunner.d" -MT"src/CarRunner.o" -MT"src/CarRunner.d" -o "src/CarRunner.o" "../src/CarRunner.c"
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -D__NEWLIB__ -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CarRunner\inc" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\SE2021\inc" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CMSIS_CORE_LPC17xx\inc" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\include" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\src\portable" -O0 -fno-common -g3 -Wall -Invoking: MCU C Compiler
+c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m3 -mthumb -D__NEWLIB__ -fstack-usage -specs=nano.specs -MMD -MP -MF"src/definitions_variables.d" -MT"src/definitions_variables.o" -MT"src/definitions_variables.d" -o "src/definitions_variables.o" "../src/definitions_variables.c"
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -D__NEWLIB__ -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CarRunner\inc" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\SE2021\inc" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CMSIS_CORE_LPC17xx\inc" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\include" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\src\portable" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m3 -mthumb -D__NEWLIB__ -fstack-usage -specs=nano.specs -MMD -MP -MF"src/game.d" -MT"src/game.o" -MT"src/game.d" -o "src/game.o" "../src/game.c"
+../src/game.c: In function 'GAME_Routine':
+../src/game.c:59:2: warning: implicit declaration of function 'initValues' [-Wimplicit-function-declaration]
+   59 |  initValues();
+      |  ^~~~~~~~~~
+../src/game.c:66:17: warning: implicit declaration of function 'ADXL345_isTap' [-Wimplicit-function-declaration]
+   66 |      bool tap = ADXL345_isTap();
+      |                 ^~~~~~~~~~~~~
+../src/game.c:73:7: warning: implicit declaration of function 'updateGameDesign' [-Wimplicit-function-declaration]
+   73 |       updateGameDesign();
+      |       ^~~~~~~~~~~~~~~~
+../src/game.c:90:24: warning: implicit declaration of function 'updateGameLogic' [-Wimplicit-function-declaration]
+   90 |             gameOver = updateGameLogic();
+      |                        ^~~~~~~~~~~~~~~
+../src/game.c:104:5: warning: implicit declaration of function 'saveUser' [-Wimplicit-function-declaration]
+  104 |     saveUser(points);
+      |     ^~~~~~~~
+../src/game.c:107:10: warning: unused variable 'a' [-Wunused-variable]
+  107 |     int *a = readScores();
+      |          ^
+../src/game.c: At top level:
+../src/game.c:126:6: warning: conflicting types for 'saveUser'
+  126 | void saveUser(int points){
+      |      ^~~~~~~~
+../src/game.c:104:5: note: previous implicit declaration of 'saveUser' was here
+  104 |     saveUser(points);
+      |     ^~~~~~~~
+../src/game.c:176:6: warning: conflicting types for 'initValues'
+  176 | void initValues() {
+      |      ^~~~~~~~~~
+../src/game.c:59:2: note: previous implicit declaration of 'initValues' was here
+   59 |  initValues();
+      |  ^~~~~~~~~~
+../src/game.c:248:6: warning: conflicting types for 'updateGameDesign'
+  248 | void updateGameDesign() {
+      |      ^~~~~~~~~~~~~~~~
+../src/game.c:73:7: note: previous implicit declaration of 'updateGameDesign' was here
+   73 |       updateGameDesign();
+      |       ^~~~~~~~~~~~~~~~
+../src/CarRunner.c: In function 'routineChooser':
+../src/CarRunner.c:58:3: warning: implicit declaration of function 'playerScoresShowDown' [-Wimplicit-function-declaration]
+   58 |   playerScoresShowDown();
+      |   ^~~~~~~~~~~~~~~~~~~~
+../src/CarRunner.c: At top level:
+../src/CarRunner.c:124:6: warning: conflicting types for 'playerScoresShowDown'
+  124 | void playerScoresShowDown(){
+      |      ^~~~~~~~~~~~~~~~~~~~
+../src/CarRunner.c:58:3: note: previous implicit declaration of 'playerScoresShowDown' was here
+   58 |   playerScoresShowDown();
+      |   ^~~~~~~~~~~~~~~~~~~~
+../src/CarRunner.c: In function 'vMainLoop':
+../src/CarRunner.c:221:9: warning: 'return' with a value, in function returning void [-Wreturn-type]
+  221 |  return 0;
+      |         ^
+../src/CarRunner.c:177:6: note: declared here
+  177 | void vMainLoop(void * pvParameters){
+      |      ^~~~~~~~~
+../src/CarRunner.c: In function 'vGame':
+../src/CarRunner.c:234:3: warning: implicit declaration of function 'GAME_Routine' [-Wimplicit-function-declaration]
+  234 |   GAME_Routine();
+      |   ^~~~~~~~~~~~
+../src/CarRunner.c: In function 'vConnection':
+../src/CarRunner.c:294:7: warning: unused variable 'res' [-Wunused-variable]
+  294 |  bool res = ESP01_Echo(0);
+      |       ^~~
+Finished building: ../src/definitions_variables.c
  
-Building target: libSE2021.a
-Invoking: MCU Archiver
-arm-none-eabi-ar -r  "libSE2021.a"  ./src/ADXL345.o ./src/EEPROM.o ./src/ESP01.o ./src/Flash.o ./src/NTP.o ./src/button.o ./src/i2c.o ./src/lcd.o ./src/led.o ./src/printf-stdarg.o ./src/rtc.o ./src/spi.o ./src/uart.o ./src/utils.o ./src/wait.o   
-arm-none-eabi-ar: creating libSE2021.a
-Finished building target: libSE2021.a
+Finished building: ../src/game.c
+ 
+Finished building: ../src/CarRunner.c
+ 
+Building target: CarRunner.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CMSIS_CORE_LPC17xx\Debug" -L"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug" -L"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\SE2021\Debug" -Xlinker -Map="CarRunner.map" -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "CarRunner_Debug.ld" -o "CarRunner.axf"  ./src/CarRunner.o ./src/cr_startup_lpc175x_6x-FreeRTOS.o ./src/crp.o ./src/definitions_variables.o ./src/game.o ./src/saver.o ./src/time_helper.o   -lCMSIS_CORE_LPC17xx -lSE2021 -lFreeRTOS-Kernel
+Memory region         Used Size  Region Size  %age Used
+       MFlash512:       41976 B       512 KB      8.01%
+        RamLoc32:       18132 B        32 KB     55.33%
+        RamAHB32:          0 GB        32 KB      0.00%
+Finished building target: CarRunner.axf
  
 make --no-print-directory post-build
 Performing post-build steps
-arm-none-eabi-size "libSE2021.a" ; # arm-none-eabi-objdump -h -S "libSE2021.a" >"libSE2021.lss"
+arm-none-eabi-size "CarRunner.axf"; # arm-none-eabi-objcopy -v -O binary "CarRunner.axf" "CarRunner.bin" ; # checksum -p LPC1769 -d "CarRunner.bin";
    text	   data	    bss	    dec	    hex	filename
-    796	      0	      0	    796	    31c	ADXL345.o (ex libSE2021.a)
-    762	      0	      0	    762	    2fa	EEPROM.o (ex libSE2021.a)
-   3639	      0	      0	   3639	    e37	ESP01.o (ex libSE2021.a)
-    768	      4	      0	    772	    304	Flash.o (ex libSE2021.a)
-    230	      3	      9	    242	     f2	NTP.o (ex libSE2021.a)
-    274	      0	      8	    282	    11a	button.o (ex libSE2021.a)
-   1904	      4	     20	   1928	    788	i2c.o (ex libSE2021.a)
-    810	      0	      8	    818	    332	lcd.o (ex libSE2021.a)
-    164	      0	      1	    165	     a5	led.o (ex libSE2021.a)
-   1189	      0	      0	   1189	    4a5	printf-stdarg.o (ex libSE2021.a)
-    374	      0	      0	    374	    176	rtc.o (ex libSE2021.a)
-    332	      0	      0	    332	    14c	spi.o (ex libSE2021.a)
-   2174	      0	     13	   2187	    88b	uart.o (ex libSE2021.a)
-    226	      0	      0	    226	     e2	utils.o (ex libSE2021.a)
-    258	      0	      4	    262	    106	wait.o (ex libSE2021.a)
+  41724	    252	  17880	  59856	   e9d0	CarRunner.axf
  
+22:42:51 **** Incremental Build of configuration Debug for project CarRunner ****
+make -r -j8 all 
+make: Nothing to be done for 'all'.

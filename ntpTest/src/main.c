@@ -23,14 +23,14 @@ void vESPTester(void * pvParameters){
 		bool res1 = ESP01_SetMode(STATION);
 		char ** r;
 		//int i = ESP01_ListAPs(r);
-		bool res2 = ESP01_ConnectAP("Vodafone-3A8807", "V9g2ZEsVM7");
-		//bool res2 = ESP01_ConnectAP("HUAWEI", "12345678");
+		//bool res2 = ESP01_ConnectAP("Vodafone-3A8807", "V9g2ZEsVM7");
+		bool res2 = ESP01_ConnectAP("HUAWEI", "12345678");
 		//bool res2 = ESP01_ConnectAP("LAPTOP-TQA8JN5P 2398", "S%3144b4");
 
 		bool res3 = ESP01_SetDNS("1.1.1.1","1.0.0.1");
 		NTP_Init(NTP_DEFAULT_SERVER, NTP_DEFAULT_PORT);
 
-		NTP_Request();
+		NTP_Request(1);
 	}
 }
 

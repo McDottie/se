@@ -172,6 +172,9 @@ bool UART_Initialize(enum UART_BaudRate baud, enum UART_Controller controller) {
 	if(xQueueTX) vQueueDelete(xQueueTX);
 
 	xQueueRX = xQueueCreate( UART_RBUFSIZE, sizeof(char));
+	if(!xQueueRX) {
+		xQueueRX = 1;
+	}
 	xQueueTX = xQueueCreate( UART_RBUFSIZE, sizeof(char));
 
 	while (1) {
@@ -271,7 +274,7 @@ void UART_WriteString(char *str)
 }
 
 void UART_Printf(char *fmt, ...) {
-	char buffer[UART_RBUFSIZE];
+	char buffer[UART_RBUFSIZE/4];
 	va_list args;
 	va_start(args, fmt);
 	vsprintf(buffer, fmt, args);

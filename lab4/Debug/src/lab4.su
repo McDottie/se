@@ -1,0 +1,4 @@
+lab4.c:28:6:vMainLoop	24	static
+lab4.c:62:5:main	16	static
+lab4.c:75:6:vApplicationStackOverflowHook	16	static
+lab4.c:88:6:vConfigureTimerForRunTimeStats	24	static

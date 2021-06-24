@@ -52,6 +52,7 @@ uint32_t WAIT_GetElapsedMillis(uint32_t start)
 }
 
 void WAIT_ChronoUs(uint32_t waitUs) {
+
 	LPC_TIM0->TCR = 0b10; 			//RESET AND DISABLE COUNTER
 
 	LPC_TIM0->MR0 = waitUs;

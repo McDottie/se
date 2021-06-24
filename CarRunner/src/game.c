@@ -34,7 +34,6 @@ void GAME_Init(){
 
 	LCDText_CreateChar(1, car);
 	LCDText_CreateChar(2, obs1);
-
 }
 
 

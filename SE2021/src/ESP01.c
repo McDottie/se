@@ -244,8 +244,10 @@ bool ESP01_Send(char * message, int len){
 bool ESP01_Echo(bool echoOn) {
 	char cmd[3];
 	sprintf(cmd, "E%d",echoOn);
-	char result[4];
-	return ESP01_CommandPrefix(10000,"AT", cmd, result, "OK", "OK");
+	char * result = pvPortMalloc(4);
+	bool res =  ESP01_CommandPrefix(10000,"AT", cmd, result, "OK", "OK");
+	pvPortMalloc(4);
+	return res;
 }
 
 bool ESP01_RecvMode(enum ESP01_RECV_MODE mode){
@@ -255,7 +257,9 @@ bool ESP01_RecvMode(enum ESP01_RECV_MODE mode){
 	cmd[13] = 0;
     char * response = pvPortMalloc(4);
 
-    ESP01_Command(10000, cmd, response, "OK", "OK");
+    bool res = ESP01_Command(10000, cmd, response, "OK", "OK");
+    vPortFree(response);
+    return res;
 }
 
 char * ESP01_RecvPassive(){
@@ -285,6 +289,10 @@ char * ESP01_RecvActive() {
 
 	bool success = ESP01_GetResponse(45000, response, "+IPD","+IPD,%d%[:]", &len,dd);//"+IPD,%d:%[^\r\n]%[^CLOSED]"
 
+	if(!success) {
+		return 0;
+	}
+
 	vPortFree(dd);
 	vPortFree(response);
 
@@ -292,4 +300,12 @@ char * ESP01_RecvActive() {
 	UART_ReadBuffer(retData, len);
 
 	return retData;
+}
+
+enum ESP01_Status ESP01_CIPStatus(){
+	int status;
+	char * response = pvPortMalloc(9);
+	bool success = ESP01_Command(3000, "CIPSTATUS", response, "STATUS", "STATUS:%d",&status);
+	vPortFree(response);
+	return success ? status : -1;
 }
