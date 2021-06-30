@@ -289,7 +289,7 @@ uint32_t UART_ReadBufferAwait(uint8_t *buffer, uint32_t len) {
 		int prevSum = sum;
 		sum += UART_ReadBuffer(&buffer[sum], len-sum);
 
-		WAIT_ChronoUs(100000);
+		WAIT_Milliseconds(100);
 	}
 	return sum;
 }

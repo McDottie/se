@@ -22,4 +22,6 @@ void TIME_ChangeRoutine(time_t seconds);
  * */
 void TIME_UpdateDateTimeDisplay(struct tm datetime);
 
+void vTimeHandler();
+
 #endif /* TIME_HELPER_H_ */

@@ -12,6 +12,7 @@
 //#include <sys/types.h> // should not be needed
 //#include <regex.h>
 #include "FreeRTOS.h"
+#include "semphr.h"
 
 #include <string.h>
 #include <stdio.h>
@@ -22,8 +23,14 @@
 #include "utils.h"
 #include "wait.h"
 
+SemaphoreHandle_t xSemaphore,xSemaphoreSend,xSemaphoreRecv;
+
 void ESP01_Init() {
-    UTILS_SetPinDir(GPIO0, ESP01_RESET, OUTPUT);
+	xSemaphore = xSemaphoreCreateMutex();
+	xSemaphoreSend = xSemaphoreCreateMutex();
+	xSemaphoreRecv = xSemaphoreCreateMutex();
+
+	UTILS_SetPinDir(GPIO0, ESP01_RESET, OUTPUT);
 
     LPC_GPIO0->FIOSET = (1<<ESP01_RESET);
 
@@ -150,10 +157,15 @@ bool ESP01_CommandPrefix(int timeout,char* prefix, char* command, unsigned char*
 }
 
 bool ESP01_VCommandPrefix(int timeout,char* prefix, char* command, unsigned char* response, char * start, unsigned char * format, va_list args){
-	UART_Printf("%s%s%s",prefix,command,ESP01_INSTRUCTION_SUFIX);
+	if(xSemaphoreTake(xSemaphore, timeout)) {
+		UART_Printf("%s%s%s",prefix,command,ESP01_INSTRUCTION_SUFIX);
 
-	bool res = ESP01_VGetResponse(timeout,response,start,format,args);
-	return res;
+		bool res = ESP01_VGetResponse(timeout,response,start,format,args);
+		xSemaphoreGive(xSemaphore);
+		return res;
+	} else {
+		return false;
+	}
 }
 
 bool ESP01_Command(int timeout, char* command, unsigned char* response, char * start, unsigned char * format, ...) {
@@ -214,31 +226,93 @@ bool ESP01_CIPDNS(bool enable,char* server0, char* server1){
 	return r;
 }
 
-bool ESP01_ConnectServer(char * connectionType, char * IP, int port){
-	int len = strlen(IP) + strlen(connectionType) + 20;
-	char cmd[len];
-	sprintf(cmd, "CIPSTART=\"%s\",\"%s\",%d",connectionType, IP, port);
+bool ESP01_CIPMUX(enum ESP01_ConectionMode mode) {
+	char cmd[8];
+	sprintf(cmd, "CIPMUX=%d",mode);
 	char response[3];
+	return ESP01_Command(30000, cmd, response, "OK", "OK");
+}
+
+bool ESP01_ConnectServerId(char * connectionType, char * IP, int port, int id){
+	int len = strlen(IP) + strlen(connectionType) + 25;
+	char cmd[len];
+	sprintf(cmd, "CIPSTART=%d,\"%s\",\"%s\",%d",id,connectionType, IP, port);
+	char response[15];
 	bool r = ESP01_Command(30000, cmd, response, "CONNECT\r\n\r\nOK", "CONNECT\r\n\r\nOK");
 	return r;
 }
 
-bool ESP01_Send(char * message, int len){
+bool ESP01_ConnectServer(char * connectionType, char * IP, int port){
+	int len = strlen(IP) + strlen(connectionType) + 20;
+	char cmd[len];
+	sprintf(cmd, "CIPSTART=\"%s\",\"%s\",%d",connectionType, IP, port);
+	char response[15];
+	bool r = ESP01_Command(30000, cmd, response, "CONNECT\r\n\r\nOK", "CONNECT\r\n\r\nOK");
+	return r;
+}
 
-	char cmd[21];
+bool ESP01_ConnectServerKeepAliveId(char * connectionType, char * IP, int port, unsigned short int keepAlive, int id){
+	int len = strlen(IP) + strlen(connectionType) + 35;
+	char cmd[len];
+	sprintf(cmd, "CIPSTART=%d,\"%s\",\"%s\",%d,%d",id,connectionType, IP, port, keepAlive);
+	char response[15];
+	bool r = ESP01_Command(30000, cmd, response, "CONNECT\r\n\r\nOK", "CONNECT\r\n\r\nOK");
+	return r;
+}
 
-	sprintf(cmd, "CIPSEND=%d",len);
+bool ESP01_ConnectServerKeepAlive(char * connectionType, char * IP, int port, unsigned short int keepAlive){
+	int len = strlen(IP) + strlen(connectionType) + 30;
+	char cmd[len];
+	sprintf(cmd, "CIPSTART=\"%s\",\"%s\",%d,%d",connectionType, IP, port, keepAlive);
+	char response[15];
+	bool r = ESP01_Command(30000, cmd, response, "CONNECT\r\n\r\nOK", "CONNECT\r\n\r\nOK");
+	return r;
+}
 
-	char response[8];
-	if(ESP01_Command(30000, cmd, response, ">", ">")) {
-		UART_WriteBuffer(message, len);
+bool ESP01_SendId(char * message, int len, int id){
+	if(xSemaphoreTake(xSemaphoreSend, 2000)) {
+		char cmd[26];
 
+		sprintf(cmd, "CIPSEND=%d,%d",id,len);
+
+		char response[8];
+		if(ESP01_Command(3000, cmd, response, ">", ">")) {
+			UART_WriteBuffer(message, len);
+		} else {
+			xSemaphoreGive(xSemaphoreSend);
+			return false;
+		}
+
+		bool r =  ESP01_GetResponse(3000, response,"SEND", "SEND OK");
+		xSemaphoreGive(xSemaphoreSend);
+		return r;
 	} else {
 		return false;
 	}
+}
 
-	bool r =  ESP01_GetResponse(3000, response,"SEND", "SEND OK");
-	return r;
+bool ESP01_Send(char * message, int len){
+	if(xSemaphoreTake(xSemaphoreSend, 2000)) {
+		char cmd[21];
+
+		sprintf(cmd, "CIPSEND=%d",len);
+
+		char response[8];
+		if(ESP01_Command(3000, cmd, response, ">", ">")) {
+			UART_WriteBuffer(message, len);
+
+		} else {
+			xSemaphoreGive(xSemaphoreSend);
+			return false;
+		}
+
+		bool r =  ESP01_GetResponse(3000, response,"SEND", "SEND OK");
+
+		xSemaphoreGive(xSemaphoreSend);
+		return r;
+	} else {
+		return false;
+	}
 }
 
 bool ESP01_Echo(bool echoOn) {
@@ -282,24 +356,81 @@ char * ESP01_RecvPassive(){
 	return data;
 }
 
-char * ESP01_RecvActive() {
+char * ipdData = 0;
+int idx;
+
+int ESP01_RecvActiveId(char * retData, int count, int * id) {
 	char * response = pvPortMalloc(1024);
 	int len;
 	char * dd = pvPortMalloc(1);
 
-	bool success = ESP01_GetResponse(45000, response, "+IPD","+IPD,%d%[:]", &len,dd);//"+IPD,%d:%[^\r\n]%[^CLOSED]"
+	if(xSemaphoreTake(xSemaphoreRecv, 2000)) {
+		if(ipdData) {
+			memcpy(retData,&ipdData[idx],count);
+			idx += count;
+			if(count >= idx) {
+				vPortFree(ipdData);
+				ipdData = 0;
+			}
 
-	if(!success) {
+			xSemaphoreGive(xSemaphoreRecv);
+			return count;
+		}
+
+		bool success = ESP01_GetResponse(3000, response, "+IPD","+IPD,%d,%d%[:]",id, &len,dd);//"+IPD,%d:%[^\r\n]%[^CLOSED]"
+
+		if(!success) {
+			xSemaphoreGive(xSemaphoreRecv);
+			return 0;
+		}
+
+		vPortFree(dd);
+		vPortFree(response);
+
+		if(len <= count) {
+			UART_ReadBuffer(retData, len);
+		} else {
+			ipdData = pvPortMalloc(len);
+			UART_ReadBuffer(ipdData, len);
+
+			len = len > count ? count : len;
+
+			memcpy(retData,ipdData,len);
+			idx = count;
+		}
+
+		xSemaphoreGive(xSemaphoreRecv);
+		return len;
+	} else {
 		return 0;
 	}
+}
 
-	vPortFree(dd);
-	vPortFree(response);
+int ESP01_RecvActive(char * retData, int count) {
+	char * response = pvPortMalloc(1024);
+	int len;
+	char * dd = pvPortMalloc(1);
 
-	char * retData = pvPortMalloc(len);
-	UART_ReadBuffer(retData, len);
+	if(xSemaphoreTake(xSemaphoreRecv, 2000)) {
+		bool success = ESP01_GetResponse(3000, response, "+IPD","+IPD,%d%[:]", &len,dd);//"+IPD,%d:%[^\r\n]%[^CLOSED]"
 
-	return retData;
+		if(!success) {
+			xSemaphoreGive(xSemaphoreRecv);
+			return 0;
+		}
+
+		vPortFree(dd);
+		vPortFree(response);
+
+		len = len > count ? count : len;
+
+		UART_ReadBuffer(retData, len);
+
+		xSemaphoreGive(xSemaphoreRecv);
+		return len;
+	} else {
+		return 0;
+	}
 }
 
 enum ESP01_Status ESP01_CIPStatus(){

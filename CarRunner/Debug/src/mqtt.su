@@ -1,0 +1,4 @@
+mqtt.c:14:6:MQTT_Publish	40	static
+mqtt.c:19:5:bindIdToSend	16	static
+mqtt.c:23:5:bindIdToRecv	24	static
+mqtt.c:28:6:vMqttPublisher	344	static

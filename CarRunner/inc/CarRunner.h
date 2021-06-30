@@ -18,4 +18,7 @@
 /**
  * @}
  */
+
+#define LONG_PRESS_TIME 100
+
 #endif /* CARRUNNER_H_ */

@@ -11,7 +11,7 @@
 
 #include "i2c.h"
 
-volatile LPC_I2C_TypeDef *ctrl = LPC_I2C1;
+volatile static LPC_I2C_TypeDef *ctrl = LPC_I2C1;
 
 volatile static uint8_t addr;
 volatile static bool rpt_start;
@@ -110,6 +110,7 @@ void I2C_IRQRoutine()
                 	ctrl->I2CONSET = STOP;
                 } else
                 {
+                	addr++;
                 	ctrl->I2CONSET = START;
                 	ctrl->I2CONCLR = SI;
                 }
@@ -137,6 +138,7 @@ void I2C_IRQRoutine()
                 	ctrl->I2CONSET = STOP;
                 } else
                 {
+                	addr++;
                 	ctrl->I2CONSET = START;
                 	ctrl->I2CONCLR = SI;
                 }

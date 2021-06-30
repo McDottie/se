@@ -1,2 +1,6 @@
-time_helper.c:35:6:TIME_ChangeRoutine	120	static
-time_helper.c:90:6:TIME_UpdateDateTimeDisplay	40	static
+time_helper.c:39:6:TIME_ChangeRoutine	120	static
+time_helper.c:98:6:TIME_UpdateDateTimeDisplay	40	static
+time_helper.c:105:5:bindIdToSendTime	16	static
+time_helper.c:109:5:bindIdToRecvTime	16	static
+time_helper.c:113:5:bindIdToConnectTime	32	static
+time_helper.c:118:6:vTimeHandler	80	static

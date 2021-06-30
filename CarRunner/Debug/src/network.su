@@ -1,0 +1,5 @@
+network.c:14:6:NETWORK_Init	8	static
+network.c:24:6:NETWORK_Connect	32	static
+network.c:28:5:NETWORK_Send	24	static
+network.c:43:5:NETWORK_Recv	32	static
+network.c:49:6:vConnection	24	static

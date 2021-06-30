@@ -27,8 +27,11 @@ uint32_t ntohl(uint32_t netlong) {
 }
 
 
-int NTP_Init(char* server, int port) {
-    return ESP01_ConnectServer("UDP", server, port);
+transport_iofunctions_t iof;
+
+int NTP_Init(char* server, int port, transport_iofunctions_t functions) {
+	iof = functions;
+    return iof.connect("UDP", server, port);
 }
 
 time_t NTP_Request(int tries) {//uint32_t lastCorrectTime, uint32_t currentTime) {
@@ -42,12 +45,14 @@ time_t NTP_Request(int tries) {//uint32_t lastCorrectTime, uint32_t currentTime)
     };
     bool responded = false;
     int count = 0;
-    char * result;
+    char * result = pvPortMalloc(48);
     while(!responded && count < tries) {
     	count++;
-    	responded = ESP01_Send((char *)&defaultSendPacket, 48);
-    	result = ESP01_RecvActive();
-    	if(!result) responded = false;
+    	responded = iof.send((char *)&defaultSendPacket, 48);
+    	if(!responded) continue;
+    	int id;
+    	int res = iof.recv(result,48);
+    	responded = (res == 48);
     }
 
     if(!responded) return 0;
@@ -58,7 +63,3 @@ time_t NTP_Request(int tries) {//uint32_t lastCorrectTime, uint32_t currentTime)
     //struct tm * dateTime = gmtime(&seconds);
     return seconds;
 }
-
-
-
-

@@ -1,0 +1,3 @@
+mqtttask.c:14:5:bindIdToSend	16	static
+mqtttask.c:18:5:bindIdToRecv	24	static
+mqtttask.c:24:6:vMqttPublisher	344	static

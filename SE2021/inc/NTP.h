@@ -14,6 +14,7 @@
 
 #include <stdint.h>
 #include <time.h>
+#include "transport.h"
 
 typedef struct
 {
@@ -42,6 +43,6 @@ typedef struct
 	uint32_t txTm_f; // 32 bits. Transmit time-stamp fraction of a second.
 } ntp_packet; // Total: 384 bits or 48 bytes
 
-int NTP_Init(char* server, int port);
+int NTP_Init(char* server, int port, transport_iofunctions_t functions);
 time_t NTP_Request(int tries);
 #endif /* NTP_H_ */

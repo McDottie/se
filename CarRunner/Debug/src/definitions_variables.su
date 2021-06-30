@@ -1,2 +1,5 @@
-definitions_variables.c:11:5:printComplex	40	static
-definitions_variables.c:16:5:printSimple	32	static
+definitions_variables.c:11:5:printLocate	40	static
+definitions_variables.c:15:5:printComplex	40	static
+definitions_variables.c:21:5:printComplexChar	40	static
+definitions_variables.c:29:5:printSimple	40	static
+definitions_variables.c:34:5:printfComplex	40	static

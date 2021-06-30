@@ -14,6 +14,8 @@
 
 #define EEPROM_PAGE_SIZE 32
 
+#include <stdint.h>
+
 int EEPROM_WriteByte(uint16_t dstAddr, char byte);
 
 int EEPROM_WriteData(uint16_t dstAddr, char *srcData, unsigned int size);

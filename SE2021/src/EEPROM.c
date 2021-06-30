@@ -34,7 +34,7 @@ int EEPROM_WriteByte(uint16_t dstAddr, char byte)
     int ret = I2C_Await();
     vPortFree(data);
 
-    WAIT_ChronoUs(5000);
+    WAIT_Milliseconds(5);
     return ret;
 }
 
@@ -82,11 +82,11 @@ int EEPROM_WriteData(uint16_t dstAddr, char *srcData, unsigned int size)
 
         ret =  I2C_Await();
         vPortFree(data);
-        WAIT_ChronoUs(5000);
+        WAIT_Milliseconds(5);
         return EEPROM_WriteData(pageEnd+1, srcData+actSize, size-actSize);
     }
 
-    WAIT_ChronoUs(5000);
+    WAIT_Milliseconds(5);
     return ret;
 }
 

@@ -5,12 +5,12 @@
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_NESTED_PROJECTS" value="false"/>
-		<item key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID" value="true"/>
+		<item key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="G:\isel\SE2\se"/>
 			<item value="C:\Users\josee\Documents\ISEL\3_Ano-5_Semestre\SE1\lab4"/>
 			<item value="C:\Users\josee\Downloads\MQTTPacket"/>
 			<item value="C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2"/>
-			<item value="G:\isel\SE2\se"/>
 			<item value="C:\Users\josee\Documents\ISEL\3_Ano-5_Semestre\SE1\CarRunner"/>
 			<item value="G:\isel\SE2\se\ntpTest"/>
 			<item value=""/>

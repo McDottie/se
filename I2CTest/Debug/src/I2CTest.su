@@ -1,1 +1,4 @@
-I2CTest.c:22:5:main	72	static
+I2CTest.c:28:6:vI2CTester	32	static
+I2CTest.c:56:5:main	16	static
+I2CTest.c:64:6:vApplicationStackOverflowHook	16	static
+I2CTest.c:77:6:vConfigureTimerForRunTimeStats	24	static

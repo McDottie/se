@@ -6,7 +6,7 @@
  * Generated linker script file for LPC1769
  * Created from linkscript.ldt by FMCreateLinkLibraries
  * Using Freemarker v2.3.30
- * MCUXpresso IDE v11.3.1 [Build 5262] [2021-04-02] on 23-Jun-2021 22:42:49
+ * MCUXpresso IDE v11.3.1 [Build 5262] [2021-04-02] on 28/jun/2021 16:18:48
  */
 
 INCLUDE "CarRunner_Debug_library.ld"

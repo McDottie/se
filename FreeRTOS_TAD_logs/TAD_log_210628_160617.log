@@ -1,0 +1,37 @@
+"FreeRTOS Task Aware Debugger for GDB" version 11.3.0 (202012100919)
+(c) 2016-2018 NXP Semiconductors, Inc.
+==================================
+16:04:15.219 INFO: [TadModel] DSF session ID 74 has started.
+16:04:21.804 INFO: [TadState] TAD state changed:  DEBUG_STARTED -> DEBUG_INIT_0 (RESUMED, USER_REQUEST)
+16:04:21.989 INFO: [TadState] TAD state changed:  DEBUG_INIT_0 -> DEBUG_INIT_1 (SUSPENDED, SIGNAL)
+16:04:22.946 INFO: [TadState] TAD state changed:  DEBUG_INIT_1 -> DEBUG_SUSPENDED (RESUMED, USER_REQUEST)
+16:04:23.100 INFO: [TadState] TAD state changed:  DEBUG_SUSPENDED -> DEBUG_SUSPENDED (SUSPENDED, BREAKPOINT)
+16:04:24.786 INFO: [TadState] TAD state changed:  DEBUG_SUSPENDED -> DEBUG_RESUMED (RESUMED, USER_REQUEST)
+16:05:21.67 INFO: [TadState] TAD state changed:  DEBUG_RESUMED -> READY (SUSPENDED, SIGNAL)
+16:05:24.499 INFO: [Benchmark] Loading data for "Determine FreeRTOS version" has started.
+16:05:24.500 ERROR: [VariableReader] Could not read variable expression: "&(FreeRTOSDebugConfig)".
+16:05:24.501 ERROR: [VariableReader] Could not read variable expression: "sizeof(struct TaskControlBlock_t)".
+16:05:24.508 ERROR: [VariableReader] Could not read variable expression: "&(((struct QueueDefinition *) 0)->pcTail)".
+16:05:24.508 INFO: [TadModel] FreeRTOS version has been identified from available FreeRTOS symbols as 10.11.
+16:05:24.508 INFO: [Benchmark] Loading data for "Determine FreeRTOS version" took 9 ms.
+16:05:24.508 INFO: [Benchmark] Loading data for "Heap Usage" has started.
+16:05:27.530 ERROR: [VariableReader] Could not read variable expression: "freeRTOSMemoryScheme".
+16:05:27.530 ERROR: [TadFactory] Reading exception during: "readIntVariableSafely(freeRTOSMemoryScheme)"
+16:05:27.530 INFO: [HeapFactory] TAD will try to determine heap type (memory scheme) from available variables.
+16:05:27.531 INFO: [HeapFactory] Make sure you have correctly defined "configFRTOS_MEMORY_SCHEME" macro in FreeRTOSConfig.h. TAD determines heap type either from MCUXpresso IDE's "FreeRTOSDebugConfig" structure (which uses "configFRTOS_MEMORY_SCHEME" define) or user defined variable "static const uint8_t freeRTOSMemoryScheme = <heap_type_used>;".
+16:05:27.531 INFO: [FreeRTOS] FreeRTOS macro "configFRTOS_MEMORY_SCHEME" is disabled.
+16:05:27.549 INFO: [HeapFactory] Heap variable ucHeap is equal to "0x100001b4".
+16:05:27.549 INFO: [HeapFactory] Heap variable xHeapStructSize is equal to "0x10008000".
+16:05:27.550 INFO: [HeapFactory] Heap type (memory allocation scheme) has been identified from available heap variables as Heap #4. 
+16:05:27.689 INFO: [Benchmark] Loading data for "Heap Usage" took 3181 ms.
+16:05:34.352 INFO: [TadState] TAD state changed:  READY -> DEBUG_RESUMED (RESUMED, USER_REQUEST)
+16:06:04.502 INFO: [TadState] TAD state changed:  DEBUG_RESUMED -> READY (SUSPENDED, SIGNAL)
+16:06:09.168 INFO: [Benchmark] Loading data for "Heap Usage" has started.
+16:06:09.452 ERROR: [VariableReader] Could not read variable expression: "(((struct tskTaskControlBlock *) 0x100039b8)->xEventListItem.pxContainer)".
+16:06:09.452 ERROR: [TaskFactory] Cannot read information from "pxReadyTasksLists[0]".
+16:06:09.788 ERROR: [VariableReader] Could not read variable expression: "(((struct tskTaskControlBlock *) 0x10002c58)->xEventListItem.pxContainer)".
+16:06:09.788 ERROR: [TaskFactory] Cannot read information from "pxReadyTasksLists[1]".
+16:06:10.235 ERROR: [VariableReader] Could not read variable expression: "(((struct tskTaskControlBlock *) 0x10001448)->xEventListItem.pxContainer)".
+16:06:10.236 ERROR: [TaskFactory] Cannot read information from "pxDelayedTaskList".
+16:06:10.434 INFO: [Benchmark] Loading data for "Heap Usage" took 1266 ms.
+16:06:17.169 INFO: [TadModel] DSF session ID 74 has ended.

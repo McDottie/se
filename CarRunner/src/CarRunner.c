@@ -21,6 +21,7 @@
 #include <cr_section_macros.h>
 
 #include <stdio.h>
+#include <string.h>
 #include <stdlib.h>
 #include <stdbool.h>
 
@@ -30,24 +31,88 @@
 #include "rtc.h"
 #include "wait.h"
 #include "ADXL345.h"
+#include "i2c.h"
 #include "spi.h"
 #include "ESP01.h"
-#include "NTP.h"
+
+#include "network.h"
+#include <mqtt.h>
 #include "saver.h"
+#include "game.h"
 #include "CarRunner.h"
 
 #include <definitions_variables.h>
 
 
-#define PRESSING_TIME 2000
+QueueHandle_t xQueueLCD,xQueueButton, xQueueMqtt;
 
-QueueHandle_t xQueueRunGame,xQueueRunMenu,xQueueLCD,xQueueButton;
-volatile key_state keySt = {0,RELEASED};
-
+volatile bool gameRunning, menuRunning;
 volatile int conStatus = 0;
 volatile bool toUpdateTime = false;
 
 char * menu_options[3] = {"Change Time","Show Players\nScores", "Exit"};
+
+/**
+ @startuml
+	[*] -> playerScoresShowdown
+	title CarRunner Player Showdown
+	playerScoresShowdown --> nextPlayer : keypressed == R
+	playerScoresShowdown --> previousPlayer : keypressed == L
+	previousPlayer --> playerScoresShowdown
+	nextPlayer --> playerScoresShowdown
+
+	playerScoresShowdown --> [*] : keypressed = S
+
+@enduml
+*/
+void playerScoresShowDown(){
+
+	int size = SAVER_ListSize();
+	if(size == 0) {
+		char * string = pvPortMalloc(22);
+		strcpy(string,"NO PLAYERS\nSCORES YET");
+		printComplex(10, true, false, true, false, 0, 0,string);
+		WAIT_Milliseconds(3000);
+		return;
+	}
+
+
+	SAVER_Score ** scores = SAVER_ReadScores();
+	int i = 0;
+
+	printfComplex(10, true, false, true, false, 0, 0,"%s\n%d",scores[i]->username,scores[i]->score);
+
+	key_state keySt;
+
+	while(1) {
+
+		if(!xQueueReceive(xQueueButton, &keySt, 100)) {
+			continue;
+		}
+
+		if(keySt.state == PRESSED)
+		switch(keySt.key) {
+			case S:
+				return;
+			case L:
+				i--;
+				if (i < 0) i = size-1;
+				printfComplex(10, true, false, true, false, 0, 0,"%s\n%d",scores[i]->username,scores[i]->score);
+				break;
+			case R:
+				i++;
+				if (i >= size) i = 0;
+				printfComplex(10, true, false, true, false, 0, 0,"%s\n%d",scores[i]->username,scores[i]->score);
+				break;
+			default:
+				break;
+		}
+	}
+
+	SAVER_CleanScores(scores,size);
+
+	vPortFree(scores);
+}
 
 void routineChooser(int routine){
 	switch(routine) {
@@ -79,9 +144,16 @@ void Menu() {
 
 	int i = 0;
 
-	printSimple(menu_options[i],100);
+	printSimple(100, menu_options[i]);
 
-	while(1){
+	key_state keySt;
+
+	while(1) {
+
+		if(!xQueueReceive(xQueueButton, &keySt, 100)) {
+			continue;
+		}
+
 		if(keySt.state == PRESSED)
 		switch(keySt.key) {
 			case S:
@@ -89,149 +161,93 @@ void Menu() {
 					return;
 
 				routineChooser(i);
-				printSimple(menu_options[i],100);
+				printSimple(100, menu_options[i]);
 				break;
 			case L:
 				i--;
 				if (i < 0) i = 2;
-				printSimple(menu_options[i],100);
+				printSimple(100, menu_options[i]);
 				break;
 			case R:
 				i++;
 				if (i > 2) i = 0;
-				printSimple(menu_options[i],100);
+				printSimple(100, menu_options[i]);
 				break;
 			default:
 				break;
 		}
 	}
 
-}
-
-/**
- @startuml
-	[*] -> playerScoresShowdown
-	title CarRunner Player Showdown
-	playerScoresShowdown --> nextPlayer : keypressed == R
-	playerScoresShowdown --> previousPlayer : keypressed == L
-	previousPlayer --> playerScoresShowdown
-	nextPlayer --> playerScoresShowdown
-
-	playerScoresShowdown --> [*] : keypressed = S
-
-@enduml
-*/
-void playerScoresShowDown(){
-
-	int size = listSize();
-	if(size == 0) {
-		LCDText_Clear();
-		LCDText_WriteString("NO PLAYERS\nSCORES YET");
-		WAIT_Milliseconds(3000);
-		return;
-	}
-
-
-	int * scores = readScores();
-	char * strings[size];
-	readNames(strings);
-
-
-	key_state keyState;
-	int i = 0;
-
-
-	LCDText_Clear();
-	LCDText_Printf("%s\n%d",strings[i],scores[i]);
-
-	while(1){
-		keyState = BUTTON_GetButtonsEvents();
-		if(keyState.state == PRESSED)
-		switch(keyState.key) {
-			case S:
-				return;
-			case L:
-				i--;
-				if (i < 0) i = size-1;
-				LCDText_Clear();
-				LCDText_Printf("%s\n%d",strings[i],scores[i]);
-
-				break;
-			case R:
-				i++;
-				if (i >= size) i = 0;
-				LCDText_Clear();
-				LCDText_Printf("%s\n%d",strings[i],scores[i]);
-				break;
-			default:
-				break;
-		}
-	}
-	for(int i = 0; i < size; i++) {
-		vPortFree(strings[i]);
-	}
-	vPortFree(scores);
 }
 
 
 void vMainLoop(void * pvParameters){
-	//GAME_Init();
-	SPI_Init();
-
-	while(ADXL345_Init() == -1);
+	I2C_Init(I2C1_ALT);
 
 	int start;
+	int elapsedAnimation = WAIT_GetElapsedMillis(0);
+	key_state keySt;
+	int cnt = 0;
+	char *strings[3] = {"Connecting .","Connecting ..","Connecting ..."};
 
-	//time Update
-	toUpdateTime = true;
-
-	while(1) {
+	while (1) {
 		int message;
 
-		switch(keySt.key) {
-			case S:
-				if(keySt.state == PRESSED) {
-					message = 1;
-					toUpdateTime = false;
-					xQueueSend(xQueueRunGame,(void *)&message,0);
-					//gameRoutine();
+		if (!gameRunning && !menuRunning) {
+			toUpdateTime = true;
+			if (conStatus == DISCON || conStatus == STARTING) {
+				if (WAIT_GetElapsedMillis(elapsedAnimation) > CONNECTING_ANIMATION_DELAY) {
+					elapsedAnimation = WAIT_GetElapsedMillis(0);
+					cnt = cnt >= 3 ? 0 : cnt;
 
-					xQueueReceive(xQueueRunGame, &message, portMAX_DELAY);
-					toUpdateTime = true;
+					char * string = pvPortMalloc(14);
+					strcpy(string,strings[cnt]);
+					printSimple(100, string);
+					cnt++;
 				}
+			}
+			if (!xQueueReceive(xQueueButton, &keySt, 100)) {
+				continue;
+			}
 
-				break;
-			case L|R:
-				if (keySt.state == PRESSED)
-					start = WAIT_GetElapsedMillis(0);
-				if (keySt.state == REPEATED && WAIT_GetElapsedMillis(start) >= PRESSING_TIME) {
-					message = 1;
-					toUpdateTime = false;
-					xQueueSend(xQueueRunMenu,(void *)&message,0);
-					//Menu();
-					xQueueReceive(xQueueRunMenu, &message, portMAX_DELAY);
-					toUpdateTime = true;
-				}
-				break;
-			default:
-				break;
+			switch (keySt.key) {
+				case S:
+					if(keySt.state == PRESSED) {
+						message = 1;
+						toUpdateTime = false;
+						gameRunning = true;
+					}
+
+					break;
+				case L|R:
+					if (keySt.state == PRESSED)
+						start = WAIT_GetElapsedMillis(0);
+					if (keySt.state == REPEATED && WAIT_GetElapsedMillis(start) >= PRESSING_TIME) {
+						message = 1;
+						toUpdateTime = false;
+						menuRunning = true;
+					}
+					break;
+				default:
+					break;
+			}
 		}
 
 	}
-	return 0;
 }
 
 void vButtonHandler(void * pvParameters){
 	key_state prev = {0, RELEASED};
+	key_state keySt;
 	int timeStamp = -1;
 	while(1)  {
-		key_state keySt = BUTTON_GetButtonsEvents();
-		if(keySt.key != prev.key || keySt.state != prev.state) {
+		keySt = BUTTON_GetButtonsEvents();
+		if(keySt.key != prev.key || keySt.state != prev.state || uxQueueMessagesWaiting(xQueueButton) == 0) {
 			if(keySt.state == REPEATED) {
 				if(timeStamp == -1) {
 					timeStamp = WAIT_GetElapsedMillis(0);
-				} else if(WAIT_GetElapsedMillis(timeStamp) > 100) {//TODO CREATE CONSTANT
-					timeStamp == -1;
+				} else if(WAIT_GetElapsedMillis(timeStamp) > LONG_PRESS_TIME) {//TODO CREATE CONSTANT
+					timeStamp = -1;
 					xQueueSend(xQueueButton, &keySt, 0);
 					prev = keySt;
 				}
@@ -244,28 +260,41 @@ void vButtonHandler(void * pvParameters){
 }
 
 void vGame(void * pvParameters){
-	int message;
+	bool toInit = true;
+
 	while(1) {
-		xQueueReceive(xQueueRunGame, &message, portMAX_DELAY);
-		GAME_Routine();
+		if(gameRunning) {
+			if(toInit) {
+				GAME_Init();
+				SPI_Init();
+				while(ADXL345_Init() == -1);
+				toInit = false;
+			}
+
+			GAME_Routine();
+
+			gameRunning = false;
+		}
 	}
 }
 
 void vMenu(void * pvParameters){
-	int message;
 	while(1) {
-		xQueueReceive(xQueueRunMenu, &message, portMAX_DELAY);
-		Menu();
+		if(menuRunning) {
+			Menu();
+			menuRunning = false;
+		}
 	}
 }
 
 void vLCDManager(void * pvParameters){
 	LCDText_Init();
-	LCDText_CursorOn();
+	bool cursor;
 
 	LCD_Mesage message;
 	while(1){
-		if(xQueueReceive(xQueueLCD, &message, portMAX_DELAY)) {
+		if(xQueueReceive(xQueueLCD, &message, 200)) {
+
 			if(message.toClear) {
 				LCDText_Clear();
 			}
@@ -279,43 +308,14 @@ void vLCDManager(void * pvParameters){
 				vPortFree(message.string);
 			}
 
+			if(message.cursor && !cursor) {
+				cursor = true;
+				LCDText_CursorOn();
+			} else if(!message.cursor && cursor){
+				LCDText_CursorOff();
+				cursor = false;
+			}
 		}
-	}
-}
-
-void vTimeHandler(){
-
-	while(conStatus != CON);
-
-	NTP_Init(NTP_DEFAULT_SERVER, NTP_DEFAULT_PORT);
-
-	RTC_Init(NTP_Request(5));
-
-	int dateTime_Stamp = WAIT_GetElapsedMillis(0);
-	struct tm dateTime;
-
-	while(1) {
-		if(toUpdateTime && WAIT_GetElapsedMillis(dateTime_Stamp) >= 1000) {
-			dateTime_Stamp = WAIT_GetElapsedMillis(0);
-			RTC_GetValue(&dateTime);
-			TIME_UpdateDateTimeDisplay(dateTime);
-		}
-	}
-}
-
-
-void vConnection() {
-	ESP01_Init();
-	conStatus = STARTING;
-	bool res = ESP01_Echo(0);
-	while(!ESP01_Test());
-	while(!ESP01_SetMode(STATION));
-	while(!ESP01_ConnectAP("HUAWEI", "12345678"));
-	ESP01_SetDNS("1.1.1.1","1.0.0.1");
-	conStatus = CON;
-
-	while(1) {
-
 	}
 }
 
@@ -337,10 +337,12 @@ void vConnection() {
 int main(void) {
 	WAIT_Init();
 
-	xQueueRunGame = xQueueCreate(1,sizeof(int));
-	xQueueRunMenu = xQueueCreate(1,sizeof(int));
+	gameRunning = false;
+	menuRunning = false;
+
 	xQueueLCD = xQueueCreate(10,sizeof(LCD_Mesage));
 	xQueueButton = xQueueCreate(20,sizeof(key_state));
+	xQueueMqtt = xQueueCreate(3,sizeof(MQTT_Request));
 
 	xTaskCreate(vConnection, "Connection", 600, (void *) 0, 1, NULL);
 
@@ -350,8 +352,10 @@ int main(void) {
 	xTaskCreate(vGame, "Game", 200, (void *) 0, 1, NULL);
 	xTaskCreate(vMenu, "Menu", 200, (void *) 0, 1, NULL);
 
-	xTaskCreate(vLCDManager, "LCDManager", 400, (void *) 0, 1, NULL);
-	xTaskCreate(vTimeHandler, "TimeHandler", 300, (void *) 0, 1, NULL);
+	xTaskCreate(vLCDManager, "LCDManager", 200, (void *) 0, 1, NULL);
+	xTaskCreate(vTimeHandler, "TimeHandler", 600, (void *) 0, 1, NULL);
+
+	xTaskCreate(vMqttPublisher, "Mqtt", 700, (void *) 0, 1, NULL);
 
 	vTaskStartScheduler();
 	return 0 ;

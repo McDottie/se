@@ -1,6 +1,42 @@
-16:38:45 **** Incremental Build of configuration Debug for project I2CTest ****
-make -r -j8 all 
-make: Nothing to be done for 'all'.
+12:15:09 **** Incremental Build of configuration Debug for project I2CTest ****
+make -r -j4 all 
+Building file: ../src/I2CTest.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -D__REDLIB__ -I"G:\isel\SE2\se\I2CTest\inc" -I"G:\isel\SE2\se\SE2021\inc" -I"G:\isel\SE2\se\CMSIS_CORE_LPC17xx\inc" -I"G:\isel\SE2\se\FreeRTOS-Kernel\src\portable" -I"G:\isel\SE2\se\FreeRTOS-Kernel\include" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m3 -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/I2CTest.d" -MT"src/I2CTest.o" -MT"src/I2CTest.d" -o "src/I2CTest.o" "../src/I2CTest.c"
+../src/I2CTest.c: In function 'vI2CTester':
+../src/I2CTest.c:40:2: warning: implicit declaration of function 'memset' [-Wimplicit-function-declaration]
+   40 |  memset(byte,0,150);
+      |  ^~~~~~
+../src/I2CTest.c:25:1: note: 'memset' is defined in header '<string.h>'; did you forget to '#include <string.h>'?
+   24 | #include "EEPROM.h"
+  +++ |+#include <string.h>
+   25 | 
+../src/I2CTest.c:53:9: warning: 'return' with a value, in function returning void [-Wreturn-type]
+   53 |  return 0 ;
+      |         ^
+../src/I2CTest.c:28:6: note: declared here
+   28 | void vI2CTester(void * pvParameters){
+      |      ^~~~~~~~~~
+../src/I2CTest.c:44:7: warning: unused variable 'byte2' [-Wunused-variable]
+   44 |  char byte2;
+      |       ^~~~~
+Finished building: ../src/I2CTest.c
+ 
+Building target: I2CTest.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"G:\isel\SE2\se\CMSIS_CORE_LPC17xx\Debug" -L"G:\isel\SE2\se\FreeRTOS-Kernel\Debug" -L"G:\isel\SE2\se\SE2021\Debug" -Xlinker -Map="I2CTest.map" -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "I2CTest_Debug.ld" -o "I2CTest.axf"  ./src/I2CTest.o ./src/cr_startup_lpc175x_6x-FreeRTOS.o ./src/crp.o   -lCMSIS_CORE_LPC17xx -lSE2021 -lFreeRTOS-Kernel
+Memory region         Used Size  Region Size  %age Used
+       MFlash512:       15668 B       512 KB      2.99%
+        RamLoc32:       23348 B        32 KB     71.25%
+        RamAHB32:          0 GB        32 KB      0.00%
+Finished building target: I2CTest.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "I2CTest.axf"; # arm-none-eabi-objcopy -v -O binary "I2CTest.axf" "I2CTest.bin" ; # checksum -p LPC1769 -d "I2CTest.bin";
+   text	   data	    bss	    dec	    hex	filename
+  15656	     12	  23336	  39004	   985c	I2CTest.axf
+ 
 
-16:38:45 Build Finished. 0 errors, 0 warnings. (took 124ms)
+12:15:10 Build Finished. 0 errors, 3 warnings. (took 767ms)
 

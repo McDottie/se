@@ -14,15 +14,25 @@
  *    Ian Craggs - initial API and implementation and/or initial documentation
  *    Sergio R. Caprile - media specifics, nice api doc :^)
  *******************************************************************************/
+#ifndef TRANSPORT_H_
+#define TRANSPORT_H_
+
+#include <stdbool.h>
 
 typedef struct {
 	int (*send)(unsigned char *address, unsigned int bytes); 	///< pointer to function to send 'bytes' bytes, returns the actual number of bytes sent
 	int (*recv)(unsigned char *address, unsigned int maxbytes); 	///< pointer to function to receive upto 'maxbytes' bytes, returns the actual number of bytes copied
+	int (*connect)(unsigned char * type, unsigned char *server, unsigned int port); 	///< pointer to function to connect to specific server
 } transport_iofunctions_t;
 
 #define TRANSPORT_DONE	1
 #define TRANSPORT_AGAIN	0
 #define TRANSPORT_ERROR	-1
+/**
+@returns connnected state
+*/
+bool transport_connect(unsigned char * type, unsigned char *server, unsigned int port);
+
 /**
 @note Blocks until requested buflen is sent
 */
@@ -68,3 +78,6 @@ the AT+xSENDx / AT+xRECVx commands into the former sendPacketBuffer() and getdat
 */
 int transport_open(transport_iofunctions_t *thisio);
 int transport_close(int sock);
+
+#endif /* TRANSPORT_H_ */
+

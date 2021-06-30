@@ -8,22 +8,26 @@
 #ifndef SAVER_H_
 #define SAVER_H_
 
-void saveScore(int score,char * name, int name_size);
+typedef struct {
+	int score;
+	int usernameLen;
+	char * username;
+} SAVER_Score;
+
+void SAVER_SaveScore(int score,char * name, int name_size);
 
 /**
  * @brief reads from flash all the scores
- * @return array of scores
+ * @return array of SAVER_Score's
  */
-int* readScores();
+SAVER_Score ** SAVER_ReadScores();
 
 /**
  * @return the current number of players that exist
  */
-int listSize();
+int SAVER_ListSize();
 
-/**
- * @brief function that reads from flash all the names its required that strings is started with size[listSize][17] to accommodate for max size names
- * */
-void readNames(char* strings[]);
+
+void SAVER_CleanScores(SAVER_Score ** scores,int size);
 
 #endif /* SAVER_H_ */

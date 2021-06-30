@@ -1,5 +1,5 @@
-saver.c:15:6:checkClean	8	static
-saver.c:22:6:saveScore	88	dynamic
-saver.c:70:6:readScores	24	static
-saver.c:83:5:listSize	8	static
-saver.c:89:6:readNames	40	static
+saver.c:23:16:insertSorted	40	static
+saver.c:42:6:SAVER_SaveScore	256	static
+saver.c:76:5:SAVER_ListSize	16	static
+saver.c:82:16:SAVER_ReadScores	240	static
+saver.c:111:6:SAVER_CleanScores	24	static

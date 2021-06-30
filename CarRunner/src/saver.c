@@ -4,101 +4,114 @@
  *  Created on: 15 Jan 2021
  *      Author: josee
  */
-#include <stdlib.h>
-#include "saver.h"
-#include "flash.h"
+#include "FreeRTOS.h"
+#include "task.h"
 
-int *names  = sector28;
-int *scores = sector29;
+
+#include <stdlib.h>
+#include <stdint.h>
+#include "saver.h"
+#include "EEPROM.h"
+#include "lcd.h"
+
+#define MAX_NAME_SIZE 		(LCDText_COLUMNS+1)
+#define TOP_SCORES_TO_SAVE 	(10)
+#define SIZE 				((TOP_SCORES_TO_SAVE*MAX_NAME_SIZE) + (TOP_SCORES_TO_SAVE*2) + 1)
+#define START_ADDRESS		(0)
 int zero = 0;
 
-void checkClean(){
-	if(FLASH_BlanckCheck(28,29) != IAP_SECTOR_NOT_BLANK){
-		FLASH_WriteData(names,&zero,512);
-		FLASH_WriteData(scores,&zero,512);
+SAVER_Score ** insertSorted(SAVER_Score ** scores, SAVER_Score * toAdd, int size){
+	SAVER_Score ** newScores = pvPortMalloc(size+1);
+
+	if(size == 0) {
+		newScores[0] = toAdd;
+		return newScores;
 	}
+
+	int j = 0;
+	for(int i = 0; i < size; i++) {
+		if(scores[i]->score < toAdd->score) {
+			newScores[j++] = toAdd;
+		}
+		newScores[j++] = scores[i];
+	}
+
+	return newScores;
 }
 
-void saveScore(int score,char * name, int name_size) {
-	checkClean();
+void SAVER_SaveScore(int score,char * name, int name_size) {
+	int size = SAVER_ListSize();
+	SAVER_Score ** scores = SAVER_ReadScores();
+	SAVER_Score scoreToAdd = {score,name_size,name};
 
-	//names
-	int currNameSize = names[0];
+	if(size >= TOP_SCORES_TO_SAVE) {
+		if(scores[size-1]->score < score) {
+			size--;
+		} else {
+			SAVER_CleanScores(scores, size);
+			return;
+		}
+	}
 
+	SAVER_Score ** sortedScores = insertSorted(scores,&scoreToAdd, size);
+	uint8_t bytes[SIZE];
+	int totalSize = 0;
+	bytes[totalSize++] = size+1;
+
+	for (int i = 0; i < size+1; i++) {
+		bytes[totalSize++] = sortedScores[i]->score;
+		bytes[totalSize++] = sortedScores[i]->usernameLen;
+		for(int j = 0; j < sortedScores[i]->usernameLen; j++) {
+			bytes[totalSize++] = sortedScores[i]->username[j];
+		}
+	}
+
+	SAVER_CleanScores(scores, size);
+	vPortFree(sortedScores);
+
+	EEPROM_WriteData(START_ADDRESS, bytes
+			, totalSize);
+}
+
+int SAVER_ListSize(){
+	uint8_t size;
+	EEPROM_ReadByte(0, &size);
+	return (int)size;
+}
+
+SAVER_Score ** SAVER_ReadScores() {
+	uint8_t bytes[SIZE];
+
+	EEPROM_ReadData(0, bytes, SIZE);
+	SAVER_Score ** scores = pvPortMalloc(bytes[0]);
+
+	int namesSizeSum = 0;
 	int i = 0;
-	int k = 1;
+	int j = 0;
+	for(int count = 0; count < bytes[0]; count++) {
+        int size = bytes[i+2];
+		namesSizeSum += size;
+		int end = size + i+3;
 
-	int tmpNameHolder[currNameSize*17 + 1 + name_size + 1];
-
-	for(;i < currNameSize;i++){
-		int s = names[k];
-		for (int j = 0; j <= s; j++) {
-			tmpNameHolder[k] = names[k];
-			k++;
+		SAVER_Score * currScore = pvPortMalloc(sizeof(SAVER_Score));
+		currScore->score = bytes[i+1];
+		currScore->usernameLen = size;
+		currScore->username = pvPortMalloc(size);
+		int k = 0;
+		for(int l = i+1; l < end; l++) {
+			currScore->username[k++] = bytes[l];
 		}
+		currScore->username[k] = 0;
+		scores[j++] = currScore;
+		i = namesSizeSum + (count+1)*2;
 	}
-
-	tmpNameHolder[0] = ++currNameSize;
-
-	tmpNameHolder[k++] = name_size;
-	for (int l = 0; l < name_size; l++) {
-		tmpNameHolder[k++] = name[l];
-	}
-
-	if((FLASH_WriteArray(names,tmpNameHolder,k,512)) == IAP_CMD_SUCESS){
-
-	}
-
-	//scores
-	int size = scores[0];
-	i = 1;
-	int tmpScoreHolder[size+2];
-
-	for(; i <= size;i++){
-		tmpScoreHolder[i] = scores[i];
-	}
-	tmpScoreHolder[0] = ++size;
-	tmpScoreHolder[size] = score;
-
-	int error;
-	if((error=FLASH_WriteArray(scores,tmpScoreHolder,size+2,512)) == IAP_CMD_SUCESS){
-
-	}
+	return scores;
 }
 
-
-int* readScores() {
-	checkClean();
-
-	int size = scores[0];
-	int * tmpScoreHolder = malloc(sizeof(int) * size);
-
-	for(int i = 0; i < size;i++){
-		tmpScoreHolder[i] = scores[i+1];
+void SAVER_CleanScores(SAVER_Score ** scores,int size){
+	for(int i = 0; i < size; i++) {
+		vPortFree(scores[i]->username);
+		vPortFree(scores[i]);
 	}
-
-	return tmpScoreHolder;
+	vPortFree(scores);
 }
-
-int listSize(){
-	checkClean();
-
-	return names[0];
-}
-
-void readNames(char * strings[]) {
-	int k = 1;
-
-	for (int i = 0; i < names[0]; i++) {
-		int s = names[k];
-		int j = 0;
-		k++;
-		strings[i] = malloc(17);
-		for (; j < s; j++) {
-			strings[i][j] = names[k];
-			k++;
-		}
-		strings[i][j] = 0;
-	}
-}
-

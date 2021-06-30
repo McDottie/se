@@ -40,7 +40,7 @@ void BUTTON_Init(void) {
 
 int BUTTON_Hit(void) {
 	int pins = ~(LPC_GPIO0->FIOPIN);
-	WAIT_ChronoUs(2000);
+	WAIT_Milliseconds(2);
 
 	//CHECK AND CORRECT BOUNCE
 	if(pins != ~(LPC_GPIO0->FIOPIN))

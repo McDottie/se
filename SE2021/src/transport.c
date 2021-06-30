@@ -39,6 +39,10 @@ static transport_iofunctions_t *io = NULL;
 static unsigned char *from = NULL;		// to keep track of data sending
 static int howmany;				// ditto
 
+bool transport_connect(unsigned char * type, unsigned char *server, unsigned int port) {
+	return io->connect(type,server,port);
+}
+
 
 void transport_sendPacketBuffernb_start(int sock, unsigned char* buf, int buflen)
 {

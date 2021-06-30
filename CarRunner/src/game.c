@@ -8,13 +8,15 @@
 #include <definitions_variables.h>
 #include <stdbool.h>
 #include <stdlib.h>
+#include <string.h>
 #include "game.h"
 #include "saver.h"
 #include "wait.h"
 #include "lcd.h"
 #include "button.h"
+#include "ADXL345.h"
 #include "CarRunner.h"
-
+#include "publisher.h"
 
 #define CAR 1
 #define OBS 2
@@ -34,143 +36,6 @@ void GAME_Init(){
 
 	LCDText_CreateChar(1, car);
 	LCDText_CreateChar(2, obs1);
-}
-
-
-/**
- @startuml
-	[*] -> gameRoutine
-	title CarRunner Game Routine
-	gameRoutine --> updateGameDesign : after delay s
-	gameRoutine --> updateGameLogic : after delay s
-	gameRoutine --> updateGameDesign : keypressed == L | R or tap detected
-	gameRoutine --> updateGameLogic : keypressed == L | R or tap detected
-	updateGameLogic --> gameRoutine
-	updateGameDesign --> gameRoutine
-	updateGameLogic : update_roads
-	updateGameLogic : check_gameOver
-	gameRoutine --> saveUser : gameOver
-	saveUser --> [*]
-@enduml
-*/
-void GAME_Routine(){
-	srand(WAIT_GetElapsedMillis(0));
-
-	initValues();
-
-    int elapsed = WAIT_GetElapsedMillis(0) + 1000;
-    LCDText_Clear();
-
-    bool gameOver = false;
-    do {
-    	bool tap = ADXL345_isTap();
-
-    	if(tap) {
-    		if(car)
-    			car = 0;
-    		else
-    			car = 1;
-    		updateGameDesign();
-    	}
-
-
-    	if (keySt.state == PRESSED) {
-    		switch(keySt.key){
-				case L:
-					car = 0;
-					break;
-				case R:
-					car = 1;
-					break;
-    		}
-    		updateGameDesign();
-    	}
-
-        if(WAIT_GetElapsedMillis(elapsed) >= delay) {
-            gameOver = updateGameLogic();
-            updateGameDesign();
-            elapsed = WAIT_GetElapsedMillis(0);
-        }
-
-    }while(!gameOver);
-
-    //GAME Over screen
-    LCDText_Clear();
-    LCDText_WriteString("  GAME OVER!");
-    LCDText_Locate(1, 0);
-    LCDText_Printf("POINTS: %d",points);
-    WAIT_ChronoUs(3000000);
-
-    saveUser(points);
-
-
-    int *a = readScores();
-    LCDText_Clear();
-}
-
-/**
- @startuml
-	[*] -> saveUser
-	title CarRunner Save User
-	saveUser --> NextChar : keypressed == L
-	saveUser --> PreviousChar : keypressed == R
-	NextChar : char++
-	PreviousChar : char--
-	saveUser --> AddChar : keypressed == S
-	AddChar : name[i] = char
-	AddChar : i++
-	saveUser --> save : keypressed == S for 2 seconds
-	save --> [*]
-@enduml
-*/
-void saveUser(int points){
-	char name[16];
-
-	LCDText_Clear();
-    LCDText_WriteString("INSERT YOUR NAME");
-
-	int pos = 0;
-	char currChar = 64;
-
-	LCDText_Locate(1, 0);
-
-	int stamp = WAIT_GetElapsedMillis(0);
-	LCDText_CursorOn();
-    while(1) {
-
-    	if (keySt.state == REPEATED && keySt.key == S && WAIT_GetElapsedMillis(stamp) > 2000) {
-    		break;
-    	}
-
-		if (keySt.state == PRESSED) {
-			stamp = WAIT_GetElapsedMillis(0);
-
-			switch(keySt.key){
-				case L:
-					currChar++;
-					LCDText_WriteChar(currChar);
-
-					LCDText_Locate(1, pos);
-					break;
-				case R:
-					currChar--;
-					LCDText_WriteChar(currChar);
-					LCDText_Locate(1, pos);
-					break;
-				case S:
-					name[pos] = currChar;
-					LCDText_Locate(1, ++pos);
-					currChar = 64;
-					break;
-				default:
-					break;
-			}
-		}
-
-    }
-    LCDText_CursorOff();
-
-	saveScore(points,name,pos);
 }
 
 void initValues() {
@@ -226,7 +91,7 @@ int updateGameLogic(){
         probabilityToSpawn += 5;
         delay -= 50;
     }
-    
+
     if(downRoad[0]) {
         if (car) {
             return 1;
@@ -272,11 +137,171 @@ void updateGameDesign() {
 	}
     up[16] = 0;
     down[16] = 0;
-    
-    LCDText_Locate(0,0);
-    LCDText_WriteString(up);
 
-    LCDText_Locate(1,0);
-    LCDText_WriteString(down);
-    
+    char * upP = pvPortMalloc(17);
+    char * downP = pvPortMalloc(17);
+    strcpy(upP,up);
+    strcpy(downP,down);
+
+    printComplex(100, false, true, true, false, 0, 0, upP);
+    printComplex(100, false, true, true, false, 1, 0, downP);
+
+}
+
+
+/**
+ @startuml
+	[*] -> saveUser
+	title CarRunner Save User
+	saveUser --> NextChar : keypressed == L
+	saveUser --> PreviousChar : keypressed == R
+	NextChar : char++
+	PreviousChar : char--
+	saveUser --> AddChar : keypressed == S
+	AddChar : name[i] = char
+	AddChar : i++
+	saveUser --> save : keypressed == S for 2 seconds
+	save --> [*]
+@enduml
+*/
+char * saveUser(int points){
+	char * name = pvPortMalloc(17);
+
+	char * string = pvPortMalloc(17);
+	strcpy(string,"INSERT YOUR NAME");
+    printSimple(100, string);
+
+	int pos = 0;
+	char currChar = 64;
+
+	int stamp = WAIT_GetElapsedMillis(0);
+	printComplex(100, false, true, false, true, 1, 0, "");
+
+
+	key_state keySt = {0, RELEASED};
+
+	while(1) {
+
+		if(!xQueueReceive(xQueueButton, &keySt, 100)) {
+			keySt.key = 0;
+			keySt.state = RELEASED;
+		}
+
+    	if (keySt.state == REPEATED && keySt.key == S && WAIT_GetElapsedMillis(stamp) > 2000) {
+    		break;
+    	}
+
+		if (keySt.state == PRESSED) {
+			stamp = WAIT_GetElapsedMillis(0);
+
+			switch(keySt.key){
+				case L:
+					currChar++;
+					printComplexChar(100, false, false, true, true, 0, 0, currChar);
+					printLocate(100, true, 1, pos);
+					break;
+				case R:
+					currChar--;
+					printComplexChar(100, false, false, true, true, 0, 0, currChar);
+					printLocate(100, true, 1, pos);
+					break;
+				case S:
+					name[pos] = currChar;
+					printLocate(100, true, 1, ++pos);
+					currChar = 64;
+					break;
+				default:
+					break;
+			}
+		}
+
+    }
+	printComplex(100, false, false, false, false, 0, 0, "");
+
+	name[pos] = 0;
+
+	SAVER_SaveScore(points,name,pos);
+	return name;
+}
+
+/**
+ @startuml
+	[*] -> gameRoutine
+	title CarRunner Game Routine
+	gameRoutine --> updateGameDesign : after delay s
+	gameRoutine --> updateGameLogic : after delay s
+	gameRoutine --> updateGameDesign : keypressed == L | R or tap detected
+	gameRoutine --> updateGameLogic : keypressed == L | R or tap detected
+	updateGameLogic --> gameRoutine
+	updateGameDesign --> gameRoutine
+	updateGameLogic : update_roads
+	updateGameLogic : check_gameOver
+	gameRoutine --> saveUser : gameOver
+	saveUser --> [*]
+@enduml
+*/
+void GAME_Routine(){
+	srand(WAIT_GetElapsedMillis(0));
+
+	initValues();
+
+    int elapsed = WAIT_GetElapsedMillis(0) + 1000;
+    key_state keySt = {0, RELEASED};
+
+    printComplex(10, true, false, false, false, 0, 0, "");
+
+    bool gameOver = false;
+    do {
+    	bool tap = ADXL345_isTap();
+
+    	if(tap) {
+    		if(car)
+    			car = 0;
+    		else
+    			car = 1;
+    		updateGameDesign();
+    	}
+
+		if(!xQueueReceive(xQueueButton, &keySt, 100)) {
+			keySt.key = 0;
+			keySt.state = RELEASED;
+		}
+
+    	if (keySt.state == PRESSED) {
+    		switch(keySt.key){
+				case L:
+					car = 0;
+					break;
+				case R:
+					car = 1;
+					break;
+    		}
+    		updateGameDesign();
+    	}
+
+        if(WAIT_GetElapsedMillis(elapsed) >= delay) {
+            gameOver = updateGameLogic();
+            updateGameDesign();
+            elapsed = WAIT_GetElapsedMillis(0);
+        }
+
+    }while(!gameOver);
+
+    //GAME Over screen
+
+    char * string = pvPortMalloc(13);
+	strcpy(string,"  GAME OVER!");
+	printSimple(100, string);
+
+	printfComplex(100, false, true, true, false, 1, 0, "POINTS: %d",points);
+
+    WAIT_Milliseconds(3000);
+
+    char * username = saveUser(points);
+
+    PUBLISHER_Publish(GROUP_NR, points, username);
+
+    vPortFree(username);
+    printComplex(100, true, false, false, false, 0, 0, "");
+
 }
