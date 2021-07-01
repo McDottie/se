@@ -2,7 +2,7 @@
  * definitions_variables.c
  *
  *  Created on: 23/06/2021
- *      Author: josee
+ *      Author: $(author)
  */
 
 #include "definitions_variables.h"

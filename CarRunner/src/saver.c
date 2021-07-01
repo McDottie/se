@@ -9,6 +9,7 @@
 
 
 #include <stdlib.h>
+#include <stdbool.h>
 #include <stdint.h>
 #include "saver.h"
 #include "EEPROM.h"
@@ -29,11 +30,17 @@ SAVER_Score ** insertSorted(SAVER_Score ** scores, SAVER_Score * toAdd, int size
 	}
 
 	int j = 0;
+	bool added;
 	for(int i = 0; i < size; i++) {
-		if(scores[i]->score < toAdd->score) {
+		if(!added && scores[i]->score < toAdd->score) {
 			newScores[j++] = toAdd;
+			added = true;
 		}
 		newScores[j++] = scores[i];
+	}
+
+	if(!added) {
+		newScores[j] = toAdd;
 	}
 
 	return newScores;
@@ -98,7 +105,7 @@ SAVER_Score ** SAVER_ReadScores() {
 		currScore->usernameLen = size;
 		currScore->username = pvPortMalloc(size);
 		int k = 0;
-		for(int l = i+1; l < end; l++) {
+		for(int l = i+3; l < end; l++) {
 			currScore->username[k++] = bytes[l];
 		}
 		currScore->username[k] = 0;

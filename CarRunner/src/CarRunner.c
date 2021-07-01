@@ -349,7 +349,7 @@ int main(void) {
 	xTaskCreate(vMainLoop, "MainLoop", 400, (void *) 0, 1, NULL);
 	xTaskCreate(vButtonHandler, "ButtonHandler", 200, (void *) 0, 1, NULL);
 
-	xTaskCreate(vGame, "Game", 200, (void *) 0, 1, NULL);
+	xTaskCreate(vGame, "Game", 600, (void *) 0, 1, NULL);
 	xTaskCreate(vMenu, "Menu", 200, (void *) 0, 1, NULL);
 
 	xTaskCreate(vLCDManager, "LCDManager", 200, (void *) 0, 1, NULL);

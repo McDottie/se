@@ -1,13 +1,13 @@
-16:07:12 **** Incremental Build of configuration Debug for project FreeRTOS-Kernel ****
+11:11:00 **** Incremental Build of configuration Debug for project FreeRTOS-Kernel ****
 make -r all 
 Building file: ../src/portable/MemMang/heap_4.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__NEWLIB__ -I"G:\isel\SE2\se\CMSIS_CORE_LPC17xx\inc" -I"G:\isel\SE2\se\FreeRTOS-Kernel\include" -I"G:\isel\SE2\se\FreeRTOS-Kernel\src\portable" -I"G:\isel\SE2\se\CarRunner\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fmerge-constants -fmacro-prefix-map="../src/portable/MemMang/"=. -mcpu=cortex-m3 -mthumb -D__NEWLIB__ -fstack-usage -specs=nano.specs -MMD -MP -MF"src/portable/MemMang/heap_4.d" -MT"src/portable/MemMang/heap_4.o" -MT"src/portable/MemMang/heap_4.d" -o "src/portable/MemMang/heap_4.o" "../src/portable/MemMang/heap_4.c"
+arm-none-eabi-gcc -D__NEWLIB__ -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CMSIS_CORE_LPC17xx\inc" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\include" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\src\portable" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CarRunner\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fmerge-constants -fmacro-prefix-map="../src/portable/MemMang/"=. -mcpu=cortex-m3 -mthumb -D__NEWLIB__ -fstack-usage -specs=nano.specs -MMD -MP -MF"src/portable/MemMang/heap_4.d" -MT"src/portable/MemMang/heap_4.o" -MT"src/portable/MemMang/heap_4.d" -o "src/portable/MemMang/heap_4.o" "../src/portable/MemMang/heap_4.c"
 Finished building: ../src/portable/MemMang/heap_4.c
  
 Building file: ../src/portable/Common/mpu_wrappers.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__NEWLIB__ -I"G:\isel\SE2\se\CMSIS_CORE_LPC17xx\inc" -I"G:\isel\SE2\se\FreeRTOS-Kernel\include" -I"G:\isel\SE2\se\FreeRTOS-Kernel\src\portable" -I"G:\isel\SE2\se\CarRunner\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fmerge-constants -fmacro-prefix-map="../src/portable/Common/"=. -mcpu=cortex-m3 -mthumb -D__NEWLIB__ -fstack-usage -specs=nano.specs -MMD -MP -MF"src/portable/Common/mpu_wrappers.d" -MT"src/portable/Common/mpu_wrappers.o" -MT"src/portable/Common/mpu_wrappers.d" -o "src/portable/Common/mpu_wrappers.o" "../src/portable/Common/mpu_wrappers.c"
+arm-none-eabi-gcc -D__NEWLIB__ -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CMSIS_CORE_LPC17xx\inc" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\include" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\src\portable" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CarRunner\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fmerge-constants -fmacro-prefix-map="../src/portable/Common/"=. -mcpu=cortex-m3 -mthumb -D__NEWLIB__ -fstack-usage -specs=nano.specs -MMD -MP -MF"src/portable/Common/mpu_wrappers.d" -MT"src/portable/Common/mpu_wrappers.o" -MT"src/portable/Common/mpu_wrappers.d" -o "src/portable/Common/mpu_wrappers.o" "../src/portable/Common/mpu_wrappers.c"
 ../src/portable/Common/mpu_wrappers.c: In function 'xPortRaisePrivilege':
 ../src/portable/Common/mpu_wrappers.c:68:23: warning: implicit declaration of function 'portIS_PRIVILEGED' [-Wimplicit-function-declaration]
    68 |  xRunningPrivileged = portIS_PRIVILEGED();
@@ -28,42 +28,42 @@ Finished building: ../src/portable/Common/mpu_wrappers.c
  
 Building file: ../src/portable/port.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__NEWLIB__ -I"G:\isel\SE2\se\CMSIS_CORE_LPC17xx\inc" -I"G:\isel\SE2\se\FreeRTOS-Kernel\include" -I"G:\isel\SE2\se\FreeRTOS-Kernel\src\portable" -I"G:\isel\SE2\se\CarRunner\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fmerge-constants -fmacro-prefix-map="../src/portable/"=. -mcpu=cortex-m3 -mthumb -D__NEWLIB__ -fstack-usage -specs=nano.specs -MMD -MP -MF"src/portable/port.d" -MT"src/portable/port.o" -MT"src/portable/port.d" -o "src/portable/port.o" "../src/portable/port.c"
+arm-none-eabi-gcc -D__NEWLIB__ -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CMSIS_CORE_LPC17xx\inc" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\include" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\src\portable" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CarRunner\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fmerge-constants -fmacro-prefix-map="../src/portable/"=. -mcpu=cortex-m3 -mthumb -D__NEWLIB__ -fstack-usage -specs=nano.specs -MMD -MP -MF"src/portable/port.d" -MT"src/portable/port.o" -MT"src/portable/port.d" -o "src/portable/port.o" "../src/portable/port.c"
 Finished building: ../src/portable/port.c
  
 Building file: ../src/croutine.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__NEWLIB__ -I"G:\isel\SE2\se\CMSIS_CORE_LPC17xx\inc" -I"G:\isel\SE2\se\FreeRTOS-Kernel\include" -I"G:\isel\SE2\se\FreeRTOS-Kernel\src\portable" -I"G:\isel\SE2\se\CarRunner\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m3 -mthumb -D__NEWLIB__ -fstack-usage -specs=nano.specs -MMD -MP -MF"src/croutine.d" -MT"src/croutine.o" -MT"src/croutine.d" -o "src/croutine.o" "../src/croutine.c"
+arm-none-eabi-gcc -D__NEWLIB__ -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CMSIS_CORE_LPC17xx\inc" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\include" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\src\portable" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CarRunner\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m3 -mthumb -D__NEWLIB__ -fstack-usage -specs=nano.specs -MMD -MP -MF"src/croutine.d" -MT"src/croutine.o" -MT"src/croutine.d" -o "src/croutine.o" "../src/croutine.c"
 Finished building: ../src/croutine.c
  
 Building file: ../src/event_groups.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__NEWLIB__ -I"G:\isel\SE2\se\CMSIS_CORE_LPC17xx\inc" -I"G:\isel\SE2\se\FreeRTOS-Kernel\include" -I"G:\isel\SE2\se\FreeRTOS-Kernel\src\portable" -I"G:\isel\SE2\se\CarRunner\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m3 -mthumb -D__NEWLIB__ -fstack-usage -specs=nano.specs -MMD -MP -MF"src/event_groups.d" -MT"src/event_groups.o" -MT"src/event_groups.d" -o "src/event_groups.o" "../src/event_groups.c"
+arm-none-eabi-gcc -D__NEWLIB__ -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CMSIS_CORE_LPC17xx\inc" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\include" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\src\portable" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CarRunner\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m3 -mthumb -D__NEWLIB__ -fstack-usage -specs=nano.specs -MMD -MP -MF"src/event_groups.d" -MT"src/event_groups.o" -MT"src/event_groups.d" -o "src/event_groups.o" "../src/event_groups.c"
 Finished building: ../src/event_groups.c
  
 Building file: ../src/list.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__NEWLIB__ -I"G:\isel\SE2\se\CMSIS_CORE_LPC17xx\inc" -I"G:\isel\SE2\se\FreeRTOS-Kernel\include" -I"G:\isel\SE2\se\FreeRTOS-Kernel\src\portable" -I"G:\isel\SE2\se\CarRunner\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m3 -mthumb -D__NEWLIB__ -fstack-usage -specs=nano.specs -MMD -MP -MF"src/list.d" -MT"src/list.o" -MT"src/list.d" -o "src/list.o" "../src/list.c"
+arm-none-eabi-gcc -D__NEWLIB__ -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CMSIS_CORE_LPC17xx\inc" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\include" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\src\portable" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CarRunner\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m3 -mthumb -D__NEWLIB__ -fstack-usage -specs=nano.specs -MMD -MP -MF"src/list.d" -MT"src/list.o" -MT"src/list.d" -o "src/list.o" "../src/list.c"
 Finished building: ../src/list.c
  
 Building file: ../src/queue.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__NEWLIB__ -I"G:\isel\SE2\se\CMSIS_CORE_LPC17xx\inc" -I"G:\isel\SE2\se\FreeRTOS-Kernel\include" -I"G:\isel\SE2\se\FreeRTOS-Kernel\src\portable" -I"G:\isel\SE2\se\CarRunner\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m3 -mthumb -D__NEWLIB__ -fstack-usage -specs=nano.specs -MMD -MP -MF"src/queue.d" -MT"src/queue.o" -MT"src/queue.d" -o "src/queue.o" "../src/queue.c"
+arm-none-eabi-gcc -D__NEWLIB__ -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CMSIS_CORE_LPC17xx\inc" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\include" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\src\portable" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CarRunner\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m3 -mthumb -D__NEWLIB__ -fstack-usage -specs=nano.specs -MMD -MP -MF"src/queue.d" -MT"src/queue.o" -MT"src/queue.d" -o "src/queue.o" "../src/queue.c"
 Finished building: ../src/queue.c
  
 Building file: ../src/stream_buffer.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__NEWLIB__ -I"G:\isel\SE2\se\CMSIS_CORE_LPC17xx\inc" -I"G:\isel\SE2\se\FreeRTOS-Kernel\include" -I"G:\isel\SE2\se\FreeRTOS-Kernel\src\portable" -I"G:\isel\SE2\se\CarRunner\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m3 -mthumb -D__NEWLIB__ -fstack-usage -specs=nano.specs -MMD -MP -MF"src/stream_buffer.d" -MT"src/stream_buffer.o" -MT"src/stream_buffer.d" -o "src/stream_buffer.o" "../src/stream_buffer.c"
+arm-none-eabi-gcc -D__NEWLIB__ -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CMSIS_CORE_LPC17xx\inc" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\include" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\src\portable" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CarRunner\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m3 -mthumb -D__NEWLIB__ -fstack-usage -specs=nano.specs -MMD -MP -MF"src/stream_buffer.d" -MT"src/stream_buffer.o" -MT"src/stream_buffer.d" -o "src/stream_buffer.o" "../src/stream_buffer.c"
 Finished building: ../src/stream_buffer.c
  
 Building file: ../src/tasks.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__NEWLIB__ -I"G:\isel\SE2\se\CMSIS_CORE_LPC17xx\inc" -I"G:\isel\SE2\se\FreeRTOS-Kernel\include" -I"G:\isel\SE2\se\FreeRTOS-Kernel\src\portable" -I"G:\isel\SE2\se\CarRunner\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m3 -mthumb -D__NEWLIB__ -fstack-usage -specs=nano.specs -MMD -MP -MF"src/tasks.d" -MT"src/tasks.o" -MT"src/tasks.d" -o "src/tasks.o" "../src/tasks.c"
+arm-none-eabi-gcc -D__NEWLIB__ -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CMSIS_CORE_LPC17xx\inc" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\include" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\src\portable" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CarRunner\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m3 -mthumb -D__NEWLIB__ -fstack-usage -specs=nano.specs -MMD -MP -MF"src/tasks.d" -MT"src/tasks.o" -MT"src/tasks.d" -o "src/tasks.o" "../src/tasks.c"
 Finished building: ../src/tasks.c
  
 Building file: ../src/timers.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__NEWLIB__ -I"G:\isel\SE2\se\CMSIS_CORE_LPC17xx\inc" -I"G:\isel\SE2\se\FreeRTOS-Kernel\include" -I"G:\isel\SE2\se\FreeRTOS-Kernel\src\portable" -I"G:\isel\SE2\se\CarRunner\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m3 -mthumb -D__NEWLIB__ -fstack-usage -specs=nano.specs -MMD -MP -MF"src/timers.d" -MT"src/timers.o" -MT"src/timers.d" -o "src/timers.o" "../src/timers.c"
+arm-none-eabi-gcc -D__NEWLIB__ -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CMSIS_CORE_LPC17xx\inc" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\include" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\src\portable" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CarRunner\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m3 -mthumb -D__NEWLIB__ -fstack-usage -specs=nano.specs -MMD -MP -MF"src/timers.d" -MT"src/timers.o" -MT"src/timers.d" -o "src/timers.o" "../src/timers.c"
 Finished building: ../src/timers.c
  
 Building target: libFreeRTOS-Kernel.a
@@ -75,7 +75,7 @@ make --no-print-directory post-build
 Performing post-build steps
 arm-none-eabi-size libFreeRTOS-Kernel.a ; # arm-none-eabi-objdump -h -S libFreeRTOS-Kernel.a >libFreeRTOS-Kernel.lss
    text	   data	    bss	    dec	    hex	filename
-   1052	      0	  25632	  26684	   683c	heap_4.o (ex libFreeRTOS-Kernel.a)
+   1052	      0	  29728	  30780	   783c	heap_4.o (ex libFreeRTOS-Kernel.a)
    2470	      0	      0	   2470	    9a6	mpu_wrappers.o (ex libFreeRTOS-Kernel.a)
     612	      4	      0	    616	    268	port.o (ex libFreeRTOS-Kernel.a)
       0	      0	      0	      0	      0	croutine.o (ex libFreeRTOS-Kernel.a)
@@ -86,20 +86,29 @@ arm-none-eabi-size libFreeRTOS-Kernel.a ; # arm-none-eabi-objdump -h -S libFreeR
    7665	      0	    268	   7933	   1efd	tasks.o (ex libFreeRTOS-Kernel.a)
       0	      0	      0	      0	      0	timers.o (ex libFreeRTOS-Kernel.a)
  
-16:07:21 **** Incremental Build of configuration Debug for project CarRunner ****
-make -r -j4 all 
+11:11:14 **** Incremental Build of configuration Debug for project CarRunner ****
+make -r -j8 all 
 Building file: ../src/CarRunner.c
 Building file: ../src/definitions_variables.c
 Building file: ../src/game.c
 Building file: ../src/mqtt.c
+Building file: ../src/network.c
 Invoking: MCU C Compiler
 Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -D__NEWLIB__ -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CarRunner\inc" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\MQTTPacket\inc" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\SE2021\inc" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CMSIS_CORE_LPC17xx\inc" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\include" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\src\portable" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m3 -mthumb -D__NEWLIB__ -fstack-usage -specs=nano.specs -MMD -MP -MF"src/CarRunner.d" -MT"src/CarRunner.o" -MT"src/CarRunner.d" -o "src/CarRunner.o" "../src/CarRunner.c"
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -D__NEWLIB__ -I"G:\isel\SE2\se\CarRunner\inc" -I"G:\isel\SE2\se\MQTTPacket\inc" -I"G:\isel\SE2\se\SE2021\inc" -I"G:\isel\SE2\se\CMSIS_CORE_LPC17xx\inc" -I"G:\isel\SE2\se\FreeRTOS-Kernel\include" -I"G:\isel\SE2\se\FreeRTOS-Kernel\src\portable" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m3 -mthumb -D__NEWLIB__ -fstack-usage -specs=nano.specs -MMD -MP -MF"src/CarRunner.d" -MT"src/CarRunner.o" -MT"src/CarRunner.d" -o "src/CarRunner.o" "../src/CarRunner.c"
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -D__NEWLIB__ -I"G:\isel\SE2\se\CarRunner\inc" -I"G:\isel\SE2\se\MQTTPacket\inc" -I"G:\isel\SE2\se\SE2021\inc" -I"G:\isel\SE2\se\CMSIS_CORE_LPC17xx\inc" -I"G:\isel\SE2\se\FreeRTOS-Kernel\include" -I"G:\isel\SE2\se\FreeRTOS-Kernel\src\portable" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m3 -mthumb -D__NEWLIB__ -fstack-usage -specs=nano.specs -MMD -MP -MF"src/definitions_variables.d" -MT"src/definitions_variables.o" -MT"src/definitions_variables.d" -o "src/definitions_variables.o" "../src/definitions_variables.c"
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -D__NEWLIB__ -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CarRunner\inc" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\MQTTPacket\inc" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\SE2021\inc" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CMSIS_CORE_LPC17xx\inc" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\include" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Invoking: MCU C Compiler
+Semestre\SE2\FreeRTOS-Kernel\src\portable" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m3 -mthumb -D__NEWLIB__ -fstack-usage -specs=nano.specs -MMD -MP -MF"src/definitions_variables.d" -MT"src/definitions_variables.o" -MT"src/definitions_variables.d" -o "src/definitions_variables.o" "../src/definitions_variables.c"
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -D__NEWLIB__ -I"G:\isel\SE2\se\CarRunner\inc" -I"G:\isel\SE2\se\MQTTPacket\inc" -I"G:\isel\SE2\se\SE2021\inc" -I"G:\isel\SE2\se\CMSIS_CORE_LPC17xx\inc" -I"G:\isel\SE2\se\FreeRTOS-Kernel\include" -I"G:\isel\SE2\se\FreeRTOS-Kernel\src\portable" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m3 -mthumb -D__NEWLIB__ -fstack-usage -specs=nano.specs -MMD -MP -MF"src/game.d" -MT"src/game.o" -MT"src/game.d" -o "src/game.o" "../src/game.c"
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -D__NEWLIB__ -I"G:\isel\SE2\se\CarRunner\inc" -I"G:\isel\SE2\se\MQTTPacket\inc" -I"G:\isel\SE2\se\SE2021\inc" -I"G:\isel\SE2\se\CMSIS_CORE_LPC17xx\inc" -I"G:\isel\SE2\se\FreeRTOS-Kernel\include" -I"G:\isel\SE2\se\FreeRTOS-Kernel\src\portable" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m3 -mthumb -D__NEWLIB__ -fstack-usage -specs=nano.specs -MMD -MP -MF"src/mqtt.d" -MT"src/mqtt.o" -MT"src/mqtt.d" -o "src/mqtt.o" "../src/mqtt.c"
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -D__NEWLIB__ -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CarRunner\inc" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\MQTTPacket\inc" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\SE2021\inc" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CMSIS_CORE_LPC17xx\inc" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\include" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\src\portable" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m3 -mthumb -D__NEWLIB__ -fstack-usage -specs=nano.specs -MMD -MP -MF"src/game.d" -MT"src/game.o" -MT"src/game.d" -o "src/game.o" "../src/game.c"
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -D__NEWLIB__ -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CarRunner\inc" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\MQTTPacket\inc" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\SE2021\inc" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CMSIS_CORE_LPC17xx\inc" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\include" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\src\portable" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m3 -mthumb -D__NEWLIB__ -fstack-usage -specs=nano.specs -MMD -MP -MF"src/mqtt.d" -MT"src/mqtt.o" -MT"src/mqtt.d" -o "src/mqtt.o" "../src/mqtt.c"
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -D__NEWLIB__ -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CarRunner\inc" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\MQTTPacket\inc" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\SE2021\inc" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CMSIS_CORE_LPC17xx\inc" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\include" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\src\portable" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m3 -mthumb -D__NEWLIB__ -fstack-usage -specs=nano.specs -MMD -MP -MF"src/network.d" -MT"src/network.o" -MT"src/network.d" -o "src/network.o" "../src/network.c"
+Building file: ../src/saver.c
+Building file: ../src/time_helper.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -D__NEWLIB__ -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CarRunner\inc" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\MQTTPacket\inc" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\SE2021\inc" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CMSIS_CORE_LPC17xx\inc" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\include" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\src\portable" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m3 -mthumb -D__NEWLIB__ -fstack-usage -specs=nano.specs -MMD -MP -MF"src/saver.d" -MT"src/saver.o" -MT"src/saver.d" -o "src/saver.o" "../src/saver.c"
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -D__NEWLIB__ -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CarRunner\inc" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\MQTTPacket\inc" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\SE2021\inc" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CMSIS_CORE_LPC17xx\inc" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\include" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\src\portable" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m3 -mthumb -D__NEWLIB__ -fstack-usage -specs=nano.specs -MMD -MP -MF"src/time_helper.d" -MT"src/time_helper.o" -MT"src/time_helper.d" -o "src/time_helper.o" "../src/time_helper.c"
 ../src/definitions_variables.c: In function 'printComplex':
 ../src/definitions_variables.c:16:10: warning: unused variable 'args' [-Wunused-variable]
    16 |  va_list args;
@@ -119,158 +128,91 @@ arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17x
       |                                      |
       |                                      int *
 In file included from ../src/mqtt.c:10:
-G:\isel\SE2\se\CarRunner\inc/network.h:27:69: note: expected 'int' but argument is of type 'int *'
+C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CarRunner\inc/network.h:27:69: note: expected 'int' but argument is of type 'int *'
    27 | int NETWORK_Recv(unsigned char *address, unsigned int maxbytes, int id);
       |                                                                 ~~~~^~
 ../src/mqtt.c: In function 'vMqttPublisher':
 ../src/mqtt.c:96:31: warning: pointer targets in initialization of 'unsigned char *' from 'char *' differ in signedness [-Wpointer-sign]
    96 |     unsigned char * payload = req.payload;
       |                               ^~~
-../src/CarRunner.c: In function 'vMainLoop':
-../src/CarRunner.c:192:7: warning: variable 'message' set but not used [-Wunused-but-set-variable]
-  192 |   int message;
-      |       ^~~~~~~
-Finished building: ../src/mqtt.c
-Finished building: ../src/game.c
-Finished building: ../src/definitions_variables.c
-Finished building: ../src/CarRunner.c
- 
- 
- 
-Building file: ../src/network.c
- 
-Building file: ../src/saver.c
-Building file: ../src/time_helper.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -D__NEWLIB__ -I"G:\isel\SE2\se\CarRunner\inc" -I"G:\isel\SE2\se\MQTTPacket\inc" -I"G:\isel\SE2\se\SE2021\inc" -I"G:\isel\SE2\se\CMSIS_CORE_LPC17xx\inc" -I"G:\isel\SE2\se\FreeRTOS-Kernel\include" -I"G:\isel\SE2\se\FreeRTOS-Kernel\src\portable" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m3 -mthumb -D__NEWLIB__ -fstack-usage -specs=nano.specs -MMD -MP -MF"src/network.d" -MT"src/network.o" -MT"src/network.d" -o "src/network.o" "../src/network.c"
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -D__NEWLIB__ -I"G:\isel\SE2\se\CarRunner\inc" -I"G:\isel\SE2\se\MQTTPacket\inc" -I"G:\isel\SE2\se\SE2021\inc" -I"G:\isel\SE2\se\CMSIS_CORE_LPC17xx\inc" -I"G:\isel\SE2\se\FreeRTOS-Kernel\include" -I"G:\isel\SE2\se\FreeRTOS-Kernel\src\portable" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m3 -mthumb -D__NEWLIB__ -fstack-usage -specs=nano.specs -MMD -MP -MF"src/saver.d" -MT"src/saver.o" -MT"src/saver.d" -o "src/saver.o" "../src/saver.c"
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -D__NEWLIB__ -I"G:\isel\SE2\se\CarRunner\inc" -I"G:\isel\SE2\se\MQTTPacket\inc" -I"G:\isel\SE2\se\SE2021\inc" -I"G:\isel\SE2\se\CMSIS_CORE_LPC17xx\inc" -I"G:\isel\SE2\se\FreeRTOS-Kernel\include" -I"G:\isel\SE2\se\FreeRTOS-Kernel\src\portable" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m3 -mthumb -D__NEWLIB__ -fstack-usage -specs=nano.specs -MMD -MP -MF"src/time_helper.d" -MT"src/time_helper.o" -MT"src/time_helper.d" -o "src/time_helper.o" "../src/time_helper.c"
-../src/saver.c: In function 'SAVER_SaveScore':
-../src/saver.c:72:34: warning: pointer targets in passing argument 2 of 'EEPROM_WriteData' differ in signedness [-Wpointer-sign]
-   72 |  EEPROM_WriteData(START_ADDRESS, bytes
-      |                                  ^~~~~
-      |                                  |
-      |                                  uint8_t * {aka unsigned char *}
-In file included from ../src/saver.c:14:
-G:\isel\SE2\se\SE2021\inc/EEPROM.h:21:46: note: expected 'char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
-   21 | int EEPROM_WriteData(uint16_t dstAddr, char *srcData, unsigned int size);
-      |                                        ~~~~~~^~~~~~~
-../src/saver.c: In function 'SAVER_ListSize':
-../src/saver.c:78:21: warning: pointer targets in passing argument 2 of 'EEPROM_ReadByte' differ in signedness [-Wpointer-sign]
-   78 |  EEPROM_ReadByte(0, &size);
-      |                     ^~~~~
-      |                     |
-      |                     uint8_t * {aka unsigned char *}
-In file included from ../src/saver.c:14:
-G:\isel\SE2\se\SE2021\inc/EEPROM.h:23:45: note: expected 'char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
-   23 | int EEPROM_ReadByte(uint16_t dstAddr, char *byte);
-      |                                       ~~~~~~^~~~
-../src/saver.c: In function 'SAVER_ReadScores':
-../src/saver.c:85:21: warning: pointer targets in passing argument 2 of 'EEPROM_ReadData' differ in signedness [-Wpointer-sign]
-   85 |  EEPROM_ReadData(0, bytes, SIZE);
-      |                     ^~~~~
-      |                     |
-      |                     uint8_t * {aka unsigned char *}
-In file included from ../src/saver.c:14:
-G:\isel\SE2\se\SE2021\inc/EEPROM.h:25:45: note: expected 'char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
-   25 | int EEPROM_ReadData(uint16_t dstAddr, char *data, unsigned int size);
-      |                                       ~~~~~~^~~~
 ../src/network.c: In function 'NETWORK_Connect':
-../src/network.c:25:40: warning: passing argument 1 of 'ESP01_ConnectServerKeepAliveId' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
-   25 |  return ESP01_ConnectServerKeepAliveId(type,host,port,keepalive,id);
+../src/network.c:27:40: warning: passing argument 1 of 'ESP01_ConnectServerKeepAliveId' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   27 |  return ESP01_ConnectServerKeepAliveId(type,host,port,keepalive,id);
       |                                        ^~~~
-In file included from ../src/network.c:8:
-G:\isel\SE2\se\SE2021\inc/ESP01.h:76:44: note: expected 'char *' but argument is of type 'const char *'
+../src/CarRunner.c: In function 'vMainLoop':
+../src/CarRunner.c:194:7: warning: variable 'message' set but not used [-Wunused-but-set-variable]
+  194 |   int message;
+      |       ^~~~~~~
+In file included from ../src/network.c:9:
+C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\SE2021\inc/ESP01.h:76:44: note: expected 'char *' but argument is of type 'const char *'
    76 | bool ESP01_ConnectServerKeepAliveId(char * connectionType, char * IP, int port, unsigned short int keepAlive, int id);
       |                                     ~~~~~~~^~~~~~~~~~~~~~
-../src/network.c:25:45: warning: passing argument 2 of 'ESP01_ConnectServerKeepAliveId' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
-   25 |  return ESP01_ConnectServerKeepAliveId(type,host,port,keepalive,id);
+../src/network.c:27:45: warning: passing argument 2 of 'ESP01_ConnectServerKeepAliveId' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   27 |  return ESP01_ConnectServerKeepAliveId(type,host,port,keepalive,id);
       |                                             ^~~~
-In file included from ../src/network.c:8:
-G:\isel\SE2\se\SE2021\inc/ESP01.h:76:67: note: expected 'char *' but argument is of type 'const char *'
+In file included from ../src/network.c:9:
+C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\SE2021\inc/ESP01.h:76:67: note: expected 'char *' but argument is of type 'const char *'
    76 | bool ESP01_ConnectServerKeepAliveId(char * connectionType, char * IP, int port, unsigned short int keepAlive, int id);
       |                                                            ~~~~~~~^~
 ../src/network.c: In function 'NETWORK_Send':
-../src/network.c:36:18: warning: pointer targets in passing argument 1 of 'ESP01_SendId' differ in signedness [-Wpointer-sign]
-   36 |  if(ESP01_SendId(address, bytes,id)) {
+../src/network.c:38:18: warning: pointer targets in passing argument 1 of 'ESP01_SendId' differ in signedness [-Wpointer-sign]
+   38 |  if(ESP01_SendId(address, bytes,id)) {
       |                  ^~~~~~~
       |                  |
       |                  unsigned char *
-In file included from ../src/network.c:8:
-G:\isel\SE2\se\SE2021\inc/ESP01.h:80:26: note: expected 'char *' but argument is of type 'unsigned char *'
+In file included from ../src/network.c:9:
+C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\SE2021\inc/ESP01.h:80:26: note: expected 'char *' but argument is of type 'unsigned char *'
    80 | bool ESP01_SendId(char * message, int len, int id);
       |                   ~~~~~~~^~~~~~~
 ../src/network.c: In function 'NETWORK_Recv':
-../src/network.c:44:31: warning: pointer targets in passing argument 1 of 'ESP01_RecvActiveId' differ in signedness [-Wpointer-sign]
-   44 |  int ret = ESP01_RecvActiveId(address, maxbytes, id);
+../src/network.c:46:31: warning: pointer targets in passing argument 1 of 'ESP01_RecvActiveId' differ in signedness [-Wpointer-sign]
+   46 |  int ret = ESP01_RecvActiveId(address, maxbytes, id);
       |                               ^~~~~~~
       |                               |
       |                               unsigned char *
-In file included from ../src/network.c:8:
-G:\isel\SE2\se\SE2021\inc/ESP01.h:90:31: note: expected 'char *' but argument is of type 'unsigned char *'
+In file included from ../src/network.c:9:
+C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\SE2021\inc/ESP01.h:90:31: note: expected 'char *' but argument is of type 'unsigned char *'
    90 | int ESP01_RecvActiveId(char * retData, int count, int * id);
       |                        ~~~~~~~^~~~~~~
-../src/network.c:44:50: warning: passing argument 3 of 'ESP01_RecvActiveId' makes pointer from integer without a cast [-Wint-conversion]
-   44 |  int ret = ESP01_RecvActiveId(address, maxbytes, id);
+../src/network.c:46:50: warning: passing argument 3 of 'ESP01_RecvActiveId' makes pointer from integer without a cast [-Wint-conversion]
+   46 |  int ret = ESP01_RecvActiveId(address, maxbytes, id);
       |                                                  ^~
       |                                                  |
       |                                                  int
-In file included from ../src/network.c:8:
-G:\isel\SE2\se\SE2021\inc/ESP01.h:90:57: note: expected 'int *' but argument is of type 'int'
+In file included from ../src/network.c:9:
+C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\SE2021\inc/ESP01.h:90:57: note: expected 'int *' but argument is of type 'int'
    90 | int ESP01_RecvActiveId(char * retData, int count, int * id);
       |                                                   ~~~~~~^~
-../src/time_helper.c: In function 'TIME_ChangeRoutine':
-../src/time_helper.c:44:5: warning: implicit declaration of function 'strcpy' [-Wimplicit-function-declaration]
-   44 |     strcpy(maintenance,"Maintenance Mode");
-      |     ^~~~~~
-../src/time_helper.c:18:1: note: 'strcpy' is defined in header '<string.h>'; did you forget to '#include <string.h>'?
-   17 | #include "NTP.h"
-  +++ |+#include <string.h>
-   18 | #include "button.h"
-../src/time_helper.c: In function 'bindIdToSendTime':
-../src/time_helper.c:106:9: warning: implicit declaration of function 'NETWORK_Send' [-Wimplicit-function-declaration]
-  106 |  return NETWORK_Send(address,bytes,TIME_CONNECTION_ID);
-      |         ^~~~~~~~~~~~
-../src/time_helper.c: In function 'bindIdToRecvTime':
-../src/time_helper.c:110:9: warning: implicit declaration of function 'NETWORK_Recv' [-Wimplicit-function-declaration]
-  110 |  return NETWORK_Recv(address, bytes, TIME_CONNECTION_ID);
-      |         ^~~~~~~~~~~~
-../src/time_helper.c: In function 'bindIdToConnectTime':
-../src/time_helper.c:114:9: warning: implicit declaration of function 'NETWORK_Connect' [-Wimplicit-function-declaration]
-  114 |  return NETWORK_Connect(type, server, port, 10, TIME_CONNECTION_ID);
-      |         ^~~~~~~~~~~~~~~
-../src/time_helper.c: In function 'vTimeHandler':
-../src/time_helper.c:128:23: warning: implicit declaration of function 'WAIT_GetElapsedMillis' [-Wimplicit-function-declaration]
-  128 |  int dateTime_Stamp = WAIT_GetElapsedMillis(0);
-      |                       ^~~~~~~~~~~~~~~~~~~~~
-Finished building: ../src/network.c
-Finished building: ../src/saver.c
- 
-Finished building: ../src/time_helper.c
- 
- 
-Building target: CarRunner.axf
-Invoking: MCU Linker
-arm-none-eabi-gcc -nostdlib -L"G:\isel\SE2\se\CMSIS_CORE_LPC17xx\Debug" -L"G:\isel\SE2\se\MQTTPacket\Debug" -L"G:\isel\SE2\se\FreeRTOS-Kernel\Debug" -L"G:\isel\SE2\se\SE2021\Debug" -Xlinker -Map="CarRunner.map" -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "CarRunner_Debug.ld" -o "CarRunner.axf"  ./src/CarRunner.o ./src/cr_startup_lpc175x_6x-FreeRTOS.o ./src/crp.o ./src/definitions_variables.o ./src/game.o ./src/mqtt.o ./src/network.o ./src/publisher.o ./src/saver.o ./src/time_helper.o   -lCMSIS_CORE_LPC17xx -lMQTTPacket -lSE2021 -lFreeRTOS-Kernel
-Memory region         Used Size  Region Size  %age Used
-       MFlash512:       49788 B       512 KB      9.50%
-        RamLoc32:       26412 B        32 KB     80.60%
-        RamAHB32:          0 GB        32 KB      0.00%
-Finished building target: CarRunner.axf
- 
-make --no-print-directory post-build
-Performing post-build steps
-arm-none-eabi-size "CarRunner.axf"; # arm-none-eabi-objcopy -v -O binary "CarRunner.axf" "CarRunner.bin" ; # checksum -p LPC1769 -d "CarRunner.bin";
-   text	   data	    bss	    dec	    hex	filename
-  49528	    260	  26152	  75940	  128a4	CarRunner.axf
- 
-16:14:06 **** Incremental Build of configuration Debug for project CarRunner ****
-make -r -j4 all 
-Building file: ../src/time_helper.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -D__NEWLIB__ -I"G:\isel\SE2\se\CarRunner\inc" -I"G:\isel\SE2\se\MQTTPacket\inc" -I"G:\isel\SE2\se\SE2021\inc" -I"G:\isel\SE2\se\CMSIS_CORE_LPC17xx\inc" -I"G:\isel\SE2\se\FreeRTOS-Kernel\include" -I"G:\isel\SE2\se\FreeRTOS-Kernel\src\portable" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m3 -mthumb -D__NEWLIB__ -fstack-usage -specs=nano.specs -MMD -MP -MF"src/time_helper.d" -MT"src/time_helper.o" -MT"src/time_helper.d" -o "src/time_helper.o" "../src/time_helper.c"
+../src/saver.c: In function 'SAVER_SaveScore':
+../src/saver.c:79:34: warning: pointer targets in passing argument 2 of 'EEPROM_WriteData' differ in signedness [-Wpointer-sign]
+   79 |  EEPROM_WriteData(START_ADDRESS, bytes
+      |                                  ^~~~~
+      |                                  |
+      |                                  uint8_t * {aka unsigned char *}
+In file included from ../src/saver.c:15:
+C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\SE2021\inc/EEPROM.h:21:46: note: expected 'char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   21 | int EEPROM_WriteData(uint16_t dstAddr, char *srcData, unsigned int size);
+      |                                        ~~~~~~^~~~~~~
+../src/saver.c: In function 'SAVER_ListSize':
+../src/saver.c:85:21: warning: pointer targets in passing argument 2 of 'EEPROM_ReadByte' differ in signedness [-Wpointer-sign]
+   85 |  EEPROM_ReadByte(0, &size);
+      |                     ^~~~~
+      |                     |
+      |                     uint8_t * {aka unsigned char *}
+In file included from ../src/saver.c:15:
+C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\SE2021\inc/EEPROM.h:23:45: note: expected 'char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   23 | int EEPROM_ReadByte(uint16_t dstAddr, char *byte);
+      |                                       ~~~~~~^~~~
+../src/saver.c: In function 'SAVER_ReadScores':
+../src/saver.c:92:21: warning: pointer targets in passing argument 2 of 'EEPROM_ReadData' differ in signedness [-Wpointer-sign]
+   92 |  EEPROM_ReadData(0, bytes, SIZE);
+      |                     ^~~~~
+      |                     |
+      |                     uint8_t * {aka unsigned char *}
+In file included from ../src/saver.c:15:
+C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\SE2021\inc/EEPROM.h:25:45: note: expected 'char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   25 | int EEPROM_ReadData(uint16_t dstAddr, char *data, unsigned int size);
+      |                                       ~~~~~~^~~~
 ../src/time_helper.c: In function 'TIME_ChangeRoutine':
 ../src/time_helper.c:44:5: warning: implicit declaration of function 'strcpy' [-Wimplicit-function-declaration]
    44 |     strcpy(maintenance,"Maintenance Mode");
@@ -295,14 +237,26 @@ arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17x
 ../src/time_helper.c:130:23: warning: implicit declaration of function 'WAIT_GetElapsedMillis' [-Wimplicit-function-declaration]
   130 |  int dateTime_Stamp = WAIT_GetElapsedMillis(0);
       |                       ^~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/mqtt.c
+Finished building: ../src/definitions_variables.c
+ 
+Finished building: ../src/game.c
+Finished building: ../src/network.c
+Finished building: ../src/CarRunner.c
+Finished building: ../src/saver.c
+ 
+ 
+ 
 Finished building: ../src/time_helper.c
+ 
+ 
  
 Building target: CarRunner.axf
 Invoking: MCU Linker
-arm-none-eabi-gcc -nostdlib -L"G:\isel\SE2\se\CMSIS_CORE_LPC17xx\Debug" -L"G:\isel\SE2\se\MQTTPacket\Debug" -L"G:\isel\SE2\se\FreeRTOS-Kernel\Debug" -L"G:\isel\SE2\se\SE2021\Debug" -Xlinker -Map="CarRunner.map" -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "CarRunner_Debug.ld" -o "CarRunner.axf"  ./src/CarRunner.o ./src/cr_startup_lpc175x_6x-FreeRTOS.o ./src/crp.o ./src/definitions_variables.o ./src/game.o ./src/mqtt.o ./src/network.o ./src/publisher.o ./src/saver.o ./src/time_helper.o   -lCMSIS_CORE_LPC17xx -lMQTTPacket -lSE2021 -lFreeRTOS-Kernel
+arm-none-eabi-gcc -nostdlib -L"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CMSIS_CORE_LPC17xx\Debug" -L"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\MQTTPacket\Debug" -L"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug" -L"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\SE2021\Debug" -Xlinker -Map="CarRunner.map" -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "CarRunner_Debug.ld" -o "CarRunner.axf"  ./src/CarRunner.o ./src/cr_startup_lpc175x_6x-FreeRTOS.o ./src/crp.o ./src/definitions_variables.o ./src/game.o ./src/mqtt.o ./src/network.o ./src/publisher.o ./src/saver.o ./src/time_helper.o   -lCMSIS_CORE_LPC17xx -lMQTTPacket -lSE2021 -lFreeRTOS-Kernel
 Memory region         Used Size  Region Size  %age Used
-       MFlash512:       49804 B       512 KB      9.50%
-        RamLoc32:       26412 B        32 KB     80.60%
+       MFlash512:       50032 B       512 KB      9.54%
+        RamLoc32:       30508 B        32 KB     93.10%
         RamAHB32:          0 GB        32 KB      0.00%
 Finished building target: CarRunner.axf
  
@@ -310,13 +264,13 @@ make --no-print-directory post-build
 Performing post-build steps
 arm-none-eabi-size "CarRunner.axf"; # arm-none-eabi-objcopy -v -O binary "CarRunner.axf" "CarRunner.bin" ; # checksum -p LPC1769 -d "CarRunner.bin";
    text	   data	    bss	    dec	    hex	filename
-  49544	    260	  26152	  75956	  128b4	CarRunner.axf
+  49772	    260	  30248	  80280	  13998	CarRunner.axf
  
-16:18:48 **** Incremental Build of configuration Debug for project CarRunner ****
-make -r -j4 all 
+11:15:41 **** Incremental Build of configuration Debug for project CarRunner ****
+make -r -j8 all 
 Building file: ../src/CarRunner.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -D__NEWLIB__ -I"G:\isel\SE2\se\CarRunner\inc" -I"G:\isel\SE2\se\MQTTPacket\inc" -I"G:\isel\SE2\se\SE2021\inc" -I"G:\isel\SE2\se\CMSIS_CORE_LPC17xx\inc" -I"G:\isel\SE2\se\FreeRTOS-Kernel\include" -I"G:\isel\SE2\se\FreeRTOS-Kernel\src\portable" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m3 -mthumb -D__NEWLIB__ -fstack-usage -specs=nano.specs -MMD -MP -MF"src/CarRunner.d" -MT"src/CarRunner.o" -MT"src/CarRunner.d" -o "src/CarRunner.o" "../src/CarRunner.c"
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -D__NEWLIB__ -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CarRunner\inc" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\MQTTPacket\inc" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\SE2021\inc" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CMSIS_CORE_LPC17xx\inc" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\include" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\src\portable" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m3 -mthumb -D__NEWLIB__ -fstack-usage -specs=nano.specs -MMD -MP -MF"src/CarRunner.d" -MT"src/CarRunner.o" -MT"src/CarRunner.d" -o "src/CarRunner.o" "../src/CarRunner.c"
 ../src/CarRunner.c: In function 'vMainLoop':
 ../src/CarRunner.c:194:7: warning: variable 'message' set but not used [-Wunused-but-set-variable]
   194 |   int message;
@@ -325,10 +279,10 @@ Finished building: ../src/CarRunner.c
  
 Building target: CarRunner.axf
 Invoking: MCU Linker
-arm-none-eabi-gcc -nostdlib -L"G:\isel\SE2\se\CMSIS_CORE_LPC17xx\Debug" -L"G:\isel\SE2\se\MQTTPacket\Debug" -L"G:\isel\SE2\se\FreeRTOS-Kernel\Debug" -L"G:\isel\SE2\se\SE2021\Debug" -Xlinker -Map="CarRunner.map" -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "CarRunner_Debug.ld" -o "CarRunner.axf"  ./src/CarRunner.o ./src/cr_startup_lpc175x_6x-FreeRTOS.o ./src/crp.o ./src/definitions_variables.o ./src/game.o ./src/mqtt.o ./src/network.o ./src/publisher.o ./src/saver.o ./src/time_helper.o   -lCMSIS_CORE_LPC17xx -lMQTTPacket -lSE2021 -lFreeRTOS-Kernel
+arm-none-eabi-gcc -nostdlib -L"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CMSIS_CORE_LPC17xx\Debug" -L"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\MQTTPacket\Debug" -L"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug" -L"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\SE2021\Debug" -Xlinker -Map="CarRunner.map" -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "CarRunner_Debug.ld" -o "CarRunner.axf"  ./src/CarRunner.o ./src/cr_startup_lpc175x_6x-FreeRTOS.o ./src/crp.o ./src/definitions_variables.o ./src/game.o ./src/mqtt.o ./src/network.o ./src/publisher.o ./src/saver.o ./src/time_helper.o   -lCMSIS_CORE_LPC17xx -lMQTTPacket -lSE2021 -lFreeRTOS-Kernel
 Memory region         Used Size  Region Size  %age Used
-       MFlash512:       49804 B       512 KB      9.50%
-        RamLoc32:       26412 B        32 KB     80.60%
+       MFlash512:       50032 B       512 KB      9.54%
+        RamLoc32:       30508 B        32 KB     93.10%
         RamAHB32:          0 GB        32 KB      0.00%
 Finished building target: CarRunner.axf
  
@@ -336,5 +290,5 @@ make --no-print-directory post-build
 Performing post-build steps
 arm-none-eabi-size "CarRunner.axf"; # arm-none-eabi-objcopy -v -O binary "CarRunner.axf" "CarRunner.bin" ; # checksum -p LPC1769 -d "CarRunner.bin";
    text	   data	    bss	    dec	    hex	filename
-  49544	    260	  26152	  75956	  128b4	CarRunner.axf
+  49772	    260	  30248	  80280	  13998	CarRunner.axf
  

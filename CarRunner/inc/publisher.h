@@ -8,6 +8,6 @@
 #ifndef PUBLISHER_H_
 #define PUBLISHER_H_
 
-void PUBLISHER_Publish(int group, int score, int username);
+void PUBLISHER_Publish(int group, int score, char * username);
 
 #endif /* PUBLISHER_H_ */

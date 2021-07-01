@@ -1,0 +1,119 @@
+"FreeRTOS Task Aware Debugger for GDB" version 11.3.0 (202012100919)
+(c) 2016-2018 NXP Semiconductors, Inc.
+==================================
+11:11:11.665 INFO: [TadModel] DSF session ID 6 has started.
+11:11:24.257 INFO: [TadState] TAD state changed:  DEBUG_STARTED -> DEBUG_INIT_0 (RESUMED, USER_REQUEST)
+11:11:24.461 INFO: [TadState] TAD state changed:  DEBUG_INIT_0 -> DEBUG_INIT_1 (SUSPENDED, SIGNAL)
+11:11:27.229 INFO: [TadState] TAD state changed:  DEBUG_INIT_1 -> DEBUG_SUSPENDED (RESUMED, USER_REQUEST)
+11:11:27.514 INFO: [TadState] TAD state changed:  DEBUG_SUSPENDED -> DEBUG_SUSPENDED (SUSPENDED, BREAKPOINT)
+11:11:30.491 INFO: [TadState] TAD state changed:  DEBUG_SUSPENDED -> DEBUG_RESUMED (RESUMED, USER_REQUEST)
+11:12:49.442 INFO: [TadState] TAD state changed:  DEBUG_RESUMED -> READY (SUSPENDED, BREAKPOINT)
+11:12:55.715 INFO: [TadState] TAD state changed:  READY -> DEBUG_RESUMED (RESUMED, STEP)
+11:12:56.380 INFO: [TadState] TAD state changed:  DEBUG_RESUMED -> READY (SUSPENDED, STEP)
+11:12:57.169 INFO: [TadState] TAD state changed:  READY -> DEBUG_RESUMED (RESUMED, STEP)
+11:12:57.672 INFO: [TadState] TAD state changed:  DEBUG_RESUMED -> READY (SUSPENDED, STEP)
+11:12:58.866 INFO: [TadState] TAD state changed:  READY -> DEBUG_RESUMED (RESUMED, STEP)
+11:12:59.375 INFO: [TadState] TAD state changed:  DEBUG_RESUMED -> READY (SUSPENDED, SIGNAL)
+11:13:08.484 INFO: [TadState] TAD state changed:  READY -> DEBUG_RESUMED (RESUMED, USER_REQUEST)
+11:13:08.764 INFO: [TadState] TAD state changed:  DEBUG_RESUMED -> READY (SUSPENDED, BREAKPOINT)
+11:13:10.247 INFO: [TadState] TAD state changed:  READY -> DEBUG_RESUMED (RESUMED, USER_REQUEST)
+11:13:36.231 INFO: [TadState] TAD state changed:  DEBUG_RESUMED -> READY (SUSPENDED, BREAKPOINT)
+11:13:39.717 INFO: [TadState] TAD state changed:  READY -> DEBUG_RESUMED (RESUMED, STEP)
+11:13:40.308 INFO: [TadState] TAD state changed:  DEBUG_RESUMED -> READY (SUSPENDED, STEP)
+11:13:41.263 INFO: [TadState] TAD state changed:  READY -> DEBUG_RESUMED (RESUMED, STEP)
+11:13:41.779 INFO: [TadState] TAD state changed:  DEBUG_RESUMED -> READY (SUSPENDED, STEP)
+11:13:43.161 INFO: [TadState] TAD state changed:  READY -> DEBUG_RESUMED (RESUMED, STEP)
+11:13:43.800 INFO: [TadState] TAD state changed:  DEBUG_RESUMED -> READY (SUSPENDED, STEP)
+11:13:46.118 INFO: [TadState] TAD state changed:  READY -> DEBUG_RESUMED (RESUMED, STEP)
+11:13:46.447 INFO: [TadState] TAD state changed:  DEBUG_RESUMED -> READY (SUSPENDED, STEP)
+11:13:48.776 INFO: [TadState] TAD state changed:  READY -> DEBUG_RESUMED (RESUMED, STEP)
+11:13:49.411 INFO: [TadState] TAD state changed:  DEBUG_RESUMED -> READY (SUSPENDED, STEP)
+11:13:50.401 INFO: [TadState] TAD state changed:  READY -> DEBUG_RESUMED (RESUMED, STEP)
+11:13:51.24 INFO: [TadState] TAD state changed:  DEBUG_RESUMED -> READY (SUSPENDED, STEP)
+11:13:53.875 INFO: [Benchmark] Loading data for "Determine FreeRTOS version" has started.
+11:13:53.880 ERROR: [VariableReader] Could not read variable expression: "&(FreeRTOSDebugConfig)".
+11:13:53.884 ERROR: [VariableReader] Could not read variable expression: "sizeof(struct TaskControlBlock_t)".
+11:13:53.888 ERROR: [VariableReader] Could not read variable expression: "&(((struct QueueDefinition *) 0)->pcTail)".
+11:13:53.889 INFO: [TadModel] FreeRTOS version has been identified from available FreeRTOS symbols as 10.11.
+11:13:53.889 INFO: [Benchmark] Loading data for "Determine FreeRTOS version" took 14 ms.
+11:13:53.889 INFO: [Benchmark] Loading data for "Heap Usage" has started.
+11:13:57.83 ERROR: [VariableReader] Could not read variable expression: "freeRTOSMemoryScheme".
+11:13:57.84 ERROR: [TadFactory] Reading exception during: "readIntVariableSafely(freeRTOSMemoryScheme)"
+11:13:57.84 INFO: [HeapFactory] TAD will try to determine heap type (memory scheme) from available variables.
+11:13:57.84 INFO: [HeapFactory] Make sure you have correctly defined "configFRTOS_MEMORY_SCHEME" macro in FreeRTOSConfig.h. TAD determines heap type either from MCUXpresso IDE's "FreeRTOSDebugConfig" structure (which uses "configFRTOS_MEMORY_SCHEME" define) or user defined variable "static const uint8_t freeRTOSMemoryScheme = <heap_type_used>;".
+11:13:57.84 INFO: [FreeRTOS] FreeRTOS macro "configFRTOS_MEMORY_SCHEME" is disabled.
+11:13:57.106 INFO: [HeapFactory] Heap variable ucHeap is equal to "0x100001b4".
+11:13:57.106 INFO: [HeapFactory] Heap variable xHeapStructSize is equal to "0x10008000".
+11:13:57.106 INFO: [HeapFactory] Heap type (memory allocation scheme) has been identified from available heap variables as Heap #4. 
+11:13:57.248 INFO: [Benchmark] Loading data for "Heap Usage" took 3359 ms.
+11:14:00.687 INFO: [TadState] TAD state changed:  READY -> DEBUG_RESUMED (RESUMED, STEP)
+11:14:01.362 INFO: [TadState] TAD state changed:  DEBUG_RESUMED -> READY (SUSPENDED, STEP)
+11:14:01.364 INFO: [Benchmark] Loading data for "Heap Usage" has started.
+11:14:04.810 INFO: [Benchmark] Loading data for "Heap Usage" took 3448 ms.
+11:14:08.825 INFO: [TadState] TAD state changed:  READY -> DEBUG_RESUMED (RESUMED, STEP)
+11:14:09.249 INFO: [TadState] TAD state changed:  DEBUG_RESUMED -> READY (SUSPENDED, STEP)
+11:14:09.849 INFO: [TadState] TAD state changed:  READY -> DEBUG_RESUMED (RESUMED, STEP)
+11:14:10.310 INFO: [TadState] TAD state changed:  DEBUG_RESUMED -> READY (SUSPENDED, STEP)
+11:14:10.966 INFO: [TadState] TAD state changed:  READY -> DEBUG_RESUMED (RESUMED, STEP)
+11:14:11.557 INFO: [TadState] TAD state changed:  DEBUG_RESUMED -> READY (SUSPENDED, STEP)
+11:14:12.691 INFO: [TadState] TAD state changed:  READY -> DEBUG_RESUMED (RESUMED, STEP)
+11:14:13.207 INFO: [TadState] TAD state changed:  DEBUG_RESUMED -> READY (SUSPENDED, STEP)
+11:14:14.579 INFO: [TadState] TAD state changed:  READY -> DEBUG_RESUMED (RESUMED, STEP)
+11:14:15.541 INFO: [TadState] TAD state changed:  DEBUG_RESUMED -> READY (SUSPENDED, STEP)
+11:14:16.784 INFO: [TadState] TAD state changed:  READY -> DEBUG_RESUMED (RESUMED, STEP)
+11:14:17.404 INFO: [TadState] TAD state changed:  DEBUG_RESUMED -> READY (SUSPENDED, BREAKPOINT)
+11:14:19.975 INFO: [TadState] TAD state changed:  READY -> DEBUG_RESUMED (RESUMED, STEP)
+11:14:20.540 INFO: [TadState] TAD state changed:  DEBUG_RESUMED -> READY (SUSPENDED, STEP)
+11:14:22.08 INFO: [TadState] TAD state changed:  READY -> DEBUG_RESUMED (RESUMED, STEP)
+11:14:22.495 INFO: [TadState] TAD state changed:  DEBUG_RESUMED -> READY (SUSPENDED, STEP)
+11:14:23.196 INFO: [TadState] TAD state changed:  READY -> DEBUG_RESUMED (RESUMED, STEP)
+11:14:23.533 INFO: [TadState] TAD state changed:  DEBUG_RESUMED -> READY (SUSPENDED, STEP)
+11:14:24.249 INFO: [TadState] TAD state changed:  READY -> DEBUG_RESUMED (RESUMED, STEP)
+11:14:24.660 INFO: [TadState] TAD state changed:  DEBUG_RESUMED -> READY (SUSPENDED, STEP)
+11:14:26.588 INFO: [TadState] TAD state changed:  READY -> DEBUG_RESUMED (RESUMED, STEP)
+11:14:26.938 INFO: [TadState] TAD state changed:  DEBUG_RESUMED -> READY (SUSPENDED, STEP)
+11:14:28.106 INFO: [TadState] TAD state changed:  READY -> DEBUG_RESUMED (RESUMED, STEP)
+11:14:28.384 INFO: [TadState] TAD state changed:  DEBUG_RESUMED -> READY (SUSPENDED, STEP)
+11:14:29.36 INFO: [TadState] TAD state changed:  READY -> DEBUG_RESUMED (RESUMED, STEP)
+11:14:29.498 INFO: [TadState] TAD state changed:  DEBUG_RESUMED -> READY (SUSPENDED, BREAKPOINT)
+11:14:31.706 INFO: [TadState] TAD state changed:  READY -> DEBUG_RESUMED (RESUMED, STEP)
+11:14:32.378 INFO: [TadState] TAD state changed:  DEBUG_RESUMED -> READY (SUSPENDED, STEP)
+11:14:37.680 INFO: [Benchmark] Loading data for "Heap Usage" has started.
+11:14:37.976 ERROR: [VariableReader] Could not read variable expression: "(((struct tskTaskControlBlock *) 0x10003e68)->xEventListItem.pxContainer)".
+11:14:37.976 ERROR: [TaskFactory] Cannot read information from "pxReadyTasksLists[0]".
+11:14:38.274 ERROR: [VariableReader] Could not read variable expression: "(((struct tskTaskControlBlock *) 0x10002018)->xEventListItem.pxContainer)".
+11:14:38.274 ERROR: [TaskFactory] Cannot read information from "pxReadyTasksLists[1]".
+11:14:38.784 ERROR: [VariableReader] Could not read variable expression: "(((struct tskTaskControlBlock *) 0x10003108)->xEventListItem.pxContainer)".
+11:14:38.784 ERROR: [TaskFactory] Cannot read information from "pxDelayedTaskList".
+11:14:38.981 INFO: [Benchmark] Loading data for "Heap Usage" took 1302 ms.
+11:14:44.560 INFO: [Benchmark] Loading data for "Task List" has started.
+11:14:44.856 ERROR: [VariableReader] Could not read variable expression: "(((struct tskTaskControlBlock *) 0x10003e68)->xEventListItem.pxContainer)".
+11:14:44.856 ERROR: [TaskFactory] Cannot read information from "pxReadyTasksLists[0]".
+11:14:45.166 ERROR: [VariableReader] Could not read variable expression: "(((struct tskTaskControlBlock *) 0x10002018)->xEventListItem.pxContainer)".
+11:14:45.167 ERROR: [TaskFactory] Cannot read information from "pxReadyTasksLists[1]".
+11:14:45.704 ERROR: [VariableReader] Could not read variable expression: "(((struct tskTaskControlBlock *) 0x10003108)->xEventListItem.pxContainer)".
+11:14:45.704 ERROR: [TaskFactory] Cannot read information from "pxDelayedTaskList".
+11:14:45.763 INFO: [Benchmark] Loading data for "Task List" took 1203 ms.
+11:14:49.932 INFO: [TadState] TAD state changed:  READY -> DEBUG_RESUMED (RESUMED, STEP)
+11:14:50.606 INFO: [TadState] TAD state changed:  DEBUG_RESUMED -> READY (SUSPENDED, STEP)
+11:14:53.131 INFO: [TadState] TAD state changed:  READY -> DEBUG_RESUMED (RESUMED, STEP)
+11:14:53.641 INFO: [TadState] TAD state changed:  DEBUG_RESUMED -> READY (SUSPENDED, STEP)
+11:14:57.224 INFO: [Benchmark] Loading data for "Heap Usage" has started.
+11:14:57.533 ERROR: [VariableReader] Could not read variable expression: "(((struct tskTaskControlBlock *) 0x10003e68)->xEventListItem.pxContainer)".
+11:14:57.533 ERROR: [TaskFactory] Cannot read information from "pxReadyTasksLists[0]".
+11:14:57.860 ERROR: [VariableReader] Could not read variable expression: "(((struct tskTaskControlBlock *) 0x10002018)->xEventListItem.pxContainer)".
+11:14:57.861 ERROR: [TaskFactory] Cannot read information from "pxReadyTasksLists[1]".
+11:14:58.389 ERROR: [VariableReader] Could not read variable expression: "(((struct tskTaskControlBlock *) 0x10003108)->xEventListItem.pxContainer)".
+11:14:58.389 ERROR: [TaskFactory] Cannot read information from "pxDelayedTaskList".
+11:14:58.587 INFO: [Benchmark] Loading data for "Heap Usage" took 1362 ms.
+11:15:03.719 INFO: [Benchmark] Loading data for "Task List" has started.
+11:15:04.07 ERROR: [VariableReader] Could not read variable expression: "(((struct tskTaskControlBlock *) 0x10003e68)->xEventListItem.pxContainer)".
+11:15:04.07 ERROR: [TaskFactory] Cannot read information from "pxReadyTasksLists[0]".
+11:15:04.319 ERROR: [VariableReader] Could not read variable expression: "(((struct tskTaskControlBlock *) 0x10002018)->xEventListItem.pxContainer)".
+11:15:04.319 ERROR: [TaskFactory] Cannot read information from "pxReadyTasksLists[1]".
+11:15:04.866 ERROR: [VariableReader] Could not read variable expression: "(((struct tskTaskControlBlock *) 0x10003108)->xEventListItem.pxContainer)".
+11:15:04.866 ERROR: [TaskFactory] Cannot read information from "pxDelayedTaskList".
+11:15:04.938 INFO: [Benchmark] Loading data for "Task List" took 1219 ms.
+11:15:12.93 INFO: [TadState] TAD state changed:  READY -> DEBUG_RESUMED (RESUMED, STEP)
+11:15:12.498 INFO: [TadState] TAD state changed:  DEBUG_RESUMED -> READY (SUSPENDED, SIGNAL)
+11:15:24.128 INFO: [TadModel] DSF session ID 6 has ended.

@@ -1,8 +1,8 @@
-16:18:48 **** Incremental Build of configuration Debug for project CarRunner ****
-make -r -j4 all 
+11:15:41 **** Incremental Build of configuration Debug for project CarRunner ****
+make -r -j8 all 
 Building file: ../src/CarRunner.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -D__NEWLIB__ -I"G:\isel\SE2\se\CarRunner\inc" -I"G:\isel\SE2\se\MQTTPacket\inc" -I"G:\isel\SE2\se\SE2021\inc" -I"G:\isel\SE2\se\CMSIS_CORE_LPC17xx\inc" -I"G:\isel\SE2\se\FreeRTOS-Kernel\include" -I"G:\isel\SE2\se\FreeRTOS-Kernel\src\portable" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m3 -mthumb -D__NEWLIB__ -fstack-usage -specs=nano.specs -MMD -MP -MF"src/CarRunner.d" -MT"src/CarRunner.o" -MT"src/CarRunner.d" -o "src/CarRunner.o" "../src/CarRunner.c"
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -D__NEWLIB__ -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CarRunner\inc" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\MQTTPacket\inc" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\SE2021\inc" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CMSIS_CORE_LPC17xx\inc" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\include" -I"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\src\portable" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/"=. -mcpu=cortex-m3 -mthumb -D__NEWLIB__ -fstack-usage -specs=nano.specs -MMD -MP -MF"src/CarRunner.d" -MT"src/CarRunner.o" -MT"src/CarRunner.d" -o "src/CarRunner.o" "../src/CarRunner.c"
 ../src/CarRunner.c: In function 'vMainLoop':
 ../src/CarRunner.c:194:7: warning: variable 'message' set but not used [-Wunused-but-set-variable]
   194 |   int message;
@@ -11,10 +11,10 @@ Finished building: ../src/CarRunner.c
  
 Building target: CarRunner.axf
 Invoking: MCU Linker
-arm-none-eabi-gcc -nostdlib -L"G:\isel\SE2\se\CMSIS_CORE_LPC17xx\Debug" -L"G:\isel\SE2\se\MQTTPacket\Debug" -L"G:\isel\SE2\se\FreeRTOS-Kernel\Debug" -L"G:\isel\SE2\se\SE2021\Debug" -Xlinker -Map="CarRunner.map" -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "CarRunner_Debug.ld" -o "CarRunner.axf"  ./src/CarRunner.o ./src/cr_startup_lpc175x_6x-FreeRTOS.o ./src/crp.o ./src/definitions_variables.o ./src/game.o ./src/mqtt.o ./src/network.o ./src/publisher.o ./src/saver.o ./src/time_helper.o   -lCMSIS_CORE_LPC17xx -lMQTTPacket -lSE2021 -lFreeRTOS-Kernel
+arm-none-eabi-gcc -nostdlib -L"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\CMSIS_CORE_LPC17xx\Debug" -L"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\MQTTPacket\Debug" -L"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\FreeRTOS-Kernel\Debug" -L"C:\Users\josee\Documents\ISEL\3_Ano-6_Semestre\SE2\SE2021\Debug" -Xlinker -Map="CarRunner.map" -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "CarRunner_Debug.ld" -o "CarRunner.axf"  ./src/CarRunner.o ./src/cr_startup_lpc175x_6x-FreeRTOS.o ./src/crp.o ./src/definitions_variables.o ./src/game.o ./src/mqtt.o ./src/network.o ./src/publisher.o ./src/saver.o ./src/time_helper.o   -lCMSIS_CORE_LPC17xx -lMQTTPacket -lSE2021 -lFreeRTOS-Kernel
 Memory region         Used Size  Region Size  %age Used
-       MFlash512:       49804 B       512 KB      9.50%
-        RamLoc32:       26412 B        32 KB     80.60%
+       MFlash512:       50032 B       512 KB      9.54%
+        RamLoc32:       30508 B        32 KB     93.10%
         RamAHB32:          0 GB        32 KB      0.00%
 Finished building target: CarRunner.axf
  
@@ -22,8 +22,8 @@ make --no-print-directory post-build
 Performing post-build steps
 arm-none-eabi-size "CarRunner.axf"; # arm-none-eabi-objcopy -v -O binary "CarRunner.axf" "CarRunner.bin" ; # checksum -p LPC1769 -d "CarRunner.bin";
    text	   data	    bss	    dec	    hex	filename
-  49544	    260	  26152	  75956	  128b4	CarRunner.axf
+  49772	    260	  30248	  80280	  13998	CarRunner.axf
  
 
-16:18:49 Build Finished. 0 errors, 1 warnings. (took 880ms)
+11:15:42 Build Finished. 0 errors, 1 warnings. (took 1s.291ms)
 

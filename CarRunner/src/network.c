@@ -2,8 +2,9 @@
  * network.c
  *
  *  Created on: 25/06/2021
- *      Author: josee
+ *      Author: $(author)
  */
+
 
 #include "ESP01.h"
 #include "network.h"
@@ -12,8 +13,9 @@
 QueueHandle_t xQueueSend,xQueueRecv;
 
 bool NETWORK_Init(void) {
-	if(!ESP01_SetMode(STATION))return false;;
-	//while(!ESP01_ConnectAP("HUAWEI", "12345678"));
+	if(!ESP01_SetMode(STATION))return false;
+	//if(!ESP01_ConnectAP("LAPTOP-TQA8JN5P 2398", "S%3144b4")) return false;
+	//if(!ESP01_ConnectAP("HUAWEI", "12345678")) return false;
 	if(!ESP01_ConnectAP("Vodafone-3A8807", "V9g2ZEsVM7")) return false;
 	ESP01_SetDNS("1.1.1.1","1.0.0.1");
 	ESP01_CIPMUX(MULTIPLE);
@@ -48,8 +50,8 @@ int NETWORK_Recv(unsigned char *address, unsigned int maxbytes, int id) {
 
 void vConnection() {
 	xQueueSend = xQueueCreate(5,sizeof(ESP_Message));
-
 	xQueueRecv = xQueueCreate(5,sizeof(ESP_Message));
+
 	ESP01_Init();
 	conStatus = STARTING;
 	ESP01_Echo(0);

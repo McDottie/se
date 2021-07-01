@@ -2,7 +2,7 @@
  * mqtttask.c
  *
  *  Created on: 27/06/2021
- *      Author: josee
+ *      Author: $(author)
  */
 
 #include <mqtt.h>
@@ -32,7 +32,7 @@ void vMqttPublisher(void *pvParameters) {
 	int length;
 
 	MQTT_Request req;
-	while(xQueueReceive(xQueueMqtt, &req, 200));
+	while(!xQueueReceive(xQueueMqtt, &req, 200));
 
 	while (conStatus != CON) {
 		vTaskDelay(100);

@@ -57,7 +57,7 @@ int EEPROM_WriteData(uint16_t dstAddr, char *srcData, unsigned int size)
         memcpy(data+2, srcData, size);
 
         I2C_SetFrequency(400000); //400 kHz
-        if(I2C_Write(CTRL, data, 2+size, false) != 0) 
+        if(I2C_Write(CTRL, data, 2+size, false) != 0)
         {
             vPortFree(data);
             return -1;  
@@ -97,7 +97,7 @@ int EEPROM_ReadByte(uint16_t dstAddr, char *byte)
     data[1] = dstAddr & 0xFF;
     
     I2C_SetFrequency(400000); //400 kHz
-    if(I2C_Write(CTRL, data, 2, true) != 0) 
+    if(I2C_Write(CTRL, data, 2, false) != 0)
     {
         vPortFree(data);
         return -1;  
@@ -126,7 +126,7 @@ int EEPROM_ReadData(uint16_t dstAddr, char *data, unsigned int size)
     data_buf[1] = dstAddr & 0xFF;
     
     I2C_SetFrequency(400000); //400 kHz
-    if(I2C_Write(CTRL, data_buf, 2, true) != 0)
+    if(I2C_Write(CTRL, data_buf, 2, false) != 0)
     {
         vPortFree(data_buf);
         return -1;  

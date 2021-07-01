@@ -38,7 +38,7 @@ void vI2CTester(void * pvParameters){
 	*/
 	char * byte = pvPortMalloc(150);
 	memset(byte,0,150);
-	EEPROM_WriteData(0, byte, 150);
+	EEPROM_WriteData(0, byte, 6);
 
 	char * byte1 = pvPortMalloc(150);
 	char byte2;

@@ -105,7 +105,6 @@ bool ESP01_VGetResponse(int timeout, char* response, char * start, unsigned char
 	char * responseHolder = pvPortMalloc(ESP01_MAX_RSP_SIZE);
 	memset(responseHolder, 0, ESP01_MAX_RSP_SIZE);
 
-	vTaskDelay(1000);
 	while(WAIT_GetElapsedMillis(startT) < timeout){
 		read = UART_GetChar(&responseHolder[sum]);
 		if(read) {
@@ -256,7 +255,7 @@ bool ESP01_ConnectServerKeepAliveId(char * connectionType, char * IP, int port, 
 	char cmd[len];
 	sprintf(cmd, "CIPSTART=%d,\"%s\",\"%s\",%d,%d",id,connectionType, IP, port, keepAlive);
 	char response[15];
-	bool r = ESP01_Command(30000, cmd, response, "CONNECT\r\n\r\nOK", "CONNECT\r\n\r\nOK");
+	bool r = ESP01_Command(30000, cmd, response, "OK", "OK");
 	return r;
 }
 
@@ -380,6 +379,9 @@ int ESP01_RecvActiveId(char * retData, int count, int * id) {
 		bool success = ESP01_GetResponse(3000, response, "+IPD","+IPD,%d,%d%[:]",id, &len,dd);//"+IPD,%d:%[^\r\n]%[^CLOSED]"
 
 		if(!success) {
+			vPortFree(dd);
+			vPortFree(response);
+			vPortFree(ipdData);
 			xSemaphoreGive(xSemaphoreRecv);
 			return 0;
 		}

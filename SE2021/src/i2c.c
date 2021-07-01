@@ -106,11 +106,10 @@ void I2C_IRQRoutine()
                 ctrl->I2CONCLR = START;
                 if(!rpt_start)
                 {
-                	ctrl->I2CONCLR = SI;
                 	ctrl->I2CONSET = STOP;
+                	ctrl->I2CONCLR = SI;
                 } else
                 {
-                	addr++;
                 	ctrl->I2CONSET = START;
                 	ctrl->I2CONCLR = SI;
                 }
@@ -134,11 +133,9 @@ void I2C_IRQRoutine()
                 ctrl->I2CONCLR = START;
                 if(!rpt_start)
                 {
-                	ctrl->I2CONCLR = SI;
                 	ctrl->I2CONSET = STOP;
-                } else
-                {
-                	addr++;
+                	ctrl->I2CONCLR = SI;
+                } else {
                 	ctrl->I2CONSET = START;
                 	ctrl->I2CONCLR = SI;
                 }
@@ -182,19 +179,22 @@ void I2C_IRQRoutine()
                 ctrl->I2CONCLR = START | SI;
                 data_count++;
             }
-            else 
+            else if (data_count == data_len - 1)
             {
-                ctrl->I2CONCLR = ACK | START;
-                if(!rpt_start)
-                {
-                	ctrl->I2CONSET = STOP;
-                	ctrl->I2CONCLR = SI;
-                } else
-                {
-                	ctrl->I2CONSET = START;
-                	ctrl->I2CONCLR = SI;
-                }
-                busy = false;
+            	ctrl->I2CONCLR = ACK | START;
+                ctrl->I2CONCLR = SI;
+                data_count++;
+            } else {
+            	if(!rpt_start)
+				{
+					ctrl->I2CONSET = STOP;
+					ctrl->I2CONCLR = SI;
+				} else
+				{
+					ctrl->I2CONSET = START;
+					ctrl->I2CONCLR = SI;
+				}
+				busy = false;
             }
             break;
         case I2C_DATA_RCV_NACK:

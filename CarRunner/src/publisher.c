@@ -2,13 +2,13 @@
  * publisher.c
  *
  *  Created on: 28/06/2021
- *      Author: josee
+ *      Author: $(author)
  */
 
 
 #include "publisher.h"
 
-void PUBLISHER_Publish(int group, int score, int username){
+void PUBLISHER_Publish(int group, int score, char * username){
 	char * topic = pvPortMalloc(24);
 	strcpy(topic,"v1/devices/me/telemetry");
 	char * payload = pvPortMalloc(25);

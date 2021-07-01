@@ -1,7 +1,7 @@
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
-configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:CarRunner Debug,org.eclipse.launchbar.core.descriptorType.default\:lab0 Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:ntpTest LinkServer Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:SE2021 LinkServer Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:I2CTest LinkServer Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:CarRunner LinkServer Debug
+configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:CarRunner Debug,org.eclipse.launchbar.core.descriptorType.default\:lab0 Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:SE2021 LinkServer Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:I2CTest LinkServer Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:CarRunner LinkServer Debug
 eclipse.preferences.version=1
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:CarRunner\ Debug/activeLaunchMode=debug
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:CarRunner\ Debug/activeLaunchTarget=null\:---
